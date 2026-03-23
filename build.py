@@ -3792,6 +3792,14 @@ Disallow: /
  print(" robots.txt")
 
 
+def build_cname():
+ """Generate CNAME file for GitHub Pages custom domain."""
+ full_path = os.path.join(OUTPUT_DIR, "CNAME")
+ with open(full_path, "w") as f:
+  f.write("b2bsalestools.com\n")
+ print(" CNAME")
+
+
 def copy_assets():
  """Copy assets/ into output/assets/ and root-level favicons."""
  dst = os.path.join(OUTPUT_DIR, "assets")
@@ -3869,6 +3877,7 @@ def build():
  print("\n Generating SEO files...")
  build_sitemap()
  build_robots()
+ build_cname()
 
  total = len(set("/" + p.replace("index.html", "") if not p.startswith("/") else p.replace("index.html", "") for p in ALL_PAGES))
  print(f"\n{'='*60}")
