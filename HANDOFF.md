@@ -17,7 +17,7 @@ A programmatic comparison/review site for B2B sales software. Generates 190+ sta
 - **No frameworks.** Pure HTML/CSS/JS. No React, no Hugo, no Astro.
 
 ## Architecture (Follow the Provyx Pattern)
-The site follows the same pattern as getprovyx.com (`/Users/rome/Documents/projects/provyx-website/`):
+The site follows the same pattern as getprovyx.com (`~/Documents/websites/services/provyx-website/`):
 - `build.py` contains ALL data inline (tools, categories, comparisons) plus HTML templates
 - `build.py` generates all pages into an output directory
 - `scripts/` for any helper scripts
