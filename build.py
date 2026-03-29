@@ -1523,6 +1523,66 @@ COMPARISONS = [
  "category": "commission-management", "winner": "captivateiq",
  "verdict": "CaptivateIQ wins on plan complexity and admin flexibility. Spiff wins on rep experience and implementation speed. Complex plans vs. rep adoption.",
  "dimensions": [("Plan Complexity", 5, 3), ("Rep Experience", 3, 5), ("Admin Flexibility", 5, 4), ("Implementation Speed", 3, 5), ("Analytics", 4, 4), ("Pricing", 3, 4)]},
+ {"slug": "apollo-vs-cognism", "tool_a": "apollo", "tool_b": "cognism",
+ "category": "b2b-contact-data", "winner": "apollo",
+ "verdict": "Apollo wins for NA-focused teams on pricing and built-in outreach. Cognism wins for European data and phone-verified mobiles. Geography decides this one.",
+ "dimensions": [("NA Data", 5, 3), ("EMEA Data", 3, 5), ("Phone Data", 3, 5), ("Built-in Outreach", 5, 1), ("Pricing", 5, 2), ("GDPR Compliance", 3, 5)]},
+ {"slug": "lusha-vs-apollo", "tool_a": "lusha", "tool_b": "apollo",
+ "category": "b2b-contact-data", "winner": "apollo",
+ "verdict": "Apollo wins on value with a larger database, built-in sequencing, and lower cost per contact. Lusha wins only on simplicity for reps who live in LinkedIn.",
+ "dimensions": [("Data Quality", 4, 4), ("Database Size", 3, 5), ("Built-in Outreach", 1, 5), ("Ease of Use", 5, 4), ("Pricing", 3, 5), ("API Access", 2, 4)]},
+ {"slug": "seamless-ai-vs-zoominfo", "tool_a": "smooth-ai", "tool_b": "zoominfo",
+ "category": "b2b-contact-data", "winner": "zoominfo",
+ "verdict": "ZoomInfo wins on data accuracy, intent data, and enterprise features. Seamless.AI wins on price. Most teams should evaluate Apollo as a third option.",
+ "dimensions": [("Data Accuracy", 3, 5), ("Database Size", 3, 5), ("Pricing", 5, 2), ("Intent Data", 1, 5), ("Ease of Use", 4, 3), ("Integrations", 3, 5)]},
+ {"slug": "clay-vs-clearbit", "tool_a": "clay", "tool_b": "clearbit",
+ "category": "data-enrichment", "winner": "clay",
+ "verdict": "Clay wins for complex multi-source enrichment workflows. Clearbit/Breeze wins for HubSpot-native teams who need simple, real-time enrichment.",
+ "dimensions": [("Enrichment Depth", 5, 3), ("Ease of Use", 3, 5), ("Workflow Automation", 5, 2), ("Pricing", 3, 4), ("CRM Integration", 4, 5), ("Company Data", 4, 5)]},
+ {"slug": "reply-io-vs-lemlist", "tool_a": "reply-io", "tool_b": "lemlist",
+ "category": "cold-email", "winner": "lemlist",
+ "verdict": "Lemlist wins for creative personalized outreach. Reply.io wins for structured multi-channel cadences with AI assistance. Both are mid-tier cold outreach tools.",
+ "dimensions": [("Email Personalization", 3, 5), ("Multi-Channel", 5, 4), ("AI Features", 4, 3), ("Deliverability", 3, 4), ("Pricing", 4, 4), ("Ease of Use", 3, 4)]},
+ {"slug": "hubspot-sales-vs-outreach", "tool_a": "hubspot-sales", "tool_b": "outreach",
+ "category": "sales-engagement", "winner": "hubspot-sales",
+ "verdict": "HubSpot Sales Hub wins for teams under 30 reps on total cost and simplicity. Outreach wins for larger teams needing advanced sequencing and analytics.",
+ "dimensions": [("Sequencing Power", 3, 5), ("CRM Integration", 5, 4), ("Total Cost", 5, 2), ("Analytics", 3, 5), ("Ease of Use", 5, 3), ("Scalability", 3, 5)]},
+ {"slug": "bombora-vs-6sense", "tool_a": "bombora", "tool_b": "6sense",
+ "category": "buyer-intent", "winner": "bombora",
+ "verdict": "Bombora wins as a flexible, lower-cost intent data feed. 6sense wins as a full ABM platform with orchestration. Choose ingredient vs. finished dish.",
+ "dimensions": [("Intent Data Quality", 5, 5), ("Platform Capabilities", 2, 5), ("Predictive Analytics", 2, 5), ("Pricing", 4, 2), ("Integration Flexibility", 5, 3), ("Ease of Implementation", 4, 3)]},
+ {"slug": "zoominfo-vs-lusha", "tool_a": "zoominfo", "tool_b": "lusha",
+ "category": "b2b-contact-data", "winner": "zoominfo",
+ "verdict": "ZoomInfo wins on capability with the deepest database and features. Lusha wins on value at 3-5x lower cost. Most teams should also evaluate Apollo.",
+ "dimensions": [("Database Size", 5, 3), ("Data Accuracy", 5, 4), ("Features", 5, 2), ("Pricing", 2, 5), ("Ease of Use", 3, 5), ("Phone Numbers", 5, 4)]},
+ {"slug": "smartlead-vs-lemlist", "tool_a": "smartlead", "tool_b": "lemlist",
+ "category": "cold-email", "winner": "smartlead",
+ "verdict": "Smartlead wins for agencies and high-volume senders. Lemlist wins for in-house teams using creative personalization. Different tools for different motions.",
+ "dimensions": [("Volume Capacity", 5, 3), ("Personalization", 2, 5), ("Agency Features", 5, 2), ("Multi-Channel", 2, 4), ("Deliverability", 5, 4), ("Pricing at Scale", 5, 3)]},
+ {"slug": "salesloft-vs-hubspot-sales", "tool_a": "salesloft", "tool_b": "hubspot-sales",
+ "category": "sales-engagement", "winner": "hubspot-sales",
+ "verdict": "HubSpot Sales Hub wins on total cost and unified platform simplicity. Salesloft wins on engagement depth and coaching tools for larger teams.",
+ "dimensions": [("Cadence Management", 5, 3), ("Coaching Tools", 5, 2), ("Unified Platform", 2, 5), ("Ease of Use", 4, 5), ("Support", 5, 4), ("Pricing", 3, 5)]},
+ {"slug": "6sense-vs-demandbase", "tool_a": "6sense", "tool_b": "demandbase",
+ "category": "buyer-intent", "winner": "6sense",
+ "verdict": "6sense wins on predictive analytics and sales integration. Demandbase wins on ABM advertising. Both are expensive. Run a head-to-head evaluation.",
+ "dimensions": [("Intent Data", 5, 5), ("Predictive Analytics", 5, 4), ("ABM Advertising", 4, 5), ("Sales Integration", 5, 4), ("Pricing", 3, 3), ("Ease of Use", 4, 4)]},
+ {"slug": "lemlist-vs-woodpecker", "tool_a": "lemlist", "tool_b": "woodpecker",
+ "category": "cold-email", "winner": "lemlist",
+ "verdict": "Lemlist wins on personalization and multi-channel. Woodpecker wins on simplicity and deliverability. Both are solid tools in a crowded market.",
+ "dimensions": [("Personalization", 5, 2), ("Deliverability", 4, 5), ("Multi-Channel", 4, 2), ("Ease of Use", 4, 5), ("Agency Features", 3, 4), ("Pricing", 4, 5)]},
+ {"slug": "orum-vs-nooks", "tool_a": "orum", "tool_b": "nooks",
+ "category": "sales-dialers", "winner": "orum",
+ "verdict": "Orum wins on dialing reliability and CRM integration. Nooks wins for remote teams with its virtual sales floor. In-office picks Orum, remote picks Nooks.",
+ "dimensions": [("Parallel Dialing", 5, 4), ("Virtual Sales Floor", 1, 5), ("AI Features", 4, 4), ("CRM Integration", 5, 4), ("Pricing", 3, 3), ("Call Quality", 5, 4)]},
+ {"slug": "rb2b-vs-warmly", "tool_a": "rb2b", "tool_b": "warmly",
+ "category": "visitor-identification", "winner": "rb2b",
+ "verdict": "RB2B wins on price with a free tier and 5-7x lower cost. Warmly wins for teams that want automated orchestration and AI chat on top of visitor identification.",
+ "dimensions": [("Person-Level ID", 5, 4), ("Orchestration", 2, 5), ("Chat/Engagement", 1, 5), ("Pricing", 5, 2), ("Integrations", 3, 4), ("Data Enrichment", 3, 5)]},
+ {"slug": "gong-vs-fireflies", "tool_a": "gong", "tool_b": "fireflies",
+ "category": "conversation-intelligence", "winner": "gong",
+ "verdict": "Gong wins on analytics, coaching, and deal intelligence. Fireflies wins on price at 5-8x less. Start with Fireflies, upgrade to Gong when coaching matters.",
+ "dimensions": [("Transcription", 5, 4), ("Conversation Analytics", 5, 2), ("Deal Intelligence", 5, 1), ("Coaching Tools", 5, 2), ("Pricing", 2, 5), ("Integration Breadth", 4, 4)]},
  ]
 
 # =============================================================================
@@ -2375,25 +2435,25 @@ def faq_schema_and_html(faqs, heading="Frequently Asked Questions"):
  """
  if not faqs:
   return ""
-  faq_items = ""
-  for faq in faqs:
-   faq_items += f'''<details class="faq-item">
-   <summary class="faq-question">{faq["question"]}</summary>
-   <div class="faq-answer"><p>{faq["answer"]}</p></div>
-   </details>\n'''
-   schema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-    {
-    "@type": "Question",
-    "name": faq["question"],
-    "acceptedAnswer": {"@type": "Answer", "text": faq["answer"]}
-    }
-    for faq in faqs
-    ]
-    }
-   return f'''<script type="application/ld+json">{json.dumps(schema)}</script>
+ faq_items = ""
+ for faq in faqs:
+  faq_items += f'''<details class="faq-item">
+  <summary class="faq-question">{faq["question"]}</summary>
+  <div class="faq-answer"><p>{faq["answer"]}</p></div>
+  </details>\n'''
+ schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+  {
+   "@type": "Question",
+   "name": faq["question"],
+   "acceptedAnswer": {"@type": "Answer", "text": faq["answer"]}
+  }
+  for faq in faqs
+  ]
+ }
+ return f'''<script type="application/ld+json">{json.dumps(schema)}</script>
 <div class="profile-section faq-section">
 <h2>{heading}</h2>
 {faq_items}
