@@ -1629,6 +1629,12 @@ ARTICLES = [
  "sales-tech-stack-budget",
  "audit-b2b-contact-database",
  "zoominfo-alternatives-buyers-guide",
+ "best-cold-email-tools-2026",
+ "buyer-intent-data-explained",
+ "waterfall-enrichment-explained",
+ "sales-engagement-platform-guide",
+ "linkedin-sales-navigator-alternatives",
+ "crm-data-enrichment-automation",
 ]
 
 
