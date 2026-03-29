@@ -1621,6 +1621,16 @@ ICP_GUIDES = [
  ]},
  ]
 
+# =============================================================================
+# STANDALONE ARTICLES (SEO guides)
+# =============================================================================
+
+ARTICLES = [
+ "sales-tech-stack-budget",
+ "audit-b2b-contact-database",
+ "zoominfo-alternatives-buyers-guide",
+]
+
 
 # =============================================================================
 # NICHES (5 niches x 8 categories = 40 pages)
@@ -2225,10 +2235,11 @@ COMPARISON_CONTENT = {}
 ALTERNATIVES_CONTENT = {}
 CATEGORY_CONTENT = {}
 GUIDE_CONTENT = {}
+ARTICLE_CONTENT = {}
 
 def _load_content():
  """Import all content modules and merge into global dicts."""
- global TOOL_CONTENT, COMPARISON_CONTENT, ALTERNATIVES_CONTENT, CATEGORY_CONTENT, GUIDE_CONTENT
+ global TOOL_CONTENT, COMPARISON_CONTENT, ALTERNATIVES_CONTENT, CATEGORY_CONTENT, GUIDE_CONTENT, ARTICLE_CONTENT
  content_dir = os.path.join(PROJECT_ROOT, "content")
  if not os.path.isdir(content_dir):
   return
@@ -2247,6 +2258,7 @@ def _load_content():
   ("alternatives", "ALTERNATIVES_CONTENT"),
   ("categories", "CATEGORY_CONTENT"),
   ("guides", "GUIDE_CONTENT"),
+  ("articles", "ARTICLE_CONTENT"),
   ]:
   try:
    mod = __import__(f"content.{mod_name}", fromlist=[target_dict_name])
@@ -2613,6 +2625,7 @@ def nav_html():
 <a href="/compare/">Compare</a>
 <a href="/industries/">Industries</a>
 <a href="/guides/">Best For</a>
+<a href="/articles/">Articles</a>
 <a href="/newsletters/">Newsletters</a>
 </div>
 <button class="nav-toggle" onclick="document.getElementById('nav-links').classList.toggle('open')" aria-label="Menu">
@@ -2642,6 +2655,7 @@ def footer_html():
 <li><a href="/compare/">Comparisons</a></li>
 <li><a href="/industries/">By Industry</a></li>
 <li><a href="/guides/">Best For Guides</a></li>
+<li><a href="/articles/">Articles</a></li>
 <li><a href="/newsletters/">Newsletters</a></li>
 </ul>
 </div>
@@ -3476,6 +3490,77 @@ def build_guide_pages():
  write_page("guides/index.html", page)
 
 
+def build_article_pages():
+ """Generate standalone SEO guide articles from ARTICLE_CONTENT."""
+ article_links = []
+ for slug in ARTICLES:
+  ac = ARTICLE_CONTENT.get(slug)
+  if not ac:
+   print(f"  Warning: no content for article '{slug}', skipping")
+   continue
+
+  title = ac["title"]
+  meta_desc = ac["meta_description"]
+  icp = ac.get("icp", "RevOps")
+  intro = ac.get("intro", "")
+  sections = ac.get("body_sections", [])
+  faqs = ac.get("faqs", [])
+  canonical = f"/articles/{slug}/"
+
+  # Build body sections HTML
+  sections_html = ""
+  for section in sections:
+   paras = "\n".join(f"<p>{p}</p>" for p in section["content"].split("\n\n") if p.strip())
+   sections_html += f'<div class="profile-section guide-prose">\n<h2>{section["heading"]}</h2>\n{paras}\n</div>\n'
+
+  # FAQ
+  faq_html = faq_schema_and_html(faqs) if faqs else ""
+
+  # Schema
+  bc_schema = breadcrumb_schema([
+   ("Home", "/"), ("Articles", "/articles/"),
+   (title, canonical)
+  ])
+  art_schema = article_schema(title, meta_desc, canonical)
+
+  # Intro
+  intro_html = f'<div class="profile-section overview-section"><p>{intro}</p></div>' if intro else ""
+
+  page_title = f"{title} ({CURRENT_YEAR}) | {SITE_NAME}"
+
+  body = f'''
+            {bc_schema}
+            {art_schema}
+            {breadcrumb_html([("Home", "/"), ("Articles", "/articles/"), (title, "")])}
+<div class="page-hero">
+            <h1>{title}</h1>
+            <p class="page-meta">Last updated: {BUILD_DATE}</p>
+</div>
+            {intro_html}
+            {sections_html}
+            {faq_html}
+            {reviewer_attribution_html()}
+            {newsletter_cta_html(icp)}
+            '''
+  page = page_shell(page_title, meta_desc, canonical, body)
+  write_page(f"articles/{slug}/index.html", page)
+  article_links.append((slug, title, intro))
+
+ # Article index page
+ links = ""
+ for slug, atitle, aintro in article_links:
+  links += f'<a href="/articles/{slug}/" class="category-card"><h3>{atitle}</h3><p>{aintro[:120]}...</p></a>\n'
+ body = f'''<div class="page-hero"><h1>Sales Tools Articles & Guides</h1>
+<p>In-depth guides on building your B2B sales tech stack, auditing data quality, and evaluating vendors.</p></div>
+ <div class="category-grid">{links}</div>'''
+ page = page_shell(
+  f"B2B Sales Tools Articles & Guides ({CURRENT_YEAR}) | {SITE_NAME}",
+  "In-depth guides on building your B2B sales tech stack, evaluating vendors, auditing contact data, and choosing the right tools for your team.",
+  "/articles/", body
+  )
+ write_page("articles/index.html", page)
+
+
 def build_newsletter_hub():
  """Generate the newsletter hub page."""
  cards = ""
@@ -3863,6 +3948,9 @@ def build():
 
  build_guide_pages()
  print(f" {len(ICP_GUIDES)} guide pages + index")
+
+ build_article_pages()
+ print(f" {len(ARTICLES)} article pages + index")
 
  build_newsletter_hub()
  print(f" Newsletter hub")
