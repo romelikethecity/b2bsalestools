@@ -1881,6 +1881,18 @@ ARTICLES = [
  "sales-engagement-platform-guide",
  "linkedin-sales-navigator-alternatives",
  "crm-data-enrichment-automation",
+ "sales-tech-stack-guide-2026",
+ "sales-stack-budget-planning",
+ "sales-tool-roi-measurement",
+ "best-free-sales-tools-2026",
+ "sales-tool-integration-guide",
+ "outbound-sales-workflow-guide",
+ "inbound-lead-management-tools",
+ "sales-automation-guide-2026",
+ "crm-implementation-checklist",
+ "sales-tools-for-startups",
+ "enterprise-sales-tools-guide",
+ "sales-tools-for-agencies",
 ]
 
 
