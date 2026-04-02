@@ -1858,6 +1858,13 @@ ICP_GUIDES = [
  ("Growth Stage", "Platforms and services built for teams that need real data without enterprise budgets. These options trade some database depth for dramatically better pricing, faster onboarding, and more flexibility.", ["apollo", "verum", "lusha"]),
  ("Budget Options", "For teams testing outbound or running lean, these tools deliver contact data at prices that fit any budget. You'll sacrifice some data quality and lose features like intent signals, but you'll get emails and phone numbers that work.", ["smooth-ai", "uplead", "lead411", "leadiq"]),
  ]},
+ {"slug": "best-apollo-alternatives", "title": "Best Apollo.io Alternatives for B2B Sales in 2026", "icp": "SDR/BDR",
+ "intro": "Apollo changed B2B prospecting by making contact data affordable. But credits burn fast, data accuracy is hit or miss on smaller companies, and the all-in-one approach means you're stuck with mediocre everything instead of great anything. If you've maxed out your credits mid-quarter or watched bounce rates climb on Apollo-sourced emails, you're not alone. Here are the alternatives worth considering, organized by what you actually need.",
+ "sections": [
+ ("Full Platforms", "For teams that want a similar self-serve experience but better data. These platforms give you a large contact database, built-in outreach tools, and integrations with your CRM. The difference is data quality, especially outside of US tech companies where Apollo tends to fall off.", ["zoominfo", "cognism", "lusha"]),
+ ("Done-For-You Data", "For teams that want someone else to handle enrichment entirely. Instead of burning credits and cleaning bad data yourself, these services source, verify, and deliver contacts on your behalf. You pay per record, not per seat, and the data is human-checked before it reaches your CRM.", ["verum"]),
+ ("Budget Alternatives", "For teams that just need cheaper contact data without the platform overhead. These tools won't match Apollo's sequencing features, but they'll give you verified emails and phone numbers at a lower price point. Good options if you already have a separate outreach tool.", ["smooth-ai", "uplead", "lead411"]),
+ ]},
  ]
 
 # =============================================================================
