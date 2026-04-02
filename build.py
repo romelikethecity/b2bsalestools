@@ -92,7 +92,7 @@ CATEGORIES = {
  "workflow": "Find",
  "what": "Verified contact info (emails, phones, titles) and company firmographics for prospecting",
  "primary_buyer": "SDR/BDR",
- "tools": ["zoominfo", "apollo", "cognism", "lusha", "rocketreach", "smooth-ai"],
+ "tools": ["zoominfo", "apollo", "cognism", "lusha", "rocketreach", "smooth-ai", "provyx", "verum", "definitive-healthcare", "iqvia-onekey", "veeva-opendata", "komodo-health", "ribbon-health", "doximity", "carevoyance", "uplead", "lead411"],
  },
  "data-enrichment": {
  "name": "Data Enrichment & Workflow Orchestration",
@@ -334,6 +334,107 @@ T("smooth-ai", "Seamless.AI", "b2b-contact-data", "https://www.seamless.ai", 7.0
  ["Data accuracy is hit-or-miss", "Aggressive sales tactics for their own product", "UI feels cluttered"],
  ["Real-time contact search", "Email finder", "Chrome extension", "Writing assistant", "Buyer intent", "CRM integrations"],
  [("Free", "$0 (50 credits)"), ("Basic", "$147/mo"), ("Pro", "Custom"), ("Enterprise", "Custom")])
+
+# --- Healthcare Data Providers ---
+T("provyx", "Provyx", "b2b-contact-data", "https://getprovyx.com", 8.4,
+ "Healthcare-specific provider intelligence with NPI verification. Per-record pricing and no contracts make it accessible, but it's not a self-serve platform.",
+ "Healthcare sales teams, medical device companies, and pharma reps who need verified provider contacts without enterprise contracts",
+ "$750",
+ ["NPI-verified provider contacts across 40+ specialties", "Multi-source verification (NPI + PECOS + LinkedIn + state licensing)", "24-48 hour turnaround on custom lists"],
+ ["Not a self-serve platform. You can't log in and pull data yourself", "Healthcare-only. Won't help with general B2B prospecting", "Smaller database than enterprise players like Definitive Healthcare"],
+ ["NPI-verified contacts", "Practice location data", "Decision-maker identification", "Technology detection", "Custom list building", "Ongoing data maintenance"],
+ [("Starter", "$750 (up to 1K records)"), ("Growth", "$2,500 (up to 5K records)"), ("Enterprise", "Custom")])
+
+T("verum", "Verum", "b2b-contact-data", "https://veruminc.com", 8.5,
+ "Done-for-you data enrichment and cleaning service. Combines 50+ sources with human QA. Per-record pricing means you only pay for what you use, but there's no self-serve option.",
+ "Midmarket sales teams (5K+ records) that need clean, enriched data without managing another platform",
+ "$2,000",
+ ["50+ data sources with human QA on every record", "93% email deliverability guarantee", "Full-service: cleaning, enrichment, and validation in one engagement"],
+ ["Not a platform. No login, no dashboard, no real-time API", "Minimum $2,000 project size isn't ideal for very small teams", "Turnaround is 24-48 hours, not instant"],
+ ["Data validation", "Deduplication", "Contact enrichment", "Firmographic enrichment", "Technology detection", "Ongoing maintenance"],
+ [("Project", "$2,000 minimum"), ("Monthly", "Volume discounted"), ("Enterprise", "Custom")])
+
+T("definitive-healthcare", "Definitive Healthcare", "b2b-contact-data", "https://www.definitivehc.com", 8.2,
+ "The biggest name in healthcare commercial intelligence. Covers hospitals, physicians, claims data, and referral patterns. Incredibly deep, but the price tag matches.",
+ "Enterprise pharma, medtech, and health system sales teams with six-figure data budgets",
+ "$50,000/yr",
+ ["Deepest healthcare facility and physician database in the market", "Claims data and referral analytics most competitors can't match", "Excellent hospital and health system org charts"],
+ ["Enterprise pricing starts around $50K/yr, often much higher", "Contract terms are rigid with long commitments", "Overkill for teams that just need contact info"],
+ ["Physician database", "Hospital profiles", "Claims analytics", "Referral patterns", "Org charts", "Market analytics"],
+ [("Professional", "$50,000+/yr"), ("Enterprise", "Custom")])
+
+T("iqvia-onekey", "IQVIA OneKey", "b2b-contact-data", "https://www.iqvia.com", 7.8,
+ "Global healthcare reference database built from IQVIA's massive pharmaceutical data business. Strong international coverage, but the platform feels dated and pricing is opaque.",
+ "Global pharma and life sciences teams that need international provider data",
+ "Custom",
+ ["Unmatched global healthcare provider coverage", "Deep pharmaceutical prescribing data integration", "Trusted by most top-20 pharma companies"],
+ ["Pricing is completely opaque and enterprise-only", "Platform UX hasn't kept up with modern competitors", "US-only teams often find better options elsewhere"],
+ ["Global provider database", "Prescribing data", "Affiliation mapping", "Compliance tracking", "Territory planning", "CRM integration"],
+ [("Enterprise", "Custom pricing only")])
+
+T("veeva-opendata", "Veeva OpenData", "b2b-contact-data", "https://www.veeva.com/products/opendata/", 7.5,
+ "Provider reference data built into the Veeva CRM ecosystem. If you already run Veeva, OpenData is the path of least resistance. Otherwise, you're buying into a whole ecosystem.",
+ "Life sciences companies already using Veeva CRM who need integrated provider data",
+ "Custom",
+ ["Native integration with Veeva CRM (no middleware needed)", "Good compliance features for regulated industries", "Solid US physician and HCP coverage"],
+ ["Locked into the Veeva ecosystem. Useless if you don't run Veeva CRM", "Coverage outside the US is weaker than IQVIA", "Pricing bundled with CRM makes standalone value hard to assess"],
+ ["HCP reference data", "Veeva CRM integration", "Compliance tracking", "Affiliation data", "Territory alignment", "Data stewardship"],
+ [("Bundled with Veeva CRM", "Custom")])
+
+T("komodo-health", "Komodo Health", "b2b-contact-data", "https://www.komodohealth.com", 7.6,
+ "Claims-based healthcare analytics platform. Komodo's real strength is patient journey mapping and treatment pattern analysis, not traditional contact data.",
+ "Pharma commercial teams that need claims-based provider targeting, not just contact info",
+ "Custom",
+ ["Patient journey analytics that no traditional data provider offers", "Claims data covers 330M+ patient records", "Strong for identifying KOLs and high-prescribers"],
+ ["Not really a contact data provider. You'll still need emails and phones elsewhere", "Enterprise pricing with long sales cycles", "Steep learning curve for the analytics platform"],
+ ["Claims analytics", "Patient journey mapping", "KOL identification", "Treatment patterns", "Market sizing", "Provider targeting"],
+ [("Enterprise", "Custom pricing only")])
+
+T("ribbon-health", "Ribbon Health", "b2b-contact-data", "https://www.ribbonhealth.com", 7.3,
+ "Provider directory API focused on insurance and digital health companies. Good for building provider search into your own product, less useful for sales prospecting.",
+ "Digital health companies building provider directories or network adequacy tools",
+ "$500/mo",
+ ["Clean API for embedding provider data into your product", "Good insurance acceptance and network data", "Real-time provider directory updates"],
+ ["Built for product teams, not sales teams. No prospecting workflow", "Limited contact enrichment (no direct emails or cell phones)", "Focused on primary care and specialists, weaker on facility decision-makers"],
+ ["Provider directory API", "Insurance network data", "Location data", "Specialty mapping", "NPI validation", "Bulk data feeds"],
+ [("Starter", "$500/mo"), ("Growth", "Custom"), ("Enterprise", "Custom")])
+
+T("doximity", "Doximity", "b2b-contact-data", "https://www.doximity.com", 6.8,
+ "LinkedIn for doctors. Over 80% of US physicians use it, but it's primarily a social network, not a data provider. Advertising products exist, but direct data access is limited.",
+ "Pharma marketers running awareness campaigns to physicians, not outbound sales teams",
+ "Custom",
+ ["80%+ of US physicians are on the platform", "High engagement for medical content and CME", "Good for peer-to-peer messaging campaigns"],
+ ["Not a data export tool. You can't download contacts or build lists", "Advertising-based model, not a sales intelligence platform", "Limited to physicians. No facility decision-makers or administrators"],
+ ["Physician network", "Peer messaging", "CME content", "Targeted advertising", "Telehealth tools", "Physician surveys"],
+ [("Advertising", "Custom CPM-based")])
+
+T("carevoyance", "Carevoyance", "b2b-contact-data", "https://www.carevoyance.com", 7.4,
+ "Medtech-focused sales intelligence platform. Strong on procedure volume data and surgical targeting. Now part of Definitive Healthcare.",
+ "Medical device and surgical product sales teams targeting by procedure volume",
+ "Custom",
+ ["Procedure volume data for surgical and device targeting", "Good physician-to-facility mapping", "Integrates with Definitive Healthcare's broader dataset"],
+ ["Acquired by Definitive Healthcare, so standalone future is uncertain", "Narrow focus on medtech. Less useful for pharma or health IT", "Pricing has crept up since the acquisition"],
+ ["Procedure volumes", "Physician targeting", "Facility analytics", "Surgical data", "Territory planning", "CRM integration"],
+ [("Professional", "Custom"), ("Enterprise", "Custom")])
+
+# --- General B2B Data (Budget) ---
+T("uplead", "UpLead", "b2b-contact-data", "https://www.uplead.com", 7.1,
+ "Budget-friendly B2B data with 95% accuracy guarantee. Smaller database than Apollo or ZoomInfo, but the data it does have is generally clean.",
+ "Small sales teams that need affordable, accurate contact data without a big commitment",
+ "$99/mo",
+ ["95% data accuracy guarantee with real-time email verification", "Simple, no-nonsense UI", "No annual contract required on lower plans"],
+ ["Database is much smaller than Apollo or ZoomInfo", "Limited international coverage", "No built-in outreach or sequencing"],
+ ["Contact search", "Email verification", "Company data", "Technographics", "Chrome extension", "CRM integrations"],
+ [("Essentials", "$99/mo"), ("Plus", "$199/mo"), ("Professional", "Custom")])
+
+T("lead411", "Lead411", "b2b-contact-data", "https://www.lead411.com", 7.2,
+ "Mid-tier B2B data provider with Bombora intent data included at no extra charge. Good value for teams that want intent signals without paying ZoomInfo prices.",
+ "SMB sales teams that want intent data bundled with contacts",
+ "$99/mo",
+ ["Bombora intent data included in all plans", "Verified direct dials and emails", "No annual commitment required"],
+ ["Smaller database than major players", "UI feels dated compared to Apollo or Lusha", "Limited enrichment and workflow features"],
+ ["Contact search", "Intent data (Bombora)", "Email verification", "Direct dials", "Chrome extension", "CRM integrations"],
+ [("Basic Plus", "$99/mo/user"), ("Enterprise", "Custom")])
 
 # --- Data Enrichment ---
 T("clay", "Clay", "data-enrichment", "https://www.clay.com", 9.0,
@@ -1623,7 +1724,7 @@ ALTERNATIVES = [
  ]
 
 # =============================================================================
-# ICP GUIDES (6)
+# ICP GUIDES (9)
 # =============================================================================
 
 ICP_GUIDES = [
@@ -1678,6 +1779,27 @@ ICP_GUIDES = [
  ("Coaching & Training", "Onboard faster and coach continuously.", ["mindtickle", "allego-coaching", "saleshood"]),
  ("Demo Automation", "Self-service demos prospects can explore.", ["storylane", "navattic", "consensus"]),
  ("Digital Sales Rooms", "Shared spaces for deal collaboration.", ["dock", "aligned", "trumpet"]),
+ ]},
+ {"slug": "best-healthcare-data-providers-for-sales-teams", "title": "Healthcare Data Providers for Sales Teams", "icp": "SDR/BDR",
+ "intro": "Selling into healthcare is different from every other vertical. Physician data decays fast, NPI numbers matter more than LinkedIn profiles, and one wrong title can tank your outreach. Generic B2B databases cover healthcare the way a gas station covers fine dining. They'll technically have something, but you won't be happy with what you get. This guide breaks down the platforms that actually specialize in healthcare provider intelligence, from enterprise-grade claims analytics down to budget-friendly options that get the job done for smaller teams. If you're selling medical devices, health IT, pharma, or services to providers, this is your shortlist.",
+ "sections": [
+ ("Enterprise Platforms", "These are the heavyweights. They cover the full spectrum of healthcare data, from hospital org charts to claims analytics. The trade-off is price: expect five- and six-figure annual contracts, long sales cycles, and implementation timelines measured in months.", ["definitive-healthcare", "zoominfo", "iqvia-onekey"]),
+ ("Specialist Providers", "Specialist platforms focus on healthcare-specific data without trying to be everything to everyone. They tend to be more affordable than the enterprise tier, with faster onboarding and pricing models that don't require board approval.", ["provyx", "veeva-opendata", "komodo-health"]),
+ ("Budget-Friendly Options", "Not every team needs a six-figure data contract. These options work for startups, early-stage medtech companies, and teams that are testing a healthcare vertical before going all-in on a dedicated platform.", ["apollo", "ribbon-health", "doximity"]),
+ ]},
+ {"slug": "best-definitive-healthcare-alternatives", "title": "Definitive Healthcare Alternatives", "icp": "SDR/BDR",
+ "intro": "Definitive Healthcare is the default choice for healthcare commercial intelligence, and for good reason. Their physician database, hospital profiles, and claims data are genuinely best-in-class. But that quality comes with a price tag that starts around $50K per year and climbs quickly. For many teams, the math just doesn't work. Maybe you only need provider contacts and don't care about claims analytics. Maybe you're a 5-person sales team and can't justify a six-figure data spend. Or maybe you've been a customer and the ROI isn't there anymore. Whatever the reason, there are real alternatives worth considering. None of them replicate Definitive's full feature set (that's the honest truth), but several do specific things better or cheaper.",
+ "sections": [
+ ("Full-Featured Alternatives", "If you need a platform that comes close to matching Definitive's breadth (hospital data, physician profiles, market analytics), these are your options. They're still enterprise-priced, but they bring different strengths to the table.", ["zoominfo", "iqvia-onekey"]),
+ ("Specialist Alternatives", "These platforms don't try to replace Definitive across the board. Instead, they focus on doing one or two things better: faster delivery, lower cost, or deeper specialty coverage. For teams that know exactly what data they need, specialists often outperform generalists.", ["provyx", "veeva-opendata", "komodo-health", "carevoyance"]),
+ ("Budget Alternatives", "If your primary need is verified healthcare contacts (emails, phones, NPI numbers) and you don't need claims data or market analytics, these options get the job done at a fraction of the cost.", ["apollo", "ribbon-health"]),
+ ]},
+ {"slug": "best-zoominfo-alternatives", "title": "ZoomInfo Alternatives That Won't Break the Budget", "icp": "SDR/BDR",
+ "intro": "ZoomInfo is the most well-known name in B2B data for a reason: their database is massive, the intent signals are strong, and it integrates with everything. But at $15K per year minimum (and realistically $25K+ for anything useful), a lot of teams are paying for a Rolls-Royce when they need a reliable pickup truck. The auto-renewal contracts don't help either. If you've been burned by a surprise renewal or you're just looking for better value, you have more options than ever. Some of these alternatives match ZoomInfo's data quality in specific segments. Others trade a smaller database for dramatically lower cost. And one category, done-for-you data services, skips the platform entirely and just hands you clean, verified contacts.",
+ "sections": [
+ ("Best Overall Alternatives", "These platforms come closest to replicating ZoomInfo's core value: a large contact database with built-in outreach tools. They won't match ZoomInfo's intent data or enterprise features, but for pure prospecting, they hold up well at a fraction of the price.", ["apollo", "cognism"]),
+ ("Done-For-You Data Services", "Instead of managing another platform and cleaning data yourself, these services handle everything: sourcing, enrichment, validation, and delivery. You tell them what you need, and you get a clean list back. The trade-off is turnaround time (24-48 hours vs. instant), but the data quality is typically higher because humans are in the loop.", ["verum"]),
+ ("Budget Options", "If you just need emails and phone numbers without enterprise features, these tools deliver solid data at prices that won't trigger a procurement review.", ["lusha", "uplead", "lead411", "smooth-ai"]),
  ]},
  ]
 
