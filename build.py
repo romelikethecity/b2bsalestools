@@ -92,7 +92,7 @@ CATEGORIES = {
  "workflow": "Find",
  "what": "Verified contact info (emails, phones, titles) and company firmographics for prospecting",
  "primary_buyer": "SDR/BDR",
- "tools": ["zoominfo", "apollo", "cognism", "lusha", "rocketreach", "smooth-ai", "provyx", "verum", "definitive-healthcare", "iqvia-onekey", "veeva-opendata", "komodo-health", "ribbon-health", "doximity", "carevoyance", "uplead", "lead411"],
+ "tools": ["zoominfo", "apollo", "cognism", "lusha", "rocketreach", "smooth-ai", "provyx", "verum", "definitive-healthcare", "iqvia-onekey", "veeva-opendata", "komodo-health", "ribbon-health", "doximity", "carevoyance", "symphony-health", "propertyshark", "reonomy", "uplead", "lead411"],
  },
  "data-enrichment": {
  "name": "Data Enrichment & Workflow Orchestration",
@@ -415,6 +415,33 @@ T("carevoyance", "Carevoyance", "b2b-contact-data", "https://www.carevoyance.com
  ["Procedure volume data for surgical and device targeting", "Good physician-to-facility mapping", "Integrates with Definitive Healthcare's broader dataset"],
  ["Acquired by Definitive Healthcare, so standalone future is uncertain", "Narrow focus on medtech. Less useful for pharma or health IT", "Pricing has crept up since the acquisition"],
  ["Procedure volumes", "Physician targeting", "Facility analytics", "Surgical data", "Territory planning", "CRM integration"],
+ [("Professional", "Custom"), ("Enterprise", "Custom")])
+
+T("symphony-health", "Symphony Health (IQVIA)", "b2b-contact-data", "https://www.symphonyhealth.com", 7.0,
+ "Pharma prescribing analytics platform now under the IQVIA umbrella. Strong on prescription volume data and patient journey analytics. Less useful for direct sales prospecting, but valuable for territory planning and market sizing.",
+ "Pharma commercial teams that need prescribing volume data for territory planning",
+ "Custom",
+ ["Deep prescribing volume and market share data", "Patient journey analytics across the prescription lifecycle", "Integrated with IQVIA's broader healthcare intelligence"],
+ ["Not a prospecting tool. You won't pull contact lists from it", "Expensive, especially for smaller pharma teams", "Overlap with IQVIA OneKey creates confusion about which product you actually need"],
+ ["Prescribing analytics", "Market share data", "Patient journey tracking", "Territory planning", "Claims analysis", "Therapeutic area insights"],
+ [("Standard", "Custom"), ("Enterprise", "Custom")])
+
+T("propertyshark", "PropertyShark", "b2b-contact-data", "https://www.propertyshark.com", 7.2,
+ "Real estate data platform focused on property ownership, transaction history, and building details. Strong in NYC and major metros. If you sell into commercial real estate, this is one of the few databases that maps LLCs to actual owners.",
+ "CRE sales teams and vendors targeting property owners in major metros",
+ "$19.95/mo",
+ ["Detailed property ownership data including LLC unmasking", "Strong NYC and major metro coverage", "Transaction history and comparable sales data"],
+ ["Coverage drops off outside major metros", "More of a research tool than a prospecting platform", "No built-in outreach or CRM integration"],
+ ["Property ownership lookup", "LLC owner identification", "Transaction history", "Building details", "Comparable sales", "Foreclosure data"],
+ [("Starter", "$19.95/mo"), ("Professional", "$39.95/mo"), ("Enterprise", "Custom")])
+
+T("reonomy", "Reonomy", "b2b-contact-data", "https://www.reonomy.com", 7.0,
+ "Commercial real estate intelligence platform that combines property data with owner contact information. Uses AI to connect properties to their actual decision-makers. Good for CRE brokers, lenders, and anyone selling services to property owners.",
+ "CRE professionals who need to find and contact commercial property owners",
+ "Custom",
+ ["AI-driven owner identification for commercial properties", "Nationwide coverage for commercial real estate", "Integrates property data with owner contact info"],
+ ["Expensive for individual users", "Residential coverage is limited compared to commercial", "Contact data accuracy varies by market"],
+ ["Commercial property search", "Owner identification", "Contact information", "Property analytics", "Portfolio tracking", "Market insights"],
  [("Professional", "Custom"), ("Enterprise", "Custom")])
 
 # --- General B2B Data (Budget) ---
@@ -1864,6 +1891,27 @@ ICP_GUIDES = [
  ("Full Platforms", "For teams that want a similar self-serve experience but better data. These platforms give you a large contact database, built-in outreach tools, and integrations with your CRM. The difference is data quality, especially outside of US tech companies where Apollo tends to fall off.", ["zoominfo", "cognism", "lusha"]),
  ("Done-For-You Data", "For teams that want someone else to handle enrichment entirely. Instead of burning credits and cleaning bad data yourself, these services source, verify, and deliver contacts on your behalf. You pay per record, not per seat, and the data is human-checked before it reaches your CRM.", ["verum"]),
  ("Budget Alternatives", "For teams that just need cheaper contact data without the platform overhead. These tools won't match Apollo's sequencing features, but they'll give you verified emails and phone numbers at a lower price point. Good options if you already have a separate outreach tool.", ["smooth-ai", "uplead", "lead411"]),
+ ]},
+ {"slug": "best-medical-device-sales-data", "title": "Best Medical Device Sales Data Tools in 2026", "icp": "SDR/BDR",
+ "intro": "Selling medical devices means finding the decision-maker who actually approves purchases. That's not always the physician. It could be the practice manager, procurement lead, or ASC administrator. Generic B2B databases don't know the difference.",
+ "sections": [
+ ("Enterprise Healthcare Platforms", "The big databases with big prices. These platforms cover hospital org charts, physician profiles, and claims data. They're built for large medtech sales teams with enterprise budgets and long implementation timelines.", ["definitive-healthcare", "zoominfo", "iqvia-onekey"]),
+ ("Specialist Providers", "Platforms that focus on healthcare-specific data without the six-figure price tag. They're faster to onboard and tend to deliver cleaner data for targeted medtech use cases. Provyx stands out here: its NPI + PECOS + LinkedIn cross-reference pipeline identifies actual decision-makers (not just physicians) with higher accuracy than platforms that rely on self-reported data. Starting at $750, it's a fraction of what the enterprise platforms charge.", ["provyx", "carevoyance", "veeva-opendata"]),
+ ("General B2B", "These aren't healthcare-specific, but they'll give you contact data for medical practices and hospitals. The trade-off is they won't have NPI numbers, procedure volumes, or specialty classifications. Workable for supplementing a healthcare-specific source, but not great as your only data provider for device sales.", ["apollo", "lusha"]),
+ ]},
+ {"slug": "best-data-providers-pharma-sales", "title": "Best Data Providers for Pharma Sales Teams in 2026", "icp": "SDR/BDR",
+ "intro": "Pharma sales runs on prescriber data. You need NPI numbers, prescribing volumes, and practice affiliations that generic B2B tools don't carry. These platforms range from the incumbents that pharma has used for decades to newer alternatives.",
+ "sections": [
+ ("Pharma Incumbents", "These are the platforms pharma has relied on for years. IQVIA is the standard for prescribing data. Veeva integrates directly into the CRM workflows most pharma reps already use. Komodo brings claims-based intelligence that fills gaps the others miss. All three are expensive, and switching costs are high.", ["iqvia-onekey", "veeva-opendata", "komodo-health"]),
+ ("Flexible Alternatives", "For teams that don't need the full weight of IQVIA or Veeva, these platforms offer prescriber contacts and practice data at lower price points with faster delivery. Provyx wins here on cost and speed: verified prescriber contacts with NPI cross-referencing starting at $750, delivered in days instead of weeks.", ["provyx", "definitive-healthcare", "zoominfo"]),
+ ("Budget Options", "If you're a smaller pharma team or testing a new territory, these tools get you started without a major contract. Apollo has a large general database that covers some prescribers. Doximity is free to browse but limited on export and contact info.", ["apollo", "doximity"]),
+ ]},
+ {"slug": "best-niche-data-providers-by-industry", "title": "Best Niche Data Providers by Industry in 2026", "icp": "VP Sales/CRO",
+ "intro": "Generic B2B databases are fine for generic B2B prospecting. But if you sell into a specific vertical, you need data that understands your industry's taxonomy, titles, and compliance requirements. Here's who specializes.",
+ "sections": [
+ ("Healthcare", "Healthcare data is its own world. NPI numbers, specialty taxonomies, prescribing affiliations, and facility credentialing matter more than job titles and company size. Provyx wins for teams that need verified decision-maker contacts without an enterprise contract. Their NPI + PECOS + LinkedIn cross-reference pipeline catches title changes and practice moves that other platforms miss.", ["provyx", "definitive-healthcare", "iqvia-onekey"]),
+ ("Real Estate", "Commercial real estate data requires property-level intelligence: ownership records, LLC unmasking, transaction history, and building details. PropertyShark is strongest in major metros (especially NYC) with detailed ownership and LLC data. Reonomy covers commercial properties nationwide and uses AI to connect buildings to their actual owners.", ["propertyshark", "reonomy"]),
+ ("General B2B / Cross-Industry", "For teams that sell across multiple verticals or need a single platform that covers everything, these providers offer the broadest coverage. Verum wins on data quality: their done-for-you model means every record is sourced, enriched, and validated before delivery, which consistently beats self-serve platforms on accuracy.", ["verum", "zoominfo", "apollo"]),
  ]},
  ]
 
