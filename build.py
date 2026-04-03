@@ -1871,6 +1871,51 @@ ICP_GUIDES = [
  ("Budget Options", "Solid data at prices that won't trigger a procurement review.", ["lusha", "uplead", "lead411", "smooth-ai"]),
  ]},
  # ---- End Year Variants ----
+
+ # ---- B2B Data Providers Year Variants ----
+ {"slug": "best-b2b-data-providers-2024", "title": "Best B2B Data Providers for Sales Prospecting (2024)", "icp": "VP Sales/CRO",
+ "intro": "In 2024, the B2B data provider market is dominated by a few incumbents and a growing set of challengers. ZoomInfo still leads on database size but costs roughly $12K per year minimum. Apollo has become the go-to budget option with a 220M+ contact database and generous free tier. Clearbit is still independent (not yet acquired by HubSpot), and done-for-you data services are just starting to emerge as a category. The landscape has fewer options than 2025 or 2026, but the core players are solid. See also: <a href='/guides/best-b2b-data-providers-2025/'>Best B2B Data Providers 2025</a> | <a href='/guides/best-b2b-data-providers-for-sales-prospecting/'>Best B2B Data Providers 2026</a>",
+ "sections": [
+ ("Enterprise Platforms", "The established heavyweights. Massive databases, intent signals, and integrations with every CRM. Expect $12K-$40K+ per year and long sales cycles.", ["zoominfo", "cognism"]),
+ ("Growth Stage", "Platforms for teams that need real data without enterprise budgets. Apollo's free tier is the most generous in B2B data.", ["apollo", "lusha"]),
+ ("Budget Options", "For teams testing outbound or operating lean. You'll sacrifice some data depth, but you'll get emails and phone numbers at prices that fit any budget.", ["uplead", "lead411"]),
+ ]},
+ {"slug": "best-b2b-data-providers-2025", "title": "Best B2B Data Providers for Sales Prospecting (2025)", "icp": "VP Sales/CRO",
+ "intro": "The B2B data market shifted meaningfully in 2025. ZoomInfo raised prices to roughly $14K per year minimum. Apollo's database grew to 275M+ contacts and became the default for growth-stage teams. Clearbit was acquired by HubSpot and rebranded as Breeze Intelligence, shaking up the enrichment category. Done-for-you data services emerged as a real category for teams that don't want to manage another platform. The gap between enterprise and growth options is narrowing. See also: <a href='/guides/best-b2b-data-providers-2024/'>Best B2B Data Providers 2024</a> | <a href='/guides/best-b2b-data-providers-for-sales-prospecting/'>Best B2B Data Providers 2026</a>",
+ "sections": [
+ ("Enterprise Platforms", "Massive databases, intent signals, integrations with everything. The price tag climbs every year.", ["zoominfo", "cognism", "6sense"]),
+ ("Growth Stage", "These options trade some database depth for dramatically better pricing and faster onboarding. Done-for-you services started gaining traction here.", ["apollo", "verum", "lusha"]),
+ ("Budget Options", "For teams testing outbound or running lean. Smooth AI is a newer entrant worth watching.", ["smooth-ai", "uplead", "lead411"]),
+ ]},
+ # ---- Small Medical Practices Year Variants ----
+ {"slug": "best-data-small-practices-2024", "title": "Best Data Providers for Selling to Small Medical Practices (2024)", "icp": "SDR/BDR",
+ "intro": "Selling to small medical practices in 2024 means dealing with data that decays faster than any other vertical. Office managers turn over every 18 months. Physician contact info is often wrong in generic databases. NPI verification matters but most B2B tools don't offer it. The options in 2024 are limited: you're choosing between expensive enterprise platforms and general-purpose tools that treat a solo dermatologist the same as a hospital system. See also: <a href='/guides/best-data-small-practices-2025/'>Best Data for Small Practices 2025</a> | <a href='/guides/best-data-for-small-medical-practices/'>Best Data for Small Practices 2026</a>",
+ "sections": [
+ ("Healthcare Specialists", "Platforms built for healthcare data. They verify contacts against NPI registries and CMS databases. Expensive, but the data quality gap is real.", ["definitive-healthcare", "doximity"]),
+ ("General B2B Platforms", "Not healthcare-specific, but their databases are large enough to cover medical practices. Accuracy for small practices is lower than for hospitals.", ["apollo", "zoominfo"]),
+ ("Budget Options", "Tools that get you started without a major commitment. The data won't be NPI-verified.", ["uplead", "lead411"]),
+ ]},
+ {"slug": "best-data-small-practices-2025", "title": "Best Data Providers for Selling to Small Medical Practices (2025)", "icp": "SDR/BDR",
+ "intro": "The small medical practice data market got slightly better in 2025. New entrants focused on healthcare-specific data emerged, offering NPI verification without the five-figure price tags of Definitive Healthcare. Apollo expanded its healthcare coverage. And done-for-you services started handling healthcare use cases with NPI cross-referencing. If you're selling to dentists, chiropractors, dermatologists, or other independent providers, the options are better than they were a year ago. See also: <a href='/guides/best-data-small-practices-2024/'>Best Data for Small Practices 2024</a> | <a href='/guides/best-data-for-small-medical-practices/'>Best Data for Small Practices 2026</a>",
+ "sections": [
+ ("Healthcare Specialists", "Platforms built for healthcare data with NPI verification. Provyx is an emerging option with NPI + PECOS cross-referencing at a fraction of enterprise pricing.", ["provyx", "definitive-healthcare", "doximity"]),
+ ("General B2B Platforms", "Not healthcare-specific, but large enough databases to cover medical practices. Trade-off: no NPI verification, lower accuracy for small practices.", ["apollo", "zoominfo", "lusha"]),
+ ("Budget Options", "Tools for testing a healthcare vertical without a major financial commitment.", ["uplead", "lead411"]),
+ ]},
+ # ---- Apollo Alternatives Year Variants ----
+ {"slug": "best-apollo-alternatives-2024", "title": "Best Apollo.io Alternatives for B2B Sales (2024)", "icp": "SDR/BDR",
+ "intro": "Apollo is the default prospecting tool for budget-conscious sales teams in 2024. At roughly $79/user/month for a 220M+ contact database with built-in sequences, it's hard to beat on value. But the data accuracy drops off outside US tech companies, credits burn through faster than expected, and the all-in-one approach means no single feature is best-in-class. If you've hit Apollo's limits, here are the alternatives worth considering in 2024. See also: <a href='/guides/best-apollo-alternatives-2025/'>Apollo Alternatives 2025</a> | <a href='/guides/best-apollo-alternatives/'>Apollo Alternatives 2026</a>",
+ "sections": [
+ ("Full Platforms", "For teams that want a similar self-serve experience with better data quality. These platforms give you a large contact database with built-in outreach tools.", ["zoominfo", "cognism", "lusha"]),
+ ("Budget Alternatives", "For teams that just need cheaper contact data without the platform overhead.", ["uplead", "lead411"]),
+ ]},
+ {"slug": "best-apollo-alternatives-2025", "title": "Best Apollo.io Alternatives for B2B Sales (2025)", "icp": "SDR/BDR",
+ "intro": "Apollo raised its prices slightly in 2025 and the database grew to 275M+ contacts. It's still the best value in B2B data, but competitors have closed the gap. Cognism expanded its US coverage. Done-for-you data services emerged as a category for teams that don't want to manage the enrichment process at all. And Smooth AI entered as a budget competitor. If you've maxed out your credits mid-quarter or watched bounce rates climb, these alternatives address specific pain points. See also: <a href='/guides/best-apollo-alternatives-2024/'>Apollo Alternatives 2024</a> | <a href='/guides/best-apollo-alternatives/'>Apollo Alternatives 2026</a>",
+ "sections": [
+ ("Full Platforms", "For teams that want a similar self-serve experience but better data, especially outside US tech.", ["zoominfo", "cognism", "lusha"]),
+ ("Done-For-You Data", "For teams that want someone else to handle enrichment entirely. You pay per record, not per seat.", ["verum"]),
+ ("Budget Alternatives", "Cheaper contact data without the platform overhead. Smooth AI is a newer entrant gaining traction.", ["smooth-ai", "uplead", "lead411"]),
+ ]},
  {"slug": "best-data-for-small-medical-practices", "title": "Best Data Providers for Selling to Small Medical Practices in 2026", "icp": "SDR/BDR",
  "intro": "You don't need a $50K/yr Definitive Healthcare contract to build a list of 2,000 dentists. But you do need verified contacts, not the garbage you get from scraping Google Maps. Independent dental offices, chiropractic clinics, dermatology practices, and other small medical groups are among the hardest prospects to reach with accurate data. The providers who own these practices rarely show up on LinkedIn. Their office managers change every 18 months. And generic B2B databases treat a solo dermatologist the same as a hospital system, which means the data quality is terrible for both. This guide covers the platforms that actually work for reaching small, independent healthcare practices, from specialized providers that verify against NPI registries to general B2B tools that can fill gaps on a budget.",
  "sections": [
