@@ -92,7 +92,7 @@ CATEGORIES = {
  "workflow": "Find",
  "what": "Verified contact info (emails, phones, titles) and company firmographics for prospecting",
  "primary_buyer": "SDR/BDR",
- "tools": ["zoominfo", "apollo", "cognism", "lusha", "rocketreach", "smooth-ai", "provyx", "verum", "definitive-healthcare", "iqvia-onekey", "veeva-opendata", "komodo-health", "ribbon-health", "doximity", "carevoyance", "symphony-health", "propertyshark", "reonomy", "uplead", "lead411"],
+ "tools": ["zoominfo", "apollo", "cognism", "lusha", "rocketreach", "smooth-ai", "provyx", "verum", "definitive-healthcare", "iqvia-onekey", "veeva-opendata", "komodo-health", "ribbon-health", "doximity", "carevoyance", "symphony-health", "propertyshark", "reonomy", "uplead", "lead411", "hunter"],
  },
  "data-enrichment": {
  "name": "Data Enrichment & Workflow Orchestration",
@@ -108,7 +108,7 @@ CATEGORIES = {
  "workflow": "Find",
  "what": "Identifies accounts actively researching solutions based on content consumption signals",
  "primary_buyer": "VP Sales/CRO",
- "tools": ["bombora", "6sense", "g2-intent", "demandbase", "trustradius-intent", "zoominfo-intent"],
+ "tools": ["bombora", "6sense", "g2-intent", "demandbase", "techtarget", "trustradius-intent", "zoominfo-intent"],
  },
  "visitor-identification": {
  "name": "Website Visitor Identification",
@@ -124,7 +124,7 @@ CATEGORIES = {
  "workflow": "Find",
  "what": "Extends LinkedIn for prospecting, automating outreach, and managing LinkedIn sequences",
  "primary_buyer": "SDR/BDR",
- "tools": ["sales-navigator", "expandi", "dripify", "skylead", "salesrobot", "phantombuster"],
+ "tools": ["sales-navigator", "expandi", "dripify", "heyreach", "skylead", "salesrobot", "phantombuster"],
  },
  "sales-engagement": {
  "name": "Sales Engagement Platforms",
@@ -140,7 +140,7 @@ CATEGORIES = {
  "workflow": "Contact",
  "what": "High-volume cold email with automated warmup, inbox rotation, deliverability optimization",
  "primary_buyer": "SDR/BDR",
- "tools": ["instantly", "smartlead", "lemlist", "woodpecker", "mailshake", "reply-io"],
+ "tools": ["instantly", "smartlead", "lemlist", "woodpecker", "mailshake", "reply-io", "warmbox", "mailwarm", "lemwarm"],
  },
  "sales-dialers": {
  "name": "Sales Dialers & Call Software",
@@ -156,7 +156,7 @@ CATEGORIES = {
  "workflow": "Contact",
  "what": "AI agents that autonomously research prospects, write personalized messages, run outbound",
  "primary_buyer": "VP Sales/CRO",
- "tools": ["11x", "artisan", "regie-ai", "aisdr", "agentforce", "relevance-ai"],
+ "tools": ["11x", "artisan", "regie-ai", "aisdr", "agentforce", "relevance-ai", "chatgpt"],
  },
  "meeting-scheduling": {
  "name": "Meeting Scheduling & Routing",
@@ -236,7 +236,7 @@ CATEGORIES = {
  "workflow": "Coach & Enable",
  "what": "Organizes, distributes, and tracks sales content so reps use the right material at the right stage",
  "primary_buyer": "Sales Enablement Leader",
- "tools": ["highspot", "seismic", "showpad", "allego", "mindtickle-enablement", "guru"],
+ "tools": ["highspot", "seismic", "showpad", "allego", "mindtickle-enablement", "guru", "loom"],
  },
  "sales-coaching": {
  "name": "Sales Coaching & Training",
@@ -252,7 +252,7 @@ CATEGORIES = {
  "workflow": "Coach & Enable",
  "what": "Calculates and tracks commissions, SPIFFs, variable comp across complex plan structures",
  "primary_buyer": "RevOps",
- "tools": ["captivateiq", "spiff", "xactly", "everstage", "quotapath", "qobra"],
+ "tools": ["captivateiq", "spiff", "xactly", "everstage", "quotapath", "varicent", "qobra"],
  },
  "sales-analytics": {
  "name": "Sales Analytics & Dashboards",
@@ -260,7 +260,7 @@ CATEGORIES = {
  "workflow": "Coach & Enable",
  "what": "Unified dashboards on rep activity, pipeline velocity, conversion rates, attainment",
  "primary_buyer": "VP Sales/CRO",
- "tools": ["salesforce-reports", "hubspot-reporting", "kluster", "atrium", "coefficient", "domo"],
+ "tools": ["salesforce-reports", "hubspot-reporting", "kluster", "atrium", "coefficient", "domo", "notion"],
  },
  }
 
@@ -1573,6 +1573,94 @@ T("domo", "Domo", "sales-analytics", "https://www.domo.com", 7.2,
  ["Not sales-specific", "Expensive", "Overkill for pure sales analytics"],
  ["Data visualization", "1000+ connectors", "Real-time dashboards", "Alerts", "Embedded analytics", "Mobile app"])
 
+# --- Phase 3: Additional Tools ---
+T("heyreach", "HeyReach", "linkedin-sales-tools", "https://www.heyreach.io", 7.2,
+ "Cloud-based LinkedIn automation for agencies and multi-account teams. Lets you run campaigns across multiple LinkedIn accounts from one dashboard, which is a big deal for agencies managing client outreach.",
+ "Agencies and teams managing multiple LinkedIn accounts for outbound",
+ "$79/mo",
+ ["Multi-account LinkedIn automation", "Agency-friendly dashboard", "Cloud-based (no extension)"],
+ ["Newer platform, smaller community", "LinkedIn detection risk exists with any automation", "Limited CRM integrations compared to Expandi"],
+ ["Multi-account management", "LinkedIn sequences", "Smart limits", "Campaign analytics", "Team collaboration", "Webhook integrations"],
+ [("Starter", "$79/mo"), ("Business", "$199/mo"), ("Agency", "Custom")])
+
+T("techtarget", "TechTarget Priority Engine", "buyer-intent", "https://www.techtarget.com", 7.2,
+ "First-party intent data from TechTarget's network of 150+ tech-focused media properties. Unlike third-party intent providers, the signals come from content consumption on sites TechTarget owns, which means the data is more precise for technology buying decisions.",
+ "Technology vendors selling to IT buyers who research on TechTarget properties",
+ "Custom pricing",
+ ["First-party intent data (not inferred)", "Deep technology buyer coverage", "Account-level and contact-level signals"],
+ ["Only covers technology buying intent", "Expensive for smaller teams", "Limited outside the IT/tech vertical"],
+ ["Purchase intent signals", "Active prospect identification", "Account prioritization", "Contact-level data", "CRM integrations", "Content syndication"])
+
+T("warmbox", "Warmbox", "cold-email", "https://www.warmbox.ai", 7.0,
+ "Standalone email warmup tool that warms your inboxes before you start sending cold email. Connects to your email accounts and exchanges real emails with its warmup network to build sender reputation.",
+ "Cold email senders who need to warm up new domains or recover damaged sender reputation",
+ "$15/mo",
+ ["Affordable standalone warmup", "Works with any email provider", "Detailed deliverability analytics"],
+ ["Only does warmup, not sending", "Smaller warmup network than Instantly's built-in", "Less useful if your cold email tool includes warmup"],
+ ["Inbox warmup", "Deliverability monitoring", "Reputation scoring", "Blacklist monitoring", "Multiple inbox support", "Analytics dashboard"],
+ [("Solo", "$15/mo"), ("Start", "$69/mo"), ("Growth", "$139/mo"), ("Team", "$269/mo")])
+
+T("mailwarm", "Mailwarm", "cold-email", "https://www.mailwarm.com", 6.5,
+ "Email warmup service that sends and receives emails on your behalf to build sender reputation. Straightforward and simple, but the warmup network is smaller than competitors like Warmbox or Instantly's built-in warmup.",
+ "Teams that need basic email warmup without complexity",
+ "$69/mo",
+ ["Simple setup", "Works with most email providers", "Straightforward interface"],
+ ["Expensive for what it does", "Smaller warmup network", "Most cold email tools now include warmup for free"],
+ ["Email warmup", "Sender reputation building", "Deliverability monitoring", "Multiple inbox support", "Daily interaction limits", "Analytics"],
+ [("Starter", "$69/mo"), ("Growth", "$159/mo"), ("Scale", "$479/mo")])
+
+T("loom", "Loom", "sales-enablement", "https://www.loom.com", 7.5,
+ "Async video messaging for sales. Record quick screen + camera videos to replace meetings, follow up with prospects, or explain proposals. Acquired by Atlassian in 2023. The free tier is generous enough for most individual sellers.",
+ "Sales reps who want to stand out with personalized video follow-ups",
+ "Free / $12.50/mo",
+ ["Dead simple to record and share", "Viewer analytics (who watched, how long)", "Generous free tier"],
+ ["Not a full sales platform", "Video fatigue is real for some prospects", "Limited editing capabilities"],
+ ["Screen + camera recording", "Viewer analytics", "CTAs and comments", "Custom branding", "Transcription", "Integrations"],
+ [("Free", "$0 (25 videos)"), ("Business", "$12.50/mo"), ("Enterprise", "Custom")])
+
+T("varicent", "Varicent", "commission-management", "https://www.varicent.com", 7.3,
+ "Enterprise incentive compensation management platform, formerly part of IBM. Handles the most complex comp plans in large organizations. Not cheap or fast to implement, but it scales to thousands of payees.",
+ "Large enterprises with complex, multi-tiered compensation plans and thousands of payees",
+ "Custom pricing",
+ ["Handles extreme comp plan complexity", "Territory and quota management built in", "Strong financial modeling tools"],
+ ["Long implementation timelines (6+ months)", "Expensive, enterprise-only pricing", "UI feels dated compared to modern competitors"],
+ ["Incentive compensation", "Territory management", "Quota planning", "Advanced analytics", "Financial modeling", "ERP integrations"])
+
+T("lemwarm", "Lemwarm", "cold-email", "https://www.lemlist.com/lemwarm", 7.0,
+ "Lemlist's built-in email warmup tool. Included with Lemlist subscriptions and available standalone. Uses Lemlist's sending network for warmup interactions, which is substantial given Lemlist's user base.",
+ "Lemlist users or teams wanting warmup from a trusted cold email brand",
+ "Included w/ Lemlist / $29/mo standalone",
+ ["Large warmup network (Lemlist's user base)", "Included free with Lemlist", "Deliverability dashboard"],
+ ["Best value when bundled with Lemlist", "Standalone pricing is higher than Warmbox", "Limited features vs. full deliverability suites"],
+ ["Inbox warmup", "Deliverability scoring", "Reputation monitoring", "Blacklist checks", "Email health reports", "Auto-optimization"])
+
+T("hunter", "Hunter.io", "b2b-contact-data", "https://www.hunter.io", 7.3,
+ "Email finder and verifier. Straightforward tool that finds professional email addresses and verifies them. The free tier gives you 25 searches and 50 verifications per month, which is enough for light prospecting.",
+ "Individual reps and small teams who need quick email lookups without a full data platform",
+ "Free / $34/mo",
+ ["Clean, simple interface", "Good email verification accuracy", "Generous free tier for getting started"],
+ ["Email-only, no phone numbers", "Smaller database than Apollo or ZoomInfo", "Limited to email finding and verification"],
+ ["Email finder", "Email verifier", "Domain search", "Bulk tasks", "Chrome extension", "API access"],
+ [("Free", "$0 (25 searches/mo)"), ("Starter", "$34/mo"), ("Growth", "$104/mo"), ("Business", "$349/mo")])
+
+T("chatgpt", "ChatGPT", "ai-sdr", "https://chat.openai.com", 8.5,
+ "Not a sales tool per se, but the most versatile free tool any SDR can use. Write cold emails, research companies, summarize earnings calls, build prospect lists from descriptions, and draft objection handling scripts. The free tier handles 80% of what SDRs need.",
+ "Every SDR who writes emails, researches prospects, or prepares for calls",
+ "Free / $20/mo",
+ ["Incredibly versatile for sales tasks", "Free tier is genuinely useful", "Gets better every month"],
+ ["Not purpose-built for sales workflows", "Output quality depends on your prompts", "No CRM integration without third-party tools"],
+ ["Email drafting", "Company research", "Objection handling", "Call prep", "Data formatting", "Content summarization"],
+ [("Free", "$0"), ("Plus", "$20/mo"), ("Team", "$25/user/mo"), ("Enterprise", "Custom")])
+
+T("notion", "Notion", "sales-analytics", "https://www.notion.so", 7.5,
+ "Not a traditional sales tool, but plenty of SDR teams use Notion as a lightweight CRM, deal tracker, and knowledge base. Free for individuals. The flexibility is the selling point, but it won't replace a real CRM at scale.",
+ "Small teams and solo sellers who want a flexible workspace for organizing deals and notes",
+ "Free / $8/mo",
+ ["Extremely flexible workspace", "Free for personal use", "Great for organizing research and notes"],
+ ["Not a real CRM. No pipeline automation", "No built-in email or calling", "Breaks down at scale"],
+ ["Databases", "Templates", "Wiki", "Project management", "Team collaboration", "API"],
+ [("Free", "$0"), ("Plus", "$8/mo"), ("Business", "$15/mo"), ("Enterprise", "Custom")])
+
 print(f" Total tools loaded: {len(TOOLS)}")
 
 # =============================================================================
@@ -1586,8 +1674,8 @@ COMPARISONS = [
  "dimensions": [("Ease of Use", 5, 3), ("Customization", 3, 5), ("Pricing", 4, 2), ("Integrations", 4, 5), ("Reporting", 3, 5), ("Support", 4, 3)]},
  {"slug": "outreach-vs-salesloft", "tool_a": "outreach", "tool_b": "salesloft",
  "category": "sales-engagement", "winner": "outreach",
- "verdict": "Outreach wins on raw power, Salesforce integration depth, and analytics granularity. Salesloft wins on ease of use and faster time to value.",
- "dimensions": [("Sequencing", 5, 4), ("CRM Integration", 5, 4), ("Ease of Use", 3, 4), ("Analytics", 5, 4), ("Pricing", 2, 3), ("Support", 3, 4)]},
+ "verdict": "Outreach wins for large teams with complex multi-step sequences. Salesloft wins for teams that prioritize coaching and conversation intelligence after absorbing Chorus. Both are $75-100+/user/mo, so the real question is whether you need workflow power (Outreach) or coaching depth (Salesloft).",
+ "dimensions": [("Sequencing", 5, 4), ("Coaching", 3, 5), ("Analytics", 4, 5), ("Integrations", 5, 4), ("Pricing", 3, 3), ("Ease of Use", 3, 4)]},
  {"slug": "zoominfo-vs-apollo", "tool_a": "zoominfo", "tool_b": "apollo",
  "category": "b2b-contact-data", "winner": "apollo",
  "verdict": "Apollo wins for 80% of teams on pricing and built-in sequencing. ZoomInfo wins for enterprise teams who need intent data and advanced firmographics.",
@@ -1724,6 +1812,10 @@ COMPARISONS = [
  "category": "b2b-contact-data", "winner": "apollo",
  "verdict": "Apollo wins for 90% of sales teams. ZoomInfo's data is marginally better, but not $14K/yr better. Apollo's free tier and all-in-one approach means most teams never need ZoomInfo unless they're enterprise with 50+ reps.",
  "dimensions": [("Data Accuracy", 4, 5), ("Database Size", 4, 5), ("Pricing Value", 5, 2), ("Ease of Use", 5, 3), ("Email Sequencing", 5, 3), ("Intent Data", 3, 5), ("Free Tier", 5, 1)]},
+ {"slug": "cognism-vs-lusha", "tool_a": "cognism", "tool_b": "lusha",
+ "category": "b2b-contact-data", "winner": "lusha",
+ "verdict": "Lusha wins for US-focused teams on a budget. Cognism wins for EMEA data quality and GDPR compliance. If you sell into Europe, pay for Cognism. Everyone else should start with Lusha.",
+ "dimensions": [("US Data", 4, 4), ("EMEA Data", 5, 3), ("Pricing", 3, 4), ("Phone Numbers", 5, 3), ("Ease of Use", 4, 5), ("Compliance", 5, 3)]},
  ]
 
 # =============================================================================
@@ -1998,6 +2090,46 @@ ICP_GUIDES = [
  ("Market Leaders", "Gong wins overall. Its call analysis is the most accurate, deal intelligence is the most actionable, and the coaching workflows give managers real data instead of anecdotes. Competitor tracking, pipeline analytics, and forecast insights round out a platform that's become the standard everything else is measured against. The downside is price: expect $100+/user/month with annual contracts, and you need meaningful call volume to justify the investment. Salesloft absorbed Chorus (formerly standalone, then acquired by ZoomInfo) and integrated conversation intelligence directly into its engagement platform. If you're already on Salesloft, the built-in call analysis avoids adding another vendor. Standalone, it trails Gong on AI depth, but the bundled value is strong.", ["gong", "salesloft"]),
  ("Mid-Market", "Avoma takes a meeting-first approach rather than a sales-first approach. That makes it useful across the entire organization, not just the sales floor. The pricing starts at $19/user/month, which is a fraction of Gong, and the AI summaries and action items are genuinely good. It won't match Gong's deal intelligence, but for teams that need meeting transcription with basic coaching, it's the best value. Fireflies is the budget king. Free unlimited transcription, solid AI summaries, and integrations with every major meeting platform. It's not a full conversation intelligence platform in the way Gong is, but for teams that want searchable call transcripts without a five-figure annual commitment, nothing else comes close on price.", ["avoma", "fireflies"]),
  ("Built-In", "Both Apollo and ZoomInfo include basic call recording and transcription in their platforms. Apollo's call recording comes bundled with its $49/month plan, and while the analysis is basic compared to Gong, having it inside the same tool you use for prospecting and sequencing eliminates context-switching. ZoomInfo integrated Chorus into its platform, giving customers conversation intelligence alongside their contact database and intent signals. The transcription is solid, but the deeper coaching features require higher-tier plans.", ["apollo", "zoominfo"]),
+ ]},
+ {"slug": "best-sales-forecasting-tools", "title": "Sales Forecasting Software", "icp": "VP Sales/CRO",
+ "intro": "Your board wants a number. Your reps want to sandbag. Your spreadsheet is three versions behind. Sales forecasting software exists to close the gap between what your team says and what's actually going to happen. The best tools pull CRM data, conversation signals, and pipeline activity into predictions that are more accurate than gut feel. The worst ones are just dashboards with a forecast label slapped on top. This guide covers what's actually worth paying for in 2026, from standalone revenue platforms to forecasting features already built into your CRM.",
+ "sections": [
+ ("Revenue Platforms", "Standalone forecasting platforms that sit on top of your CRM and use AI to predict revenue outcomes. Clari is the market leader here. It ingests CRM data, email activity, and conversation signals to produce forecasts that are consistently more accurate than rep-submitted numbers. The risk scoring catches deals that are slipping before your managers do. Aviso takes a similar approach with a heavier emphasis on AI-guided selling. Its predictions are solid, though the platform is less polished than Clari and the company is smaller. If Clari's pricing is too steep, Aviso is worth a serious look.", ["clari", "aviso"]),
+ ("Built Into CRM", "If you're already paying for Salesforce or HubSpot, you've got forecasting tools included. They won't match a dedicated platform like Clari on accuracy, but they're free with your existing subscription and they don't require another integration. Salesforce Einstein Forecasting uses AI to predict close rates and flag at-risk deals. It's decent if your CRM data is clean, which is a big if. HubSpot's forecasting is simpler but functional for teams under 50 reps. The weighted pipeline view and deal stage probability calculations work fine for straightforward sales motions.", ["salesforce", "hubspot-crm"]),
+ ("Conversation-Based", "Gong Forecast takes a different approach: it uses actual conversation data from your sales calls to inform predictions. Instead of relying solely on CRM fields that reps may or may not update, it listens to what prospects are saying on calls and adjusts deal scores accordingly. The accuracy edge is real for teams with high call volume. The downside is you need Gong's full conversation intelligence platform to use it, which means $100+/user/month.", ["gong-forecast"]),
+ ]},
+ {"slug": "best-linkedin-automation-tools", "title": "LinkedIn Automation Tools for Sales", "icp": "SDR/BDR",
+ "intro": "LinkedIn is where B2B buyers live. It's also where most SDRs waste two hours a day doing manual connection requests and profile visits. LinkedIn automation tools handle the repetitive work: sending connection requests, following up with messages, visiting profiles, and endorsing skills to warm up prospects before you pitch. The catch? LinkedIn actively fights automation. Use the wrong tool and your account gets restricted. Use the right one and you'll 3x your connection acceptance rates without touching your keyboard. Here's what works in 2026 and what gets your account flagged.",
+ "sections": [
+ ("Cloud-Based", "Cloud-based tools run from their own servers, which means they don't need a browser extension or your computer running 24/7. Expandi is the gold standard here. Its smart throttling mimics human behavior well enough that account restrictions are rare, and the campaign builder handles complex multi-step sequences with conditional logic. HeyReach is newer but built specifically for agencies and teams managing multiple LinkedIn accounts. If you're running outreach across 5+ accounts, its multi-account dashboard saves real time. Dripify is the budget pick. It's simpler than Expandi, but at $39/month vs. $99/month, it does enough for individual reps who want basic LinkedIn sequences.", ["expandi", "heyreach", "dripify"]),
+ ("Multi-Channel", "If LinkedIn is just one channel in your outreach motion, these platforms let you blend LinkedIn touches with email, phone, and other channels in a single sequence. Reply.io integrates LinkedIn steps directly into email sequences, including automated profile visits, connection requests, and messages. Outreach supports LinkedIn tasks within its cadences, though the automation is less deep than dedicated LinkedIn tools. The advantage is workflow consolidation. Instead of managing separate tools for email and LinkedIn, everything runs from one platform.", ["reply-io", "outreach"]),
+ ]},
+ {"slug": "best-sales-commission-software", "title": "Sales Commission & SPM Software", "icp": "RevOps",
+ "intro": "If your commission calculations still live in a spreadsheet, you're one VLOOKUP error away from paying someone $40K too much or $40K too little. Sales commission software automates the math, gives reps real-time visibility into their earnings, and saves your finance team from monthly reconciliation nightmares. The market splits into three tiers: modern platforms built for flexibility, enterprise tools built for scale, and budget options for teams that just need the basics. Pick based on your plan complexity, team size, and budget.",
+ "sections": [
+ ("Modern Platforms", "CaptivateIQ is the most flexible commission platform on the market. It handles complex, multi-tiered comp plans that would break most competitors, and the admin interface lets RevOps teams make plan changes without engineering support. Spiff focuses on the rep experience. Its real-time commission dashboards are the cleanest in the category, which drives adoption. If your reps don't trust the comp numbers, Spiff solves that problem. Everstage splits the difference between CaptivateIQ's flexibility and Spiff's usability. It's particularly strong for mid-market teams that need more than basic commission tracking but don't have CaptivateIQ's budget.", ["captivateiq", "spiff", "everstage"]),
+ ("Enterprise", "Xactly and Varicent are the legacy players. They've been doing incentive compensation management since before the modern platforms existed, and they handle the most complex enterprise scenarios: thousands of payees, multi-currency, global tax compliance, territory management. The trade-off is implementation time (often 6+ months) and pricing that makes modern platforms look cheap. If you have 500+ reps and comp plans that require a PhD to understand, these are your options.", ["xactly", "varicent"]),
+ ("Budget", "QuotaPath is the best option for smaller teams. At $15/user/month, it gives reps commission visibility and managers basic plan management without the enterprise overhead. It won't handle the comp plan complexity that CaptivateIQ or Xactly can, but for straightforward quota-based plans, it does the job.", ["quotapath"]),
+ ]},
+ {"slug": "best-intent-data-providers", "title": "Intent Data Providers for B2B Sales", "icp": "VP Sales/CRO",
+ "intro": "Intent data tells you which accounts are actively researching solutions like yours before they fill out a form or book a demo. The promise is simple: stop wasting time on cold accounts and focus on the ones already in-market. The reality is messier. Intent signals vary wildly in quality. Some providers track actual content consumption on specific websites. Others infer intent from IP-level browsing patterns that are barely better than guessing. This guide covers what each provider actually measures, because the methodology matters more than the marketing.",
+ "sections": [
+ ("Full Platforms", "These aren't just intent data feeds. They're full ABM platforms that combine intent signals with account identification, orchestration, and advertising. 6sense uses AI to predict which accounts are in a buying stage, even before they visit your website. The predictions are genuinely useful if your database is large enough to train the models. Demandbase combines intent data with ABM advertising, letting you serve targeted ads to in-market accounts. ZoomInfo bundles Bombora intent data with its contact database, which means you can identify in-market accounts and pull contact info in the same workflow.", ["6sense", "demandbase", "zoominfo"]),
+ ("Pure Intent", "Bombora is the largest third-party intent data cooperative. It tracks content consumption across 5,000+ B2B websites and tells you which accounts are researching topics relevant to your product. The data is a feed you can plug into your CRM, engagement platform, or ABM tool. TechTarget takes a different approach with first-party data. Its intent signals come from content consumption on TechTarget's own media properties (150+ tech-focused sites), which makes the signals more precise for technology buying decisions but narrower in scope.", ["bombora", "techtarget"]),
+ ("Budget", "Apollo added buyer intent signals to its platform in 2025. The signals aren't as deep as Bombora's or 6sense's, but they're included in Apollo's existing subscription. For teams that can't justify a $30K+ intent data contract, Apollo's intent signals are a reasonable starting point to test whether intent-based prioritization improves your connect rates.", ["apollo"]),
+ ]},
+ {"slug": "best-email-warmup-tools", "title": "Email Warmup & Deliverability Tools", "icp": "SDR/BDR",
+ "intro": "You bought 10 new domains, set up DKIM, SPF, and DMARC, and you're ready to send cold email. Not so fast. New domains have zero sender reputation, and sending cold email from a fresh inbox is the fastest way to land in spam. Email warmup tools fix this by automatically sending and replying to emails from your new accounts, building sender reputation over 2-3 weeks before you start real outreach. Some cold email platforms include warmup for free. Others charge extra. And standalone warmup tools exist for teams using engagement platforms that don't include it. Here's what works.",
+ "sections": [
+ ("Built-In", "If you're already using a cold email platform, check whether warmup is included before paying for a separate tool. Instantly has the largest warmup network in the industry with 200K+ real accounts exchanging emails. It's included with every plan and it's the main reason Instantly's deliverability numbers are consistently higher than competitors. Saleshandy includes warmup in its plans too, though the network is smaller. For most cold email senders, the built-in warmup from Instantly or Saleshandy is more than enough.", ["instantly", "saleshandy"]),
+ ("Standalone", "Standalone warmup tools make sense if your main sending platform doesn't include warmup, or if you want a second warmup layer for extra inbox health. Warmbox is the best standalone option at $15/month. Clean interface, solid deliverability analytics, and it works with any email provider. Mailwarm is simpler and more expensive. It works, but at $69/month for what Warmbox does for $15, it's hard to recommend unless you're already using it. Lemwarm is Lemlist's warmup tool, included free with Lemlist subscriptions. If you use Lemlist, you've already got it. Standalone, it's $29/month.", ["warmbox", "mailwarm", "lemwarm"]),
+ ]},
+ {"slug": "best-free-sales-tools", "title": "Free Sales Tools Every SDR Should Use", "icp": "SDR/BDR",
+ "intro": "You don't need a $50K tech stack to book meetings. The best SDRs run lean and know how to squeeze value out of free tools before upgrading to paid ones. This guide covers the free tools and free tiers that actually move the needle for outbound sales. No trials that expire in 14 days. No \"free\" tools that are really just demos. These are tools you can use indefinitely without paying, and they're good enough that some reps never upgrade.",
+ "sections": [
+ ("Data", "Apollo's free tier is the single best free sales tool available. You get 60 mobile credits, 120 export credits, and access to a 275M+ contact database every month. That's enough to build 100+ prospect lists without spending a dollar. LinkedIn (the free version, not Sales Navigator) is still a goldmine if you know how to use Boolean search and filter by company, title, and location. And Hunter.io's free tier gives you 25 email searches and 50 verifications per month for quick lookups.", ["apollo", "sales-navigator", "hunter"]),
+ ("Productivity", "ChatGPT changed SDR workflows overnight. Use it to research companies, write personalized first lines, draft objection handling scripts, and summarize prospect websites before calls. The free tier handles most of what you need. Calendly's free tier lets you share one booking link with unlimited meetings, which eliminates the back-and-forth of scheduling. Loom's free tier gives you 25 video messages, which is plenty for sending personalized video follow-ups that stand out from text-only emails.", ["chatgpt", "calendly", "loom"]),
+ ("Organization", "HubSpot's free CRM is legitimately free, not a trial. You get contact management, deal pipeline, email tracking, and basic reporting at no cost. For teams under 10 reps, it's all you need. Notion's free tier works as a lightweight deal tracker, research repository, and team wiki. It won't replace a CRM, but it's the best free tool for organizing prospect research and keeping notes in one place.", ["hubspot-crm", "notion"]),
  ]},
  ]
 
