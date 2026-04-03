@@ -1711,6 +1711,10 @@ COMPARISONS = [
  "category": "conversation-intelligence", "winner": "gong",
  "verdict": "Gong wins on analytics, coaching, and deal intelligence. Fireflies wins on price at 5-8x less. Start with Fireflies, upgrade to Gong when coaching matters.",
  "dimensions": [("Transcription", 5, 4), ("Conversation Analytics", 5, 2), ("Deal Intelligence", 5, 1), ("Coaching Tools", 5, 2), ("Pricing", 2, 5), ("Integration Breadth", 4, 4)]},
+ {"slug": "apollo-vs-zoominfo", "tool_a": "apollo", "tool_b": "zoominfo",
+ "category": "b2b-contact-data", "winner": "apollo",
+ "verdict": "Apollo wins for 90% of sales teams. ZoomInfo's data is marginally better, but not $14K/yr better. Apollo's free tier and all-in-one approach means most teams never need ZoomInfo unless they're enterprise with 50+ reps.",
+ "dimensions": [("Data Accuracy", 4, 5), ("Database Size", 4, 5), ("Pricing Value", 5, 2), ("Ease of Use", 5, 3), ("Email Sequencing", 5, 3), ("Intent Data", 3, 5), ("Free Tier", 5, 1)]},
  ]
 
 # =============================================================================
@@ -1957,6 +1961,13 @@ ICP_GUIDES = [
  ("Healthcare", "Healthcare data is its own world. NPI numbers, specialty taxonomies, prescribing affiliations, and facility credentialing matter more than job titles and company size. Provyx wins for teams that need verified decision-maker contacts without an enterprise contract. Their NPI + PECOS + LinkedIn cross-reference pipeline catches title changes and practice moves that other platforms miss.", ["provyx", "definitive-healthcare", "iqvia-onekey"]),
  ("Real Estate", "Commercial real estate data requires property-level intelligence: ownership records, LLC unmasking, transaction history, and building details. PropertyShark is strongest in major metros (especially NYC) with detailed ownership and LLC data. Reonomy covers commercial properties nationwide and uses AI to connect buildings to their actual owners.", ["propertyshark", "reonomy"]),
  ("General B2B / Cross-Industry", "For teams that sell across multiple verticals or need a single platform that covers everything, these providers offer the broadest coverage. Verum wins on data quality: their done-for-you model means every record is sourced, enriched, and validated before delivery, which consistently beats self-serve platforms on accuracy.", ["verum", "zoominfo", "apollo"]),
+ ]},
+ {"slug": "best-ai-sdr-tools", "title": "Best AI SDR Tools", "icp": "SDR/BDR",
+ "intro": "AI SDRs promise to replace human prospecting. The reality is messier. These tools can handle research, write emails, and send sequences autonomously. But the data quality, personalization, and deliverability vary wildly. Here's what each actually delivers.",
+ "sections": [
+ ("Fully Autonomous", "These platforms take over outbound entirely. You set targeting criteria, and the AI handles research, writing, and sending. It sounds great on a demo. In practice, you're trusting a black box with your domain reputation and brand voice. 11x is the most ambitious, but at $5K+/mo you're paying enterprise prices for technology that's still finding its legs. Artisan costs less and bundles its own contact database, but customization is limited and the sales process itself is aggressive enough to raise eyebrows.", ["11x", "artisan"]),
+ ("Hybrid Approach", "AiSDR sits between full autonomy and traditional sequencing. It'll research leads and write personalized emails, but gives you more control over what goes out. The quarterly contracts are a big differentiator when competitors want annual commitments. The personalization engine is solid for the price. The trade-off is a smaller database and less brand recognition, but for teams testing AI outbound without betting the farm, it's the lowest-risk entry point.", ["aisdr"]),
+ ("Build Your Own", "Here's the thing most AI SDR vendors won't tell you: you can build a better system yourself. Apollo for data, Clay for enrichment and research, Instantly for sending. Total cost is $200-500/mo instead of $2K-5K/mo, and you control every step. The downside is setup time and maintenance. But if you've got someone technical on the team, this stack outperforms dedicated AI SDRs on personalization quality because you're choosing the prompts, the data sources, and the sending rules. It's not autonomous, but it's transparent.", ["apollo", "clay", "instantly"]),
  ]},
  ]
 
