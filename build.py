@@ -2879,18 +2879,18 @@ def breadcrumb_schema(crumbs):
  """
  if not crumbs:
   return ""
-  items = []
-  for i, (name, url) in enumerate(crumbs, 1):
-   item = {"@type": "ListItem", "position": i, "name": name}
-   if url:
-    item["item"] = f"{SITE_URL}{url}" if url.startswith("/") else url
-    items.append(item)
-    schema = {
-     "@context": "https://schema.org",
-     "@type": "BreadcrumbList",
-     "itemListElement": items
-     }
-    return f'<script type="application/ld+json">{json.dumps(schema)}</script>'
+ items = []
+ for i, (name, url) in enumerate(crumbs, 1):
+  item = {"@type": "ListItem", "position": i, "name": name}
+  if url:
+   item["item"] = f"{SITE_URL}{url}" if url.startswith("/") else url
+  items.append(item)
+ schema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": items
+  }
+ return f'<script type="application/ld+json">{json.dumps(schema)}</script>'
 
 
 def faq_schema_and_html(faqs, heading="Frequently Asked Questions"):
@@ -2934,27 +2934,27 @@ def software_app_schema(tool_name, category_name, score, pricing_start, url):
    price = m.group(1)
   elif "free" in pricing_start.lower():
    price = "0"
-   schema = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": tool_name,
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web",
-    "url": url,
-    "offers": {
-    "@type": "Offer",
-    "price": price,
-    "priceCurrency": "USD"
-    },
-    "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": str(score),
-    "bestRating": "10",
-    "worstRating": "0",
-    "ratingCount": "1"
-    }
-    }
-   return f'<script type="application/ld+json">{json.dumps(schema)}</script>'
+ schema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": tool_name,
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "url": url,
+  "offers": {
+  "@type": "Offer",
+  "price": price,
+  "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+  "@type": "AggregateRating",
+  "ratingValue": str(score),
+  "bestRating": "10",
+  "worstRating": "0",
+  "ratingCount": "1"
+  }
+  }
+ return f'<script type="application/ld+json">{json.dumps(schema)}</script>'
 
 
 def organization_schema():
@@ -3108,6 +3108,7 @@ def html_head(title, description, canonical_path="/", og_title=None):
  og_t = og_title or title
  return f'''<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
  <title>{title}</title>
  <meta name="description" content="{description}">
  <link rel="canonical" href="{SITE_URL}{canonical_path}">
@@ -3169,7 +3170,7 @@ def footer_html():
  cat_links = ""
  for slug, cat in list(CATEGORIES.items())[:8]:
   cat_links += f'<li><a href="/categories/{slug}/">{cat["short"]}</a></li>\n'
-  return f'''<footer class="site-footer">
+ return f'''<footer class="site-footer">
 <div class="site-footer-inner">
 <div>
   <div class="footer-brand">{ICON_SVG_WHITE} B2B Sales Tools</div>
@@ -3271,7 +3272,7 @@ def newsletter_cta_html(icp="SDR/BDR"):
   if v["name"] == nl["name"]:
    slug = list_slug.get(k, "sales-tool-index")
    break
-   return f'''<div class="newsletter-cta">
+ return f'''<div class="newsletter-cta">
 <h2>Get smarter about sales tools</h2>
    <p>Join {nl["name"]}. {nl["description"].lower()}</p>
    <form class="nl-form" data-list="{slug}" style="display:flex;gap:8px;max-width:420px;margin:16px 0;">
@@ -3291,7 +3292,7 @@ def breadcrumb_html(crumbs):
    parts.append(f'<span style="color:var(--slate-600)">{label}</span>')
   else:
    parts.append(f'<a href="{url}">{label}</a><span>/</span>')
-   return f'<div class="breadcrumb">{"".join(parts)}</div>'
+ return f'<div class="breadcrumb">{"".join(parts)}</div>'
 
 
 def tool_card_html(slug, rank=0):
