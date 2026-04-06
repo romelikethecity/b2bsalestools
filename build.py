@@ -16,7 +16,7 @@ from datetime import datetime
 # =============================================================================
 
 CURRENT_YEAR = 2026
-SITE_NAME = "B2B Sales Tools"
+SITE_NAME = "B2BSalesTools"
 SITE_URL = "https://b2bsalestools.com"
 BUILD_DATE = datetime.now().strftime("%Y-%m-%d")
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -3423,7 +3423,7 @@ def build_category_index():
 <div class="category-grid">{cards}</div>
 '''
   page = page_shell(
-   f"All B2B Sales Tool Categories ({CURRENT_YEAR}) | {SITE_NAME}",
+   f"All B2B Sales Tool Categories | {SITE_NAME}",
    "Browse 22 categories of B2B sales software organized by workflow stage. Find the best tools for prospecting, data enrichment, outreach, CRM, coaching, and revenue operations.",
    "/categories/",
    body
@@ -3497,7 +3497,7 @@ def build_category_pages():
         {reviewer_attribution_html()}
         {newsletter_cta_html(cat["primary_buyer"])}
         '''
-        title = f'Best {cat["short"]} Tools ({CURRENT_YEAR}) | {SITE_NAME}'
+        title = f'Best {cat["short"]} Tools | {SITE_NAME}'
         desc = f'Compare the best {cat["name"].lower()} for B2B sales teams in {CURRENT_YEAR}. Side-by-side pricing, features, pros and cons, and honest verdicts to help you pick the right tool.'
         page = page_shell(title, desc, f"/categories/{slug}/", body)
         write_page(f"categories/{slug}/index.html", page)
@@ -3659,7 +3659,7 @@ def build_tool_pages():
        {reviewer_attribution_html()}
        {newsletter_cta_html(cat.get("primary_buyer", "SDR/BDR"))}
        '''
-  title = f'{t["name"]} Review ({CURRENT_YEAR}) | {SITE_NAME}'
+  title = f'{t["name"]} Review | {SITE_NAME}'
   tools_in_cat = [TOOLS[s]["name"] for s in cat.get("tools", []) if s in TOOLS and s != slug][:2]
   alt_names = " and ".join(tools_in_cat) if tools_in_cat else "competitors"
   desc = f'{t["name"]} review for {CURRENT_YEAR} with detailed pricing, key features, pros and cons, and use cases. See how it stacks up against {alt_names} and who it works best for.'
@@ -3958,7 +3958,7 @@ def build_comparison_pages():
          {reviewer_attribution_html()}
          {newsletter_cta_html(cat["primary_buyer"])}
          '''
-  title = f'{ta["name"]} vs {tb["name"]} ({CURRENT_YEAR}) | {SITE_NAME}'
+  title = f'{ta["name"]} vs {tb["name"]} | {SITE_NAME}'
   desc = f'{ta["name"]} vs {tb["name"]} compared for {CURRENT_YEAR}. Feature-by-feature breakdown of pricing, integrations, and use cases so you can pick the right one for your team.'
   page = page_shell(title, desc, f'/compare/{c["slug"]}/', body)
   write_page(f'compare/{c["slug"]}/index.html', page)
@@ -3976,7 +3976,7 @@ def build_comparison_pages():
 <p>Side-by-side breakdowns of the most popular B2B sales tools.</p></div>
 <div class="comparison-grid">{comp_cards}</div>'''
  page = page_shell(
-  f"B2B Sales Tool Comparisons ({CURRENT_YEAR}) | {SITE_NAME}",
+  f"B2B Sales Tool Comparisons | {SITE_NAME}",
   "Side-by-side comparisons of popular B2B sales tools. Feature-by-feature breakdowns of pricing, integrations, ease of use, and honest verdicts to help you choose.",
   "/compare/", body
   )
@@ -4139,7 +4139,7 @@ def build_alternatives_pages():
        {reviewer_attribution_html()}
        {newsletter_cta_html(CATEGORIES.get(t["category"], {}).get("primary_buyer", "SDR/BDR"))}
        '''
-  title = f'{a["title"]} Alternatives ({CURRENT_YEAR}) | {SITE_NAME}'
+  title = f'{a["title"]} Alternatives | {SITE_NAME}'
   alt_names = ", ".join(TOOLS[s]["name"] for s in a["alts"][:3] if s in TOOLS)
   desc = f'Looking for {a["title"]} alternatives in {CURRENT_YEAR}? Compare {alt_names} and more with detailed pricing, feature breakdowns, and honest reviews to find the right fit.'
   page = page_shell(title, desc, f'/alternatives/{a["slug"]}/', body)
@@ -4153,7 +4153,7 @@ def build_alternatives_pages():
 <p>The best alternatives to the most popular B2B sales tools.</p></div>
  <div class="category-grid">{links}</div>'''
  page = page_shell(
-  f"B2B Sales Tool Alternatives ({CURRENT_YEAR}) | {SITE_NAME}",
+  f"B2B Sales Tool Alternatives | {SITE_NAME}",
   "Find the best alternatives to popular sales tools like ZoomInfo, Salesforce, Gong, and more. Pricing comparisons, migration tips, and honest reviews.",
   "/alternatives/", body
   )
@@ -4350,7 +4350,7 @@ def build_guide_pages():
    ("Home", "/"), ("Guides", "/guides/"),
    (f'Best Tools for {g["title"]}', f'/guides/{g["slug"]}/')
    ])
-  guide_title = f'Best Tools for {g["title"]} ({CURRENT_YEAR}) | {SITE_NAME}'
+  guide_title = f'Best Tools for {g["title"]} | {SITE_NAME}'
   guide_desc = f'Curated {CURRENT_YEAR} tool recommendations for {g["title"]}. The best software for prospecting, outreach, deal execution, and coaching at every stage of your workflow.'
   guide_path = f'/guides/{g["slug"]}/'
   art_schema = article_schema(guide_title, guide_desc, guide_path)
@@ -4404,7 +4404,7 @@ def build_guide_pages():
 <p>Curated recommendations for every sales persona.</p></div>
  <div class="category-grid">{links}</div>'''
  page = page_shell(
-  f"Best Sales Tools by Role ({CURRENT_YEAR}) | {SITE_NAME}",
+  f"Best Sales Tools by Role | {SITE_NAME}",
   "Find the best B2B sales tools for your specific role. Curated recommendations for SDRs, AEs, Sales Managers, VPs of Sales, RevOps, and Enablement leaders with budget guidance.",
   "/guides/", body
   )
@@ -4447,7 +4447,7 @@ def build_article_pages():
   # Intro
   intro_html = f'<div class="profile-section overview-section"><p>{intro}</p></div>' if intro else ""
 
-  page_title = f"{title} ({CURRENT_YEAR}) | {SITE_NAME}"
+  page_title = f"{title} | {SITE_NAME}"
 
   body = f'''
             {bc_schema}
@@ -4475,7 +4475,7 @@ def build_article_pages():
 <p>In-depth guides on building your B2B sales tech stack, auditing data quality, and evaluating vendors.</p></div>
  <div class="category-grid">{links}</div>'''
  page = page_shell(
-  f"B2B Sales Tools Articles & Guides ({CURRENT_YEAR}) | {SITE_NAME}",
+  f"B2B Sales Tools Articles & Guides | {SITE_NAME}",
   "In-depth guides on building your B2B sales tech stack, evaluating vendors, auditing contact data, and choosing the right tools for your team.",
   "/articles/", body
   )
@@ -4510,7 +4510,7 @@ def build_newsletter_hub():
  <div class="newsletter-grid">{cards}</div>
  '''
    page = page_shell(
-    f"Best Sales Newsletters ({CURRENT_YEAR}) | {SITE_NAME}",
+    f"Best Sales Newsletters | {SITE_NAME}",
     "Free weekly newsletters for CROs, RevOps, SDRs, and sales leaders. Curated tool intel, market data, and career insights delivered to your inbox. Subscribe to the ones that match your role.",
     "/newsletters/", body
     )
@@ -4730,7 +4730,7 @@ def build_industry_pages():
 <div class="category-grid">{cards}</div>
 '''
  idx_page = page_shell(
-  f"Best Sales Tools by Industry ({CURRENT_YEAR}) | {SITE_NAME}",
+  f"Best Sales Tools by Industry | {SITE_NAME}",
   "Find the best B2B sales tools for your industry. Curated stacks for SaaS, healthcare, financial services, manufacturing, and more, with specific tool picks for every workflow stage.",
   "/industries/",
   idx_body
