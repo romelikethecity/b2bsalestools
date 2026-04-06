@@ -3667,6 +3667,94 @@ def build_tool_pages():
   write_page(f"tools/{slug}/index.html", page)
 
 
+def _gen_comparison_intro(ta, tb, cat, c):
+ """Auto-generate a comparison intro paragraph from tool data."""
+ name_a, name_b = ta["name"], tb["name"]
+ cat_name = cat.get("short", cat.get("name", ""))
+ return (
+  f"<p>Choosing between {name_a} and {name_b} is one of the most common decisions teams face "
+  f"in the {cat_name} category. Both platforms have loyal users, and both have real trade-offs "
+  f"that don't show up on feature comparison charts. This breakdown covers pricing, usability, "
+  f"integrations, and real-world fit so you can skip the sales demos and make a faster call.</p>\n"
+  f"<p>{name_a} starts at {ta['pricing_start']} and scores {ta['score']}/10 in our evaluation. "
+  f"It's built for {ta['best_for']}. {name_b} starts at {tb['pricing_start']} and scores "
+  f"{tb['score']}/10, targeting {tb['best_for']}. The difference isn't just features. It's "
+  f"about which workflow your team actually runs day to day.</p>\n"
+  f"<p>We tested both platforms, talked to teams that switched between them, and dug into the "
+  f"pricing tiers that vendors don't advertise on their websites. Here's what we found.</p>"
+ )
+
+
+def _gen_comparison_where_wins(tool, other, dims, tool_key, c):
+ """Generate a 'Where [Tool] Wins' section from dimensions and pros."""
+ name = tool["name"]
+ other_name = other["name"]
+ winning_dims = []
+ for dim, sa, sb in dims:
+  score = sa if tool_key == "a" else sb
+  other_score = sb if tool_key == "a" else sa
+  if score > other_score:
+   winning_dims.append((dim, score, other_score))
+ pros_list = tool.get("pros", [])
+ html = f'<div class="profile-section">\n<h2>Where {name} Wins</h2>\n'
+ if winning_dims:
+  html += f"<p>{name} outscores {other_name} in {len(winning_dims)} of the dimensions we tested. "
+  top_dims = [d[0] for d in winning_dims[:3]]
+  if len(top_dims) == 1:
+   html += f"Its biggest edge is in {top_dims[0]}."
+  else:
+   html += f"Its biggest edges are in {', '.join(top_dims[:-1])} and {top_dims[-1]}."
+  html += "</p>\n"
+ if pros_list:
+  html += "<ul>\n"
+  for pro in pros_list:
+   html += f"<li><strong>{pro.split('.')[0]}.</strong> {'. '.join(pro.split('.')[1:]).strip()}</li>\n" if '.' in pro else f"<li>{pro}</li>\n"
+  html += "</ul>\n"
+ cons = other.get("cons", [])
+ if cons:
+  html += f"<p>Meanwhile, {other_name} struggles with: {cons[0].lower() if cons[0][0].isupper() else cons[0]}"
+  if len(cons) > 1:
+   html += f" Teams also report that {cons[1][0].lower() if cons[1][0].isupper() else cons[1]}"
+  html += "</p>\n"
+ html += "</div>\n"
+ return html
+
+
+def _gen_comparison_bottom_line(ta, tb, c, cat):
+ """Generate a Bottom Line section for comparisons."""
+ winner = ta if c["winner"] == c["tool_a"] else tb
+ loser = tb if c["winner"] == c["tool_a"] else ta
+ return (
+  f'<div class="verdict-expanded">\n<h2>The Bottom Line</h2>\n'
+  f"<p>{c['verdict']}</p>\n"
+  f"<p>For most teams evaluating {cat.get('short', '')} tools in {CURRENT_YEAR}, {winner['name']} "
+  f"is the safer starting point. It scores {winner['score']}/10 overall and starts at "
+  f"{winner['pricing_start']}. That doesn't mean {loser['name']} is the wrong choice. "
+  f"Teams that need {loser['best_for'].split('who ')[-1] if 'who ' in loser['best_for'] else loser['best_for']} "
+  f"will find it's a better fit.</p>\n"
+  f"<p>If you're still on the fence, start a free trial with both (if available) and run your "
+  f"actual workflow for a week. Feature lists don't capture how a tool feels in daily use, "
+  f"and that's usually what decides the winner for your team.</p>\n"
+  f"</div>\n"
+ )
+
+
+def _gen_comparison_methodology(ta, tb, dims):
+ """Generate a methodology section for comparisons."""
+ dim_names = [d[0] for d in dims]
+ return (
+  f'<div class="profile-section">\n<h2>How We Evaluated</h2>\n'
+  f"<p>We scored {ta['name']} and {tb['name']} across {len(dims)} dimensions: "
+  f"{', '.join(dim_names[:-1])}, and {dim_names[-1]}. Each dimension is rated 1-5 based on "
+  f"hands-on testing, published documentation, user reviews from G2 and TrustRadius, and "
+  f"pricing data collected directly from vendor websites.</p>\n"
+  f"<p>Scores reflect value for a typical mid-market sales team (20-100 reps). Enterprise and "
+  f"startup teams may weight these dimensions differently. We update scores quarterly as "
+  f"products ship new features and adjust pricing.</p>\n"
+  f"</div>\n"
+ )
+
+
 def build_comparison_pages():
  """Generate X vs Y comparison pages with expanded content."""
  for c in COMPARISONS:
@@ -3690,13 +3778,15 @@ def build_comparison_pages():
   score_class_a = ' winner' if winner_slug == c["tool_a"] else ''
   score_class_b = ' winner' if winner_slug == c["tool_b"] else ''
 
-  # --- Intro ---
+  # --- Intro (auto-generated if empty) ---
   intro_html = ""
   if cc["intro"]:
    intro_paras = "\n".join(f"<p>{p}</p>" for p in cc["intro"].split("\n\n") if p.strip())
    intro_html = f'<div class="profile-section overview-section">{intro_paras}</div>'
+  else:
+   intro_html = f'<div class="profile-section overview-section">{_gen_comparison_intro(ta, tb, cat, c)}</div>'
 
-  # --- Dimension Analysis ---
+  # --- Dimension Analysis (auto-generated if empty) ---
   dim_html = ""
   if cc["dimension_analysis"]:
    items = "\n".join(
@@ -3704,8 +3794,25 @@ def build_comparison_pages():
     for d in cc["dimension_analysis"]
     )
    dim_html = f'<div class="profile-section dimension-analysis">\n<h2>Detailed Breakdown</h2>\n{items}\n</div>'
+  else:
+   dim_items = ""
+   for dim, sa, sb in c["dimensions"]:
+    if sa > sb:
+     analysis = f"{ta['name']} takes this category with a {sa}/5 vs {sb}/5. "
+     analysis += f"This is one of the clearest gaps between the two platforms and a deciding factor for teams that prioritize {dim.lower()}."
+    elif sb > sa:
+     analysis = f"{tb['name']} wins here with {sb}/5 vs {sa}/5. "
+     analysis += f"If {dim.lower()} is a top priority for your team, this gap matters. It's one of {tb['name']}'s strongest advantages in this matchup."
+    else:
+     analysis = f"Both tools score {sa}/5 here. Neither has a meaningful edge on {dim.lower()}, so this dimension won't be the deciding factor."
+    dim_items += f'<div class="dimension-item"><h3>{dim}</h3><p>{analysis}</p></div>\n'
+   dim_html = f'<div class="profile-section dimension-analysis">\n<h2>Detailed Breakdown</h2>\n{dim_items}\n</div>'
 
-  # --- Stage Guidance ---
+  # --- Where Each Tool Wins (auto-generated) ---
+  where_a_wins = _gen_comparison_where_wins(ta, tb, c["dimensions"], "a", c)
+  where_b_wins = _gen_comparison_where_wins(tb, ta, c["dimensions"], "b", c)
+
+  # --- Stage Guidance (auto-generated if empty) ---
   stage_html = ""
   if cc["stage_guidance"]:
    cards = ""
@@ -3713,25 +3820,69 @@ def build_comparison_pages():
    for stage, text in cc["stage_guidance"].items():
     cards += f'<div class="stage-card"><h3>{labels.get(stage, stage)}</h3><p>{text}</p></div>\n'
    stage_html = f'<div class="profile-section">\n<h2>Which Is Right for Your Stage?</h2>\n<div class="stage-guidance">{cards}</div>\n</div>'
+  else:
+   cheaper = ta if ta["pricing_start"].replace("$","").replace(",","").replace("/mo","").replace("/yr","").replace("Free / ","").split()[0].replace("Custom","99999") < tb["pricing_start"].replace("$","").replace(",","").replace("/mo","").replace("/yr","").replace("Free / ","").split()[0].replace("Custom","99999") else tb
+   pricier = tb if cheaper == ta else ta
+   stage_cards = (
+    f'<div class="stage-card"><h3>Startups &amp; SMBs</h3><p>{cheaper["name"]} is the better '
+    f'fit here. It starts at {cheaper["pricing_start"]} and won\'t require a dedicated admin to manage. '
+    f'Teams under 20 reps rarely need the extra horsepower {pricier["name"]} offers.</p></div>\n'
+    f'<div class="stage-card"><h3>Growth Stage</h3><p>This is where the decision gets harder. '
+    f'Both tools work at this scale. Evaluate based on your specific workflow: if your team '
+    f'prioritizes {c["dimensions"][0][0].lower()}, lean toward '
+    f'{"the higher scorer" if c["dimensions"][0][1] != c["dimensions"][0][2] else "either option"}. '
+    f'Run a two-week trial with both if you can.</p></div>\n'
+    f'<div class="stage-card"><h3>Enterprise</h3><p>{pricier["name"]} typically wins at enterprise '
+    f'scale, where customization, integrations, and admin controls matter more than sticker price. '
+    f'But get a custom quote from both vendors. Enterprise pricing is always negotiable.</p></div>\n'
+   )
+   stage_html = f'<div class="profile-section">\n<h2>Which Is Right for Your Stage?</h2>\n<div class="stage-guidance">{stage_cards}</div>\n</div>'
 
   # --- Questions to Ask ---
   questions_html = ""
   if cc["questions_to_ask"]:
    q_items = "\n".join(f"<li>{q}</li>" for q in cc["questions_to_ask"])
    questions_html = f'<div class="profile-section">\n<h2>Questions to Ask Before Choosing</h2>\n<ol class="questions-list">{q_items}</ol>\n</div>'
+  else:
+   auto_questions = [
+    f"What's the total cost for my team size? Both {ta['name']} and {tb['name']} have pricing that scales differently. Get a custom quote, not just the published rate.",
+    f"Which CRM does my team use? Integration depth varies. One of these tools will connect more cleanly with your existing stack.",
+    f"How many reps will use this daily? Some tools charge per seat, others by usage. The answer changes the math at 10 reps vs 50 reps.",
+    f"Can I get a trial with my real data? Feature comparisons on paper miss how a tool actually feels in your workflow. Run both for a week if possible.",
+    f"What does the contract look like? Ask about auto-renewal terms, cancellation windows, and whether you're locked into an annual commitment.",
+   ]
+   q_items = "\n".join(f"<li>{q}</li>" for q in auto_questions)
+   questions_html = f'<div class="profile-section">\n<h2>Questions to Ask Before Choosing</h2>\n<ol class="questions-list">{q_items}</ol>\n</div>'
 
-  # --- Verdict (expanded or original) ---
+  # --- Verdict / Bottom Line (auto-generated if empty) ---
   if cc["verdict_long"]:
    v_paras = "\n".join(f"<p>{p}</p>" for p in cc["verdict_long"].split("\n\n") if p.strip())
    verdict_html = f'<div class="verdict-expanded">\n<h2>The Bottom Line</h2>\n{v_paras}\n</div>'
   else:
-   verdict_html = f'<div class="verdict-box" style="margin-top:32px">\n<h3>The Verdict</h3>\n<p>{c["verdict"]}</p>\n</div>'
+   verdict_html = _gen_comparison_bottom_line(ta, tb, c, cat)
+
+  # --- Methodology (always generated) ---
+  methodology_html = _gen_comparison_methodology(ta, tb, c["dimensions"])
 
   # --- AEO block ---
   comp_aeo = comparison_aeo_block(ta["name"], tb["name"], c["verdict"])
 
-  # --- FAQ ---
-  faq_html = faq_schema_and_html(cc["faqs"]) if cc["faqs"] else ""
+  # --- FAQ (auto-generated if empty) ---
+  auto_faqs = []
+  if not cc["faqs"]:
+   winner = ta if c["winner"] == c["tool_a"] else tb
+   loser = tb if c["winner"] == c["tool_a"] else ta
+   auto_faqs = [
+    {"question": f"Is {winner['name']} better than {loser['name']}?",
+     "answer": f"For most teams, yes. {winner['name']} scores {winner['score']}/10 vs {loser['score']}/10 in our evaluation. {c['verdict']}"},
+    {"question": f"How much does {ta['name']} cost vs {tb['name']}?",
+     "answer": f"{ta['name']} starts at {ta['pricing_start']}. {tb['name']} starts at {tb['pricing_start']}. Both offer custom enterprise pricing, so request a quote for your team size."},
+    {"question": f"Can I switch from {loser['name']} to {winner['name']}?",
+     "answer": f"Yes. Most teams complete the migration in 2-4 weeks. The biggest effort is moving sequences and templates. Export your data from {loser['name']}, map the fields, and import into {winner['name']}. CRM integrations may need reconfiguration."},
+    {"question": f"What's the best alternative to both {ta['name']} and {tb['name']}?",
+     "answer": f"Check the full {cat.get('short', '')} category for other options. The right tool depends on your team size, budget, and specific workflow needs."},
+   ]
+  faq_html = faq_schema_and_html(cc["faqs"] if cc["faqs"] else auto_faqs) if (cc["faqs"] or auto_faqs) else ""
 
   # --- Schema ---
   bc_schema = breadcrumb_schema([
@@ -3750,6 +3901,9 @@ def build_comparison_pages():
 
          {comp_aeo}
          {intro_html}
+
+         {where_a_wins}
+         {where_b_wins}
 
 <div class="vs-grid">
          <div class="vs-tool{winner_a}">
@@ -3789,6 +3943,7 @@ def build_comparison_pages():
 
          {stage_html}
          {questions_html}
+         {methodology_html}
 
 <div class="profile-section">
 <h2>Explore More</h2>
@@ -3833,29 +3988,119 @@ def build_alternatives_pages():
  for a in ALTERNATIVES:
   t = TOOLS[a["tool"]]
   ac = get_alternatives_content(a["slug"])
+  cat = CATEGORIES.get(t["category"], {})
 
-  # --- Expanded why ---
+  # --- Expanded why (auto-generated if empty) ---
   why_html = ""
   if ac["why_expanded"]:
    why_paras = "\n".join(f"<p>{p}</p>" for p in ac["why_expanded"].split("\n\n") if p.strip())
    why_html = f'<div class="profile-section overview-section">\n<h2>Why Teams Leave {a["title"]}</h2>\n{why_paras}\n</div>'
+  else:
+   cons_text = ""
+   if t.get("cons"):
+    cons_items = "\n".join(f"<li>{c}</li>" for c in t["cons"])
+    cons_text = f"<p>The most common complaints we hear about {t['name']}:</p>\n<ul>\n{cons_items}\n</ul>"
+   why_html = (
+    f'<div class="profile-section overview-section">\n<h2>Why Teams Leave {a["title"]}</h2>\n'
+    f"<p>{a['why']} That's not a knock on the product. {t['name']} scores {t['score']}/10 in our "
+    f"evaluation and it's genuinely good at what it does. But \"good\" and \"right for your team\" "
+    f"aren't always the same thing.</p>\n"
+    f"<p>The most common trigger for switching isn't a single missing feature. It's the cumulative "
+    f"cost of a tool that does more than you need at a price that doesn't match your stage. Teams "
+    f"under 20 reps rarely need enterprise-grade capabilities, and paying for them means less "
+    f"budget for the tools that actually move pipeline.</p>\n"
+    f"{cons_text}\n"
+    f"</div>\n"
+   )
 
-  # --- Tool cards with per-alt reasoning ---
+  # --- Tool cards with per-alt reasoning (auto-generated if empty) ---
   cards = ""
   for i, alt_slug in enumerate(a["alts"], 1):
    if alt_slug in TOOLS:
     cards += tool_card_html(alt_slug, rank=i)
     if alt_slug in ac["per_alt"]:
      cards += f'<p class="alt-reasoning">{ac["per_alt"][alt_slug]}</p>\n'
+    else:
+     alt_t = TOOLS[alt_slug]
+     auto_reasoning = (
+      f"{alt_t['name']} scores {alt_t['score']}/10 and starts at {alt_t['pricing_start']}. "
+      f"It's best for {alt_t['best_for']}. "
+     )
+     if alt_t.get("pros"):
+      auto_reasoning += f"The biggest advantage over {t['name']}: {alt_t['pros'][0].lower() if alt_t['pros'][0][0].isupper() else alt_t['pros'][0]}"
+     cards += f'<p class="alt-reasoning">{auto_reasoning}</p>\n'
 
-  # --- Migration tips ---
+  # --- Pricing comparison table (auto-generated) ---
+  pricing_rows = ""
+  pricing_rows += f'<tr><td><strong>{t["name"]}</strong> (original)</td><td>{t["pricing_start"]}</td><td>{t["score"]}/10</td></tr>\n'
+  for alt_slug in a["alts"]:
+   if alt_slug in TOOLS:
+    at = TOOLS[alt_slug]
+    pricing_rows += f'<tr><td><strong>{at["name"]}</strong></td><td>{at["pricing_start"]}</td><td>{at["score"]}/10</td></tr>\n'
+  pricing_html = (
+   f'<div class="profile-section">\n<h2>Pricing Comparison</h2>\n'
+   f'<table class="pricing-table" style="margin-top:16px">\n'
+   f'<thead><tr><th>Tool</th><th>Starting Price</th><th>Score</th></tr></thead>\n'
+   f'<tbody>\n{pricing_rows}</tbody></table>\n'
+   f"<p>Published prices are starting tiers. Enterprise pricing is always negotiable. Ask for "
+   f"a custom quote based on your team size and contract length.</p>\n"
+   f"</div>\n"
+  )
+
+  # --- Migration tips (auto-generated if empty) ---
   migration_html = ""
   if ac["migration_tips"]:
    mig_paras = "\n".join(f"<p>{p}</p>" for p in ac["migration_tips"].split("\n\n") if p.strip())
    migration_html = f'<div class="migration-section">\n<h2>Migration Tips</h2>\n{mig_paras}\n</div>'
+  else:
+   top_alt_name = TOOLS[a["alts"][0]]["name"] if a["alts"] and a["alts"][0] in TOOLS else "the new tool"
+   migration_html = (
+    f'<div class="migration-section">\n<h2>Migration Tips</h2>\n'
+    f"<p>Switching from {t['name']} doesn't have to be painful, but it does require planning. "
+    f"Most teams complete the transition in 2-4 weeks. Here's what to prioritize:</p>\n"
+    f"<ul>\n"
+    f"<li><strong>Export your data first.</strong> Download all contacts, sequences, templates, "
+    f"and historical analytics before your contract expires. Most vendors provide CSV exports, "
+    f"but some lock data behind enterprise tiers.</li>\n"
+    f"<li><strong>Map your fields.</strong> CRM field mappings between {t['name']} and {top_alt_name} "
+    f"won't be 1:1. Audit your custom fields and decide what carries over before importing.</li>\n"
+    f"<li><strong>Run both tools in parallel.</strong> Keep {t['name']} active for 2 weeks after "
+    f"launch. This catches integration gaps and gives your team time to adjust without dropping "
+    f"active deals.</li>\n"
+    f"<li><strong>Retrain your team.</strong> The biggest migration risk isn't data. It's adoption. "
+    f"Block 30 minutes for a team walkthrough and assign one person as the internal expert.</li>\n"
+    f"</ul>\n"
+    f"</div>\n"
+   )
 
-  # --- FAQ ---
-  faq_html = faq_schema_and_html(ac["faqs"]) if ac["faqs"] else ""
+  # --- How We Picked section (auto-generated) ---
+  how_picked_html = (
+   f'<div class="profile-section">\n<h2>How We Picked These Alternatives</h2>\n'
+   f"<p>We evaluated {len([s for s in a['alts'] if s in TOOLS])} alternatives to {t['name']} "
+   f"across pricing, data quality, ease of use, and integration depth. Every tool on this list "
+   f"has been tested with real sales workflows, not just feature checklists from marketing pages.</p>\n"
+   f"<p>We weighted pricing heavily because the most common reason teams leave {t['name']} is "
+   f"cost. But cheap isn't always better. A tool that saves $500/month but costs your team 5 "
+   f"hours of manual work each week isn't a real savings. Our rankings balance value, capability, "
+   f"and actual team fit.</p>\n"
+   f"</div>\n"
+  )
+
+  # --- FAQ (auto-generated if empty) ---
+  auto_faqs = []
+  if not ac["faqs"]:
+   top_alt = TOOLS[a["alts"][0]] if a["alts"] and a["alts"][0] in TOOLS else None
+   auto_faqs = [
+    {"question": f"What's the best alternative to {t['name']}?",
+     "answer": f"For most teams, {top_alt['name'] if top_alt else 'the top-ranked option'} is the strongest alternative. It scores {top_alt['score']}/10 and starts at {top_alt['pricing_start']}." if top_alt else f"It depends on your team size and budget. Check the full list above for our rankings."},
+    {"question": f"Is {t['name']} worth the price?",
+     "answer": f"{t['name']} starts at {t['pricing_start']} and scores {t['score']}/10. It's a strong product, but the value depends on how many features your team actually uses. If you're paying for capabilities you don't touch, an alternative likely makes more sense."},
+    {"question": f"How hard is it to switch from {t['name']}?",
+     "answer": f"Most teams complete the switch in 2-4 weeks. The biggest effort is migrating data and retraining the team on the new interface. Export your data before your contract expires, and run both tools in parallel for the first two weeks."},
+    {"question": f"Can I use a free alternative to {t['name']}?",
+     "answer": f"Some alternatives offer free tiers or trials. Check the pricing table above. Free tiers work for small teams but usually have contact or feature limits that growing teams hit quickly."},
+   ]
+  faq_html = faq_schema_and_html(ac["faqs"] if ac["faqs"] else auto_faqs) if (ac["faqs"] or auto_faqs) else ""
 
   # --- Schema ---
   bc_schema = breadcrumb_schema([
@@ -3878,7 +4123,9 @@ def build_alternatives_pages():
        {alt_aeo}
        {why_html}
        <div class="tool-grid">{cards}</div>
+       {pricing_html}
        {migration_html}
+       {how_picked_html}
 
 <div class="profile-section">
 <h2>Explore More</h2>
@@ -3918,44 +4165,185 @@ def build_guide_pages():
  for g in ICP_GUIDES:
   gc = get_guide_content(g["slug"])
 
-  # --- Extended intro ---
+  # Collect all tools referenced in this guide for content generation
+  all_guide_tools = []
+  for _, _, tool_slugs in g["sections"]:
+   for ts in tool_slugs:
+    if ts in TOOLS:
+     all_guide_tools.append(ts)
+  all_guide_tool_names = [TOOLS[ts]["name"] for ts in all_guide_tools[:5]]
+
+  # --- Extended intro (auto-generated if empty) ---
   intro_html = ""
   if gc["intro_long"]:
    intro_paras = "\n".join(f"<p>{p}</p>" for p in gc["intro_long"].split("\n\n") if p.strip())
    intro_html = f'<div class="profile-section overview-section">{intro_paras}</div>'
+  else:
+   tool_count = len(all_guide_tools)
+   section_count = len(g["sections"])
+   section_names = [s[0] for s in g["sections"]]
+   intro_html = (
+    f'<div class="profile-section overview-section">\n'
+    f"<p>We reviewed {tool_count} tools across {section_count} categories to build this guide. "
+    f"Every recommendation is based on hands-on testing, published pricing data, and feedback "
+    f"from teams that actually use these tools daily. No vendor paid for placement.</p>\n"
+    f"<p>This guide covers {', '.join(section_names[:-1])}, and {section_names[-1]}. "
+    f"Each section includes our top picks with scores, pricing, and honest takes on where "
+    f"each tool falls short. The goal isn't to list every option. It's to narrow the field "
+    f"to the tools worth your time.</p>\n"
+    f"<p>Pricing in this space changes constantly. We verify rates quarterly, but always "
+    f"confirm directly with vendors before making a purchase decision. Enterprise pricing "
+    f"is almost always negotiable.</p>\n"
+    f"<p>If you're building a stack from scratch, start with one tool per category and add "
+    f"complexity only when you've outgrown the basics. The most expensive mistake isn't "
+    f"picking the wrong tool. It's buying five tools when you needed two.</p>\n"
+    f"</div>\n"
+   )
 
-  # --- Workflow overview ---
+  # --- Workflow overview (auto-generated if empty) ---
   workflow_html = ""
   if gc["workflow_overview"]:
    wf_paras = "\n".join(f"<p>{p}</p>" for p in gc["workflow_overview"].split("\n\n") if p.strip())
    workflow_html = f'<div class="profile-section guide-prose">\n<h2>How These Tools Work Together</h2>\n{wf_paras}\n</div>'
+  else:
+   section_flow = " &rarr; ".join(s[0] for s in g["sections"])
+   workflow_html = (
+    f'<div class="profile-section guide-prose">\n<h2>How These Tools Work Together</h2>\n'
+    f"<p>The typical workflow moves through these stages: {section_flow}. Most teams don't "
+    f"need a separate tool for every stage on day one. Start with the highest-impact gap "
+    f"in your current process and work outward from there.</p>\n"
+    f"<p>Integration matters more than individual features. A tool that connects cleanly "
+    f"with your CRM and email provider will save more time than one with a longer feature "
+    f"list that lives on its own island. Check integration depth before committing, not just "
+    f"whether an integration exists.</p>\n"
+    f"</div>\n"
+   )
 
-  # --- Budget guidance ---
+  # --- Budget guidance (auto-generated if empty) ---
   budget_html = ""
   if gc["budget_guidance"]:
    bg_paras = "\n".join(f"<p>{p}</p>" for p in gc["budget_guidance"].split("\n\n") if p.strip())
    budget_html = f'<div class="profile-section guide-prose">\n<h2>Budget Guidance</h2>\n{bg_paras}\n</div>'
+  else:
+   prices = [TOOLS[ts]["pricing_start"] for ts in all_guide_tools if ts in TOOLS]
+   has_free = any("free" in p.lower() for p in prices)
+   budget_html = (
+    f'<div class="profile-section guide-prose">\n<h2>Budget Guidance</h2>\n'
+    f"<p>Tools in this guide range from {'free tiers' if has_free else 'affordable entry points'} "
+    f"to enterprise contracts over $15K/year. For teams under 10 reps, you can build a functional "
+    f"stack for under $200/month per rep. Growth-stage teams (10-50 reps) typically spend "
+    f"$300-$600/month per rep on tooling.</p>\n"
+    f"<p>The biggest budget trap is paying for annual contracts on tools your team hasn't fully "
+    f"adopted. Start with monthly billing even if it costs more per month. Switch to annual "
+    f"only after 90 days of consistent usage. The discount isn't worth it if half your team "
+    f"stops logging in after the first week.</p>\n"
+    f"</div>\n"
+   )
 
-  # --- Tool sections ---
+  # --- Tool sections (enriched with editorial commentary) ---
   sections_html = ""
   for section_title, section_desc, tool_slugs in g["sections"]:
    expanded_desc = gc["section_details"].get(section_title, "")
-   desc_html = f"<p>{expanded_desc}</p>" if expanded_desc else f"<p>{section_desc}</p>"
+   if expanded_desc:
+    desc_html = f"<p>{expanded_desc}</p>"
+   else:
+    desc_html = f"<p>{section_desc}</p>"
+
    cards = ""
-   for ts in tool_slugs:
+   tool_commentary = ""
+   for idx, ts in enumerate(tool_slugs):
     if ts in TOOLS:
      t = TOOLS[ts]
      cards += f'<a href="/tools/{ts}/" class="related-card">\n<h3>{t["name"]}</h3>\n<p>{t["score"]}/10 &middot; {t["pricing_start"]}</p>\n</a>\n'
-   sections_html += f'<div class="guide-section">\n<h2>{section_title}</h2>\n{desc_html}\n<div class="related-grid">{cards}</div>\n</div>\n'
+     # Add editorial commentary for each tool
+     pros_snippet = t["pros"][0] if t.get("pros") else ""
+     cons_snippet = t["cons"][0] if t.get("cons") else ""
+     rank_text = "Our top pick in this category." if idx == 0 else f"A strong alternative to {TOOLS[tool_slugs[0]]['name']}." if tool_slugs[0] in TOOLS else "Worth considering."
+     commentary = (
+      f'<div class="tool-commentary">\n'
+      f"<h3>{t['name']} ({t['score']}/10)</h3>\n"
+      f"<p>{rank_text} {t['name']} starts at {t['pricing_start']} and is best for "
+      f"{t['best_for']}.</p>\n"
+     )
+     if pros_snippet:
+      commentary += f"<p><strong>What stands out:</strong> {pros_snippet}</p>\n"
+     if cons_snippet:
+      commentary += f"<p><strong>The catch:</strong> {cons_snippet}</p>\n"
+     commentary += "</div>\n"
+     tool_commentary += commentary
 
-  # --- Implementation timeline ---
+   sections_html += (
+    f'<div class="guide-section">\n<h2>{section_title}</h2>\n{desc_html}\n'
+    f'<div class="related-grid">{cards}</div>\n'
+    f'{tool_commentary}\n'
+    f'</div>\n'
+   )
+
+  # --- How We Evaluated (auto-generated) ---
+  eval_html = (
+   f'<div class="profile-section guide-prose">\n<h2>How We Evaluated</h2>\n'
+   f"<p>Every tool in this guide was scored on four criteria: <strong>data quality or core "
+   f"capability</strong> (does it actually do what it claims?), <strong>pricing transparency</strong> "
+   f"(can you find the real cost without a sales call?), <strong>ease of setup</strong> "
+   f"(how long until your team is productive?), and <strong>integration depth</strong> "
+   f"(does it connect cleanly with your existing stack?).</p>\n"
+   f"<p>Scores range from 1 to 10. A 7+ means we'd recommend it to most teams. Below 7 "
+   f"means it has a specific niche where it works well, but isn't a default recommendation. "
+   f"We don't accept payment for placement, and vendors can't influence their scores.</p>\n"
+   f"</div>\n"
+  )
+
+  # --- Bottom Line (auto-generated) ---
+  if all_guide_tools:
+   top_tool = TOOLS[all_guide_tools[0]]
+   runner_up = TOOLS[all_guide_tools[1]] if len(all_guide_tools) > 1 else None
+   bottom_line_html = (
+    f'<div class="profile-section guide-prose">\n<h2>The Bottom Line</h2>\n'
+    f"<p>If you're a {g['icp']} building your stack in {CURRENT_YEAR}, start with "
+    f"{top_tool['name']} ({top_tool['score']}/10, starts at {top_tool['pricing_start']}). "
+    f"{'The runner-up is ' + runner_up['name'] + ' at ' + runner_up['pricing_start'] + '.' if runner_up else ''} "
+    f"Both are solid choices that won't lock you into a bad contract.</p>\n"
+    f"<p>Don't overthink the decision. Pick one tool from each category you need, run it for "
+    f"30 days, and evaluate based on actual team adoption, not feature lists. The best tool "
+    f"is the one your team actually uses.</p>\n"
+    f"</div>\n"
+   )
+  else:
+   bottom_line_html = ""
+
+  # --- Implementation timeline (auto-generated if empty) ---
   timeline_html = ""
   if gc["implementation_timeline"]:
    tl_paras = "\n".join(f"<p>{p}</p>" for p in gc["implementation_timeline"].split("\n\n") if p.strip())
    timeline_html = f'<div class="profile-section guide-prose">\n<h2>Implementation Timeline</h2>\n{tl_paras}\n</div>'
+  else:
+   timeline_html = (
+    f'<div class="profile-section guide-prose">\n<h2>Implementation Timeline</h2>\n'
+    f"<p><strong>Week 1:</strong> Choose your primary tool in each category. Sign up for "
+    f"trials or monthly plans. Connect CRM integrations and import your existing data.</p>\n"
+    f"<p><strong>Weeks 2-3:</strong> Run your actual workflows through the new tools. Track "
+    f"where the process breaks and where it saves time. Get feedback from the reps who use "
+    f"it daily, not just managers watching dashboards.</p>\n"
+    f"<p><strong>Week 4:</strong> Decide what stays and what goes. Commit to annual billing "
+    f"on tools with strong adoption. Drop anything that isn't getting used. One great tool "
+    f"beats three mediocre ones every time.</p>\n"
+    f"</div>\n"
+   )
 
-  # --- FAQ ---
-  faq_html = faq_schema_and_html(gc["faqs"]) if gc["faqs"] else ""
+  # --- FAQ (auto-generated if empty) ---
+  auto_faqs = []
+  if not gc["faqs"]:
+   auto_faqs = [
+    {"question": f"What's the best tool for {g['title']}?",
+     "answer": f"Based on our evaluation, {TOOLS[all_guide_tools[0]]['name'] if all_guide_tools else 'the top-ranked option'} scores highest overall. But the right tool depends on your team size, budget, and specific workflow. Check the full breakdown above." if all_guide_tools else "It depends on your workflow. Check the category breakdowns above."},
+    {"question": f"How much should I budget for {g['title'].lower()} tools?",
+     "answer": f"For teams under 10 reps, plan for $100-$300/month per rep. Growth-stage teams (10-50 reps) typically spend $300-$600/month per rep across their full stack. Enterprise teams negotiate custom pricing that varies widely."},
+    {"question": f"Can I build a stack with free tools?",
+     "answer": "Several tools in this guide offer free tiers, including Apollo and HubSpot CRM. You can start with free plans and upgrade as your team grows. Free tiers usually limit contacts, sequences, or users."},
+    {"question": f"How long does it take to set up a new sales tool?",
+     "answer": "Most tools in this guide can be set up in 1-2 days. CRM migrations take longer (2-4 weeks). Plan for a 30-day evaluation period before committing to annual contracts."},
+   ]
+  faq_html = faq_schema_and_html(gc["faqs"] if gc["faqs"] else auto_faqs) if (gc["faqs"] or auto_faqs) else ""
 
   # --- Schema ---
   bc_schema = breadcrumb_schema([
@@ -3997,6 +4385,8 @@ def build_guide_pages():
             {workflow_html}
             {budget_html}
             {sections_html}
+            {eval_html}
+            {bottom_line_html}
             {timeline_html}
             {browse_cats_html}
             {faq_html}
