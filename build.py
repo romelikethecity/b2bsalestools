@@ -3191,11 +3191,13 @@ def footer_html():
 </ul>
 </div>
 <div class="footer-col">
-<h3>Newsletters</h3>
+<h3>Career Intelligence</h3>
 <ul>
-<li><a href="https://thecroreport.com" target="_blank">The CRO Report</a></li>
-<li><a href="https://therevopsreport.com" target="_blank">The RevOps Report</a></li>
-<li><a href="https://theaimarketpulse.com" target="_blank">AI Market Pulse</a></li>
+<li><a href="https://thecroreport.com" target="_blank" rel="noopener">The CRO Report</a></li>
+<li><a href="https://therevopsreport.com" target="_blank" rel="noopener">RevOps Report</a></li>
+<li><a href="https://gtmepulse.com" target="_blank" rel="noopener">GTME Pulse</a></li>
+<li><a href="https://theaimarketpulse.com" target="_blank" rel="noopener">AI Market Pulse</a></li>
+<li><a href="https://datastackguide.com" target="_blank" rel="noopener">DataStack Guide</a></li>
 </ul>
 </div>
 </div>
