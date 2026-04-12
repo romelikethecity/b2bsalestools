@@ -3104,7 +3104,7 @@ def related_categories_html(current_slug, current_workflow):
   # HTML TEMPLATE HELPERS
   # =============================================================================
 
-def html_head(title, description, canonical_path="/", og_title=None):
+def html_head(title, description, canonical_path="/", og_title=None, og_type="website"):
  """Generate <head> content for a page."""
  og_t = og_title or title
  return f'''<meta charset="UTF-8">
@@ -3123,7 +3123,7 @@ def html_head(title, description, canonical_path="/", og_title=None):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/styles.css">
-<meta property="og:type" content="website">
+<meta property="og:type" content="{og_type}">
  <meta property="og:site_name" content="{SITE_NAME}">
  <meta property="og:title" content="{og_t}">
  <meta property="og:description" content="{description}">
@@ -3206,12 +3206,12 @@ def footer_html():
   </footer>'''
 
 
-def page_shell(title, description, canonical, body_content):
+def page_shell(title, description, canonical, body_content, og_type="website"):
  """Wrap body content in full HTML page."""
  return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
- {html_head(title, description, canonical)}
+ {html_head(title, description, canonical, og_type=og_type)}
 </head>
 <body>
  {nav_html()}
@@ -4466,7 +4466,7 @@ def build_article_pages():
             {reviewer_attribution_html()}
             {newsletter_cta_html(icp)}
             '''
-  page = page_shell(page_title, meta_desc, canonical, body)
+  page = page_shell(page_title, meta_desc, canonical, body, og_type="article")
   write_page(f"articles/{slug}/index.html", page)
   article_links.append((slug, title, intro))
 
