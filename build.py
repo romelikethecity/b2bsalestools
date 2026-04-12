@@ -2159,6 +2159,7 @@ ARTICLES = [
  "sales-tools-for-startups",
  "enterprise-sales-tools-guide",
  "sales-tools-for-agencies",
+ "gtm-engineer-tool-stack",
 ]
 
 
