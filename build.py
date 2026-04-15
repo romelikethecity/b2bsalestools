@@ -3132,7 +3132,15 @@ def html_head(title, description, canonical_path="/", og_title=None, og_type="we
 <meta name="twitter:card" content="summary_large_image">
  <meta name="twitter:title" content="{og_t}">
  <meta name="twitter:description" content="{description}">
- <meta name="twitter:image" content="{SITE_URL}/assets/social/twitter-card-1200x630.png">'''
+ <meta name="twitter:image" content="{SITE_URL}/assets/social/twitter-card-1200x630.png">
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-67FMT3HDLP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+    gtag('config', 'G-67FMT3HDLP');
+</script>'''
 
 
 ICON_SVG = '''<svg width="22" height="22" viewBox="0 0 64 64" aria-hidden="true">
