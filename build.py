@@ -3202,9 +3202,11 @@ def footer_html():
 <div class="footer-col">
 <h3>Career Intelligence</h3>
 <ul>
+<li><a href="https://thegtmindex.com" target="_blank" rel="noopener">The GTM Index</a></li>
 <li><a href="https://thecroreport.com" target="_blank" rel="noopener">The CRO Report</a></li>
 <li><a href="https://therevopsreport.com" target="_blank" rel="noopener">RevOps Report</a></li>
 <li><a href="https://gtmepulse.com" target="_blank" rel="noopener">GTME Pulse</a></li>
+<li><a href="https://sultanofsaas.com" target="_blank" rel="noopener">Sultan of SaaS</a></li>
 <li><a href="https://theaimarketpulse.com" target="_blank" rel="noopener">AI Market Pulse</a></li>
 <li><a href="https://datastackguide.com" target="_blank" rel="noopener">DataStack Guide</a></li>
 </ul>
