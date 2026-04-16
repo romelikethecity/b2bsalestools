@@ -3410,8 +3410,8 @@ def build_homepage():
 {newsletter_cta_html("VP Sales/CRO")}
 '''
    page = page_shell(
-    f"B2B Sales Tools: 130+ Tools Ranked & Compared ({CURRENT_YEAR})",
-    "Compare 130+ B2B sales tools across 22 categories. Data-driven reviews with pricing breakdowns, feature analysis, and honest verdicts for SDRs, AEs, managers, and CROs.",
+    f"B2B Sales Tools Compared: 130+ Software Options ({CURRENT_YEAR})",
+    f"{CURRENT_YEAR} B2B sales tools: Compare 130+ platforms across 22 categories. Pricing, features, and reviews help SDRs, AEs, and CROs choose wisely today.",
     "/",
     body
     )
