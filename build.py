@@ -158,6 +158,14 @@ CATEGORIES = {
  "primary_buyer": "VP Sales/CRO",
  "tools": ["11x", "artisan", "regie-ai", "aisdr", "agentforce", "relevance-ai", "chatgpt"],
  },
+ "voice-ai": {
+ "name": "Voice AI / Conversational Agents",
+ "short": "Voice AI",
+ "workflow": "Contact",
+ "what": "Voice AI infrastructure and turnkey agents for sales calls, qualification, and customer service",
+ "primary_buyer": "VP Sales/CRO",
+ "tools": ["vapi", "retell", "bland-ai", "elevenlabs-conversational"],
+ },
  "meeting-scheduling": {
  "name": "Meeting Scheduling & Routing",
  "short": "Scheduling",
@@ -891,6 +899,43 @@ T("relevance-ai", "Relevance AI", "ai-sdr", "https://www.relevanceai.com", 7.3,
  ["Requires technical setup", "Not turnkey like 11x", "Steeper learning curve"],
  ["AI agent builder", "Custom workflows", "Multi-step automations", "Integrations", "Analytics", "API access"],
  [("Free", "$0"), ("Pro", "$19/mo"), ("Team", "$199/mo"), ("Enterprise", "Custom")])
+
+# --- Voice AI ---
+T("vapi", "Vapi", "voice-ai", "https://vapi.ai", 8.4,
+ "Developer-first voice AI infrastructure. The closest thing to Stripe-for-voice. Best for engineering teams building custom voice agents at scale.",
+ "Engineering teams building production voice AI applications",
+ "$0.05/min",
+ ["Most flexible voice AI platform for builders", "Sub-second latency on most calls", "Pay-per-minute pricing scales linearly"],
+ ["Requires engineering capacity to build agents", "Not a turnkey product for non-technical buyers", "Compliance posture is buyer-managed, not vendor-managed"],
+ ["Voice agent infrastructure", "Real-time API", "Telephony integration", "Multi-LLM support", "Function calling", "Webhook callbacks"],
+ [("Pay-as-you-go", "$0.05-0.60/min"), ("Volume", "Custom"), ("Enterprise", "Custom")])
+
+T("retell", "Retell AI", "voice-ai", "https://www.retellai.com", 8.2,
+ "Voice AI platform for production conversational agents. Strong on natural turn-taking and low latency. Targets sales and customer service deployments.",
+ "Teams deploying voice AI for sales calls or customer service automation",
+ "$0.08/min",
+ ["Natural conversation flow with sub-second latency", "Strong production-readiness for enterprise deployments", "Telephony and webhook integrations included"],
+ ["Less flexible than Vapi for custom builds", "Pricing higher than infrastructure-only platforms", "Quality varies by use case fit"],
+ ["Voice agent platform", "Telephony", "Conversation analytics", "CRM integrations", "Multi-language support", "Production SLAs"],
+ [("Pay-as-you-go", "$0.08-0.30/min"), ("Volume", "Custom"), ("Enterprise", "Custom")])
+
+T("bland-ai", "Bland.ai", "voice-ai", "https://www.bland.ai", 8.0,
+ "Enterprise-focused voice AI for inbound and outbound calls. Strong at scaling phone-based use cases. Targets call centers and high-volume sales motions.",
+ "Enterprise teams running high-volume phone-based sales or service",
+ "$0.09/min",
+ ["Built for scale across call centers and sales teams", "Reliable for high-volume phone deployments", "Stronger compliance posture than infrastructure-only options"],
+ ["Less flexibility than developer-first platforms", "Higher cost at low volume", "Setup complexity for enterprise integrations"],
+ ["Voice agent platform", "Phone infrastructure", "Multi-channel orchestration", "Compliance features", "Enterprise integrations", "SLAs"],
+ [("Pay-as-you-go", "$0.09-0.40/min"), ("Volume", "Custom"), ("Enterprise", "Custom")])
+
+T("elevenlabs-conversational", "ElevenLabs Conversational AI", "voice-ai", "https://elevenlabs.io/conversational-ai", 8.3,
+ "Conversational voice agents from ElevenLabs combining best-in-class voice synthesis with end-to-end agent tooling. The voice quality is the differentiator.",
+ "Brand-conscious teams where voice quality and naturalness matter most",
+ "$0.10/min",
+ ["Best-in-class voice synthesis quality", "Natural-sounding voices indistinguishable from humans", "Strong brand customization options"],
+ ["Higher cost than infrastructure-only platforms", "Newer entrant to conversational AI versus voice synthesis", "Agent feature depth still maturing"],
+ ["Conversational agents", "Voice synthesis", "Multi-language support", "Phone integration", "API access", "Custom voices"],
+ [("Pay-as-you-go", "$0.10-0.50/min"), ("Volume", "Custom"), ("Enterprise", "Custom")])
 
 # --- Meeting Scheduling ---
 T("calendly", "Calendly", "meeting-scheduling", "https://www.calendly.com", 8.4,
@@ -2073,6 +2118,13 @@ ICP_GUIDES = [
  ("Fully Autonomous", "These platforms take over outbound entirely. You set targeting criteria, and the AI handles research, writing, and sending. It sounds great on a demo. In practice, you're trusting a black box with your domain reputation and brand voice. 11x is the most ambitious, but at $5K+/mo you're paying enterprise prices for technology that's still finding its legs. Artisan costs less and bundles its own contact database, but customization is limited and the sales process itself is aggressive enough to raise eyebrows.", ["11x", "artisan"]),
  ("Hybrid Approach", "AiSDR sits between full autonomy and traditional sequencing. It'll research leads and write personalized emails, but gives you more control over what goes out. The quarterly contracts are a big differentiator when competitors want annual commitments. The personalization engine is solid for the price. The trade-off is a smaller database and less brand recognition, but for teams testing AI outbound without betting the farm, it's the lowest-risk entry point.", ["aisdr"]),
  ("Build Your Own", "Here's the thing most AI SDR vendors won't tell you: you can build a better system yourself. Apollo for data, Clay for enrichment and research, Instantly for sending. Total cost is $200-500/mo instead of $2K-5K/mo, and you control every step. The downside is setup time and maintenance. But if you've got someone technical on the team, this stack outperforms dedicated AI SDRs on personalization quality because you're choosing the prompts, the data sources, and the sending rules. It's not autonomous, but it's transparent.", ["apollo", "clay", "instantly"]),
+ ]},
+ {"slug": "best-voice-ai-tools", "title": "Best Voice AI Tools", "icp": "VP Sales/CRO",
+ "intro": "Voice AI moved from demo to production in the last 18 months, but the gap between demo-quality and production-quality is meaningful. Three categories matter: developer infrastructure for teams building custom agents, turnkey platforms for production deployments, and brand-quality voice for teams where naturalness drives conversion. Here is the honest breakdown of each.",
+ "sections": [
+ ("Developer Infrastructure", "Vapi is the closest thing to Stripe-for-voice. The pay-per-minute economics ($0.05-0.60/min) scale linearly, the latency is sub-second on most calls, and the API surface is the most flexible in the category. The catch is that you need engineering capacity. Vapi gives you the building blocks; you build the agent. For teams with developers who want maximum control and lower marginal cost at high volume, Vapi is the default choice.", ["vapi"]),
+ ("Production Voice Platforms", "Retell AI and Bland.ai compete in the production-ready turnkey tier. Retell is the more polished option for natural conversation flow, with strong production-readiness and faster setup than infrastructure platforms. Bland is built for high-volume phone deployments with stronger enterprise features and compliance posture. Pricing for both lands $0.08-0.40/min depending on volume. For teams that want voice AI without engineering investment, these are the two to evaluate.", ["retell", "bland-ai"]),
+ ("Brand-Quality Voice", "ElevenLabs Conversational AI wins on voice quality. The synthesis is best-in-class, indistinguishable from human voices in scripted readings and very close in conversational flow. The cost is higher ($0.10-0.50/min) and the agent feature depth is still maturing versus pure-play voice AI platforms, but for brand-conscious deployments where voice quality drives conversion, ElevenLabs is the clearest pick. The trade-off is paying for voice quality you may not need at scale.", ["elevenlabs-conversational"]),
  ]},
  {"slug": "best-cold-email-outreach-tools", "title": "Best Cold Email Outreach Tools in 2026", "icp": "SDR/BDR",
  "intro": "Cold email still works. But deliverability is harder than ever. Google and Microsoft are cracking down on bulk senders, and the tools you pick determine whether your sequences land in inboxes or spam folders. The difference between a 40% open rate and a 4% open rate often comes down to infrastructure: warmup networks, sending limits, inbox rotation, and domain reputation monitoring. Here's what actually matters when choosing a cold email platform in 2026.",
