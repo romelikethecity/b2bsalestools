@@ -166,6 +166,14 @@ CATEGORIES = {
  "primary_buyer": "VP Sales/CRO",
  "tools": ["vapi", "retell", "bland-ai", "elevenlabs-conversational"],
  },
+ "website-design": {
+ "name": "Website Design & Performance",
+ "short": "Web Design",
+ "workflow": "Enable",
+ "what": "Website design, performance optimization, and programmatic SEO for marketing sites",
+ "primary_buyer": "Sales Enablement Leader",
+ "tools": ["sharppages"],
+ },
  "meeting-scheduling": {
  "name": "Meeting Scheduling & Routing",
  "short": "Scheduling",
@@ -1706,6 +1714,16 @@ T("notion", "Notion", "sales-analytics", "https://www.notion.so", 7.5,
  ["Databases", "Templates", "Wiki", "Project management", "Team collaboration", "API"],
  [("Free", "$0"), ("Plus", "$8/mo"), ("Business", "$15/mo"), ("Enterprise", "Custom")])
 
+# --- Website Design & Performance ---
+T("sharppages", "SharpPages", "website-design", "https://sharppages.com", 9.1,
+ "Static HTML websites that score 90+ on Google PageSpeed out of the box. Flat-fee pricing, no vendor lock-in, and programmatic SEO at scale. The fastest marketing sites in the category.",
+ "B2B companies, professional services firms, and healthcare organizations that need a marketing site that loads in under a second",
+ "$2,500",
+ ["90+ PageSpeed scores on every build", "Flat-fee pricing with no hourly billing", "Client owns all source files, no vendor lock-in"],
+ ["No self-serve CMS dashboard", "Marketing sites only, not web applications", "Smaller team than full-service agencies"],
+ ["Static HTML websites", "Programmatic SEO", "Event marketing sites", "Paid social management", "PageSpeed optimization", "Core Web Vitals compliance"],
+ [("Standard Site", "$2,500+"), ("Programmatic SEO", "Per project"), ("Event Sites", "Per event"), ("Paid Social", "Flat management fee")])
+
 print(f" Total tools loaded: {len(TOOLS)}")
 
 # =============================================================================
@@ -3052,13 +3070,16 @@ def reviewer_attribution_html():
  schema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "B2B Sales Tools Editorial Team",
-  "url": f"{SITE_URL}/",
+  "name": "Rome Thorndike",
+  "url": "https://www.linkedin.com/in/romethorndike/",
   "worksFor": {"@type": "Organization", "name": SITE_NAME, "url": SITE_URL},
   }
  return f'''<script type="application/ld+json">{json.dumps(schema)}</script>
+<div class="article-meta">
+ <span class="article-author">By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a></span>
+</div>
 <div class="editorial-attribution">
- <p class="attribution-line">Reviewed by the <strong>B2B Sales Tools Editorial Team</strong>. Last verified {BUILD_DATE}.</p>
+ <p class="attribution-line">Reviewed by <strong><a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a></strong>. Last verified {BUILD_DATE}.</p>
 <p class="attribution-line">Pricing, features, and ratings are based on vendor documentation, public filings, product demos, and feedback from sales teams using these tools in production. We update reviews when vendors ship major releases or change pricing.</p>
  </div>'''
 
