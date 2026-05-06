@@ -448,4 +448,202 @@ HOME_SERVICES_SAAS_LANDING = {
     ],
 }
 
-HOME_SERVICES_AI_LANDING = {}
+HOME_SERVICES_AI_LANDING = {
+    "hero_verdict": (
+        "Avoca leads inbound AI voice for ServiceTitan-integrated mid-large operations. Hatch dominates multi-channel "
+        "CSR (voice plus SMS plus email) for established shops. Goodcall and Rosie compete for SMBs and owner-"
+        "operators on price and ease of setup. Trillet is the budget option at $49 per month. Sera Systems is the "
+        "AI-native FSM challenger trying to displace ServiceTitan. Rilla owns AI sales coaching for in-home "
+        "replacement-and-install reps. LeadTruffle and Chirp focus on lead qualification and customer messaging "
+        "respectively.\n\n"
+        "ServiceTitan's Vera AI is mentioned but does not get a standalone page in this Wave 1 review because it "
+        "is a feature inside ServiceTitan, not a standalone vendor. We cover it inside the ServiceTitan profile."
+    ),
+
+    "methodology": (
+        "We evaluated each AI tool on six criteria. Voice quality and conversational handling (does it sound human, "
+        "does it handle interruptions, does it know when to escalate?). FSM integration (ServiceTitan, Jobber, "
+        "Housecall Pro, FieldEdge?). After-hours and overflow coverage. Spanish-language support (significant for "
+        "a meaningful share of trades businesses). ROI math (how many missed calls recovered, what dollar value at "
+        "typical close rates and ticket sizes). Pricing model fit (subscription vs. usage, per-minute vs. per-call). "
+        "Pricing data verified against vendor sites and recent customer reports as of 2026-05-05."
+    ),
+
+    "cluster_intros": {
+        "ai-receptionist": (
+            "AI receptionists answer calls when humans cannot. The category has matured fast: Avoca raised at a "
+            "$1B valuation in April 2026 on the back of high-volume residential trades adoption. Goodcall, Rosie, "
+            "and Trillet compete at the SMB end on configurability and price. The ROI math is the strongest in any "
+            "AI-for-trades category: a 10-tech HVAC shop missing 30-40% of inbound calls is leaving $30,000-$60,000 "
+            "of monthly revenue on the table. AI receptionist services running $500-$2,000 per month typically "
+            "recover most of that within 30 days."
+        ),
+        "csr-platform": (
+            "Customer service platforms extend AI from voice into SMS, email, and review-site responses. Hatch is "
+            "the leader with 2,000+ home service customers on a multi-channel CSR platform. LeadTruffle focuses "
+            "on lead qualification specifically with Thumbtack and Angi integrations. Chirp covers SMS automation "
+            "for trades. The category overlaps with AI receptionist on inbound voice but extends the workflow "
+            "into asynchronous channels where customers prefer to communicate now."
+        ),
+        "sales-coaching": (
+            "AI sales coaching is a niche but high-value category. Rilla owns the in-home sales rep coaching "
+            "segment: HVAC replacement, roofing, water treatment, and other trades where average ticket sizes are "
+            "$5,000-$30,000 and the rep walking the customer through options has outsized impact on close rate "
+            "and ticket size. Rilla records ride-along audio, transcribes, scores against a coaching framework, "
+            "and surfaces specific moments where the rep won or lost the deal. Pricing runs $200-$350 per rep per "
+            "month, which makes the 10-rep math close to $40,000 per year. For trades businesses with $5M+ in "
+            "in-home replacement revenue, the payback is fast."
+        ),
+        "ai-fsm": (
+            "AI-native FSM is the disruption play. Sera Systems built an FSM from the ground up with AI dispatch, "
+            "AI quoting, and AI customer matching as core features rather than add-ons. The pitch: instead of "
+            "buying ServiceTitan and bolting AI add-ons (Avoca, Hatch, etc.), buy a platform where the AI is the "
+            "operating system. Sera is winning specifically with new buyers in the 5-30 employee band who have "
+            "not yet committed to ServiceTitan. The wager is that AI-native FSM beats AI-bolted-on-FSM as AI "
+            "deepens. Whether that bet pays off in 2027+ is the most interesting open question in trades software."
+        ),
+    },
+
+    "buyer_framework": (
+        "Six things matter when picking AI tools for a US home services business.\n\n"
+        "Voice quality and conversational handling. Bad voice AI is a customer-experience disaster. Test the "
+        "vendor's product by calling it as a customer with a complex scenario (after-hours emergency, schedule "
+        "change, billing question). If it stumbles, your customers will too. Avoca, Goodcall, and Hatch all sound "
+        "credibly human. Lower-tier products are less polished and you can hear the difference.\n\n"
+        "FSM integration depth. AI receptionist that does not write the call data (customer info, job details, "
+        "appointment time) into your FSM is creating extra work for the office staff. Most major AI vendors "
+        "integrate with ServiceTitan, Jobber, and Housecall Pro. Avoca's ServiceTitan integration is the deepest "
+        "in the category. Verify integration depth specific to your FSM before buying.\n\n"
+        "After-hours and overflow coverage. The biggest revenue lift for AI receptionist comes from covering calls "
+        "humans cannot or will not (after 6pm, weekends, peak overflow during summer cooling season or winter "
+        "heating season). Make sure the AI is configured for those scenarios specifically and the handoff to a "
+        "human technician for true emergencies is reliable.\n\n"
+        "Spanish-language support. Roughly 18% of US households speak Spanish at home, and the percentage is much "
+        "higher in markets like Texas, Florida, California, Arizona, and the Southwest generally. AI tools with "
+        "credible Spanish-language support open up a meaningful customer segment for many trades businesses.\n\n"
+        "ROI math validation. Get the vendor's claims (calls recovered, revenue recovered, hours saved) and run a "
+        "30-60 day pilot on real call volume. Most vendors offer trial periods or pay-per-recovery pricing for new "
+        "customers. Validate the math on your specific business before committing to a 12-month contract.\n\n"
+        "Pricing model fit. Subscription pricing (Goodcall at $59-$199/mo, Trillet at $49/mo) makes cost predictable. "
+        "Usage-based pricing (Avoca, custom enterprise) scales with call volume, which can be either great or "
+        "expensive depending on your trajectory. Pay-per-recovery pricing (some vendors offer this for new "
+        "customers) is the easiest to justify because you only pay when the AI delivers value."
+    ),
+
+    "pricing_landscape": (
+        "AI receptionist pricing splits into three tiers. Budget ($49-$99 per month, Trillet, Rosie, Goodcall "
+        "Starter). Standard ($99-$199 per month, Goodcall Growth and Scale, Rosie higher tiers). Custom enterprise "
+        "(usage-based, Avoca, Hatch). The custom enterprise pricing typically lands $1,000-$5,000+ per month for "
+        "mid-large operations.\n\n"
+        "CSR platforms are mostly contact-sales pricing. Hatch is per-seat per-month with custom packaging. "
+        "LeadTruffle runs $229-$629 per month tiered by usage. Chirp is contact-sales but reports indicate "
+        "$300-$800 per month for typical SMB deployments.\n\n"
+        "AI sales coaching (Rilla) runs $199-$349 per rep per month, which works out to $40,000-$84,000 per year "
+        "for a 20-rep in-home sales team. The payback math depends on rep close rates: typical reports are 20-40% "
+        "close rate improvement and 10-25% average ticket size improvement, which more than covers the cost.\n\n"
+        "AI-native FSM (Sera) runs $399 per month for 4 users plus $149 per additional technician. For a 10-tech "
+        "shop that is $1,293 per month, comparable to Jobber Connect or Housecall Pro Essentials but with built-in "
+        "AI dispatch."
+    ),
+
+    "market_trends": (
+        "Three trends define this market in 2026.\n\n"
+        "AI receptionist is going mainstream fast. In 2024, AI answering was an experiment most trades businesses "
+        "had heard about but not adopted. By mid-2026, roughly 15-20% of mid-size HVAC and plumbing operations "
+        "have AI receptionist deployed and growing. The remaining holdouts are mostly waiting for voice quality "
+        "to clear a higher bar. Avoca's $1B valuation reflects investor confidence that the category will hit "
+        "50%+ adoption in 3-5 years.\n\n"
+        "ServiceTitan's Vera response is shaping the market. Vera ships AI dispatch, AI sales scoring, and AI "
+        "customer matching inside the ServiceTitan platform. The pitch to existing ServiceTitan customers is: "
+        "you do not need to add a separate AI vendor because we are building it natively. The independent AI "
+        "vendors (Avoca, Hatch, Goodcall) counter that purpose-built AI beats general-platform AI add-ons. "
+        "Customers running both ServiceTitan and Avoca report that the dedicated AI receptionist still outperforms "
+        "Vera's voice features as of mid-2026, but Vera is improving on a shorter cycle than independent vendors "
+        "have to ship.\n\n"
+        "AI sales coaching is concentrating around in-home replacement work. Rilla's customer base is heavily "
+        "weighted toward HVAC replacement, roofing, and water treatment where the in-home sales motion has the "
+        "most room for AI-coaching impact. Other coaching tools (Mosaik, Convirza, internal coaching platforms) "
+        "compete in adjacent niches but Rilla owns the trades-specific in-home sales segment."
+    ),
+
+    "by_the_numbers": [
+        {"number": "30-50%", "label": "of inbound calls go unanswered at the typical HVAC or plumbing shop"},
+        {"number": "$1B", "label": "Avoca AI valuation as of April 2026"},
+        {"number": "2,000+", "label": "home service customers on Hatch's CSR platform"},
+        {"number": "20-40%", "label": "close-rate improvement reported by Rilla customers in in-home sales coaching"},
+    ],
+
+    "comparisons": [
+        ("/compare/avoca-vs-hatch/", "Avoca vs Hatch"),
+        ("/compare/goodcall-vs-rosie/", "Goodcall vs Rosie"),
+        ("/compare/avoca-vs-goodcall/", "Avoca vs Goodcall"),
+        ("/compare/sera-vs-servicetitan/", "Sera vs ServiceTitan"),
+        ("/compare/hatch-vs-leadtruffle/", "Hatch vs LeadTruffle"),
+        ("/compare/avoca-vs-rilla/", "Avoca vs Rilla"),
+    ],
+
+    "guides": [
+        ("/guides/best-ai-call-answering-hvac/", "Best AI Call Answering for HVAC"),
+        ("/guides/best-ai-receptionist-home-services/", "Best AI Receptionist for Home Services"),
+        ("/guides/best-ai-tools-plumbing-companies/", "Best AI Tools for Plumbing Companies"),
+        ("/guides/best-ai-sales-coaching-in-home-sales/", "Best AI Sales Coaching for In-Home Sales"),
+    ],
+
+    "faqs": [
+        {
+            "question": "Will customers know they are talking to an AI?",
+            "answer": (
+                "The best AI receptionists (Avoca, Goodcall, Hatch) sound credibly human and most customers do not "
+                "know they are talking to AI unless they specifically ask. Some vendors disclose AI status by "
+                "default (more common in California and other privacy-regulated markets); others let you choose. "
+                "Lower-tier products sound robotic and customers can tell. The voice quality bar has risen "
+                "meaningfully in 2025-2026 and continues improving. If voice quality matters for your brand, "
+                "test before buying."
+            ),
+        },
+        {
+            "question": "Does AI receptionist work well after hours and on weekends?",
+            "answer": (
+                "Yes. After-hours and weekend coverage is where AI receptionist delivers the most revenue lift "
+                "because that is when human staff is unavailable. Most vendors recommend deploying AI for "
+                "after-hours and overflow first, then expanding to business-hours coverage once you trust the "
+                "performance. The ROI math on after-hours-only deployment is usually obvious: if you currently "
+                "miss 100% of after-hours calls and AI captures 70-80% of them, every recovered call is incremental "
+                "revenue."
+            ),
+        },
+        {
+            "question": "AI receptionist or hire a CSR?",
+            "answer": (
+                "Both, in most cases. The right comparison is not AI versus human but AI plus human. A typical "
+                "mid-size HVAC operation has one or two CSRs handling business-hours calls and AI handling after-"
+                "hours, weekend, and overflow. The combined cost is lower than hiring a third human CSR for "
+                "after-hours coverage and the AI does not call in sick. For shops too small to afford a CSR ($45,000-"
+                "$70,000 fully-loaded annually), AI is the only realistic call-coverage option."
+            ),
+        },
+        {
+            "question": "ServiceTitan Vera or buy Avoca separately?",
+            "answer": (
+                "Buy Avoca if you have ServiceTitan and you care about voice quality. As of mid-2026, Avoca's "
+                "dedicated AI receptionist still outperforms Vera's voice features in real-world tests, and the "
+                "ServiceTitan integration with Avoca is deep enough that the workflow feels native. Vera is "
+                "improving and may close the gap in 2027, but if you are buying for now, Avoca wins on quality. "
+                "If you have not committed to a separate AI receptionist budget, Vera is the path of least "
+                "resistance."
+            ),
+        },
+        {
+            "question": "How does Rilla coach reps?",
+            "answer": (
+                "Reps wear a small audio recorder on in-home sales calls. Rilla transcribes the audio, scores "
+                "the call against a coaching framework (open questions, customer pain identification, presenting "
+                "value, handling objections, asking for the close), and surfaces specific moments where the rep "
+                "won or lost the deal. Sales managers review the scored calls and use them in coaching sessions. "
+                "Rilla also generates aggregate reports (which reps are weakest on which skills, which scripts "
+                "are converting best). The product replaces the manual ride-along practice that worked but did "
+                "not scale; one sales manager can effectively coach 10-15 reps with Rilla versus 3-4 without."
+            ),
+        },
+    ],
+}
