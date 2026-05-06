@@ -1465,3 +1465,701 @@ COMPARISON_CONTENT_W1["harvey-vs-cocounsel"] = {
         },
     ],
 }
+
+
+# =============================================================================
+# Home Services SaaS comparisons
+# =============================================================================
+
+COMPARISON_CONTENT_W1["servicetitan-vs-jobber"] = {
+    "category": "hs-saas",
+    "last_verified": "2026-05-06",
+    "verdict": (
+        "ServiceTitan for $5M+ residential trades operations wanting comprehensive operational "
+        "depth. Jobber for 1-15 person SMB shops wanting transparent pricing and fast time-to-"
+        "value. Different product tiers, different price points; the choice rarely comes down "
+        "to feature comparison and almost always to revenue size and operational maturity."
+    ),
+    "intro": (
+        "ServiceTitan and Jobber target opposite ends of the residential trades software market. "
+        "ServiceTitan dominates the top with roughly 12,000 customers concentrated in $5M+ "
+        "operations. Jobber dominates the bottom with 200,000+ paying customers across small "
+        "trades shops worldwide.\n\n"
+        "Pricing: ServiceTitan custom enterprise typically $80,000-$200,000+ per year all-in "
+        "including implementation. Jobber Core at $39/mo, Connect at $119-169/mo, Grow at "
+        "$199-349/mo. The cost gap at typical SMB scale is 10-30x in ServiceTitan's favor on "
+        "list price."
+    ),
+    "dimensions": [
+        ["Pricing (entry)", "Custom $8K-$15K+/year", "$39/mo Core"],
+        ["Pricing (typical)", "Custom $80K-$200K+/year", "$169-$349/mo Connect/Grow"],
+        ["Implementation time", "60-90 days", "1-2 weeks"],
+        ["Implementation cost", "$15K-$40K", "Minimal/included"],
+        ["Best fit (revenue)", "$5M+ residential trades", "1-15 person shops, $750K-$3M"],
+        ["Mobile app", "Comprehensive, dense", "Best-in-class for SMB"],
+        ["Marketing automation", "Deep", "Functional, lighter"],
+        ["Reporting depth", "Deepest in residential trades", "Solid SMB reporting"],
+        ["Set pricing book", "Industry-leading", "Functional"],
+        ["Customer base", "12,000+ (largest residential operators)", "200,000+ (small trades)"],
+    ],
+    "a_wins": (
+        "**Operational depth at scale.** ServiceTitan was built around the operating model of "
+        "large residential trades operators: set pricing books, KPI dashboards, dispatcher "
+        "seats, marketing automation, membership management. The depth pays back at $5M+ "
+        "revenue.\n\n"
+        "**Set pricing book management.** Industry-leading capability for managing flat-rate "
+        "pricing across services, regional adjustments, markup logic, and easy updates across "
+        "the team.\n\n"
+        "**Marketing automation depth.** Review automation, online booking, customer messaging, "
+        "membership management, marketing analytics, and ad-platform integration that Jobber "
+        "does not match.\n\n"
+        "**Reporting comprehensiveness.** Technician performance, ticket size, close rate, "
+        "membership conversion, callback rate, marketing ROI. The deepest reporting in "
+        "residential trades software."
+    ),
+    "b_wins": (
+        "**Pricing transparency and predictability.** $39, $169, or $349 per month with no "
+        "custom-quote dance. Compare to ServiceTitan's custom pricing that requires sales "
+        "engagement and varies by operation profile.\n\n"
+        "**Time-to-value.** 1-2 weeks live. Compare to ServiceTitan's 60-90 day implementation "
+        "with $15,000-$40,000 in partner fees.\n\n"
+        "**SMB pricing fit.** A 5-tech operation pays $39-$169/month on Jobber. Same operation "
+        "on ServiceTitan would be $50,000-$100,000+ per year. The 50-100x cost differential "
+        "is the entire reason most SMB shops never consider ServiceTitan.\n\n"
+        "**Mobile app polish.** Jobber's mobile app is best-in-class for SMB residential "
+        "trades. ServiceTitan's mobile app is comprehensive but feels denser and less "
+        "polished for typical 1-2 technician daily use."
+    ),
+    "choose_a": (
+        "your residential trades operation is at $5M+ revenue, you have growth ambition that "
+        "requires the operational depth, or you are willing to invest in implementation to "
+        "build the ServiceTitan operating model."
+    ),
+    "choose_b": (
+        "you are 1-15 person shop, you want transparent pricing and fast onboarding, or you "
+        "are below $3M revenue where ServiceTitan's operational depth does not pay back."
+    ),
+    "pricing_scenario": (
+        "**3-tech HVAC, $750K revenue:** Jobber Connect $169/mo = $2,028/year. ServiceTitan "
+        "would not typically sell at this size; if it did, $40,000-$80,000/year. Jobber wins "
+        "by 20-40x on cost.\n\n"
+        "**10-tech HVAC, $3M revenue:** Jobber Grow $349/mo = $4,188/year. ServiceTitan custom "
+        "$50,000-$120,000/year. Jobber wins by 12-30x on cost. ServiceTitan delivers "
+        "operational depth that may justify the premium for growth-ambitious operators.\n\n"
+        "**25-tech HVAC, $7M revenue:** Jobber Grow scaled hits user-tier limits; would be on "
+        "Connect or higher tiers. ServiceTitan custom $100,000-$200,000+/year. ServiceTitan "
+        "wins on operational fit at this scale; Jobber bends past 15-20 attorneys typically."
+    ),
+    "integrations": (
+        "**ServiceTitan:** ServiceTitan Marketplace with deep integrations across payments, "
+        "marketing automation, accounting, business intelligence, AI add-ons (Vera, Avoca, "
+        "Hatch).\n\n"
+        "**Jobber:** Solid integrations with QuickBooks, Stripe, Calendly, Mailchimp, plus "
+        "trades-specific tools. Narrower than ServiceTitan but covers the SMB needs."
+    ),
+    "faqs": [
+        {
+            "question": "When does it make sense to leave Jobber for ServiceTitan?",
+            "answer": (
+                "When revenue passes $5M and operational complexity exceeds what Jobber Grow "
+                "supports. Common signals: dispatcher hiring, marketing automation needs beyond "
+                "Jobber's built-in tools, KPI reporting that requires custom calculations Jobber "
+                "does not deliver. Plan a 3-6 month transition with $30,000-$50,000 in "
+                "implementation costs."
+            ),
+        },
+        {
+            "question": "Can ServiceTitan work for a 5-tech residential operation?",
+            "answer": (
+                "Pricing and implementation overhead make it impractical at this size. "
+                "Operations $1-3M in revenue should run Jobber, Housecall Pro, or FieldEdge. "
+                "ServiceTitan's value compounds at $5M+ where the operational depth pays back."
+            ),
+        },
+        {
+            "question": "What is the realistic ServiceTitan ROI?",
+            "answer": (
+                "Hard to measure cleanly. ServiceTitan customers typically report 10-25% "
+                "revenue lift from set pricing optimization, marketing automation, and "
+                "dispatcher efficiency. For a $5M operation, that is $500K-$1.25M annually, "
+                "well above the $80,000-$200,000 platform cost. The risk is execution: many "
+                "operations buy ServiceTitan but do not invest in the operational changes "
+                "needed to capture the lift."
+            ),
+        },
+    ],
+}
+
+COMPARISON_CONTENT_W1["jobber-vs-housecallpro"] = {
+    "category": "hs-saas",
+    "last_verified": "2026-05-06",
+    "verdict": (
+        "Jobber for SMB residential trades wanting clean operational workflow and pricing "
+        "transparency. Housecall Pro for SMB residential trades prioritizing marketing "
+        "automation and customer experience features. The two are close enough that most "
+        "trades shops can pick either based on which strength matters more."
+    ),
+    "intro": (
+        "Jobber and Housecall Pro are the two leading SMB residential trades FSM platforms. "
+        "Both target 1-15 person shops with similar pricing structure and broadly comparable "
+        "feature sets. The differentiation is product personality: Jobber is operations-and-"
+        "pricing-driven, Housecall Pro is marketing-and-customer-experience-driven.\n\n"
+        "Pricing: Jobber Core at $39/mo, Connect at $119-169/mo, Grow at $199-349/mo. Housecall "
+        "Pro Basic at $49/mo, Essentials at $129/mo, Max+ at $279/mo. Pricing is comparable "
+        "across tiers; Housecall Pro is slightly more expensive at the top tier, slightly "
+        "cheaper at the middle tier."
+    ),
+    "dimensions": [
+        ["Pricing (entry)", "$39/mo Core", "$49/mo Basic"],
+        ["Pricing (mid)", "$119-169/mo Connect", "$129/mo Essentials"],
+        ["Pricing (top)", "$199-349/mo Grow", "$279/mo Max+"],
+        ["Mobile app polish", "Best-in-class SMB", "Strong, polished"],
+        ["Marketing automation", "Functional, lighter", "Strong, primary differentiator"],
+        ["Customer messaging", "Solid", "Strong, multi-channel built-in"],
+        ["Online booking widget", "Available", "Strong, primary feature"],
+        ["Review automation", "Functional", "Strong"],
+        ["Operational workflow", "Strong, primary differentiator", "Solid"],
+        ["Customer base", "200,000+ paying", "Large but smaller than Jobber"],
+    ],
+    "a_wins": (
+        "**Operational workflow polish.** Jobber's quote-to-invoice flow, dispatch UI, and "
+        "everyday operational features feel slightly cleaner than Housecall Pro's. For "
+        "operations focused on getting the trades work done efficiently, Jobber's polish on "
+        "core workflow shows.\n\n"
+        "**Mobile app for technicians.** Best-in-class for SMB residential trades. Polished "
+        "iOS and Android, clean information architecture, fast performance.\n\n"
+        "**Pricing transparency.** $39, $169, or $349 per month with clear feature differences "
+        "between tiers. Less custom-quote dance than Housecall Pro at higher tiers.\n\n"
+        "**Larger customer base.** 200,000+ paying customers across worldwide trades. More "
+        "battle-tested in diverse use cases."
+    ),
+    "b_wins": (
+        "**Marketing automation depth.** Review automation, online booking widget, customer "
+        "messaging across channels, and marketing-specific reporting. Jobber covers these but "
+        "less deeply than Housecall Pro.\n\n"
+        "**Customer experience features.** Customer portal, automated communications, "
+        "appointment reminders, technician ETA, and review request flow are polished and "
+        "extensive. For operations where customer experience drives competitive differentiation, "
+        "Housecall Pro is the stronger pick.\n\n"
+        "**All-in-one with built-in payments.** HouseCall Pro's built-in payment processing "
+        "and customer comms are tightly integrated. Jobber covers similar ground but feels "
+        "slightly more modular.\n\n"
+        "**Max+ tier competitive with ServiceTitan.** At $279/mo, Max+ delivers depth that "
+        "competes with ServiceTitan in the $2-5M revenue band. Jobber Grow at $349/mo competes "
+        "but feels more SMB-flavored at this tier."
+    ),
+    "choose_a": (
+        "you prioritize operational workflow polish, mobile app polish, and pricing "
+        "transparency. Jobber is the safer pick for trades operations focused on clean daily "
+        "work."
+    ),
+    "choose_b": (
+        "you prioritize marketing automation, customer experience features, and review-driven "
+        "growth. Housecall Pro is the better pick for trades operations focused on customer-"
+        "acquisition and marketing impact."
+    ),
+    "pricing_scenario": (
+        "**3-tech operation:** Jobber Core $39/mo or Housecall Pro Basic $49/mo. Marginal "
+        "price difference; choose by feature priority.\n\n"
+        "**8-tech operation:** Jobber Connect $169/mo or Housecall Pro Essentials $129/mo. "
+        "Housecall Pro is $40/mo cheaper but Jobber's mobile app polish may be worth the "
+        "premium.\n\n"
+        "**15-tech operation:** Jobber Grow $349/mo or Housecall Pro Max+ $279/mo. Housecall "
+        "Pro is $70/mo cheaper at this tier with stronger marketing automation. Jobber Grow "
+        "delivers stronger reporting and operational depth."
+    ),
+    "integrations": (
+        "**Jobber:** QuickBooks, Stripe, Calendly, Mailchimp, plus trades-specific tools.\n\n"
+        "**Housecall Pro:** QuickBooks, built-in payment processing, customer messaging, plus "
+        "marketing-automation integrations."
+    ),
+    "faqs": [
+        {
+            "question": "Which has the better mobile app?",
+            "answer": (
+                "Jobber, slightly. Both are polished for SMB residential trades but Jobber's "
+                "iOS and Android apps feel more refined for daily technician use. The gap is "
+                "small enough that either platform works well for typical 1-15 person shops."
+            ),
+        },
+        {
+            "question": "Which is cheaper for a 10-tech operation?",
+            "answer": (
+                "Housecall Pro, by $40-$70/month at typical tiers. Over 3 years, that is "
+                "$1,440-$2,520 in savings. Modest but real for SMB operations watching every "
+                "operating expense."
+            ),
+        },
+        {
+            "question": "Should I just pick the one with the marketing tools I want?",
+            "answer": (
+                "Yes, mostly. The operational workflow capabilities are close enough that most "
+                "operations get similar daily workflow value from either. Marketing automation "
+                "is where Housecall Pro pulls ahead, and that translates directly to customer "
+                "acquisition. If marketing is a priority, Housecall Pro. If operational "
+                "workflow polish is the priority, Jobber."
+            ),
+        },
+    ],
+}
+
+COMPARISON_CONTENT_W1["servicetitan-vs-housecallpro"] = {
+    "category": "hs-saas",
+    "last_verified": "2026-05-06",
+    "verdict": (
+        "ServiceTitan for $5M+ residential trades operations wanting maximum operational "
+        "depth. Housecall Pro for $1-5M operations or those prioritizing marketing automation "
+        "and customer experience. Housecall Pro Max+ at $279/mo competes head-to-head with "
+        "ServiceTitan in the $2-5M revenue band specifically."
+    ),
+    "intro": (
+        "ServiceTitan and Housecall Pro overlap in the $2-5M residential trades market where "
+        "Housecall Pro Max+ competes head-to-head with ServiceTitan's lower enterprise tiers. "
+        "Below $2M, ServiceTitan rarely sells; above $5M, ServiceTitan dominates. The contested "
+        "zone is where the comparison gets interesting.\n\n"
+        "Pricing: ServiceTitan custom enterprise $50,000-$200,000+ per year all-in including "
+        "implementation. Housecall Pro Max+ at $279/mo = $3,348/year. The cost gap at $2-5M "
+        "scale is meaningful (15-50x in Housecall Pro's favor) but ServiceTitan's operational "
+        "depth grows with revenue."
+    ),
+    "dimensions": [
+        ["Pricing (typical)", "Custom $50K-$200K+/year", "$279/mo Max+ = $3,348/year"],
+        ["Implementation time", "60-90 days", "1-2 weeks"],
+        ["Implementation cost", "$15K-$40K", "Minimal"],
+        ["Best fit (revenue)", "$5M+ residential trades", "$1-5M residential trades"],
+        ["Marketing automation", "Deepest in category", "Strong, primary feature"],
+        ["Set pricing book", "Industry-leading", "Solid"],
+        ["Customer experience", "Comprehensive", "Strong, marketing-driven"],
+        ["Reporting depth", "Deepest", "Solid"],
+        ["Mobile app", "Comprehensive, dense", "Polished, modern"],
+        ["Membership management", "Deep", "Strong"],
+    ],
+    "a_wins": (
+        "**Operational depth at scale.** ServiceTitan was built around the operating model of "
+        "$5M+ residential trades operations: dispatcher seats, KPI dashboards, marketing "
+        "analytics, technician performance comp tied to platform data. The depth pays back at "
+        "scale.\n\n"
+        "**Set pricing book management.** Industry-leading. Regional adjustments, markup logic, "
+        "tier-based pricing, easy updates across the team. Housecall Pro covers this but less "
+        "deeply.\n\n"
+        "**Reporting comprehensiveness.** Custom reports, calculated fields, technician scoring, "
+        "marketing attribution at depths Housecall Pro Max+ does not match.\n\n"
+        "**Enterprise procurement and integration ecosystem.** ServiceTitan Marketplace, deep "
+        "AI add-on ecosystem (Avoca, Hatch native integrations), and custom enterprise integrations."
+    ),
+    "b_wins": (
+        "**Pricing fit at $1-5M revenue.** $279/mo for full Max+ tier capability versus "
+        "ServiceTitan custom $50,000-$120,000+. The cost differential is meaningful at this "
+        "revenue range.\n\n"
+        "**Marketing automation polish.** Review automation, online booking, customer messaging "
+        "across channels, marketing-specific reporting all strong out of the box without "
+        "additional setup work.\n\n"
+        "**Time-to-value.** 1-2 weeks live versus 60-90 days for ServiceTitan. For operations "
+        "wanting fast platform deployment, Housecall Pro wins.\n\n"
+        "**Better fit for marketing-driven trades operations.** Operations focused on customer "
+        "acquisition through reviews, online presence, and customer experience get more value "
+        "from Housecall Pro than from ServiceTitan's broader operational depth."
+    ),
+    "choose_a": (
+        "your operation is $5M+ in revenue with growth ambition, you have budget for "
+        "implementation, and you want maximum operational depth across the business."
+    ),
+    "choose_b": (
+        "your operation is $1-5M in revenue, you prioritize marketing automation and customer "
+        "experience, you want fast time-to-value, or you cannot justify ServiceTitan's "
+        "implementation overhead at your size."
+    ),
+    "pricing_scenario": (
+        "**$2.5M HVAC operation:** Housecall Pro Max+ $3,348/year all-in. ServiceTitan custom "
+        "$50,000-$100,000/year all-in. ServiceTitan delivers more operational depth; whether "
+        "the 15-30x cost premium is worth it depends on growth trajectory.\n\n"
+        "**$5M HVAC operation:** Housecall Pro Max+ $3,348/year may not have enough depth at "
+        "this size. ServiceTitan custom $80,000-$150,000/year is the typical pick. Operations "
+        "at this scale benefit from ServiceTitan's depth more reliably.\n\n"
+        "**$10M HVAC operation:** Housecall Pro Max+ does not scale to this size cleanly. "
+        "ServiceTitan custom $120,000-$250,000+/year is the safer pick. Houescall Pro could "
+        "work but feels under-built for operational complexity at $10M+."
+    ),
+    "integrations": (
+        "**ServiceTitan:** ServiceTitan Marketplace, deep AI integrations (Avoca, Hatch), "
+        "marketing automation, accounting, business intelligence platforms.\n\n"
+        "**Housecall Pro:** QuickBooks, built-in payment processing, customer messaging, "
+        "marketing-automation tools, plus trades-specific integrations."
+    ),
+    "faqs": [
+        {
+            "question": "Can Housecall Pro replace ServiceTitan?",
+            "answer": (
+                "For operations under $5M revenue, often yes. Housecall Pro Max+ delivers most "
+                "of what ServiceTitan does at this scale at a fraction of the cost. Above $5M, "
+                "ServiceTitan's operational depth becomes hard to substitute. The exception: "
+                "operations heavily focused on marketing-driven customer acquisition where "
+                "Housecall Pro's marketing tools win on the metric that matters."
+            ),
+        },
+        {
+            "question": "What is the marketing automation difference?",
+            "answer": (
+                "Both are strong, but Housecall Pro is more user-friendly out of the box. "
+                "ServiceTitan's marketing tools require more configuration and benefit from a "
+                "marketing admin running the platform. Housecall Pro is set up for owner-"
+                "operators or small marketing teams to manage."
+            ),
+        },
+        {
+            "question": "When does the ServiceTitan investment pay back?",
+            "answer": (
+                "Above $5M revenue with execution discipline. Operations buying ServiceTitan and "
+                "investing in the operational changes (set pricing rollout, marketing "
+                "automation, technician scoring) typically see 10-25% revenue lift within 12-"
+                "18 months. Operations buying ServiceTitan without operational change see "
+                "the platform cost without the lift."
+            ),
+        },
+    ],
+}
+
+COMPARISON_CONTENT_W1["servicetitan-vs-fieldedge"] = {
+    "category": "hs-saas",
+    "last_verified": "2026-05-06",
+    "verdict": (
+        "ServiceTitan for residential trades operations wanting comprehensive operating system "
+        "depth and willing to invest in implementation. FieldEdge for QuickBooks-deep "
+        "operations wanting unified field-to-office workflow without ServiceTitan's "
+        "implementation overhead. The choice often comes down to QuickBooks dependency and "
+        "implementation appetite."
+    ),
+    "intro": (
+        "ServiceTitan and FieldEdge target similar mid-large residential trades markets but "
+        "with different platform philosophies. ServiceTitan is a comprehensive operating "
+        "system with set pricing, marketing automation, and reporting at depth. FieldEdge is "
+        "QuickBooks-centric FSM that delivers deeper QuickBooks integration than any "
+        "competitor, with solid (but lighter) operational features.\n\n"
+        "Pricing: ServiceTitan custom enterprise $80,000-$200,000+ per year all-in. FieldEdge "
+        "custom typically $80-$120 per user per month equivalents, totaling $30,000-$80,000+ "
+        "per year for typical mid-size operations. ServiceTitan's premium reflects broader "
+        "operational scope; FieldEdge's lower cost reflects narrower scope with deeper "
+        "QuickBooks integration."
+    ),
+    "dimensions": [
+        ["Pricing", "Custom $80K-$200K+/year", "Custom $30K-$80K+/year"],
+        ["Implementation time", "60-90 days", "3-6 weeks"],
+        ["QuickBooks integration", "Solid", "Deepest in FSM market"],
+        ["Set pricing book", "Industry-leading", "Solid"],
+        ["Marketing automation", "Deep", "Lighter"],
+        ["Mobile app", "Comprehensive", "Functional, less polished"],
+        ["Reporting", "Deepest", "Solid"],
+        ["Membership management", "Deep", "Solid"],
+        ["Best fit", "$5M+ residential trades", "Mid-large QuickBooks-running trades"],
+        ["Customer base", "12,000+", "Smaller, QuickBooks-focused"],
+    ],
+    "a_wins": (
+        "**Operating system depth.** ServiceTitan covers more of the residential trades "
+        "operating model with depth. Set pricing books, marketing automation, KPI dashboards, "
+        "dispatcher workflow, technician scoring all stronger.\n\n"
+        "**Marketing automation.** Review automation, customer messaging, marketing analytics "
+        "deeper than FieldEdge.\n\n"
+        "**Reporting comprehensiveness.** Custom reports, calculated fields, marketing "
+        "attribution, technician performance tracking. The deepest in residential trades.\n\n"
+        "**Mobile app polish.** ServiceTitan mobile is comprehensive. FieldEdge mobile feels "
+        "older."
+    ),
+    "b_wins": (
+        "**QuickBooks integration depth.** Deepest in the FSM market by a meaningful margin. "
+        "For operations that want to keep QuickBooks as the financial backbone with FSM as "
+        "the operations layer, FieldEdge's integration eliminates the friction that "
+        "ServiceTitan's QuickBooks integration creates.\n\n"
+        "**Lower implementation overhead.** 3-6 weeks vs 60-90 days for ServiceTitan. Less "
+        "operational disruption during deployment.\n\n"
+        "**Lower total cost.** $30,000-$80,000/year vs ServiceTitan's $80,000-$200,000+/year. "
+        "For operations where the cost differential matters, FieldEdge delivers most of the "
+        "operational value at half to a third of the ServiceTitan cost.\n\n"
+        "**Better fit for QuickBooks-centric operations.** Operations whose financial workflow "
+        "runs on QuickBooks and whose owner or office manager is comfortable with QuickBooks "
+        "find FieldEdge integrates more cleanly than ServiceTitan."
+    ),
+    "choose_a": (
+        "your operation is $5M+ revenue, you want comprehensive operating system depth, you "
+        "have budget for implementation, and your QuickBooks usage is light or you are willing "
+        "to migrate to a more comprehensive accounting platform."
+    ),
+    "choose_b": (
+        "your operation is $2-8M revenue, you want to keep QuickBooks as the financial "
+        "backbone, or you want lower implementation overhead and faster time-to-value than "
+        "ServiceTitan delivers."
+    ),
+    "pricing_scenario": (
+        "**$3M HVAC operation, 12 techs:** FieldEdge custom $40,000-$60,000/year. ServiceTitan "
+        "custom $60,000-$120,000/year. FieldEdge wins on cost for QuickBooks-running "
+        "operations. ServiceTitan wins on depth for growth-focused operations.\n\n"
+        "**$7M HVAC operation, 25 techs:** FieldEdge $60,000-$100,000/year. ServiceTitan "
+        "$120,000-$200,000+/year. ServiceTitan's depth justifies cost at this scale for most "
+        "operators; FieldEdge wins specifically when QuickBooks dependency is the priority.\n\n"
+        "**$15M HVAC operation:** FieldEdge feels under-built at this scale. ServiceTitan is "
+        "the typical pick at $200,000-$400,000+/year all-in."
+    ),
+    "integrations": (
+        "**ServiceTitan:** ServiceTitan Marketplace with deep integrations across categories. "
+        "QuickBooks integration is solid but operations at scale typically move to a separate "
+        "accounting platform.\n\n"
+        "**FieldEdge:** Deepest QuickBooks integration in FSM. Solid integrations with payment "
+        "processing, AI add-ons, and major trades-specific tools."
+    ),
+    "faqs": [
+        {
+            "question": "How deep is FieldEdge's QuickBooks integration vs ServiceTitan's?",
+            "answer": (
+                "FieldEdge sync is real-time bidirectional with full data integrity. "
+                "ServiceTitan's QuickBooks integration is solid but most ServiceTitan customers "
+                "above $5M migrate to a more comprehensive accounting platform anyway. For "
+                "operations committed to QuickBooks, FieldEdge eliminates double-entry and "
+                "data fragmentation that other FSMs create."
+            ),
+        },
+        {
+            "question": "Can FieldEdge handle a 25-tech HVAC operation?",
+            "answer": (
+                "Yes. FieldEdge is built for mid-large operations and handles 50+ techs "
+                "comfortably. The platform scales operationally even when ServiceTitan's depth "
+                "would be a better fit for some specific use cases. For QuickBooks-running "
+                "operations at this size, FieldEdge often wins on cost-per-tech."
+            ),
+        },
+        {
+            "question": "Which is better for marketing-driven HVAC operations?",
+            "answer": (
+                "ServiceTitan, by a meaningful margin. Marketing automation, customer "
+                "messaging, review automation, and marketing analytics are deeper. FieldEdge "
+                "covers these but less deeply, which limits marketing-driven growth at scale."
+            ),
+        },
+    ],
+}
+
+COMPARISON_CONTENT_W1["workiz-vs-housecallpro"] = {
+    "category": "hs-saas",
+    "last_verified": "2026-05-06",
+    "verdict": (
+        "Housecall Pro for residential HVAC, plumbing, and electrical operations focused on "
+        "marketing automation and customer experience. Workiz for niche residential trades "
+        "(locksmiths, garage doors, appliance repair) and operations with high inbound call "
+        "volume needing call-tracking depth. Different strengths; the choice usually comes "
+        "down to trade specialization."
+    ),
+    "intro": (
+        "Workiz and Housecall Pro target overlapping but distinct SMB residential trades "
+        "markets. Housecall Pro is the marketing-and-customer-experience pick for typical "
+        "residential HVAC, plumbing, and electrical. Workiz fits niche residential trades "
+        "(locksmith, garage door, appliance repair) and operations where call-tracking and "
+        "lead-attribution matter.\n\n"
+        "Pricing: Workiz Kickstart at $187/mo, Standard at $229/mo, Pro at $270/mo. Housecall "
+        "Pro Basic at $49/mo, Essentials at $129/mo, Max+ at $279/mo. At similar tiers, "
+        "Workiz is more expensive than Housecall Pro Essentials but cheaper than Max+."
+    ),
+    "dimensions": [
+        ["Pricing", "$187-$270/mo", "$49-$279/mo"],
+        ["Best fit (trades)", "Niche (locksmith, garage, appliance)", "Mainstream (HVAC, plumbing, electrical)"],
+        ["Call tracking", "Strong, primary feature", "Available via integrations"],
+        ["Marketing automation", "Functional", "Strong, primary differentiator"],
+        ["Mobile app", "Functional", "Polished"],
+        ["Customer experience features", "Solid", "Strong"],
+        ["Online booking", "Available", "Strong, primary feature"],
+        ["Operational workflow", "Built around niche trades", "Mainstream residential trades"],
+        ["Customer base", "Niche residential trades", "Larger mainstream residential trades"],
+        ["Affiliate program", "Strong ($6K/5 customers)", "Strong"],
+    ],
+    "a_wins": (
+        "**Niche residential trades fit.** Locksmiths, garage door operations, appliance "
+        "repair, and similar niches have specific workflow needs (varied service types, "
+        "different parts inventory, distinct customer profiles) that Workiz handles natively.\n\n"
+        "**Built-in call tracking.** Inbound call attribution to marketing campaigns, lead "
+        "scoring, and call-to-customer journey tracking. For trades operations doing paid "
+        "acquisition (Google Ads, lead-gen vendors), call tracking is operational depth.\n\n"
+        "**AI features built in.** Workiz has shipped AI features (intake automation, "
+        "scheduling AI) inside the platform. Housecall Pro covers similar ground via "
+        "integration partners.\n\n"
+        "**Affiliate program quality.** $6,000 per 5 customers + 30% year-end bonus is "
+        "competitive with the best in the category. Worth noting for operators evaluating "
+        "platform partnerships."
+    ),
+    "b_wins": (
+        "**Marketing automation depth.** Review automation, online booking widget, customer "
+        "messaging, and marketing-specific reporting deeper than Workiz.\n\n"
+        "**Mobile app polish.** Best-in-class for SMB residential trades.\n\n"
+        "**Mainstream residential trades fit.** HVAC, plumbing, electrical workflow native "
+        "to the platform. Workiz can handle these but is more general-trades flavored.\n\n"
+        "**Lower entry pricing.** Basic at $49/mo vs Workiz Kickstart at $187/mo. For very "
+        "small operations, Housecall Pro is meaningfully cheaper to start."
+    ),
+    "choose_a": (
+        "you operate niche residential trades (locksmith, garage door, appliance repair) where "
+        "Workiz's specific workflow design fits, or you have high inbound call volume and want "
+        "call-tracking depth as a primary platform feature."
+    ),
+    "choose_b": (
+        "you operate mainstream residential HVAC, plumbing, or electrical trades, you "
+        "prioritize marketing automation and customer experience, or you want lower entry "
+        "pricing for solo or very small operations."
+    ),
+    "pricing_scenario": (
+        "**5-tech HVAC operation:** Housecall Pro Essentials $129/mo or Workiz Standard "
+        "$229/mo. Housecall Pro is $1,200/year cheaper with stronger HVAC fit.\n\n"
+        "**5-tech locksmith operation:** Workiz Standard $229/mo with niche-trades workflow "
+        "and call tracking, or Housecall Pro Essentials $129/mo with HVAC-flavored workflow. "
+        "Workiz wins on fit despite higher cost.\n\n"
+        "**10-tech multi-trade operation (HVAC + locksmith):** Housecall Pro Max+ $279/mo or "
+        "Workiz Pro $270/mo. Roughly comparable cost; choose by primary trade focus."
+    ),
+    "integrations": (
+        "**Workiz:** Built-in call tracking, payment processing, plus integration with major "
+        "trades tools and AI vendors. Smaller ecosystem than Housecall Pro overall.\n\n"
+        "**Housecall Pro:** QuickBooks, built-in payments, customer messaging, marketing "
+        "automation tools, plus broader trades-specific integration ecosystem."
+    ),
+    "faqs": [
+        {
+            "question": "Can Workiz handle mainstream HVAC or plumbing?",
+            "answer": (
+                "Yes, but Housecall Pro and Jobber are better fits. Workiz works for mainstream "
+                "residential trades but the platform's primary strength is in niche services. "
+                "If your operation is HVAC, plumbing, or electrical specifically, Housecall Pro "
+                "Essentials at $129/mo delivers more value than Workiz Kickstart at $187/mo."
+            ),
+        },
+        {
+            "question": "Is Workiz call tracking worth $100/mo more than Housecall Pro?",
+            "answer": (
+                "If you do meaningful paid acquisition or have 50+ inbound calls per month, "
+                "yes. Lead attribution, marketing ROI, and call-to-customer tracking save real "
+                "money on marketing spend optimization. For operations with low call volume "
+                "or no paid acquisition, the call tracking is overhead without payback."
+            ),
+        },
+        {
+            "question": "Which has better marketing automation?",
+            "answer": (
+                "Housecall Pro, by a meaningful margin. Review automation, online booking, "
+                "customer messaging across channels, and marketing analytics are deeper. "
+                "Workiz covers these but less deeply, which limits marketing-driven growth "
+                "at scale."
+            ),
+        },
+    ],
+}
+
+COMPARISON_CONTENT_W1["buildops-vs-servicetitan"] = {
+    "category": "hs-saas",
+    "last_verified": "2026-05-06",
+    "verdict": (
+        "BuildOps for commercial trades contractors with crews of 10-200 doing service plus "
+        "project work. ServiceTitan for residential trades operations at scale. Different "
+        "markets, different platform philosophies; the choice is residential vs commercial, "
+        "not feature comparison."
+    ),
+    "intro": (
+        "BuildOps and ServiceTitan target opposite ends of the commercial-vs-residential "
+        "trades software market. ServiceTitan dominates residential at scale (HVAC, plumbing, "
+        "electrical for homes). BuildOps targets commercial trades (commercial HVAC, "
+        "electrical, plumbing for buildings, with 10-200 crew sizes).\n\n"
+        "Pricing for both is custom enterprise. ServiceTitan typically $80,000-$200,000+ per "
+        "year all-in. BuildOps similar range $80,000-$250,000+ per year all-in. The price "
+        "comparison is less interesting than the platform fit comparison: each is built around "
+        "a different operating model."
+    ),
+    "dimensions": [
+        ["Primary market", "Residential trades", "Commercial trades"],
+        ["Crew sizes", "1-100+ residential techs", "10-200 commercial techs"],
+        ["Workflow fit", "Service calls, set pricing", "Service plus longer-form projects"],
+        ["Billing models", "Set pricing, T&M secondary", "T&M and fixed-price both primary"],
+        ["Customer relationships", "Residential homeowners", "GCs, property managers, building owners"],
+        ["Asset tracking", "Equipment service history", "Building-portfolio asset tracking"],
+        ["Membership management", "Deep (residential)", "Service contract management"],
+        ["Marketing automation", "Deep", "Less central to commercial workflow"],
+        ["Implementation", "60-90 days", "3-6 months"],
+        ["Customer base", "12,000+ residential operators", "Commercial trades contractors"],
+    ],
+    "a_wins": (
+        "**Commercial workflow fit.** BuildOps was built for commercial trades from day one. "
+        "Tenant build-outs, building maintenance contracts, T&M plus fixed-price billing, GC "
+        "and property-manager customer relationships, and asset tracking across building "
+        "portfolios all native rather than adapted from residential.\n\n"
+        "**Project-and-service hybrid model.** Commercial trades mix service work with longer "
+        "projects. BuildOps handles both in one platform. ServiceTitan's project capabilities "
+        "exist but feel bolted on top of residential service workflow.\n\n"
+        "**Crew management for project work.** Larger commercial projects involve crews of "
+        "5-25 technicians on multi-day or multi-week scopes. BuildOps schedule and time "
+        "tracking by project phase and crew handles this natively.\n\n"
+        "**Building asset tracking.** Equipment across building portfolios (switchgear, HVAC "
+        "units, transfer switches, etc.) tracked at the building and asset level. Critical "
+        "for service-contract customers."
+    ),
+    "b_wins": (
+        "**Residential trades operating depth.** Set pricing books, marketing automation, "
+        "membership management, customer experience features all built for residential operations. "
+        "BuildOps has these but less deeply; commercial buyers do not need them as primarily.\n\n"
+        "**Marketing automation.** Review automation, online booking, residential customer "
+        "messaging. Less central to commercial workflow but critical for residential.\n\n"
+        "**Larger ecosystem.** ServiceTitan Marketplace and AI add-on ecosystem (Avoca, Hatch "
+        "native integrations) is broader than BuildOps's commercial-focused integrations.\n\n"
+        "**Faster implementation.** 60-90 days vs 3-6 months for BuildOps. Time-to-value "
+        "matters for operations that need fast platform deployment."
+    ),
+    "choose_a": (
+        "your operation is commercial-focused (commercial HVAC, electrical, plumbing for "
+        "buildings, tenant build-outs, service contracts), you have crews of 10-200, or you "
+        "mix service work with longer-form projects."
+    ),
+    "choose_b": (
+        "your operation is residential-focused (residential HVAC, plumbing, electrical), you "
+        "have crews of 1-100+ residential techs, or you focus on residential service calls "
+        "with set pricing as the primary billing model."
+    ),
+    "pricing_scenario": (
+        "**Commercial HVAC contractor, 30 techs, $10M revenue:** BuildOps custom $100,000-"
+        "$200,000+/year all-in. ServiceTitan would be similar cost but workflow fit is worse "
+        "for commercial.\n\n"
+        "**Residential HVAC operation, 25 techs, $7M revenue:** ServiceTitan custom $100,000-"
+        "$200,000/year. BuildOps would be similar cost but residential workflow fit is worse.\n\n"
+        "**Mixed operation (60% residential, 40% commercial):** Most operators end up running "
+        "two systems or stay on a multi-trade platform like simPRO. ServiceTitan or BuildOps "
+        "alone bend on the secondary workflow."
+    ),
+    "integrations": (
+        "**BuildOps:** Commercial trades-specific tools, accounting (deeper QuickBooks plus "
+        "ERP integrations), GC and property management platforms.\n\n"
+        "**ServiceTitan:** ServiceTitan Marketplace with deep residential trades integrations, "
+        "AI add-ons (Avoca, Hatch), marketing automation, accounting platforms."
+    ),
+    "faqs": [
+        {
+            "question": "Can ServiceTitan handle commercial trades?",
+            "answer": (
+                "Awkwardly. ServiceTitan has commercial features but they are bolted on top of "
+                "a residential-first platform. Commercial-specific workflow (project phases, GC "
+                "and property-manager customers, building-portfolio asset tracking, T&M plus "
+                "fixed-price billing) feels secondary. BuildOps and simPRO were built for this "
+                "from the ground up."
+            ),
+        },
+        {
+            "question": "Can BuildOps handle residential trades?",
+            "answer": (
+                "Awkwardly, in reverse. BuildOps has residential-trades capability but the "
+                "platform was built for commercial workflows. Residential-specific features "
+                "(set pricing books, marketing automation, customer experience for homeowners, "
+                "membership management) feel secondary. ServiceTitan, Housecall Pro, and Jobber "
+                "are better residential picks."
+            ),
+        },
+        {
+            "question": "What about mixed-mode contractors?",
+            "answer": (
+                "Three options: run two systems (residential FSM plus commercial FSM with data "
+                "fragmentation), use a multi-trade platform like simPRO that handles both with "
+                "less depth, or pick the dominant workflow's platform and accept friction on "
+                "the secondary workflow. Most mixed-mode contractors above 30% on the secondary "
+                "workflow eventually pick a multi-trade platform."
+            ),
+        },
+    ],
+}
