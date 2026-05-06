@@ -8,11 +8,131 @@ Covers two scopes:
 LEGAL_INDUSTRY = {
     "slug": "legal",
     "name": "Legal",
-    "hero_intro": "",  # Filled in Task 6
     "scopes": ["practice-management", "ai"],
-    "by_the_numbers": [],  # Filled in Task 6 from Lexica vertical-data brand counts
-    "faqs": [],  # Filled in Task 6
     "last_verified": "2026-05-05",
+
+    "hero_intro": (
+        "The US legal software market hit $4.8 billion in 2025 and keeps fragmenting along firm size and practice specialty. "
+        "A solo immigration attorney runs nothing like a 200-attorney PI firm, and the software market reflects that reality. "
+        "There are roughly 450,000 law firms in the US and at least 35 distinct vendors competing for them, organized into a "
+        "half-dozen overlapping categories.\n\n"
+        "Two shifts are reshaping the landscape this year. First, AI: Harvey raised at a $5 billion valuation and locked down "
+        "most of the AmLaw 100, while a separate cluster of plaintiff-focused tools (EvenUp, Eve, Supio) racks up wins in "
+        "personal injury. Lexis and Thomson Reuters are racing to bake AI into their research products before independent "
+        "vendors can take market share. Second, the practice management category Clio dominated for a decade is fragmenting: "
+        "CosmoLex pitches all-in-one with native trust accounting, Smokeball doubles down on document automation, Filevine and "
+        "Litify own enterprise PI, and a wave of vertical AI tools is eating the workflow Clio used to own.\n\n"
+        "If you are picking software for a US firm in 2026, three things shape the decision: firm size, practice area, and "
+        "how aggressive you want to be on AI. This page walks through each."
+    ),
+
+    "saas_card_blurb": "Cloud practice management for solo through enterprise firms. Clio, MyCase, PracticePanther, Smokeball, Filevine, and seven more compared.",
+    "ai_card_blurb": "AI-native legal tools for research, drafting, intake, and PI workflows. Harvey, Spellbook, EvenUp, Eve, Lexis+ AI, and others compared.",
+    "index_card_blurb": "Practice management plus AI tool reviews for US law firms across solo, small, mid, and BigLaw segments.",
+
+    "state_of_overview": (
+        "Three patterns dominate legal software in 2026.\n\n"
+        "AI is splitting the market by firm size, not by feature. BigLaw buys Harvey or Westlaw Precision with CoCounsel because "
+        "they need broad capability across research, drafting, and due diligence with enterprise procurement comfort. Personal "
+        "injury firms buy EvenUp, Eve, or Supio because demand letters and medical record review are the workflow bottleneck "
+        "and these tools were built around it. Solo and small-firm attorneys buy Spellbook for contract drafting or Briefpoint "
+        "for litigation responses, where the ROI per matter is obvious. The middle of the market (mid-size general practice) is "
+        "the most contested zone, with Spellbook, Lexis+ AI, Westlaw Precision, and a handful of practice-area-specific tools "
+        "all competing for the same buyers.\n\n"
+        "Practice management is unbundling. Clio still leads on overall market share and integration depth, but specific "
+        "weaknesses are pulling firms to specialists. CosmoLex has eaten share from firms that wanted to drop QuickBooks. "
+        "Smokeball pulls firms with high document-template volume (family law, estate planning, certain PI shops). Filevine "
+        "and Litify took most of the high-volume PI category, where Clio's general-purpose model never fit. The pricing wars "
+        "at the bottom of the market (PracticePanther at $59/u/mo, MyCase at $39/u/mo Basic) are squeezing Clio's EasyStart "
+        "tier hard.\n\n"
+        "Trust accounting compliance is going through its biggest modernization in 20 years. State bars in California, Texas, "
+        "Florida, and Illinois have all updated IOLTA reporting requirements between 2024 and 2026. The firms that built their "
+        "stack on QuickBooks plus a separate trust ledger are finding compliance painful, which is why CosmoLex's all-in-one "
+        "thesis keeps gaining traction. LawPay's IOLTA-compliant payments product moved from a nice-to-have to a buying criterion "
+        "in roughly the same window.\n\n"
+        "The Lexis-versus-Westlaw AI race is the highest-stakes incumbent battle in legal tech. Both products started shipping AI "
+        "research add-ons in 2023 and have been improving them on roughly six-month cycles. Whichever side ends up with the "
+        "more reliable citation grounding (and fewer hallucination incidents) will carry forward a 30-year customer-base lead "
+        "into the AI era. As of mid-2026, the products are close enough that most firms pick based on which research platform "
+        "they were already on, not which AI is better. That stickiness is exactly what Lexis and Westlaw were defending."
+    ),
+
+    "by_the_numbers": [
+        {"number": "~450,000", "label": "active law firms in the US (Lexica brand data, 2025)"},
+        {"number": "~1.3 million", "label": "active US attorneys (ABA, 2025)"},
+        {"number": "74%", "label": "of US law firms are solo (one attorney). Most are underserved by enterprise software."},
+        {"number": "~200", "label": "AmLaw 200 firms account for the bulk of legal AI enterprise spend"},
+        {"number": "$4.8B", "label": "US legal software market size, 2025"},
+    ],
+
+    "most_compared": [
+        ("/compare/clio-vs-mycase/", "Clio vs MyCase"),
+        ("/compare/clio-vs-practicepanther/", "Clio vs PracticePanther"),
+        ("/compare/smokeball-vs-clio/", "Smokeball vs Clio"),
+        ("/compare/harvey-vs-spellbook/", "Harvey vs Spellbook"),
+        ("/compare/evenup-vs-eve/", "EvenUp vs Eve"),
+        ("/compare/lexis-ai-vs-westlaw-precision/", "Lexis+ AI vs Westlaw Precision"),
+    ],
+
+    "buyer_guides": [
+        ("/guides/best-practice-management-software-solo-attorneys/", "Best Practice Management Software for Solo Attorneys"),
+        ("/guides/best-legal-practice-management-small-firms/", "Best Legal Practice Management for Small Law Firms"),
+        ("/guides/best-pms-personal-injury-law-firms/", "Best PMS for Personal Injury Firms"),
+        ("/guides/best-clio-alternatives/", "Best Clio Alternatives"),
+        ("/guides/best-legal-ai-personal-injury-firms/", "Best Legal AI for Personal Injury Firms"),
+        ("/guides/best-ai-contract-review-software/", "Best AI Contract Review Software"),
+        ("/guides/best-ai-legal-research-tools/", "Best AI Legal Research Tools"),
+        ("/guides/best-ai-tools-solo-lawyers/", "Best AI Tools for Solo Lawyers"),
+    ],
+
+    "faqs": [
+        {
+            "question": "What is the best practice management software for a US law firm in 2026?",
+            "answer": (
+                "There is no universal winner. For solo attorneys, Clio EasyStart or MyCase Basic. For small firms (2-15 attorneys) "
+                "general practice, Clio Essentials, MyCase Pro, or PracticePanther Essential. For document-heavy practices "
+                "(family, estate, certain PI), Smokeball. For mid-firm general practice that wants to ditch QuickBooks, CosmoLex. "
+                "For high-volume PI or mass tort (25+ attorneys), Filevine or Litify. The pick that matters less than people "
+                "expect is general-purpose PMS within the same tier. Clio versus MyCase versus PracticePanther come down to "
+                "preference, integration ecosystem, and whether you have time to migrate."
+            ),
+        },
+        {
+            "question": "Should my firm buy AI legal tools in 2026?",
+            "answer": (
+                "If you do contract drafting, contract review, demand letters, medical record summary, or high-volume discovery "
+                "responses, yes. ROI is obvious in those workflows and pilot programs typically pay back within a quarter. If "
+                "you do general practice with low-document-volume work, the case is weaker and most tools are still expensive "
+                "or rough at the edges. The exception is research: if you already pay for Lexis or Westlaw, the AI add-ons are "
+                "worth the extra cost for the time savings on case search and brief drafting."
+            ),
+        },
+        {
+            "question": "Are AI legal tools safe to use under bar ethics rules?",
+            "answer": (
+                "Yes, with diligence. The Florida Bar, California Bar, ABA, and others have published guidance on competent AI "
+                "use that boils down to: do not rely on AI output without verification, protect client confidentiality (which "
+                "means understanding where the tool processes data), supervise AI work product the same way you would supervise "
+                "a paralegal, and bill for AI-assisted work at the lawyer rate, not the AI cost. Tools designed for legal use "
+                "(Harvey, Spellbook, Lexis+ AI, Westlaw Precision) all publish privacy and data-handling documentation. Generic "
+                "consumer AI tools (free ChatGPT, etc.) are riskier and several state bars have warned against using them for "
+                "client matters."
+            ),
+        },
+        {
+            "question": "How do I evaluate IOLTA-compliant trust accounting in PMS?",
+            "answer": (
+                "Three things matter. First, can the system enforce three-way reconciliation (book balance, bank balance, client "
+                "ledger sum) automatically and flag discrepancies? Second, does it generate the IOLTA reports your state bar "
+                "requires without manual export-and-format work? Third, when you process client payments, does the platform "
+                "route trust-applicable funds to the IOLTA account and operating funds to the operating account without manual "
+                "intervention? CosmoLex, LawPay, and Smokeball all do this natively. Clio and MyCase do it well with their "
+                "respective payments integrations. PracticePanther and Rocket Matter handle it but with more manual setup. If "
+                "your firm has been bouncing between QuickBooks and a separate trust ledger, an all-in-one tool is worth the "
+                "migration pain."
+            ),
+        },
+    ],
 }
 
 LEGAL_SAAS_TOOLS = [
