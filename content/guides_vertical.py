@@ -1528,3 +1528,460 @@ GUIDE_CONTENT_VERTICAL["best-ai-contract-review-software"] = {
         ("/guides/best-legal-ai-personal-injury-firms/", "Best Legal AI for PI Firms"),
     ],
 }
+
+
+GUIDE_CONTENT_VERTICAL["best-ai-legal-research-tools"] = {
+    "category": "legal-ai",
+    "title": "Best AI Legal Research Tools",
+    "last_verified": "2026-05-05",
+    "intro": (
+        "AI legal research is the highest-stakes incumbent battle in legal tech. Lexis and "
+        "Thomson Reuters (Westlaw) both started shipping AI add-ons in 2023 and have been "
+        "improving them on roughly six-month cycles ever since. The product feature gap between "
+        "the two is small enough by mid-2026 that most firms pick based on which research "
+        "platform they were already on, not which AI is technically better. That stickiness is "
+        "exactly what Lexis and Westlaw were defending.\n\n"
+        "Independent AI research vendors have struggled to compete because the citation grounding "
+        "moat requires the underlying case-law corpus, and only Lexis and Westlaw have the full "
+        "depth. This guide covers the credible AI research options, with explicit recommendations "
+        "based on existing platform fit, firm size, and research depth requirements."
+    ),
+    "verdict": (
+        "Top pick: **Lexis+ AI** if your firm runs on Lexis. **Westlaw Precision with CoCounsel** "
+        "if your firm runs on Westlaw. **Harvey** for BigLaw enterprise legal research as part of "
+        "a broader AI platform. Pick a primary based on existing research platform; the AI "
+        "feature gap is too small to justify migrating research platforms purely for AI."
+    ),
+    "methodology": (
+        "We evaluated each tool on citation grounding quality (does it hallucinate cases?), "
+        "natural-language query handling, integration with the underlying research platform, "
+        "drafting and brief-writing capability, federal vs state coverage, and pricing model. "
+        "Pricing data verified as of 2026-05-05."
+    ),
+    "recommendations": [
+        {
+            "slug": "lexis-ai", "rank": "1.",
+            "review": (
+                "Lexis+ AI runs as an AI assistant inside the Lexis research platform. It handles "
+                "natural-language queries, generates research memos, drafts briefs, summarizes "
+                "case law, and surfaces relevant authority. Citation grounding is engineered "
+                "against the Lexis precedent corpus, which reduces hallucination risk versus "
+                "general AI tools.\n\n"
+                "Pricing is add-on to existing Lexis subscriptions, typically $20,000-$200,000 "
+                "annually depending on firm size and seat count. For Lexis-using firms, the "
+                "integration depth and citation grounding make Lexis+ AI the clear pick. For "
+                "non-Lexis firms, the value depends on whether you would migrate research "
+                "platforms (rarely worth it) or run two platforms (rarely sustainable)."
+            ),
+        },
+        {
+            "slug": "westlaw-precision", "rank": "2.",
+            "review": (
+                "Westlaw Precision with CoCounsel is the Thomson Reuters answer to Lexis+ AI. "
+                "Same model: AI assistant integrated into the Westlaw research platform with "
+                "citation grounding against the Westlaw corpus. Federal-scale authority is "
+                "particularly strong because of Westlaw's federal case-law depth.\n\n"
+                "Pricing is similarly structured: add-on to Westlaw subscription, custom pricing "
+                "in the $20,000-$200,000 range depending on firm size. For federal litigation "
+                "specifically, Westlaw's authority depth gives it a slight edge over Lexis. For "
+                "state-level work, the platforms are roughly equivalent. Pick based on existing "
+                "subscription."
+            ),
+        },
+        {
+            "slug": "harvey", "rank": "3.",
+            "review": (
+                "Harvey covers legal research as part of a broader AI platform spanning research, "
+                "drafting, due diligence, and contract work. Pricing is custom enterprise, "
+                "typically $100,000+ annually with scaling to seven figures for AmLaw 100 "
+                "deployments.\n\n"
+                "Where Harvey wins for research specifically: BigLaw firms wanting one AI vendor "
+                "across the full deal-and-litigation workflow rather than separate research and "
+                "drafting tools. The training corpus on commercial law and complex transactional "
+                "matters is deep. Where it loses: pure research-focused use cases where Lexis+ "
+                "AI or Westlaw Precision deliver the same quality at lower cost."
+            ),
+        },
+        {
+            "slug": "spellbook", "rank": "4.",
+            "review": (
+                "Spellbook is not primarily a research tool but covers research-adjacent work for "
+                "transactional teams: clause analysis grounded in commercial law, drafting from "
+                "researched precedent, and risk flagging based on case-law trends. Pricing: $99 "
+                "Starter, $199 Enterprise per user per month.\n\n"
+                "For transactional teams that occasionally need research-grounded drafting, "
+                "Spellbook covers the workflow without requiring a separate research platform "
+                "subscription. For litigation or pure research-heavy practices, Spellbook is "
+                "insufficient and Lexis+ AI or Westlaw Precision are necessary."
+            ),
+        },
+        {
+            "slug": "casemark", "rank": "5.",
+            "review": (
+                "CaseMark covers research-adjacent workflow (matter summaries, deposition "
+                "transcripts, court filings) but is not a primary AI research tool the way "
+                "Lexis+ AI or Westlaw Precision are. Credit-based pricing fits episodic use. "
+                "Useful as a complement to a primary research tool for matter-summary work.\n\n"
+                "Pick CaseMark when you need a budget-friendly summary tool and have a separate "
+                "research subscription. Skip it as a primary research solution."
+            ),
+        },
+    ],
+    "what_to_look_for": (
+        "Six things matter when picking AI legal research.\n\n"
+        "**Citation grounding quality.** AI that invents cases is a bar-grievance machine. Test "
+        "the tool on real research questions and verify every citation it produces. Lexis+ AI "
+        "and Westlaw Precision both have engineered guardrails against hallucination but no tool "
+        "is perfect. The best tools also surface the underlying authority for every claim, making "
+        "verification fast.\n\n"
+        "**Existing research platform fit.** If your firm pays for Lexis or Westlaw, the AI "
+        "add-on for that platform almost always wins. Switching research platforms purely for AI "
+        "rarely pays back the migration cost (training, workflow disruption, citation-format "
+        "changes). Pick AI based on existing subscription.\n\n"
+        "**Federal vs state coverage.** Westlaw has slightly deeper federal authority. Lexis is "
+        "comparable for state-level work. For federal litigation specifically (especially "
+        "regulatory and administrative law), Westlaw's depth is meaningful.\n\n"
+        "**Drafting capability.** AI research that helps you draft briefs, memos, and motions "
+        "directly from the research is more valuable than AI that just answers research questions. "
+        "Lexis+ AI and Westlaw Precision both handle drafting from research; Harvey extends this "
+        "to broader document types.\n\n"
+        "**Natural-language query depth.** Test the tool with conversational queries similar to "
+        "how an attorney thinks in practice (\"is there a recent case where the court held...?\"). "
+        "Quality varies by tool and improves over time. Pilot before committing.\n\n"
+        "**Pricing model and contract structure.** All three major options price as add-ons to "
+        "existing subscriptions or as custom enterprise contracts. Watch for auto-renewal, term "
+        "length, and usage caps. Negotiate based on multi-year commitments where possible."
+    ),
+    "pricing_scenarios": (
+        "**Solo or small firm on Lexis or Westlaw:** AI add-on typically $5,000-$15,000 annually "
+        "depending on usage tier and existing subscription. The math usually works because "
+        "research time savings of 5-10 hours per attorney per month at $300+/hour billing rate "
+        "covers the cost.\n\n"
+        "**Mid-firm (15-50 attorneys):** $20,000-$60,000 annually for Lexis+ AI or Westlaw "
+        "Precision add-on. Implementation is light because the AI is layered on the existing "
+        "research platform attorneys already know.\n\n"
+        "**BigLaw or enterprise:** Custom enterprise contracts $100,000-$500,000+ for either "
+        "research-platform AI or Harvey. Many BigLaw firms run both Harvey (broader platform) "
+        "and Lexis+ AI or Westlaw Precision (research-specific) for different use cases."
+    ),
+    "what_to_avoid": (
+        "**Generic consumer AI for legal research.** Free ChatGPT and similar tools have "
+        "produced hallucinated citations that led to bar sanctions. Multiple state bars have "
+        "warned against using them for client work. Use legal-specific tools.\n\n"
+        "**Switching research platforms for AI features alone.** The migration cost (training, "
+        "citation format changes, workflow disruption) rarely pays back the AI feature delta. "
+        "Pick AI based on existing platform.\n\n"
+        "**Buying Harvey when Lexis+ AI or Westlaw Precision covers research needs.** Harvey's "
+        "broader scope justifies its pricing only when you have AI use cases beyond research.\n\n"
+        "**Skipping verification on AI-generated briefs.** Bar ethics rules require attorney "
+        "supervision and verification of AI work product. The high-profile sanction cases all "
+        "involved attorneys filing AI-drafted briefs without verifying citations."
+    ),
+    "questions_to_ask": [
+        "How does the AI ground its citations? What is the hallucination rate on real queries?",
+        "What is the integration depth with our existing Lexis or Westlaw subscription?",
+        "What is the federal vs state authority coverage?",
+        "What is the drafting capability beyond research-question answering?",
+        "What is the pricing model and how does it scale with seats?",
+        "What is the data privacy documentation? How are queries handled?",
+        "What is the bar-ethics compliance documentation?",
+        "What does training look like for attorneys?",
+        "What is the contract structure including auto-renewal and term length?",
+        "What is the pilot program structure?",
+    ],
+    "faqs": [
+        {
+            "question": "Lexis+ AI vs Westlaw Precision: which is better?",
+            "answer": (
+                "The feature gap is small by mid-2026. Pick based on existing research platform. "
+                "Westlaw has slightly deeper federal authority (relevant for federal litigation). "
+                "Lexis is comparable for state-level work. Both have engineered citation grounding "
+                "and both handle natural-language queries credibly. Switching research platforms "
+                "purely for the AI feature delta is rarely justified."
+            ),
+        },
+        {
+            "question": "Can AI legal research replace Lexis or Westlaw?",
+            "answer": (
+                "Not yet. The AI tools depend on the underlying case-law corpus, which only Lexis "
+                "and Thomson Reuters have at full depth. Independent AI research vendors that "
+                "tried to build with limited corpus access struggled to match the citation "
+                "grounding the incumbents deliver. Lexis and Westlaw are likely to keep the "
+                "research category for the foreseeable future, with AI as an enhancement layer "
+                "rather than a replacement."
+            ),
+        },
+        {
+            "question": "What is the typical research time saved with AI?",
+            "answer": (
+                "5-15 hours per attorney per month on average for active researchers. Pure "
+                "research lawyers (appellate, regulatory, complex litigation) see higher savings. "
+                "Transactional lawyers see less because their research volume is lower. The math "
+                "for ROI is straightforward: at $300+/hour billing rates, 5 hours per month per "
+                "attorney covers the AI cost easily."
+            ),
+        },
+        {
+            "question": "Will AI legal research replace junior associate research work?",
+            "answer": (
+                "Partially. AI is taking the first-pass research work that used to fall to "
+                "junior associates: pulling relevant cases, summarizing authority, drafting "
+                "research memos. The judgment work (synthesizing authority into argument, "
+                "tactical decisions, legal strategy) remains attorney work. Firms are reporting "
+                "leaner first-year associate research workloads but not wholesale layoffs."
+            ),
+        },
+        {
+            "question": "Is Lexis+ AI safe for confidential matter research?",
+            "answer": (
+                "Lexis+ AI publishes data-handling documentation, does not train on user inputs, "
+                "and offers SOC 2 audit reports. Westlaw Precision has equivalent documentation. "
+                "Both meet standard bar-ethics requirements for confidentiality. Generic consumer "
+                "AI does not. As always, the supervisory burden under bar rules sits with the "
+                "attorney, not the tool."
+            ),
+        },
+    ],
+    "related_comparisons": [
+        ("/compare/lexis-ai-vs-westlaw-precision/", "Lexis+ AI vs Westlaw Precision"),
+        ("/compare/spellbook-vs-lexis-ai/", "Spellbook vs Lexis+ AI"),
+        ("/compare/harvey-vs-cocounsel/", "Harvey vs CoCounsel"),
+    ],
+    "related_guides": [
+        ("/guides/best-ai-contract-review-software/", "Best AI Contract Review Software"),
+        ("/guides/best-ai-tools-solo-lawyers/", "Best AI Tools for Solo Lawyers"),
+        ("/guides/best-legal-ai-personal-injury-firms/", "Best Legal AI for PI Firms"),
+    ],
+}
+
+
+GUIDE_CONTENT_VERTICAL["best-ai-tools-solo-lawyers"] = {
+    "category": "legal-ai",
+    "title": "Best AI Tools for Solo Lawyers",
+    "last_verified": "2026-05-05",
+    "intro": (
+        "Solo attorneys have a different AI calculation than larger firms. You are the practice, "
+        "the bookkeeper, the marketer, and the supervisor of every piece of work product. The "
+        "right AI tools save you time on the work you would otherwise do yourself rather than "
+        "the work a paralegal or junior associate would do. Budget matters more because there is "
+        "no firm-level cost spreading.\n\n"
+        "This guide covers AI tools that fit a solo budget and workflow in 2026. Most enterprise "
+        "AI vendors (Harvey, Eve, Supio, EvenUp at high-volume tiers) are priced out of solo "
+        "reach. Spellbook, Briefpoint, CaseMark, and Lawmatics all have solo-tier pricing that "
+        "delivers measurable value at $100-$300 per month."
+    ),
+    "verdict": (
+        "Top pick: **Spellbook Starter** at $99/mo for transactional solos doing contract work. "
+        "**Briefpoint** at $89/mo+ for litigation solos doing discovery responses, motions, "
+        "objections. **Lawmatics Lite** at $199/mo for PI or family-law solos with paid-acquisition "
+        "intake flow. **CaseMark** credit packages for episodic matter-summary work. **Lexis+ AI** "
+        "or **Westlaw Precision** add-ons if you already pay for Lexis or Westlaw research."
+    ),
+    "methodology": (
+        "We evaluated each tool on solo-specific criteria: total monthly cost at one user, "
+        "integration with common solo PMS (Clio, MyCase, PracticePanther), implementation time "
+        "without dedicated support, payback math at typical solo billing rates ($200-$400/hour), "
+        "and bar-ethics compliance documentation. Pricing verified as of 2026-05-05."
+    ),
+    "recommendations": [
+        {
+            "slug": "spellbook", "rank": "1.",
+            "review": (
+                "Spellbook Starter at $99 per month is the best contract AI for transactional "
+                "solos. Sidebar add-in for Microsoft Word handles clause review, redlining, "
+                "missing-clause detection, and drafting from templates. Reported time savings: "
+                "6-9 hours per contract review.\n\n"
+                "For a solo doing 10-20 contract matters per month at typical $250-$400/hour "
+                "billing rates, the time savings cover the $99 cost easily within the first "
+                "contract. The Starter tier covers most solo transactional workflows; upgrade to "
+                "Enterprise only if you grow to a 10+ person team."
+            ),
+        },
+        {
+            "slug": "briefpoint", "rank": "2.",
+            "review": (
+                "Briefpoint at $89 per month and up is the best AI for litigation solos handling "
+                "discovery responses, objections, and motion practice. The product takes the "
+                "input documents (interrogatories, requests for production, motions) and "
+                "generates draft responses ready for attorney review.\n\n"
+                "Reported customer base: 1,500+ firms, mostly mid-market litigation. For solos, "
+                "the value is concrete on consistent discovery-response work: a typical set of "
+                "interrogatories takes 2-4 hours of paralegal-equivalent drafting time, which "
+                "Briefpoint compresses to 20-30 minutes of attorney review. Pays back fast on "
+                "any solo doing more than 2-3 discovery responses per month."
+            ),
+        },
+        {
+            "slug": "lawmatics", "rank": "3.",
+            "review": (
+                "Lawmatics Lite at $199 per firm per month is the leading AI-enabled legal CRM "
+                "for solos with paid-acquisition intake flow. Lead capture, qualification "
+                "scoring (QualifyAI), document collection automation, and marketing analytics. "
+                "PI, family law, and certain criminal-defense solos with meaningful Google Ads "
+                "or referral spend make the math work.\n\n"
+                "If you do not have paid acquisition or referral volume, Lawmatics is overbuilt. "
+                "Stick with your PMS's native intake (Clio Grow, MyCase IQ) and skip Lawmatics "
+                "until volume justifies it. The break-even is roughly 5-10 inbound leads per "
+                "month with conversion-tracking value."
+            ),
+        },
+        {
+            "slug": "casemark", "rank": "4.",
+            "review": (
+                "CaseMark uses a credit-based pricing model that fits episodic solo use. "
+                "Subscription packages start at affordable tiers (around $50-$100 per month for "
+                "moderate usage) and scale with consumption. Useful for matter summaries, "
+                "deposition transcript work, and court filing summaries.\n\n"
+                "Best fit: solos who need AI for occasional matter-summary or transcript work "
+                "but do not want a daily-use subscription. The credit model means you pay only "
+                "for what you use rather than committing to an unused subscription."
+            ),
+        },
+        {
+            "slug": "evenup", "rank": "5.",
+            "review": (
+                "EvenUp's per-document pricing is the only realistic option for solo PI "
+                "attorneys. A typical demand package costs $200-$500 versus 8-12 hours of "
+                "paralegal-equivalent drafting time. For a solo PI handling 10-30 demands per "
+                "year, EvenUp pays for itself per matter without requiring a subscription "
+                "commitment.\n\n"
+                "Avoid EvenUp's full subscription tiers at solo volumes; they assume the volume "
+                "of mid-firm or larger PI shops. Per-document pricing keeps the math simple."
+            ),
+        },
+        {
+            "slug": "lexis-ai", "rank": "6.",
+            "review": (
+                "Lexis+ AI as an add-on to existing Lexis subscriptions is the right pick for "
+                "solos already on Lexis who want AI-enabled research. Pricing varies based on "
+                "subscription tier but solo add-on cost typically lands $200-$500 per month. The "
+                "research time savings (5-10 hours per month for active research) cover the cost "
+                "at solo billing rates.\n\n"
+                "If you are not on Lexis, do not migrate research platforms purely for AI. "
+                "Westlaw Precision is the equivalent for Westlaw users."
+            ),
+        },
+    ],
+    "what_to_look_for": (
+        "Six things matter for solo AI tool selection.\n\n"
+        "**Total monthly cost at one user.** Most enterprise AI tools are priced out of solo "
+        "reach. Look for solo-specific tiers: Spellbook Starter ($99), Briefpoint base ($89), "
+        "Lawmatics Lite ($199), CaseMark credit packages. Avoid tools with seat minimums above 1.\n\n"
+        "**Integration with your PMS.** The AI workflow needs to connect to your existing PMS "
+        "(Clio, MyCase, PracticePanther) for matter context, time tracking, and document "
+        "storage. Verify integration depth before committing.\n\n"
+        "**Per-document or pay-per-use options.** Solos often have variable matter volume. "
+        "Vendors that offer per-document pricing (EvenUp), credit packages (CaseMark), or no-"
+        "minimum subscriptions reduce risk if volume is unpredictable.\n\n"
+        "**Implementation time without support.** You will set the tool up yourself. Look for "
+        "platforms with self-service onboarding, video tutorials, and sensible defaults. "
+        "Spellbook, Briefpoint, and Lawmatics all clear this bar.\n\n"
+        "**Payback math at solo billing rates.** Calculate time saved × your billing rate. At "
+        "$250/hour, saving 2 hours per month covers a $99/month tool. Most solo-tier AI tools "
+        "pay back within the first matter where they save real time.\n\n"
+        "**Bar-ethics compliance.** Solos do all the supervision themselves. Tools that publish "
+        "data-privacy documentation, audit trails, and bar-ethics guidance reduce the supervisory "
+        "burden. Generic consumer AI is the higher-risk category and several state bars have "
+        "warned against using it for client work."
+    ),
+    "pricing_scenarios": (
+        "**Transactional solo doing 10-20 contracts/month:** Spellbook Starter $99 = $1,188/year. "
+        "Time saved at $300/hr × 6-9 hours per contract × 15 contracts/month = $300+/year per "
+        "month. ROI is 25x or better.\n\n"
+        "**Litigation solo doing discovery + motion practice:** Briefpoint $89-$200/month = "
+        "$1,000-$2,400/year. Time saved on 5-10 discovery responses per month covers the cost "
+        "easily.\n\n"
+        "**PI solo with paid acquisition:** Lawmatics Lite $199/month + EvenUp per-document on "
+        "10-20 demands/year = $5,000-$15,000/year combined. Improvement in lead-to-signed-client "
+        "conversion alone usually justifies the spend within 6-12 months.\n\n"
+        "**Multi-practice solo:** Pick one tool that maps to your largest practice area first. "
+        "Add a second tool only after the first is paying back. Avoid stacking 3-4 AI tools "
+        "before validating each one's ROI."
+    ),
+    "what_to_avoid": (
+        "**Generic consumer AI for client work.** Free ChatGPT and similar tools have produced "
+        "hallucinated citations that led to bar sanctions. Multiple state bars have warned "
+        "against using them for client matters. Use legal-specific tools.\n\n"
+        "**Enterprise AI tools at solo scale.** Harvey, Eve, full Lawmatics premium tiers, full "
+        "EvenUp subscriptions are all priced for mid-firm or larger. Pricing models do not "
+        "fit solo budgets.\n\n"
+        "**Stacking too many AI tools too fast.** Each tool is more setup, more bills, more "
+        "vendor relationships. Start with one tool that maps to your biggest workflow gap. "
+        "Validate ROI for 90 days. Then consider adding a second.\n\n"
+        "**Skipping the supervision habit.** Bar ethics rules require attorney verification of "
+        "AI work product. Treat AI output the same way you would treat paralegal output: review, "
+        "verify, and take responsibility."
+    ),
+    "questions_to_ask": [
+        "What is the total monthly cost at one user?",
+        "Does the platform integrate with my PMS (Clio, MyCase, PracticePanther)?",
+        "Are there per-document or credit-based pricing options for variable volume?",
+        "What does implementation look like without dedicated admin support?",
+        "What is the payback math at typical solo billing rates and matter volumes?",
+        "What is the bar-ethics compliance documentation?",
+        "What is the data privacy documentation?",
+        "What does training look like as a one-person practice?",
+        "What is the pilot or trial program structure?",
+        "What is the contract structure including auto-renewal and term length?",
+    ],
+    "faqs": [
+        {
+            "question": "What is the single best AI tool for a solo attorney?",
+            "answer": (
+                "Depends on practice area. Transactional: Spellbook Starter. Litigation: "
+                "Briefpoint. PI: EvenUp per-document pricing or Lawmatics Lite for intake. "
+                "General research: Lexis+ AI or Westlaw Precision add-on if already on the "
+                "platform. There is no universal answer; pick based on the workflow that "
+                "consumes most of your billable hours."
+            ),
+        },
+        {
+            "question": "Should solos avoid AI entirely until tools mature more?",
+            "answer": (
+                "No. The category is mature enough by 2026 that the major solo-tier tools deliver "
+                "measurable value at low cost. Spellbook, Briefpoint, EvenUp per-document, and "
+                "Lawmatics Lite all pay back within months for the right practice profile. "
+                "Avoiding AI means leaving billable hours on the table."
+            ),
+        },
+        {
+            "question": "Can I use ChatGPT or Claude for client work?",
+            "answer": (
+                "Not the consumer versions. Free ChatGPT and Claude.ai consumer have not been "
+                "audited for legal use, may train on inputs, and create data-privacy risk under "
+                "bar ethics rules. Several state bars have warned against using them for client "
+                "matters. Use legal-specific tools (Spellbook, Briefpoint, CaseMark, etc.) or "
+                "enterprise versions with proper data-handling documentation."
+            ),
+        },
+        {
+            "question": "How much should a solo budget for AI tools per month?",
+            "answer": (
+                "$100-$500 per month covers most solo-tier AI needs. Spellbook Starter ($99), "
+                "Briefpoint ($89-$200), Lawmatics Lite ($199), Lexis+ AI add-on if already on "
+                "Lexis ($200-$500). Picking one or two tools that map to your biggest workflow "
+                "is better than stacking five tools at $50-$100 each."
+            ),
+        },
+        {
+            "question": "What is the bar-ethics burden of using AI as a solo?",
+            "answer": (
+                "The same as supervising paralegal work but with the supervision sitting "
+                "entirely on you. Bar rules require attorney verification of AI work product, "
+                "data privacy protections (which legal-specific tools document), and proper "
+                "billing practices (you bill for the lawyer time, not the AI cost). Florida, "
+                "California, and ABA guidance all address this. Set internal policy before "
+                "rolling out tools."
+            ),
+        },
+    ],
+    "related_comparisons": [
+        ("/compare/harvey-vs-spellbook/", "Harvey vs Spellbook"),
+        ("/compare/spellbook-vs-lexis-ai/", "Spellbook vs Lexis+ AI"),
+    ],
+    "related_guides": [
+        ("/guides/best-practice-management-software-solo-attorneys/", "Best PMS for Solo Attorneys"),
+        ("/guides/best-ai-contract-review-software/", "Best AI Contract Review Software"),
+        ("/guides/best-ai-legal-research-tools/", "Best AI Legal Research Tools"),
+    ],
+}
