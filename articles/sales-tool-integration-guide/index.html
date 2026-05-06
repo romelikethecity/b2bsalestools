@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+ <title>Sales Tool Integration Guide: Making Your Stack Work | B2BSalesTools</title>
+ <meta name="description" content="How to integrate your sales tools for clean data flow. API connections, Zapier workflows, and data mapping patterns that prevent CRM chaos.">
+ <link rel="canonical" href="https://b2bsalestools.com/articles/sales-tool-integration-guide/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#6366F1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<meta property="og:type" content="article">
+ <meta property="og:site_name" content="B2BSalesTools">
+ <meta property="og:title" content="Sales Tool Integration Guide: Making Your Stack Work | B2BSalesTools">
+ <meta property="og:description" content="How to integrate your sales tools for clean data flow. API connections, Zapier workflows, and data mapping patterns that prevent CRM chaos.">
+ <meta property="og:image" content="https://b2bsalestools.com/assets/social/og-image-1200x630.png">
+ <meta property="og:url" content="https://b2bsalestools.com/articles/sales-tool-integration-guide/">
+<meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Sales Tool Integration Guide: Making Your Stack Work | B2BSalesTools">
+ <meta name="twitter:description" content="How to integrate your sales tools for clean data flow. API connections, Zapier workflows, and data mapping patterns that prevent CRM chaos.">
+ <meta name="twitter:image" content="https://b2bsalestools.com/assets/social/twitter-card-1200x630.png">
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-67FMT3HDLP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-67FMT3HDLP');
+</script>
+</head>
+<body>
+ <nav class="site-nav">
+<div class="site-nav-inner">
+ <a href="/" class="site-logo"><svg width="22" height="22" viewBox="0 0 64 64" aria-hidden="true">
+<rect x="8" y="14" width="48" height="10" rx="3" fill="#22D3EE"/>
+<rect x="8" y="28" width="36" height="10" rx="3" fill="#6366F1"/>
+<rect x="8" y="42" width="24" height="10" rx="3" fill="#CBD5E1"/>
+</svg><span class="site-logo-text">B2B Sales Tools</span></a>
+<div class="site-nav-links" id="nav-links">
+<a href="/categories/">Categories</a>
+<a href="/compare/">Compare</a>
+<a href="/industries/">Industries</a>
+<a href="/guides/">Best For</a>
+<a href="/articles/">Articles</a>
+<a href="/newsletters/">Newsletters</a>
+</div>
+<button class="nav-toggle" onclick="document.getElementById('nav-links').classList.toggle('open')" aria-label="Menu">
+<span></span><span></span><span></span>
+</button>
+</div>
+ </nav>
+<main class="container">
+ 
+            <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://b2bsalestools.com/"}, {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://b2bsalestools.com/articles/"}, {"@type": "ListItem", "position": 3, "name": "Sales Tool Integration Guide: Making Your Stack Work", "item": "https://b2bsalestools.com/articles/sales-tool-integration-guide/"}]}</script>
+            <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Sales Tool Integration Guide: Making Your Stack Work", "description": "How to integrate your sales tools for clean data flow. API connections, Zapier workflows, and data mapping patterns that prevent CRM chaos.", "datePublished": "2026-05-06", "dateModified": "2026-05-06", "author": {"@type": "Organization", "name": "B2BSalesTools", "url": "https://b2bsalestools.com"}, "publisher": {"@type": "Organization", "name": "B2BSalesTools", "url": "https://b2bsalestools.com"}, "mainEntityOfPage": "https://b2bsalestools.com/articles/sales-tool-integration-guide/"}</script>
+            <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/articles/">Articles</a><span>/</span><span style="color:var(--slate-600)">Sales Tool Integration Guide: Making Your Stack Work</span></div>
+<div class="page-hero">
+            <h1>Sales Tool Integration Guide: Making Your Stack Work</h1>
+            <p class="page-meta">Last updated: 2026-05-06</p>
+</div>
+            <div class="profile-section overview-section"><p>Your tools are only as good as the connections between them. A $50K/yr tech stack with broken integrations performs worse than a $5K stack where data flows cleanly. The number one complaint RevOps teams have about their tools isn't features or pricing. It's that tools don't talk to each other properly. This guide covers the integration patterns that matter, from native connections to Zapier workflows to custom API builds.</p></div>
+            <div class="profile-section guide-prose">
+<h2>The Integration Hierarchy: Native, Middleware, Custom</h2>
+<p>Not all integrations are created equal. There's a clear hierarchy.</p>
+<p>**Native integrations** are built by the vendors themselves. <a href="/tools/outreach/">Outreach</a> to <a href="/tools/salesforce/">Salesforce</a> is a native integration maintained by Outreach's engineering team. It syncs activities, contacts, and sequences in real time. It breaks less, syncs faster, and handles edge cases better than anything you can build yourself.</p>
+<p>**Middleware integrations** use tools like Zapier, Make (formerly Integromat), or Tray.io to connect two tools that don't integrate natively. They're flexible and don't require code, but they add a layer of complexity and a monthly cost. Zapier starts free for 100 tasks per month and scales to $49-69/mo for serious usage.</p>
+<p>**Custom API integrations** are built by your team (or a developer) using each tool's API. They're the most powerful but the most expensive to build and maintain. Only build custom integrations when native and middleware options can't handle your specific data flow.</p>
+<p>Always default to native first. Check if the two tools you're connecting have a built-in integration before building anything custom.</p>
+</div>
+<div class="profile-section guide-prose">
+<h2>The CRM Is the Hub: Everything Flows Through It</h2>
+<p>Your CRM is the source of truth. Every other tool should sync to and from it. If data exists in Outreach but not Salesforce, it's invisible to reporting. If a contact is updated in Apollo but not your CRM, your reps are working with stale data.</p>
+<p><a href="/tools/salesforce/">Salesforce</a> has the deepest integration ecosystem. Almost every sales tool has a native Salesforce connector. <a href="/tools/hubspot-crm/">HubSpot</a> is second, with strong native integrations for most major tools.</p>
+<p>The critical CRM integrations, in priority order:</p>
+<p>1. **Data provider to CRM.** <a href="/tools/apollo/">Apollo</a> or <a href="/tools/zoominfo/">ZoomInfo</a> contacts should create or update CRM records automatically. No manual CSV imports.</p>
+<p>2. **Engagement platform to CRM.** <a href="/tools/outreach/">Outreach</a> or <a href="/tools/salesloft/">Salesloft</a> activities (emails sent, calls made, replies received) must log to CRM contact records.</p>
+<p>3. **Scheduling to CRM.** <a href="/tools/calendly/">Calendly</a> or <a href="/tools/chili-piper/">Chili Piper</a> meetings should create CRM activities and update deal stages.</p>
+<p>4. **Conversation intelligence to CRM.** <a href="/tools/gong/">Gong</a> call recordings linked to CRM contact and opportunity records.</p>
+<p>If any of these four connections are broken, you're making decisions on incomplete data.</p>
+</div>
+<div class="profile-section guide-prose">
+<h2>Common Zapier Workflows for Sales Teams</h2>
+<p>Zapier fills the gaps where native integrations don't exist or don't do enough. Here are the workflows that save the most time:</p>
+<p>**New form submission to CRM + Slack.** When someone fills out a demo request form, create a CRM contact, create a deal at the demo-requested stage, and send a Slack notification to the assigned rep. This should trigger in under 60 seconds.</p>
+<p>**Bounced email to CRM flag.** When your email tool reports a bounce, update the CRM contact with a "bad email" flag and remove them from active sequences. This prevents reps from emailing dead addresses.</p>
+<p>**Meeting booked to deal stage update.** When a Calendly meeting is scheduled, update the associated CRM deal to the "meeting scheduled" stage. Saves reps from manual deal stage updates that they'll forget.</p>
+<p>**New CRM deal to Slack notification.** Alert the team when a deal moves to a specific stage. Useful for celebration (closed-won) and escalation (stalled at proposal for 14+ days).</p>
+<p>**LinkedIn connection to CRM note.** When a LinkedIn connection is accepted (tracked by your LinkedIn tool), add a note to the CRM contact. This keeps LinkedIn activity visible in your CRM timeline.</p>
+<p>Each of these takes 15-30 minutes to set up in Zapier and saves hours of manual work per week.</p>
+</div>
+<div class="profile-section guide-prose">
+<h2>Data Mapping: The Boring Part That Breaks Everything</h2>
+<p>When two tools sync, they need to agree on what fields map to what. "Company" in Apollo needs to map to "Account Name" in Salesforce. "Job Title" in LinkedIn needs to map to "Title" in your CRM. Sounds simple until you're dealing with 50+ fields across 6 tools.</p>
+<p>Rules for data mapping that prevent chaos:</p>
+<p>**One tool owns each field.** Your data provider owns email and phone. Your CRM owns deal stage and revenue. Your engagement platform owns sequence status. When two tools can write to the same field, you get conflicts. Pick one source of truth per field.</p>
+<p>**Standardize before syncing.** If Apollo uses "VP of Sales" and your CRM uses "Vice President, Sales," create a mapping layer that normalizes titles before they sync. Inconsistent data formats make segmentation and reporting impossible.</p>
+<p>**Never overwrite with blank values.** If Apollo returns an empty phone field, don't let it erase the phone number that already exists in your CRM. Configure syncs to only update non-empty fields.</p>
+<p>**Document your field map.** Create a spreadsheet showing every field, which tool owns it, which direction it syncs, and what transformation happens. When something breaks (it will), this document cuts debugging time in half.</p>
+</div>
+<div class="profile-section guide-prose">
+<h2>Integration Testing and Monitoring</h2>
+<p>Integrations break silently. A Zapier workflow fails, data stops syncing, and nobody notices for two weeks until a rep complains that their CRM activities are missing.</p>
+<p>Build monitoring into every integration:</p>
+<p>**Set up failure alerts.** Every Zapier workflow should have an error notification that goes to your ops team's Slack channel. Native integrations in Salesforce and HubSpot have built-in sync error logs. Check them weekly.</p>
+<p>**Test after every tool update.** When Outreach pushes an update or Salesforce releases a new version, test your critical integrations within 48 hours. Vendor updates are the most common cause of integration failures.</p>
+<p>**Run a weekly data quality spot-check.** Pick 10 random CRM records and verify that the data matches what's in your other tools. If 3 out of 10 have discrepancies, you have an integration problem.</p>
+<p>**Keep a runbook for common failures.** Document the five most common integration failures you've seen, what causes them, and how to fix them. When the next failure happens at 9 PM on a Friday, the runbook turns a 2-hour debugging session into a 15-minute fix.</p>
+<p>The best RevOps teams spend 10-15% of their time on integration maintenance. It's not glamorous, but it's what keeps the stack running.</p>
+</div>
+<div class="profile-section guide-prose">
+<h2>When to Build vs Buy vs Skip</h2>
+<p>Not every integration is worth building. Some data flows sound useful in theory but create maintenance overhead that exceeds their value.</p>
+<p>**Build** when the integration directly impacts revenue activities. CRM to engagement platform, data provider to CRM, scheduling to deal stage. These integrations touch every deal and the ROI is obvious.</p>
+<p>**Buy** (via Zapier/Make) when you need a connection that runs daily or weekly but isn't real-time critical. Lead routing from a form, weekly data enrichment batches, marketing-to-sales handoff notifications.</p>
+<p>**Skip** when the integration is nice-to-have but nobody has asked for it twice. If one rep mentioned it would be cool to see LinkedIn activity in the CRM but nobody's followed up, it's not a real need. Build integrations in response to repeated pain, not theoretical efficiency.</p>
+<p>The most over-integrated stacks are the ones where RevOps built connections for every possible data flow. The most effective stacks have 5-8 critical integrations that work perfectly, not 20 integrations that break constantly.</p>
+</div>
+<div class="profile-section guide-prose">
+<h2>Integration Mistakes That Wreck Your Data</h2>
+<p>Most integration problems are preventable. Here are the mistakes that cause the most damage.</p>
+<p>**Mistake 1: Bidirectional sync without field ownership.** You set up Apollo to push contacts to Salesforce AND Salesforce to push updates back to Apollo. A rep changes a title in Salesforce. Apollo's stale data overwrites it on the next sync. Now the CRM has the wrong title and nobody knows why. Fix: define one source of truth per field. Apollo owns email and phone. Salesforce owns title and deal stage. Never let both tools write to the same field.</p>
+<p>**Mistake 2: No error handling on Zapier workflows.** Your Zapier zap creates a Salesforce lead from every form submission. One day the Salesforce API is slow. Zapier retries 3 times and creates 3 duplicate leads. Or the zap fails silently and 15 leads never make it to your CRM. Fix: add error notifications to every Zapier workflow. Set up a Slack alert channel for integration failures. Check it daily.</p>
+<p>**Mistake 3: Syncing everything.** You configure Apollo to sync every field to Salesforce, including fields your reps never use. Now your Salesforce records have 40 fields from Apollo that clutter the layout and slow down page loads. Fix: only sync fields your reps see and use. Five fields synced cleanly beats 40 fields synced messily.</p>
+<p>**Mistake 4: Not testing with real data.** You build a Zapier workflow using test records and launch it. Real records have special characters, empty fields, and unexpected formats that break the workflow. Fix: always test with 20 real records before going live. Include records with messy data, not just clean test entries.</p>
+<p>**Mistake 5: Ignoring sync timing.** <a href="/tools/outreach/">Outreach</a> syncs to Salesforce every 15 minutes. <a href="/tools/calendly/">Calendly</a> syncs instantly via webhook. Your reps see Calendly meetings in real time but Outreach activities appear late. Fix: document sync frequency for every integration and set expectations with reps. Real-time sync is ideal but not always possible.</p>
+</div>
+<div class="profile-section guide-prose">
+<h2>Step-by-Step: Setting Up Your First Five Integrations</h2>
+<p>If you're starting from scratch, build integrations in this order. Each one builds on the previous.</p>
+<p>**Integration 1: Email to CRM.** Connect Gmail or Outlook to <a href="/tools/hubspot-crm/">HubSpot</a> or <a href="/tools/salesforce/">Salesforce</a>. Every email sent or received logs to the contact record automatically. This takes 5 minutes and eliminates the most common manual data entry task.</p>
+<p>**Integration 2: Data provider to CRM.** Connect <a href="/tools/apollo/">Apollo</a> to your CRM so saved contacts create CRM records. Configure field mapping for email, phone, title, company name, and LinkedIn URL. Test with 10 contacts before enabling bulk sync. Time: 30 minutes.</p>
+<p>**Integration 3: Scheduling to CRM.** Connect <a href="/tools/calendly/">Calendly</a> to your CRM. When a meeting is booked, create a CRM activity and update the deal stage to "Meeting Scheduled." Use Calendly's native HubSpot integration or a Zapier workflow for Salesforce. Time: 20 minutes.</p>
+<p>**Integration 4: Engagement to CRM.** If you use <a href="/tools/outreach/">Outreach</a> or <a href="/tools/salesloft/">Salesloft</a>, connect it to your CRM for activity logging. Emails sent, calls made, and sequence steps completed should all appear on CRM contact timelines. Time: 45 minutes including field mapping.</p>
+<p>**Integration 5: Reply notifications to Slack.** Set up a Zapier workflow that sends a Slack message when a prospect replies to a sequence email. This is the fastest way to ensure reps respond within 5 minutes. Time: 15 minutes.</p>
+<p>These five integrations cover 90% of what a sales team needs. Everything else is optimization.</p>
+</div>
+
+            <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What's the most important sales tool integration?", "acceptedAnswer": {"@type": "Answer", "text": "Your data provider to your CRM. When Apollo or ZoomInfo contacts flow directly into Salesforce or HubSpot without manual CSV imports, you eliminate the biggest source of data entry errors and ensure every prospected contact is trackable in your pipeline."}}, {"@type": "Question", "name": "Should I use Zapier or build custom API integrations?", "acceptedAnswer": {"@type": "Answer", "text": "Start with Zapier. It handles 80% of integration needs without code and costs $0-69/mo depending on volume. Build custom API integrations only when you need real-time sync, complex data transformations, or volume that exceeds Zapier's pricing tiers."}}, {"@type": "Question", "name": "How do I prevent duplicate records across tools?", "acceptedAnswer": {"@type": "Answer", "text": "Use email address as the primary deduplication key across all tools. Configure every integration to check for existing records before creating new ones. Run a monthly dedup job in your CRM using built-in tools or a dedicated dedup service. Prevention is cheaper than cleanup."}}, {"@type": "Question", "name": "How much does Zapier cost for a sales team?", "acceptedAnswer": {"@type": "Answer", "text": "Free for up to 100 tasks per month (enough for testing). Starter at $19.99/mo for 750 tasks handles light usage. Professional at $49/mo for 2,000 tasks covers most small sales teams. If you're running over 2,000 automated tasks per month, evaluate Make (formerly Integromat) at $9/mo for 10,000 operations as a cheaper alternative."}}, {"@type": "Question", "name": "What breaks most often in sales tool integrations?", "acceptedAnswer": {"@type": "Answer", "text": "Authentication tokens expiring. Most OAuth integrations require re-authentication every 60-90 days. When the token expires, the integration fails silently until someone notices missing data. Set calendar reminders to re-authenticate critical integrations monthly."}}]}</script>
+<div class="profile-section faq-section">
+<h2>Frequently Asked Questions</h2>
+<details class="faq-item">
+  <summary class="faq-question">What's the most important sales tool integration?</summary>
+  <div class="faq-answer"><p>Your data provider to your CRM. When Apollo or ZoomInfo contacts flow directly into Salesforce or HubSpot without manual CSV imports, you eliminate the biggest source of data entry errors and ensure every prospected contact is trackable in your pipeline.</p></div>
+  </details>
+<details class="faq-item">
+  <summary class="faq-question">Should I use Zapier or build custom API integrations?</summary>
+  <div class="faq-answer"><p>Start with Zapier. It handles 80% of integration needs without code and costs $0-69/mo depending on volume. Build custom API integrations only when you need real-time sync, complex data transformations, or volume that exceeds Zapier's pricing tiers.</p></div>
+  </details>
+<details class="faq-item">
+  <summary class="faq-question">How do I prevent duplicate records across tools?</summary>
+  <div class="faq-answer"><p>Use email address as the primary deduplication key across all tools. Configure every integration to check for existing records before creating new ones. Run a monthly dedup job in your CRM using built-in tools or a dedicated dedup service. Prevention is cheaper than cleanup.</p></div>
+  </details>
+<details class="faq-item">
+  <summary class="faq-question">How much does Zapier cost for a sales team?</summary>
+  <div class="faq-answer"><p>Free for up to 100 tasks per month (enough for testing). Starter at $19.99/mo for 750 tasks handles light usage. Professional at $49/mo for 2,000 tasks covers most small sales teams. If you're running over 2,000 automated tasks per month, evaluate Make (formerly Integromat) at $9/mo for 10,000 operations as a cheaper alternative.</p></div>
+  </details>
+<details class="faq-item">
+  <summary class="faq-question">What breaks most often in sales tool integrations?</summary>
+  <div class="faq-answer"><p>Authentication tokens expiring. Most OAuth integrations require re-authentication every 60-90 days. When the token expires, the integration fails silently until someone notices missing data. Set calendar reminders to re-authenticate critical integrations monthly.</p></div>
+  </details>
+
+</div>
+            <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Rome Thorndike", "url": "https://www.linkedin.com/in/romethorndike/", "worksFor": {"@type": "Organization", "name": "B2BSalesTools", "url": "https://b2bsalestools.com"}}</script>
+<div class="article-meta">
+ <span class="article-author">By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a></span>
+</div>
+<div class="editorial-attribution">
+ <p class="attribution-line">Reviewed by <strong><a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a></strong>. Last verified 2026-05-06.</p>
+<p class="attribution-line">Pricing, features, and ratings are based on vendor documentation, public filings, product demos, and feedback from sales teams using these tools in production. We update reviews when vendors ship major releases or change pricing.</p>
+ </div>
+            <div class="newsletter-cta">
+<h2>Get smarter about sales tools</h2>
+   <p>Join The RevOps Report. tactics, tools, and frameworks for revops professionals building scalable revenue engines.</p>
+   <form class="nl-form" data-list="revops-report" style="display:flex;gap:8px;max-width:420px;margin:16px 0;">
+<input type="email" name="email" placeholder="Your email" required style="flex:1;padding:10px 14px;border:1px solid var(--slate-700,#334155);border-radius:6px;font-size:14px;background:var(--slate-800,#1e293b);color:#fff;outline:none;">
+<button type="submit" class="tool-btn" style="white-space:nowrap;">Subscribe Free</button>
+</form>
+<p class="nl-msg" style="display:none;font-size:13px;margin-top:8px;"></p>
+<p style="font-size:11px;color:var(--slate-500,#64748b);margin-top:4px;">No spam. Unsubscribe anytime.</p>
+   </div>
+            
+</main>
+ <footer class="site-footer">
+<div class="site-footer-inner">
+<div>
+  <div class="footer-brand"><svg width="18" height="18" viewBox="0 0 64 64" aria-hidden="true">
+<rect x="8" y="14" width="48" height="10" rx="3" fill="#FFFFFF" opacity="1"/>
+<rect x="8" y="28" width="36" height="10" rx="3" fill="#FFFFFF" opacity="0.5"/>
+<rect x="8" y="42" width="24" height="10" rx="3" fill="#FFFFFF" opacity="0.2"/>
+</svg> B2B Sales Tools</div>
+<p class="footer-tagline">Ranked and compared so you don't have to. Data-driven reviews of 130+ B2B sales tools across 22 categories.</p>
+</div>
+<div class="footer-col">
+<h3>Categories</h3>
+  <ul><li><a href="/categories/b2b-contact-data/">B2B Data</a></li>
+<li><a href="/categories/data-enrichment/">Data Enrichment</a></li>
+<li><a href="/categories/buyer-intent/">Intent Data</a></li>
+<li><a href="/categories/visitor-identification/">Visitor ID</a></li>
+<li><a href="/categories/linkedin-sales-tools/">LinkedIn Tools</a></li>
+<li><a href="/categories/sales-engagement/">Sales Engagement</a></li>
+<li><a href="/categories/cold-email/">Cold Email</a></li>
+<li><a href="/categories/sales-dialers/">Dialers</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3>Resources</h3>
+<ul>
+<li><a href="/compare/">Comparisons</a></li>
+<li><a href="/industries/">By Industry</a></li>
+<li><a href="/guides/">Best For Guides</a></li>
+<li><a href="/articles/">Articles</a></li>
+<li><a href="/newsletters/">Newsletters</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3>Career Intelligence</h3>
+<ul>
+<li><a href="https://thegtmindex.com" target="_blank" rel="noopener">The GTM Index</a></li>
+<li><a href="https://thecroreport.com" target="_blank" rel="noopener">The CRO Report</a></li>
+<li><a href="https://therevopsreport.com" target="_blank" rel="noopener">RevOps Report</a></li>
+<li><a href="https://gtmepulse.com" target="_blank" rel="noopener">GTME Pulse</a></li>
+<li><a href="https://sultanofsaas.com" target="_blank" rel="noopener">Sultan of SaaS</a></li>
+<li><a href="https://theaimarketpulse.com" target="_blank" rel="noopener">AI Market Pulse</a></li>
+<li><a href="https://datastackguide.com" target="_blank" rel="noopener">DataStack Guide</a></li>
+</ul>
+</div>
+</div>
+  <div class="footer-bottom">&copy; 2026 B2B Sales Tools. All rights reserved.</div>
+  </footer>
+<script>
+ (function(){
+ var API="https://newsletter-subscribe.rome-workers.workers.dev";
+ document.querySelectorAll(".nl-form").forEach(function(form){
+ form.addEventListener("submit",function(e){
+ e.preventDefault();
+ var btn=form.querySelector("button");
+ var email=form.querySelector("input[name=email]").value;
+ var list=form.getAttribute("data-list");
+ var msg=form.nextElementSibling;
+ btn.disabled=true;btn.textContent="Subscribing...";
+ if(msg)msg.style.display="none";
+ fetch(API+"/subscribe",{
+ method:"POST",headers:{"Content-Type":"application/json"},
+ body:JSON.stringify({email:email,list:list})
+ })
+ .then(function(r){return r.json();})
+ .then(function(data){
+ if(data.ok){
+ if(msg){msg.textContent="You're in! Check your inbox.";msg.style.color="#4ade80";msg.style.display="block";}
+ form.style.display="none";
+ }else{
+ if(msg){msg.textContent=data.error||"Something went wrong.";msg.style.color="#f87171";msg.style.display="block";}
+ btn.disabled=false;btn.textContent="Subscribe Free";
+ }
+ })
+ .catch(function(){
+ if(msg){msg.textContent="Connection error. Try again.";msg.style.color="#f87171";msg.style.display="block";}
+ btn.disabled=false;btn.textContent="Subscribe Free";
+ });
+ });
+ });
+ })();
+</script>
+</body>
+ </html>
