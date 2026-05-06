@@ -234,6 +234,218 @@ HOME_SERVICES_AI_SUB_CLUSTERS = {
     "ai-fsm": "AI-native FSM. Dispatch and scheduling AI built into the FSM itself.",
 }
 
-# Scope landing content (filled in Tasks 10-11)
-HOME_SERVICES_SAAS_LANDING = {}
+HOME_SERVICES_SAAS_LANDING = {
+    "hero_verdict": (
+        "If you run a $5M+ residential HVAC, plumbing, or electrical operation, ServiceTitan is the default and "
+        "FieldEdge is the credible alternative if QuickBooks integration is non-negotiable. If you are a 1-15 person "
+        "shop, Jobber for clean quote-to-invoice flow or Housecall Pro for stronger marketing tools. Workiz wins for "
+        "niche residential trades (locksmiths, garage doors, appliance repair). Service Fusion if you want flat-rate "
+        "(non-per-user) pricing as your team grows. simPRO for multi-trade contractors who run service plus longer "
+        "projects. BuildOps for commercial-focused HVAC, electrical, and plumbing.\n\n"
+        "GorillaDesk and RazorSync are good niche fits but smaller market presence: GorillaDesk for pest control "
+        "and recurring-service-heavy businesses, RazorSync for 5-25 person shops on a budget. Centerbase is not "
+        "in this category (it is legal); we cover it on the legal page."
+    ),
+
+    "methodology": (
+        "We evaluated each FSM platform on eight criteria. Mobile experience (does the technician app work "
+        "in the field with intermittent connectivity?). Dispatch capability (drag-and-drop, route optimization, "
+        "skills-based assignment). QuickBooks integration depth (one-way sync, two-way sync, native ledger). "
+        "Customer-facing experience (online booking, customer portal, invoice and payment portal). Pricing model "
+        "(per-user, flat-rate, hybrid) and how cost scales as the team grows. Reporting depth (KPI dashboards, "
+        "technician performance, marketing ROI). Marketing tools (review requests, automated follow-ups, online "
+        "booking widgets). Implementation and onboarding speed. Pricing data verified against vendor sites and "
+        "recent customer reports as of 2026-05-05."
+    ),
+
+    "cluster_intros": {
+        "enterprise-residential": (
+            "ServiceTitan and FieldEdge dominate the enterprise residential trades market. ServiceTitan is the "
+            "category-defining product with deep operational features (set pricing, KPI dashboards, marketing "
+            "automation, dispatcher seats) and a customer base of roughly 12,000 of the largest residential HVAC, "
+            "plumbing, and electrical operators. FieldEdge wins on QuickBooks integration depth and tends to land "
+            "with mid-large teams already running QuickBooks who want a unified field-to-office workflow."
+        ),
+        "smb-residential": (
+            "SMB residential FSM is the most contested category in trades software. Jobber serves the broadest "
+            "buyer profile (1-15 person trades shops, owner-operators) with clean quote-to-invoice flow and "
+            "transparent pricing. Housecall Pro is the marketing-and-customer-experience challenger with stronger "
+            "review automation and online booking. Workiz fills the gap for niche residential trades (locksmiths, "
+            "garage doors, appliance repair) where the larger platforms feel over-built. RazorSync is the budget "
+            "option in the 5-25 person band."
+        ),
+        "mid-market-flat": (
+            "Service Fusion's distinct angle is flat-rate pricing: $208 to $533 per month total regardless of seat "
+            "count. For a growing trades business going from 5 technicians to 25, the math becomes meaningful "
+            "($208 versus $1,000+ per month on a per-user platform). The trade is fewer enterprise features and a "
+            "less polished mobile app than ServiceTitan or Jobber."
+        ),
+        "niche": (
+            "Pest control, lawn care, pool service, and other recurring-service businesses have specialized needs "
+            "(chemical tracking, recurring schedule logic, route density optimization) that general-purpose FSM "
+            "platforms handle awkwardly. GorillaDesk was built for pest control and expanded to broader trades. "
+            "Most pest control operators prefer GorillaDesk over Jobber or Housecall Pro because the chemical "
+            "tracking and recurring schedule features fit their actual workflow."
+        ),
+        "mid-market-multi-trade": (
+            "Multi-trade contractors that run both service work and longer-form projects (where a single job spans "
+            "weeks or months) need different software than pure-service residential trades. simPRO is built for "
+            "this category. The acquisition of BigChange (now part of simPRO) consolidated the multi-trade segment "
+            "and made simPRO the dominant pick for trade contractors mixing service and project workflow."
+        ),
+        "commercial": (
+            "Commercial trades are a separate market from residential. BuildOps was built specifically for commercial "
+            "HVAC, electrical, and plumbing contractors with crews of 10 to 200 technicians. Workflow is different: "
+            "longer service-agreement contracts, T&M and fixed-price billing models, commercial property managers "
+            "and GCs as customers, asset and equipment tracking across building portfolios. ServiceTitan has "
+            "commercial features but they are bolted on. simPRO competes here on the multi-trade side."
+        ),
+    },
+
+    "buyer_framework": (
+        "Six things matter when picking FSM software for a US trades business.\n\n"
+        "Mobile experience. Your technicians spend 80% of their day in the field with the FSM mobile app. If that "
+        "app is slow, crashes, loses connectivity, or hides the data they need (job notes, customer history, "
+        "equipment, parts), you will lose adoption fast. ServiceTitan, Jobber, and Housecall Pro all have polished "
+        "mobile apps. Workiz is solid. FieldEdge is functional but feels like a phone version of a desktop product. "
+        "Test the mobile app with a real technician for a week before signing.\n\n"
+        "Dispatch capability. Static schedule, drag-and-drop schedule, route optimization, or skills-based "
+        "assignment? Smaller shops can run on static or drag-and-drop. Mid-market and enterprise need real route "
+        "optimization (which technicians, in what order, with what skills, on what truck stock). Sera's "
+        "AI-driven auto-dispatch is the new entrant trying to disrupt the manual-dispatch status quo.\n\n"
+        "QuickBooks integration depth. If your bookkeeper runs QuickBooks today and you want to keep it, integration "
+        "depth matters. FieldEdge has the deepest QuickBooks integration. Jobber and Housecall Pro both have solid "
+        "QuickBooks Online integrations. ServiceTitan integrates with both QuickBooks Online and Desktop, but "
+        "ServiceTitan customers above $5M typically move to a more comprehensive accounting platform regardless.\n\n"
+        "Customer-facing experience. Online booking widget on your website, automated review requests after "
+        "service completion, customer portal for invoices and payment, automated reminders for upcoming service "
+        "or membership renewals. These are revenue features, not nice-to-haves. Housecall Pro is strongest on "
+        "marketing and customer experience. Jobber is close behind. ServiceTitan covers all of these but spread "
+        "across multiple modules with separate licensing.\n\n"
+        "Pricing model fit. Per-user pricing (Jobber, Housecall Pro, ServiceTitan, FieldEdge, simPRO, Workiz, "
+        "BuildOps) makes cost predictable per technician but escalates fast as you grow. Flat-rate pricing "
+        "(Service Fusion, sometimes RazorSync) is fixed regardless of team size. For a growing business going "
+        "from 5 to 25 technicians, flat-rate is meaningfully cheaper. For a stable team, per-user is fine.\n\n"
+        "Implementation speed. Jobber and Housecall Pro can be live in 1-2 weeks. ServiceTitan typically takes "
+        "60-90 days with implementation partner involvement and $10,000-$30,000 in setup costs. FieldEdge and "
+        "BuildOps land in between (3-6 weeks). simPRO is similar to ServiceTitan in scope. Time-to-value matters "
+        "more than people remember when budgeting."
+    ),
+
+    "pricing_landscape": (
+        "Per-user FSM pricing for residential trades clusters in three bands. SMB ($39-$129 per month per user "
+        "on Jobber, Housecall Pro, Workiz). Mid-market ($79-$200 per month per user on FieldEdge, simPRO). "
+        "Enterprise ($150-$300+ per month per user on ServiceTitan and BuildOps, with custom pricing typical at "
+        "the high end).\n\n"
+        "Flat-rate alternatives: Service Fusion runs $208 (Starter) to $533 (Pro) per month total. RazorSync runs "
+        "$85-$360 per month with seat tiers. GorillaDesk runs $49-$99 per month. These work out cheaper than "
+        "per-user pricing once you cross 4-6 technicians on most plans.\n\n"
+        "Implementation costs are real budget items at the enterprise end. ServiceTitan implementation partners "
+        "charge $10,000-$30,000 plus a typical multi-month engagement. BuildOps and simPRO are similar. SMB "
+        "platforms (Jobber, Housecall Pro, Workiz) typically waive implementation fees or charge minimal setup. "
+        "All-in three-year cost for a 10-tech residential HVAC shop runs $25,000-$80,000 on Jobber or Housecall "
+        "Pro, $80,000-$200,000+ on ServiceTitan."
+    ),
+
+    "market_trends": (
+        "Three trends define this market in 2026.\n\n"
+        "ServiceTitan dominance keeps consolidating at the top. Post-IPO, ServiceTitan has more capital and a "
+        "stronger sales engine than any competitor. The product is also the most comprehensive operating "
+        "system for a residential trades business. Mid-market competitors (FieldEdge, simPRO) are not displacing "
+        "ServiceTitan in head-to-head deals; they are winning customers ServiceTitan is too expensive or too "
+        "complex for. The competitive frontier is at $2-5M revenue where ServiceTitan and Housecall Pro Max+ "
+        "compete head-to-head.\n\n"
+        "AI is reshaping the FSM stack from outside. Avoca, Hatch, Goodcall, Rosie, and Trillet all integrate "
+        "with the major FSM platforms (ServiceTitan, Jobber, Housecall Pro) rather than replacing them. Sera "
+        "Systems is the AI-native FSM challenger trying to displace the entire operating system. ServiceTitan's "
+        "response is Vera, an AI add-on that ships dispatching and sales-AI features inside the existing platform. "
+        "How this plays out by 2027-2028 is the most interesting open question in trades software.\n\n"
+        "Flat-rate pricing is gaining ground at the SMB end. Service Fusion has been growing share specifically "
+        "because growing trades businesses do not want their software bill scaling per-user. Expect more vendors "
+        "to introduce flat-rate or hybrid pricing tiers in 2026-2027 as a competitive response."
+    ),
+
+    "by_the_numbers": [
+        {"number": "~12,000", "label": "ServiceTitan customers (residential trades operators)"},
+        {"number": "~200,000", "label": "Jobber paying customers (small trades businesses)"},
+        {"number": "~30%", "label": "of US residential trades businesses use a modern FSM platform (rest are still on QuickBooks plus paper)"},
+        {"number": "$400-$700", "label": "all-in software spend per technician per month for a typical 10-tech HVAC shop in 2026"},
+    ],
+
+    "comparisons": [
+        ("/compare/servicetitan-vs-jobber/", "ServiceTitan vs Jobber"),
+        ("/compare/jobber-vs-housecallpro/", "Jobber vs Housecall Pro"),
+        ("/compare/servicetitan-vs-housecallpro/", "ServiceTitan vs Housecall Pro"),
+        ("/compare/servicetitan-vs-fieldedge/", "ServiceTitan vs FieldEdge"),
+        ("/compare/workiz-vs-housecallpro/", "Workiz vs Housecall Pro"),
+        ("/compare/buildops-vs-servicetitan/", "BuildOps vs ServiceTitan"),
+    ],
+
+    "guides": [
+        ("/guides/best-hvac-software/", "Best HVAC Software"),
+        ("/guides/best-plumbing-software/", "Best Plumbing Software"),
+        ("/guides/best-electrical-contractor-software/", "Best Electrical Contractor Software"),
+        ("/guides/best-servicetitan-alternatives/", "Best ServiceTitan Alternatives"),
+    ],
+
+    "faqs": [
+        {
+            "question": "ServiceTitan vs Jobber: how do you actually choose?",
+            "answer": (
+                "Revenue size is the starting filter. Below $2M, Jobber wins on simplicity, transparent pricing, "
+                "and time-to-value. Above $5M, ServiceTitan wins on the operational depth (set pricing, KPI dashboards, "
+                "dispatcher workflow, marketing automation) that maps to the operating model larger trades businesses "
+                "actually run. The $2-5M range is where the decision gets interesting and most often comes down to "
+                "growth ambition. If you plan to be at $10M in 24-36 months and the revenue funds it, ServiceTitan "
+                "saves a painful migration later. If your revenue is stable or growth is uncertain, Jobber Grow at "
+                "$349/month delivers most of what you need without the implementation overhead."
+            ),
+        },
+        {
+            "question": "Is Sera ready to replace ServiceTitan for SMB trades businesses?",
+            "answer": (
+                "Sera is plausible for new buyers in the 5-30 employee band who want AI dispatch out of the box and "
+                "have not committed to ServiceTitan's full operating model. It is not a migration target for "
+                "existing ServiceTitan customers because the workflow customization that ServiceTitan customers "
+                "have built up does not port over cleanly. The wager Sera is making is that AI-native FSM beats "
+                "AI-bolted-on-FSM as AI capabilities deepen. Whether that bet pays off is a 2027+ question. For "
+                "2026, Sera is a valid pick for new buyers, not a credible Switching pitch."
+            ),
+        },
+        {
+            "question": "When does flat-rate pricing beat per-user pricing?",
+            "answer": (
+                "Above 4-6 technicians on most plans. Service Fusion at $208/month works out cheaper than Jobber "
+                "Connect at $169/user once you have 2 technicians plus an office user. RazorSync's higher tiers "
+                "($231-$360 per month) beat per-user pricing once you cross 5-7 technicians. The break-even point "
+                "depends on which tier you compare. The catch: flat-rate vendors typically have less polished "
+                "mobile apps and less depth on marketing automation. Trade money for product polish."
+            ),
+        },
+        {
+            "question": "Do I need a commercial-specific FSM (BuildOps) over residential FSM?",
+            "answer": (
+                "Yes if more than 30-40% of your revenue is commercial. Commercial workflow (longer projects, "
+                "T&M billing, building-portfolio asset tracking, GC and property-manager customers) is genuinely "
+                "different from residential workflow (one-time service calls, set-pricing, residential homeowners). "
+                "Forcing residential FSM to handle commercial is workable up to a point but eventually creates "
+                "workflow workarounds that cost more than buying the right tool. ServiceTitan has commercial "
+                "features but they are bolted on. simPRO covers the multi-trade side. BuildOps is purpose-built."
+            ),
+        },
+        {
+            "question": "What is the implementation cost reality on ServiceTitan?",
+            "answer": (
+                "Plan for $15,000-$40,000 in implementation partner fees plus 60-90 days of internal time before "
+                "the platform delivers full value. ServiceTitan offers in-house implementation but most customers "
+                "use certified partners for faster results. The first 6 months on ServiceTitan are typically more "
+                "operational disruption than gain. By month 9-12, most customers see the operational gains the "
+                "platform was sold on. If your business cannot absorb 6 months of implementation overhead, "
+                "ServiceTitan is too expensive. Consider Housecall Pro Max+ or Jobber Grow as easier alternatives "
+                "that deliver 70-80% of the value at 30% of the friction."
+            ),
+        },
+    ],
+}
+
 HOME_SERVICES_AI_LANDING = {}
