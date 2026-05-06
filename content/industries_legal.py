@@ -240,6 +240,207 @@ LEGAL_AI_SUB_CLUSTERS = {
     "intake-crm": "Intake and CRM AI. Lead scoring, intake automation, marketing analytics.",
 }
 
-# Scope landing content (filled in Tasks 8-9)
-LEGAL_SAAS_LANDING = {}
+LEGAL_SAAS_LANDING = {
+    "hero_verdict": (
+        "If you run a solo or small firm general practice, Clio or MyCase. PracticePanther if budget is tight. "
+        "Smokeball if your practice is document-heavy (family, PI, estate). Filevine or Litify if you are a 25+ "
+        "attorney high-volume PI or mass tort firm. CosmoLex if you want to drop QuickBooks and run trust accounting "
+        "natively. Rocket Matter if you obsess about firm-level profitability metrics. Centerbase if you have "
+        "outgrown Clio but Salesforce-based Litify is overkill. LawPay if you only need IOLTA-compliant payments "
+        "as a layer on top of your existing PMS.\n\n"
+        "The choice that matters less than people expect: general PMS within the same tier. Clio versus MyCase "
+        "versus PracticePanther come down to integration ecosystem preferences and migration cost more than "
+        "feature differentiation. Pick once, set up properly, do not relitigate."
+    ),
+
+    "methodology": (
+        "We evaluated each platform on eight criteria. Pricing transparency (is the rate card public? are tiers "
+        "honest?). IOLTA compliance depth (three-way reconciliation? state-bar-specific reports? automatic trust "
+        "fund routing on payments?). Document automation (template power, conditional logic, court-rules-aware "
+        "drafts). Integration ecosystem (CRM, accounting, e-filing, payments, court systems). Mobile experience "
+        "(does it work for an attorney in the field, or is it desktop-only with a phone shim?). Support quality "
+        "and self-service learning. Customization without engineering (can a non-technical admin configure custom "
+        "fields, automations, intake forms?). Total cost over three years including implementation, training, "
+        "and add-ons. Pricing data verified against vendor sites and recent customer reports as of 2026-05-05."
+    ),
+
+    "cluster_intros": {
+        "general-pms": (
+            "General-practice PMS is the largest sub-category and the most contested. Clio, MyCase, PracticePanther, "
+            "and Rocket Matter all serve solo through mid-firm general practice with broadly similar feature sets. "
+            "The differences are in tier pricing (PracticePanther and Rocket Matter run cheaper), integration "
+            "breadth (Clio leads with 250+ partners), intake automation (MyCase is strongest), and overall ecosystem "
+            "stickiness (Clio's lawyer-marketplace and accounting partners create switching costs)."
+        ),
+        "doc-automation": (
+            "Document-automation-heavy PMS makes sense when your practice generates more documents than legal work. "
+            "Family law, estate planning, certain PI workflows, and immigration all fit this profile. Smokeball's "
+            "auto-time-capture (which records time spent in Word and Outlook on a matter) is the standout feature "
+            "here, and it eliminates a chunk of the time-tracking gap most firms have. Filevine sits between this "
+            "category and enterprise PI, with stronger document automation than Clio and stronger case management "
+            "than Smokeball."
+        ),
+        "all-in-one": (
+            "All-in-one PMS with native trust accounting is the answer for firms that want to drop QuickBooks. "
+            "CosmoLex is the only platform in this category at scale. The pitch lands hardest with firms that have "
+            "been double-keying transactions between PMS and QuickBooks, or struggling with three-way reconciliation. "
+            "Migration is real work (typically 4-8 weeks of bookkeeper time) but the long-term operational simplification "
+            "is the trade."
+        ),
+        "enterprise": (
+            "Enterprise PMS for mid-size firms outgrowing Clio. Centerbase is the cleanest option for firms that "
+            "want enterprise-grade workflow, billing, and reporting without going to Salesforce-based Litify. The "
+            "common buyer here is a 30-100 attorney firm with multiple practice areas, complex billing arrangements, "
+            "and a dedicated ops or finance person who can run the platform."
+        ),
+        "enterprise-pi": (
+            "Enterprise PI and mass tort is its own world. The volume math is different: a firm running 5,000 PI "
+            "matters needs intake-to-settlement automation that general PMS was not built for. Filevine and Litify "
+            "split the market, with Filevine winning more on usability and Litify winning on Salesforce-ecosystem "
+            "fit and enterprise procurement comfort. Pricing is custom and typically lands 2-5x what general PMS costs."
+        ),
+        "payments": (
+            "Payments adjacency is the LawPay-shaped hole in the legal stack. Most full-featured PMS platforms have "
+            "payment processing, but if you only need IOLTA-compliant card payments and your firm is happy on its "
+            "current PMS or even on QuickBooks plus a separate trust ledger, LawPay layers on top without forcing "
+            "a PMS migration. It is also the integration backbone for Clio, MyCase, PracticePanther, and most other "
+            "legal payment flows."
+        ),
+    },
+
+    "buyer_framework": (
+        "Six criteria matter more than the others when evaluating PMS for a US law firm.\n\n"
+        "Trust accounting depth. If you handle client funds, your PMS or its accounting integration must enforce "
+        "three-way reconciliation, generate IOLTA reports your state bar accepts without manual reformatting, and "
+        "route trust-applicable payments to the IOLTA account automatically. Manual workarounds compound bar-grievance "
+        "risk and add hours of monthly bookkeeping work.\n\n"
+        "Integration ecosystem. PMS lives at the center of your stack. Calendar (Google or Outlook), email, accounting "
+        "(QuickBooks or native), payments, e-filing (state-court-specific), CRM-style intake, and document storage "
+        "(Box, OneDrive, NetDocuments) all need to work cleanly. Clio leads on raw count of integrations; Smokeball "
+        "and Filevine are deeper on Word and Outlook specifically.\n\n"
+        "Document automation. Templates with conditional logic, court-rules-aware drafts (where venue-specific rules "
+        "are baked in), automatic merge from matter data, and reusable clause libraries. Smokeball is strongest. "
+        "Clio Draft (the rebranded Lawyaw acquisition) closed much of the gap. Other vendors lag and most firms "
+        "supplement with NetDocuments, HotDocs, or Spellbook.\n\n"
+        "Time tracking model. Manual entry, timer-based, or auto-capture? Smokeball's auto-capture is unique. "
+        "Most other vendors offer timers and manual entry, which means time leakage in the 10-25% range for typical "
+        "firms. If your firm bills hourly, time tracking is revenue.\n\n"
+        "Conflict checking. Built-in across most PMS but with varying depth. Larger firms running more matters "
+        "and more parties need full conflict-database features (party search, related-party detection, prior-matter "
+        "lookups). Smaller firms can get by with simpler implementations.\n\n"
+        "Total cost over three years. License cost is the headline. Implementation, training, integration setup, "
+        "data migration from your current system, ongoing add-on costs, and the bookkeeper or admin time to run "
+        "the platform are the rest. For a 10-attorney firm, all-in three-year cost typically runs $35,000-$120,000 "
+        "depending on platform tier and add-ons."
+    ),
+
+    "pricing_landscape": (
+        "Solo and entry-tier general PMS runs $39-89 per user per month (MyCase Basic at $39, PracticePanther Solo "
+        "at $59, Clio EasyStart at $49). Mid-tier runs $79-129 per user per month (the bulk of working firms land "
+        "here). Enterprise general practice runs $129-199 per user per month with feature-loaded plans. Document-"
+        "heavy or PI-specialized PMS like Smokeball and Filevine sit in the $80-200 range with more variance based "
+        "on firm size and add-ons. CosmoLex is a flat $89 per user per month including the trust-accounting depth.\n\n"
+        "Enterprise PI and mass-tort PMS (Litify, Centerbase, large Filevine deployments) run $150-300+ per user per "
+        "month with custom enterprise pricing, multi-year contracts, and meaningful implementation fees ($15,000-$75,000 "
+        "in year one). Payments-only LawPay charges per-transaction (~2.95% plus $0.20) plus a small monthly fee.\n\n"
+        "What drives variance within a tier: number of users, included document storage, integration tier "
+        "(API access often costs extra), advanced reporting, and bundled training credits. Mid-firm and enterprise "
+        "deals usually have negotiating room of 10-25% off list, especially on annual prepay."
+    ),
+
+    "market_trends": (
+        "Three trend lines matter in 2026. First, the all-in-one trust-accounting thesis is winning in the mid-market. "
+        "CosmoLex is growing faster than the general-PMS category and pulling firms that hit the limits of QuickBooks "
+        "plus a separate ledger. Smaller PMS vendors are adding deeper trust accounting in response, but native built-in "
+        "is a different product than QuickBooks-integrated.\n\n"
+        "Second, AI is leaking into PMS at the edges. Clio added Clio Duo (AI chat summaries, draft assistance), MyCase "
+        "added IQ (intake automation, lead scoring), PracticePanther added AI-assisted time entry. These additions are "
+        "marginal but signal where the platforms want to go. The bigger story is that the PMS-adjacent AI tools "
+        "(Spellbook for drafting, Lawmatics for intake, EvenUp for PI demand letters) are pulling workflow out of "
+        "the PMS rather than into it.\n\n"
+        "Third, pricing pressure at the bottom is forcing tier consolidation. PracticePanther's Solo at $59 and "
+        "MyCase Basic at $39 are aggressive enough that Clio's EasyStart at $49 is losing share. Expect either "
+        "Clio to introduce a sub-$40 tier or quietly stop competing for the smallest firms in 2027."
+    ),
+
+    "by_the_numbers": [
+        {"number": "~73%", "label": "of US law firms run a modern cloud PMS in 2026 (up from ~58% in 2022)"},
+        {"number": "~30%", "label": "estimated combined market share of Clio, MyCase, and PracticePanther in cloud PMS"},
+        {"number": "10-25%", "label": "average time leakage from manual time tracking versus auto-capture solutions"},
+        {"number": "$35K-$120K", "label": "all-in three-year PMS cost for a 10-attorney firm including implementation"},
+    ],
+
+    "comparisons": [
+        ("/compare/clio-vs-mycase/", "Clio vs MyCase"),
+        ("/compare/clio-vs-practicepanther/", "Clio vs PracticePanther"),
+        ("/compare/mycase-vs-practicepanther/", "MyCase vs PracticePanther"),
+        ("/compare/smokeball-vs-clio/", "Smokeball vs Clio"),
+        ("/compare/filevine-vs-litify/", "Filevine vs Litify"),
+        ("/compare/clio-vs-smokeball/", "Clio vs Smokeball"),
+    ],
+
+    "guides": [
+        ("/guides/best-practice-management-software-solo-attorneys/", "Best PMS for Solo Attorneys"),
+        ("/guides/best-legal-practice-management-small-firms/", "Best PMS for Small Law Firms"),
+        ("/guides/best-pms-personal-injury-law-firms/", "Best PMS for PI Firms"),
+        ("/guides/best-clio-alternatives/", "Best Clio Alternatives"),
+    ],
+
+    "faqs": [
+        {
+            "question": "What's the cheapest PMS that handles IOLTA compliance properly?",
+            "answer": (
+                "MyCase Basic at $39 per user per month is the cheapest general PMS with credible trust accounting, but the "
+                "trust handling there is integration-based (through MyCase Payments) rather than fully native. PracticePanther "
+                "Solo at $59 has similar capability. CosmoLex at $89 has the deepest native trust accounting at the lowest "
+                "price point in that category. If you handle small-volume client funds, MyCase or PracticePanther work fine. "
+                "If you handle large-volume trust transactions or run a high-IOLTA-activity practice (real estate closings, "
+                "PI settlements, retainer-heavy litigation), CosmoLex pays back the price difference."
+            ),
+        },
+        {
+            "question": "When does it make sense to leave Clio for a specialist?",
+            "answer": (
+                "Leave for Smokeball if your practice is document-template-heavy and Clio Draft does not cover your templates "
+                "well. Leave for Filevine or Litify if you have grown past 25 attorneys and run high-volume PI or mass tort "
+                "where Clio's general-purpose model is awkward. Leave for CosmoLex if you are tired of running QuickBooks "
+                "alongside Clio and want native trust accounting. Stay on Clio if your firm is general-purpose, mid-size or "
+                "smaller, and your existing setup works. Migration costs typically run 80-200 hours of admin and bookkeeper "
+                "time, and most firms underestimate it."
+            ),
+        },
+        {
+            "question": "How does Clio's recent Lawyaw acquisition affect document automation?",
+            "answer": (
+                "Lawyaw became Clio Draft and significantly closed the document-automation gap with Smokeball. Clio Draft "
+                "supports template logic, court-rules awareness for major US states, automatic merge from matter data, and "
+                "clause libraries. It is not as deep as Smokeball on family law and certain probate templates, but for general "
+                "practice it eliminates the previous reason firms picked Smokeball over Clio. The acquisition also brought "
+                "Clio closer to feature parity with Filevine on case-management workflow, though Filevine's customization "
+                "depth and PI-specific feature set still win for high-volume PI."
+            ),
+        },
+        {
+            "question": "Is Salesforce-based Litify worth the cost over Filevine?",
+            "answer": (
+                "Only if your firm already lives on Salesforce or has a dedicated Salesforce admin. Litify's value compounds "
+                "when other parts of the firm (marketing, BD, finance) run on Salesforce ecosystem tools. For pure case-"
+                "management value, Filevine delivers similar capability at lower cost and with a smaller learning curve. The "
+                "real test: list your top 15 case-management requirements. If five or more require multi-object Salesforce "
+                "logic, Litify wins. If most are workflow and document-driven, Filevine is the better buy."
+            ),
+        },
+        {
+            "question": "Can I combine PMS and accounting in one tool?",
+            "answer": (
+                "Yes, in two distinct ways. CosmoLex bundles full accounting (general ledger, trust accounting, billing, "
+                "financial statements) into the PMS itself, eliminating QuickBooks. Clio, MyCase, and PracticePanther bundle "
+                "their own billing, invoicing, and trust accounting but rely on QuickBooks for general-ledger work. Most "
+                "firms below 50 attorneys can run on either model. Above 50 attorneys, you typically end up with a dedicated "
+                "accounting platform regardless of PMS choice."
+            ),
+        },
+    ],
+}
+
 LEGAL_AI_LANDING = {}
