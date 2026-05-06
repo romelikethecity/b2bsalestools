@@ -176,7 +176,7 @@ GUIDE_CONTENT_VERTICAL["best-practice-management-software-solo-attorneys"] = {
         "from Word and Outlook. Most others require manual or timer entry. For solos billing hourly, "
         "auto-capture eliminates 10-25% time leakage that compounds over a year.\n\n"
         "**Integration ecosystem.** Calendar (Google or Outlook), accounting (QuickBooks or native), "
-        "e-filing, payments. Clio leads on raw count. The integrations you actually need are smaller: "
+        "e-filing, payments. Clio leads on raw count. The integrations a solo needs are smaller: "
         "calendar plus payments plus accounting cover 80% of solo use cases.\n\n"
         "**Growth path.** If you add a second attorney or paralegal in 18 months, will the platform "
         "scale without a painful migration? Clio, MyCase, and PracticePanther all have higher tiers "
@@ -210,7 +210,7 @@ GUIDE_CONTENT_VERTICAL["best-practice-management-software-solo-attorneys"] = {
         "How does trust-applicable payment routing work? Is it automatic or manual on every transaction?",
         "What is the document automation capability at the tier I am buying? Are templates included or are they an add-on?",
         "Does time tracking auto-capture from Word and Outlook, or do I need to manually log entries?",
-        "What is the mobile app actually like in the field? Can I do everything I do on desktop?",
+        "What is the mobile app like in the field? Can I do everything I do on desktop?",
         "What is the upgrade path if I add a second attorney or paralegal in 12-18 months?",
         "What is the data export and migration story if I switch platforms?",
         "Are there bar-association discounts available through ABA, state, or local bar memberships?",
