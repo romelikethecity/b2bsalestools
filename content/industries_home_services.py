@@ -390,12 +390,12 @@ HOME_SERVICES_SAAS_LANDING = {
 
     "faqs": [
         {
-            "question": "ServiceTitan vs Jobber: how do you actually choose?",
+            "question": "ServiceTitan vs Jobber: which is right for my shop?",
             "answer": (
                 "Revenue size is the starting filter. Below $2M, Jobber wins on simplicity, transparent pricing, "
                 "and time-to-value. Above $5M, ServiceTitan wins on the operational depth (set pricing, KPI dashboards, "
                 "dispatcher workflow, marketing automation) that maps to the operating model larger trades businesses "
-                "actually run. The $2-5M range is where the decision gets interesting and most often comes down to "
+                "run. The $2-5M range is where the decision gets interesting and most often comes down to "
                 "growth ambition. If you plan to be at $10M in 24-36 months and the revenue funds it, ServiceTitan "
                 "saves a painful migration later. If your revenue is stable or growth is uncertain, Jobber Grow at "
                 "$349/month delivers most of what you need without the implementation overhead."
@@ -426,7 +426,7 @@ HOME_SERVICES_SAAS_LANDING = {
             "question": "Do I need a commercial-specific FSM (BuildOps) over residential FSM?",
             "answer": (
                 "Yes if more than 30-40% of your revenue is commercial. Commercial workflow (longer projects, "
-                "T&M billing, building-portfolio asset tracking, GC and property-manager customers) is genuinely "
+                "T&M billing, building-portfolio asset tracking, GC and property-manager customers) is "
                 "different from residential workflow (one-time service calls, set-pricing, residential homeowners). "
                 "Forcing residential FSM to handle commercial is workable up to a point but eventually creates "
                 "workflow workarounds that cost more than buying the right tool. ServiceTitan has commercial "
