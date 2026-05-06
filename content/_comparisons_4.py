@@ -2163,3 +2163,671 @@ COMPARISON_CONTENT_W1["buildops-vs-servicetitan"] = {
         },
     ],
 }
+
+
+# =============================================================================
+# Home Services AI comparisons
+# =============================================================================
+
+COMPARISON_CONTENT_W1["avoca-vs-hatch"] = {
+    "category": "hs-ai",
+    "last_verified": "2026-05-06",
+    "verdict": (
+        "Avoca for ServiceTitan-integrated mid-large operations focused on AI voice answering. "
+        "Hatch for SMB and mid-market operations wanting multi-channel CSR (voice plus SMS plus "
+        "email). Different scopes; the choice depends on whether voice-only AI receptionist or "
+        "multi-channel customer service is the priority."
+    ),
+    "intro": (
+        "Avoca and Hatch are two of the leading AI-for-trades platforms in 2026. Avoca AI raised "
+        "at a $1B valuation in April 2026 on the back of high-volume AI voice answering "
+        "adoption. Hatch covers voice plus SMS plus email across 2,000+ home service customers.\n\n"
+        "Pricing: Avoca custom usage-based pricing typically $1,000-$5,000+ per month for mid-"
+        "large operations. Hatch per-seat or contact-sales pricing typically $500-$2,000/mo "
+        "for SMB. The price comparison depends heavily on call volume and channel mix."
+    ),
+    "dimensions": [
+        ["Primary use case", "AI voice answering", "Multi-channel CSR (voice + SMS + email)"],
+        ["Pricing model", "Custom usage-based", "Per-seat or custom"],
+        ["Typical monthly cost (mid-large)", "$1K-$5K+", "$500-$2,000"],
+        ["Voice quality", "Highest in category", "Strong"],
+        ["SMS automation", "Limited", "Strong, primary feature"],
+        ["Email handling", "Limited", "Built in"],
+        ["FSM integration", "Deepest with ServiceTitan", "Major FSM supported"],
+        ["Customer base", "Mid-large home services on ServiceTitan", "2,000+ home service customers"],
+        ["Best fit", "Voice-focused mid-large", "Multi-channel SMB through mid-market"],
+        ["Funding stage", "Late-stage growth, $1B valuation", "Growth stage"],
+    ],
+    "a_wins": (
+        "**Voice quality.** Highest in category. Customers calling Avoca-handled lines often "
+        "do not realize they are talking to AI.\n\n"
+        "**ServiceTitan integration depth.** Native integration writes call data, customer "
+        "info, and appointment details directly into ServiceTitan without manual entry. "
+        "Hatch's ServiceTitan integration is solid but less native.\n\n"
+        "**Voice-focused mid-large fit.** Operations doing high inbound voice volume (HVAC, "
+        "plumbing, roofing) where voice is the priority channel get the strongest value from "
+        "Avoca's voice depth.\n\n"
+        "**Late-stage maturity.** Avoca's $1B valuation in 2026 reflects the platform's "
+        "operational maturity and customer adoption at scale."
+    ),
+    "b_wins": (
+        "**Multi-channel scope.** Voice plus SMS plus email in one platform. Trades customers "
+        "increasingly prefer text and email for non-emergency communication. Hatch covers all "
+        "channels; Avoca is voice-focused.\n\n"
+        "**Lower entry cost.** $500-$1,000/month for SMB tiers vs Avoca's $1,000+/mo "
+        "minimum. Hatch is more accessible for smaller operations.\n\n"
+        "**Established customer base on multi-channel.** 2,000+ home service customers using "
+        "the multi-channel CSR platform. Battle-tested across diverse trade types and operation "
+        "sizes.\n\n"
+        "**Better fit for marketing-driven operations.** Operations focused on customer "
+        "messaging across channels (review responses, SMS appointment reminders, email follow-"
+        "ups) get more value from Hatch than from Avoca's voice-only approach."
+    ),
+    "choose_a": (
+        "you operate $3M+ residential trades on ServiceTitan, voice answering is the primary "
+        "use case, or you prioritize voice quality and ServiceTitan integration depth above "
+        "all else."
+    ),
+    "choose_b": (
+        "you want multi-channel customer service (voice + SMS + email), you operate at SMB or "
+        "mid-market scale where Avoca's pricing is too high, or your customer-communication "
+        "workflow extends beyond voice."
+    ),
+    "pricing_scenario": (
+        "**5-tech HVAC operation:** Avoca probably not a fit at this size (custom pricing "
+        "minimum often $1,000+/mo with implementation overhead). Hatch SMB tier $500-$800/mo "
+        "covers voice plus SMS at this scale.\n\n"
+        "**15-tech HVAC operation on ServiceTitan:** Avoca custom $1,500-$3,000/mo for voice. "
+        "Hatch $1,000-$1,500/mo for multi-channel. Either works; choose by channel priority.\n\n"
+        "**30-tech HVAC operation on ServiceTitan:** Avoca custom $3,000-$5,000+/mo for voice. "
+        "Hatch custom $2,000-$3,500/mo for multi-channel. Many operations run both: Avoca for "
+        "voice, Hatch for SMS and email."
+    ),
+    "integrations": (
+        "**Avoca:** Deep ServiceTitan integration. Other FSM (Jobber, Housecall Pro, FieldEdge) "
+        "supported via API.\n\n"
+        "**Hatch:** Major FSM (ServiceTitan, Jobber, Housecall Pro, Workiz) plus payment "
+        "processing and customer messaging tools."
+    ),
+    "faqs": [
+        {
+            "question": "Should we run both Avoca and Hatch?",
+            "answer": (
+                "Many mid-large operations do. Avoca for voice depth, Hatch for SMS and email. "
+                "The combined cost ($2,000-$8,000/month) is meaningful but each platform "
+                "delivers strongest value in its specialized lane. For operations with both "
+                "voice and multi-channel needs, the dual approach often wins."
+            ),
+        },
+        {
+            "question": "Can Hatch replace Avoca for voice-only use cases?",
+            "answer": (
+                "Partially. Hatch handles voice but the depth is less than Avoca's specialized "
+                "voice product. Operations where voice is the primary use case (high inbound "
+                "call volume, missed-call recovery as the main ROI driver) usually pick Avoca. "
+                "Hatch wins when voice is one of multiple channels."
+            ),
+        },
+        {
+            "question": "How do they handle Spanish-speaking customers?",
+            "answer": (
+                "Both support Spanish with reasonable quality. Avoca's Spanish voice quality "
+                "is comparable to its English. Hatch's multi-channel approach handles Spanish "
+                "across voice, SMS, and email. For operations in Spanish-heavy markets (TX, "
+                "FL, CA, AZ, Southwest), test specifically before buying."
+            ),
+        },
+    ],
+}
+
+COMPARISON_CONTENT_W1["goodcall-vs-rosie"] = {
+    "category": "hs-ai",
+    "last_verified": "2026-05-06",
+    "verdict": (
+        "Goodcall for SMB trades operations wanting drag-and-drop call-flow configuration and "
+        "self-service control. Rosie for solo and small trades operators wanting trade-trained "
+        "AI voice with minimal setup. Both are credible SMB picks; the choice is configurability "
+        "vs simplicity."
+    ),
+    "intro": (
+        "Goodcall and Rosie are two of the leading SMB AI receptionist platforms for trades. "
+        "Both target solo through 15-person home services operations. Both have credible voice "
+        "quality. The differentiation is in product personality: Goodcall is configurability-"
+        "driven; Rosie is trade-trained simplicity.\n\n"
+        "Pricing: Goodcall Starter at $59/mo, Growth at $99/mo, Scale at $199/mo. Rosie at "
+        "$49-$149/mo by tier. Comparable price ranges; the choice is feature fit not cost."
+    ),
+    "dimensions": [
+        ["Pricing", "$59-$199/mo", "$49-$149/mo"],
+        ["Configuration model", "Drag-and-drop call flows", "Trade-trained out of box"],
+        ["Voice quality", "Strong", "Strong, slightly better trade vocabulary"],
+        ["Setup time", "30-60 minutes self-serve", "15-30 minutes self-serve"],
+        ["Customization", "Strong, owner-operator can configure", "Lighter, simpler"],
+        ["FSM integration", "Major FSM supported", "Major FSM supported"],
+        ["Spanish support", "Available", "Available"],
+        ["Best fit (operation size)", "1-15 person SMB trades", "Solo and very small trades"],
+        ["Customer base", "Growing SMB trades", "Solo and small trades operators"],
+        ["AI voice training", "General service business", "Specifically trade-trained"],
+    ],
+    "a_wins": (
+        "**Drag-and-drop configurability.** Owner-operators can configure call flows, "
+        "escalation logic, and routing without vendor implementation work. For operations with "
+        "specific call-flow needs, this is the key differentiator.\n\n"
+        "**Tier flexibility.** Three tiers ($59, $99, $199) let operations start small and "
+        "upgrade as needs grow. Rosie's tier structure is similar but less granular.\n\n"
+        "**Better fit for 5-15 person SMB.** Goodcall's product depth scales to mid-SMB "
+        "operations more cleanly than Rosie. Operations that grow past 5-7 employees often "
+        "outgrow Rosie's simpler model.\n\n"
+        "**Stronger admin features.** Multi-user access, role-based controls, audit trails. "
+        "More relevant at SMB scale than for solo operators."
+    ),
+    "b_wins": (
+        "**Trade-trained out of the box.** Built specifically for home services with trade "
+        "vocabulary (HVAC, plumbing, electrical terms) baked in. Less setup work to handle "
+        "trade-specific conversations.\n\n"
+        "**Lower entry pricing.** $49/mo lowest tier vs Goodcall's $59 Starter. Modest "
+        "difference but matters for very budget-conscious solo operators.\n\n"
+        "**Faster setup.** 15-30 minutes to live operation. The trade-trained model means less "
+        "configuration work upfront.\n\n"
+        "**Better fit for solo and very small operators.** Rosie's simpler product fits 1-3 "
+        "person operations more naturally than Goodcall's configurability."
+    ),
+    "choose_a": (
+        "you operate 5-15 person SMB residential trades, you want drag-and-drop call-flow "
+        "configuration, or you have specific call-routing needs that require customization."
+    ),
+    "choose_b": (
+        "you are a solo or very small trades operator (1-3 people), you want fast setup with "
+        "minimal configuration work, or you specifically value trade-trained AI vocabulary "
+        "out of the box."
+    ),
+    "pricing_scenario": (
+        "**Solo HVAC operator:** Goodcall Starter $59/mo or Rosie low tier $49/mo. Marginal "
+        "price difference; Rosie wins on faster setup.\n\n"
+        "**5-tech plumbing operation:** Goodcall Growth $99/mo with configurability or Rosie "
+        "mid-tier $99-$149/mo. Goodcall is better fit at this size.\n\n"
+        "**12-tech HVAC operation:** Goodcall Scale $199/mo with multi-user controls or Rosie "
+        "higher tier $149/mo with simpler model. Goodcall is the safer pick."
+    ),
+    "integrations": (
+        "**Goodcall:** Major FSM (ServiceTitan, Jobber, Housecall Pro, Workiz) plus calendar "
+        "and CRM integrations.\n\n"
+        "**Rosie:** Major FSM supported with simpler integration model. Less granular than "
+        "Goodcall but covers the typical SMB needs."
+    ),
+    "faqs": [
+        {
+            "question": "Which has better voice quality on real calls?",
+            "answer": (
+                "Comparable. Both sound credibly human on routine calls. Rosie's trade-trained "
+                "vocabulary is slightly better on trade-specific conversations. Goodcall's "
+                "voice quality is strong across general service business conversations. Test "
+                "both as a customer with realistic scenarios before deciding."
+            ),
+        },
+        {
+            "question": "Can Goodcall do everything Rosie does?",
+            "answer": (
+                "Mostly, with configuration. Goodcall's drag-and-drop call flows can be "
+                "configured to handle trade-specific scenarios that Rosie handles natively. "
+                "The trade-off is setup time: Rosie is faster to live operation; Goodcall "
+                "requires more configuration work upfront."
+            ),
+        },
+        {
+            "question": "When does it make sense to upgrade from Rosie to Goodcall?",
+            "answer": (
+                "When your operation grows past 5-7 employees and you need multi-user access, "
+                "role controls, or specific call-flow customization. Solo and very small "
+                "operations should run Rosie indefinitely. Mid-SMB operations typically "
+                "outgrow Rosie's simpler model."
+            ),
+        },
+    ],
+}
+
+COMPARISON_CONTENT_W1["avoca-vs-goodcall"] = {
+    "category": "hs-ai",
+    "last_verified": "2026-05-06",
+    "verdict": (
+        "Avoca for ServiceTitan-integrated mid-large operations where voice quality and "
+        "integration depth justify premium pricing. Goodcall for SMB operations on Jobber, "
+        "Housecall Pro, or other FSM where pricing and self-service configurability matter. "
+        "Different price tiers, different operation sizes."
+    ),
+    "intro": (
+        "Avoca and Goodcall represent the enterprise vs SMB ends of the AI receptionist "
+        "market for trades. Avoca AI raised at $1B valuation in April 2026 with custom usage-"
+        "based pricing typically $1,000-$5,000+/mo for mid-large operations. Goodcall at "
+        "$59-$199/mo targets SMB and mid-market.\n\n"
+        "Both deliver credible voice quality. The differences: voice quality (Avoca higher), "
+        "FSM integration depth (Avoca deepest with ServiceTitan), pricing tier (Goodcall "
+        "much cheaper), and target operation size (Avoca mid-large, Goodcall SMB)."
+    ),
+    "dimensions": [
+        ["Pricing model", "Custom usage-based", "Subscription tiers"],
+        ["Typical monthly cost", "$1,000-$5,000+", "$59-$199"],
+        ["Voice quality", "Highest in category", "Strong"],
+        ["FSM integration", "Deepest with ServiceTitan", "Major FSM supported"],
+        ["Configuration", "Vendor-implementation", "Drag-and-drop self-serve"],
+        ["Setup time", "Custom rollout, weeks", "30-60 minutes self-serve"],
+        ["Best fit (revenue)", "$3M+ on ServiceTitan", "$500K-$3M on any FSM"],
+        ["Customer base", "Mid-large residential trades", "SMB residential trades"],
+        ["Funding stage", "Late-stage, $1B valuation", "Growth stage"],
+        ["AI voice training", "Premium-tier voice tech", "Strong commodity-tier voice tech"],
+    ],
+    "a_wins": (
+        "**Voice quality.** Highest in category. Real-world calls handled by Avoca often pass "
+        "as human conversations.\n\n"
+        "**ServiceTitan integration depth.** Deepest in the category. Call data, customer "
+        "info, appointments all write directly into ServiceTitan natively. Goodcall's FSM "
+        "integration is solid but less deep.\n\n"
+        "**Mid-large operation fit.** Operations doing $3M+ revenue with high inbound call "
+        "volume get the most value from Avoca's depth. Goodcall scales but feels light at "
+        "enterprise scale.\n\n"
+        "**Late-stage maturity.** $1B valuation reflects operational maturity and "
+        "customer adoption at scale."
+    ),
+    "b_wins": (
+        "**SMB pricing.** $59-$199/mo subscription vs Avoca's $1,000+/mo custom pricing. For "
+        "SMB operations, the cost differential is enormous.\n\n"
+        "**Self-service configurability.** Drag-and-drop call flows that owner-operators "
+        "configure without vendor implementation. Avoca requires custom rollout work.\n\n"
+        "**Faster time-to-value.** 30-60 minutes self-serve vs Avoca's custom rollout (typically "
+        "weeks).\n\n"
+        "**Better fit for non-ServiceTitan FSM.** Goodcall integrates with Jobber, Housecall "
+        "Pro, FieldEdge, Workiz comparably. Avoca's strength is specifically ServiceTitan; "
+        "Goodcall is more FSM-agnostic."
+    ),
+    "choose_a": (
+        "you operate $3M+ residential trades on ServiceTitan, voice quality and integration "
+        "depth justify the premium pricing, or you have call volume that supports usage-based "
+        "pricing economics."
+    ),
+    "choose_b": (
+        "you are SMB ($500K-$3M revenue), you operate on Jobber/Housecall Pro/other non-"
+        "ServiceTitan FSM, you want fast self-service deployment, or you want subscription "
+        "pricing without usage-based variability."
+    ),
+    "pricing_scenario": (
+        "**3-tech HVAC, $750K revenue:** Goodcall Starter $59/mo. Avoca probably not a fit at "
+        "this size.\n\n"
+        "**10-tech HVAC, $2.5M revenue on ServiceTitan:** Goodcall Growth $99/mo OR Avoca "
+        "custom $1,500-$2,500/mo. Goodcall wins on cost (~15-25x cheaper); Avoca wins on "
+        "ServiceTitan integration depth and voice quality.\n\n"
+        "**25-tech HVAC, $7M revenue on ServiceTitan:** Avoca custom $3,000-$5,000+/mo is the "
+        "typical pick. Goodcall Scale at $199/mo could work but feels under-built at this "
+        "operation size."
+    ),
+    "integrations": (
+        "**Avoca:** Deepest ServiceTitan integration in category. Other FSM supported via API.\n\n"
+        "**Goodcall:** Major FSM (ServiceTitan, Jobber, Housecall Pro, FieldEdge, Workiz) plus "
+        "calendar and CRM integrations."
+    ),
+    "faqs": [
+        {
+            "question": "Why pay 15-25x more for Avoca?",
+            "answer": (
+                "Voice quality and ServiceTitan integration depth. For operations where missed-"
+                "call recovery is high-value (mid-large HVAC, plumbing, roofing on ServiceTitan), "
+                "the premium pricing pays back through higher recovery rates and deeper "
+                "operational integration. For SMB operations, Goodcall's pricing and "
+                "configurability win."
+            ),
+        },
+        {
+            "question": "Can Goodcall scale to mid-large operations?",
+            "answer": (
+                "Goodcall Scale at $199/mo handles mid-market SMB operations (15-25 employees). "
+                "Above that, Avoca's depth becomes worth the premium. The transition point "
+                "varies by operation but typically lands around $3M revenue and 15-20 "
+                "employees."
+            ),
+        },
+        {
+            "question": "Should I start with Goodcall and upgrade to Avoca later?",
+            "answer": (
+                "Plausible strategy. Start with Goodcall to validate AI receptionist ROI, then "
+                "migrate to Avoca when operation size and call volume justify the premium. "
+                "The migration is meaningful work (call flow rebuild, integration "
+                "reconfiguration) but the validation step de-risks the larger Avoca commitment."
+            ),
+        },
+    ],
+}
+
+COMPARISON_CONTENT_W1["sera-vs-servicetitan"] = {
+    "category": "hs-ai",
+    "last_verified": "2026-05-06",
+    "verdict": (
+        "Sera for new buyers in 5-30 employee residential trades wanting AI-native FSM with "
+        "AI dispatch out of the box. ServiceTitan for established operations and growth-"
+        "ambitious mid-large operators with budget for the platform's depth. Different "
+        "operating models; Sera is the AI-first wager, ServiceTitan is the established "
+        "incumbent."
+    ),
+    "intro": (
+        "Sera Systems and ServiceTitan represent different bets on the future of trades FSM. "
+        "ServiceTitan dominates the residential trades operating system market with 12,000+ "
+        "customers and a comprehensive platform. Sera is the AI-native challenger built from "
+        "the ground up with AI dispatch, AI quoting, and AI customer matching as core features.\n\n"
+        "Pricing: Sera at $399/mo for 4 users plus $149 per extra technician. ServiceTitan "
+        "custom enterprise typically $80,000-$200,000+ per year all-in. The price comparison "
+        "favors Sera by 15-50x at typical operation sizes; the platform comparison favors "
+        "ServiceTitan on operational depth."
+    ),
+    "dimensions": [
+        ["Pricing", "$399/mo for 4 users + $149/tech", "Custom $80K-$200K+/year"],
+        ["AI capabilities", "AI dispatch, quoting, matching native", "AI add-ons (Vera) plus partner ecosystem"],
+        ["Operating system depth", "Lighter, AI-focused", "Comprehensive, deepest in residential"],
+        ["Set pricing book", "Solid", "Industry-leading"],
+        ["Marketing automation", "Functional", "Deep"],
+        ["Reporting depth", "Solid", "Deepest in residential"],
+        ["Implementation time", "1-3 weeks", "60-90 days"],
+        ["Best fit (operation size)", "5-30 employees, new buyers", "$5M+ residential trades"],
+        ["Customer base", "Smaller, growing", "12,000+ residential operators"],
+        ["Platform maturity", "2024-2026 launch", "Established 10+ years"],
+    ],
+    "a_wins": (
+        "**AI-native architecture.** Dispatch, quoting, and customer matching all built around "
+        "AI rather than added on top of legacy workflow. The architectural difference may "
+        "matter more as AI capabilities deepen.\n\n"
+        "**Pricing accessibility.** $399/mo for 4 users + $149/tech makes Sera accessible to "
+        "5-30 employee operations that ServiceTitan's pricing excludes.\n\n"
+        "**Faster implementation.** 1-3 weeks self-serve vs ServiceTitan's 60-90 days. For "
+        "new buyers, time-to-value matters.\n\n"
+        "**Modern UX.** Sera's interface feels current. ServiceTitan's interface, while "
+        "comprehensive, can feel dense and dated by comparison."
+    ),
+    "b_wins": (
+        "**Operating system depth.** ServiceTitan covers more of the residential trades "
+        "operating model: marketing automation, dispatcher seats, comprehensive reporting, "
+        "membership management, technician scoring, marketing analytics.\n\n"
+        "**Customer base maturity.** 12,000+ customers across the largest residential trades "
+        "operators. Battle-tested in diverse operation sizes and trade types.\n\n"
+        "**Integration ecosystem.** ServiceTitan Marketplace with deep AI add-ons (Avoca, "
+        "Hatch native integrations), marketing automation, accounting, business intelligence.\n\n"
+        "**Operational track record.** Set pricing books, KPI dashboards, marketing analytics "
+        "all built around what residential trades operators need at scale. Sera's "
+        "feature depth is improving but lighter."
+    ),
+    "choose_a": (
+        "you are a new buyer in 5-30 employee residential trades, you want AI-native FSM with "
+        "AI dispatch out of the box, or you cannot justify ServiceTitan's pricing and "
+        "implementation overhead at your operation size."
+    ),
+    "choose_b": (
+        "you are an established residential trades operator at $5M+ revenue, you want maximum "
+        "operating system depth, or your operation requires ServiceTitan's specific feature "
+        "set (marketing automation, dispatcher workflow, reporting depth)."
+    ),
+    "pricing_scenario": (
+        "**5-tech HVAC, $1.5M revenue:** Sera $399 + $149×1 = $548/mo = $6,576/year. "
+        "ServiceTitan custom $50,000-$100,000/year. Sera wins by 7-15x on cost.\n\n"
+        "**15-tech HVAC, $4M revenue:** Sera $399 + $149×11 = $2,038/mo = $24,456/year. "
+        "ServiceTitan custom $80,000-$150,000/year. Sera wins by 3-6x on cost.\n\n"
+        "**30-tech HVAC, $8M revenue:** Sera $399 + $149×26 = $4,273/mo = $51,276/year. "
+        "ServiceTitan custom $120,000-$250,000/year. Sera wins by 2-5x on cost. ServiceTitan's "
+        "operational depth becomes hard to substitute at this scale though."
+    ),
+    "integrations": (
+        "**Sera:** Smaller ecosystem focused on AI capabilities. Major payment processors, "
+        "calendar, and accounting integrations. Less breadth than ServiceTitan.\n\n"
+        "**ServiceTitan:** ServiceTitan Marketplace with deep integrations across categories. "
+        "AI add-on ecosystem (Avoca, Hatch), marketing automation, accounting, BI."
+    ),
+    "faqs": [
+        {
+            "question": "Is Sera ready to replace ServiceTitan?",
+            "answer": (
+                "Not for existing ServiceTitan customers. Workflow customization and "
+                "operational depth lock existing ServiceTitan customers in. For new buyers in "
+                "5-30 employee operations, Sera is a credible 2026 pick. The wager is that "
+                "AI-native FSM beats AI-bolted-on-FSM as AI capabilities deepen. Whether that "
+                "pays off in 2027+ is the open question."
+            ),
+        },
+        {
+            "question": "What does Sera AI dispatch do?",
+            "answer": (
+                "Real-time route optimization and tech-to-job matching. Considers technician "
+                "skills, parts availability, customer history, and traffic patterns to "
+                "optimize the daily schedule. Reported customer outcomes: 30-90 minutes saved "
+                "per technician per day on drive time and rescheduling. ServiceTitan's "
+                "dispatcher workflow is more manual but more configurable."
+            ),
+        },
+        {
+            "question": "When does ServiceTitan justify its premium over Sera?",
+            "answer": (
+                "When operational depth across the platform (marketing automation, dispatcher "
+                "seats, comprehensive reporting, membership management) compounds at scale. "
+                "Operations $5M+ in revenue with growth ambition and execution discipline "
+                "typically capture more value from ServiceTitan's depth than from Sera's "
+                "AI-native architecture."
+            ),
+        },
+    ],
+}
+
+COMPARISON_CONTENT_W1["hatch-vs-leadtruffle"] = {
+    "category": "hs-ai",
+    "last_verified": "2026-05-06",
+    "verdict": (
+        "Hatch for trades operations wanting comprehensive multi-channel CSR (voice plus SMS "
+        "plus email). LeadTruffle for trades operations sourcing leads from Thumbtack, Angi, "
+        "and similar marketplaces wanting AI lead qualification. Different scopes; Hatch is "
+        "broader CSR, LeadTruffle is marketplace-lead-specific."
+    ),
+    "intro": (
+        "Hatch and LeadTruffle target different points in the customer-acquisition-and-service "
+        "funnel for trades businesses. Hatch covers customer-service operations after the "
+        "lead becomes a customer (multi-channel CSR with voice, SMS, email). LeadTruffle "
+        "focuses earlier in the funnel: AI lead qualification specifically for marketplace-"
+        "sourced leads (Thumbtack, Angi).\n\n"
+        "Pricing: Hatch per-seat or contact-sales pricing typically $500-$2,000/mo for SMB. "
+        "LeadTruffle at $229-$629/mo tiered by usage. Different pricing structures reflect "
+        "different scope and use cases."
+    ),
+    "dimensions": [
+        ["Primary use case", "Multi-channel CSR (voice + SMS + email)", "AI lead qualification from marketplaces"],
+        ["Pricing model", "Per-seat or custom", "Tiered by usage"],
+        ["Typical monthly cost", "$500-$2,000", "$229-$629"],
+        ["Channel scope", "Voice + SMS + email", "Marketplace lead intake"],
+        ["Marketplace integration", "Limited", "Strong (Thumbtack, Angi)"],
+        ["FSM integration", "Major FSM supported", "Major FSM supported"],
+        ["Best fit", "Established trades with broad CSR needs", "Marketplace-driven lead-gen operations"],
+        ["Customer base", "2,000+ home service customers", "Smaller, marketplace-focused"],
+        ["Scope", "Customer service after acquisition", "Lead qualification before acquisition"],
+        ["AI capability", "Multi-channel conversation AI", "Specialized intake and qualification AI"],
+    ],
+    "a_wins": (
+        "**Multi-channel scope.** Voice plus SMS plus email in one platform. LeadTruffle is "
+        "marketplace-lead-specific.\n\n"
+        "**Customer base maturity.** 2,000+ home service customers. Battle-tested across "
+        "trade types and operation sizes.\n\n"
+        "**Broader use case fit.** Customer service automation extends beyond marketplace "
+        "leads to all customer interactions: scheduling, support, follow-ups, reviews.\n\n"
+        "**Better fit for established operations.** Operations with established customer "
+        "bases benefit more from comprehensive CSR than from marketplace-lead-specific tools."
+    ),
+    "b_wins": (
+        "**Marketplace-lead specialization.** Thumbtack and Angi integration with AI "
+        "qualification specifically built for marketplace lead types. Hatch handles "
+        "marketplace leads but less natively.\n\n"
+        "**Lower entry pricing.** $229/mo lowest tier vs Hatch's $500/mo SMB starting point. "
+        "Accessible for smaller marketplace-driven operations.\n\n"
+        "**Best fit for marketplace-dependent operations.** Trades businesses sourcing 50%+ "
+        "of leads from Thumbtack or Angi get specific value from LeadTruffle's "
+        "specialization.\n\n"
+        "**Usage-based pricing flexibility.** Tier matches lead volume, which fits seasonal "
+        "or variable marketplace activity better than per-seat pricing."
+    ),
+    "choose_a": (
+        "you are an established trades operation wanting comprehensive CSR across voice, SMS, "
+        "and email, or you do not specifically depend on marketplace-sourced leads."
+    ),
+    "choose_b": (
+        "you source meaningful share of leads from Thumbtack, Angi, or similar marketplaces, "
+        "or you specifically need AI lead qualification at the lead-intake step."
+    ),
+    "pricing_scenario": (
+        "**3-tech operation with low marketplace dependency:** Hatch SMB tier $500-$800/mo for "
+        "broad CSR. LeadTruffle at $229/mo only if marketplace leads matter.\n\n"
+        "**5-tech operation with 60% marketplace leads:** LeadTruffle $329-$629/mo for "
+        "marketplace specialization, plus separate AI receptionist (Goodcall, Rosie) for voice. "
+        "Combined cost ~$400-$800/mo, roughly comparable to Hatch's SMB tier.\n\n"
+        "**15-tech operation with mixed lead sources:** Hatch covers the broader CSR workflow. "
+        "Operations could add LeadTruffle for marketplace specialization but most do not "
+        "because Hatch handles marketplace inbound adequately for non-specialized needs."
+    ),
+    "integrations": (
+        "**Hatch:** Major FSM (ServiceTitan, Jobber, Housecall Pro, Workiz), payment "
+        "processing, customer messaging tools.\n\n"
+        "**LeadTruffle:** Thumbtack and Angi (primary marketplace integrations), major FSM, "
+        "lead-routing tools."
+    ),
+    "faqs": [
+        {
+            "question": "Should I run both Hatch and LeadTruffle?",
+            "answer": (
+                "If you do meaningful marketplace lead-gen volume and have broader customer "
+                "service needs, often yes. The combined cost (~$700-$2,500/mo) is meaningful "
+                "but each platform delivers strongest value in its specialized lane. Most "
+                "trades operations pick one based on which workflow gap is bigger."
+            ),
+        },
+        {
+            "question": "Can Hatch handle marketplace leads?",
+            "answer": (
+                "Yes, but less natively than LeadTruffle. Hatch covers marketplace inbound "
+                "as part of broader customer messaging. LeadTruffle is purpose-built for "
+                "Thumbtack and Angi lead patterns specifically. For operations heavily "
+                "dependent on these marketplaces, LeadTruffle's specialization wins."
+            ),
+        },
+        {
+            "question": "Which has better Spanish support?",
+            "answer": (
+                "Hatch's multi-channel approach handles Spanish across voice, SMS, and email "
+                "with reasonable quality. LeadTruffle's Spanish support is functional but "
+                "the use case (marketplace lead qualification) is narrower. For Spanish-heavy "
+                "markets, Hatch's broader Spanish coverage usually wins."
+            ),
+        },
+    ],
+}
+
+COMPARISON_CONTENT_W1["avoca-vs-rilla"] = {
+    "category": "hs-ai",
+    "last_verified": "2026-05-06",
+    "verdict": (
+        "Different products solving different problems. Avoca for AI voice receptionist on "
+        "inbound calls (replacing or augmenting CSRs). Rilla for AI sales coaching on in-home "
+        "replacement reps (improving close rate and ticket size). Both are AI for trades but "
+        "they do not substitute for each other. Most operations doing $5M+ in in-home "
+        "replacement run both."
+    ),
+    "intro": (
+        "Avoca and Rilla are both AI-for-trades platforms but solve completely different "
+        "problems. Avoca handles inbound customer calls with AI voice receptionist. Rilla "
+        "records in-home sales conversations with reps and uses AI to surface coaching "
+        "moments. The two are searched together because they are both well-known AI vendors "
+        "in trades, but they are not substitutes.\n\n"
+        "Pricing: Avoca custom usage-based typically $1,000-$5,000+/mo. Rilla at $199-$349 per "
+        "rep per month, which works out to $40,000-$84,000/year for a 20-rep in-home sales "
+        "team."
+    ),
+    "dimensions": [
+        ["Primary use case", "AI voice receptionist (inbound calls)", "AI sales coaching (in-home reps)"],
+        ["Channel", "Inbound voice", "In-home audio + transcription"],
+        ["Pricing", "Custom usage-based", "$199-$349 per rep/mo"],
+        ["Typical cost", "$1,000-$5,000+/mo", "$40K-$84K/yr for 20 reps"],
+        ["FSM integration", "Deepest with ServiceTitan", "Standalone with reporting integration"],
+        ["Hardware required", "None", "Wearable audio recorder"],
+        ["Best fit (use case)", "Operations missing inbound calls", "Operations with in-home replacement sales"],
+        ["Best fit (operation type)", "$3M+ residential trades", "$5M+ in-home replacement sales"],
+        ["Customer base", "Mid-large home services", "HVAC replacement, roofing, water treatment"],
+        ["AI capability", "Conversational voice", "Audio transcription + scoring"],
+    ],
+    "a_wins": (
+        "**Inbound call handling.** AI receptionist for customers calling the business. "
+        "Recovers missed calls during business hours and after hours.\n\n"
+        "**Voice quality on customer calls.** Sounds credibly human; customers often do not "
+        "realize they are talking to AI.\n\n"
+        "**ServiceTitan integration depth.** Call data writes directly into ServiceTitan "
+        "customer and matter records.\n\n"
+        "**Broader operation fit.** Almost every trades operation receives inbound calls; the "
+        "use case applies broadly. Avoca is relevant for operations $3M+ regardless of in-"
+        "home sales motion."
+    ),
+    "b_wins": (
+        "**Sales coaching at in-home appointments.** Records conversations between reps and "
+        "customers in the home, transcribes, and scores against a coaching framework. "
+        "Surfaces specific moments in the sale where the rep won or lost the deal.\n\n"
+        "**Improvement in close rate and ticket size.** Reported customer outcomes: 20-40% "
+        "close rate improvement, 10-25% ticket size improvement on coached reps.\n\n"
+        "**ROI for in-home replacement sales operations.** Operations $5M+ in in-home "
+        "replacement (HVAC, roofing, water treatment) capture meaningful revenue lift from "
+        "coaching at scale.\n\n"
+        "**Manager workflow integration.** Sales managers review AI-scored calls and use them "
+        "in coaching sessions. Scales coaching from 3-4 reps per manager to 10-15 reps."
+    ),
+    "choose_a": (
+        "you want to capture inbound calls (recover missed-call revenue, automate after-hours "
+        "coverage, reduce CSR overhead). Almost every trades operation $3M+ benefits."
+    ),
+    "choose_b": (
+        "you have an in-home replacement or install sales motion (HVAC replacement, roofing, "
+        "water treatment, water heater replacement, certain plumbing repipe work) where AI "
+        "coaching can improve close rate and ticket size. Operations $5M+ in this kind of "
+        "sales motion capture the most value."
+    ),
+    "pricing_scenario": (
+        "**5-tech HVAC service operation:** Avoca custom $500-$1,500/mo (or skip Avoca if "
+        "below the size threshold). Rilla not relevant (no in-home replacement sales motion).\n\n"
+        "**15-tech HVAC with replacement sales (5 reps):** Avoca $1,500-$2,500/mo for inbound "
+        "coverage. Rilla 5 reps × $249 = $1,245/mo for sales coaching. Combined ~$3,000-$3,800/"
+        "mo. Both useful, neither replaces the other.\n\n"
+        "**30-tech HVAC operation with 15-rep in-home sales team:** Avoca $3,000-$5,000/mo "
+        "for inbound coverage. Rilla 15 reps × $249 = $3,735/mo for coaching. Combined "
+        "$6,500-$9,000/mo. Most operations at this scale run both because the ROI on each is "
+        "independent."
+    ),
+    "integrations": (
+        "**Avoca:** Deep ServiceTitan integration. Other FSM via API.\n\n"
+        "**Rilla:** Standalone primary platform with reporting integration to ServiceTitan and "
+        "other FSM. Manager dashboards independent of FSM."
+    ),
+    "faqs": [
+        {
+            "question": "Is this a real comparison? They do different things.",
+            "answer": (
+                "Yes, that is the point. Both are searched together because they are both well-"
+                "known AI vendors in trades, but they solve completely different problems. "
+                "Avoca handles inbound calls; Rilla coaches in-home sales reps. Most "
+                "operations doing meaningful in-home replacement sales run both because the "
+                "two ROI profiles are independent."
+            ),
+        },
+        {
+            "question": "If I can only pick one, which has higher ROI?",
+            "answer": (
+                "Depends entirely on your operation profile. If you miss inbound calls (most "
+                "operations do), Avoca pays back fast. If you have in-home replacement sales "
+                "with stable rep team, Rilla pays back fast. Operations doing both would "
+                "benefit from both. The ROI math on each is independent and additive."
+            ),
+        },
+        {
+            "question": "Which is more mature as a product?",
+            "answer": (
+                "Both are late-stage growth-stage products with established customer bases. "
+                "Avoca's $1B valuation in April 2026 reflects the product's commercial maturity. "
+                "Rilla's product is similarly mature within its specialized category. Neither "
+                "is a 2024-vintage early-stage AI tool; both are battle-tested in real "
+                "operations."
+            ),
+        },
+    ],
+}
