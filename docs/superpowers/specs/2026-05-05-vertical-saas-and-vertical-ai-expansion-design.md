@@ -289,6 +289,21 @@ The implementation plan (next step, via writing-plans skill) must:
 4. Include a regression-test step (rendered-HTML diff for one existing tool page before/after build.py changes) to confirm no Wave 1 changes broke existing 190 pages
 5. Include the deploy step + GSC/GA4 monitoring plan for the 8 weeks following deploy
 
+## Constraint refinements (2026-05-05 review)
+
+After self-evaluation, the following constraints were clarified:
+
+- **No affiliate revenue currently**, so FTC affiliate disclosure copy is not a launch blocker. Existing `class="affiliate-link"` markup is sufficient. Add disclosure copy when affiliate programs activate.
+- **No current traffic** (~22 weekly views per GA4). The whole purpose of this expansion is to build content that captures traffic over a 3-12 month horizon. Don't optimize for conversion-rate or audience-capture mechanisms that require traffic to validate.
+- **E-E-A-T / authorship is already handled** by existing `build.py` author functions. New render functions for scope landings, comparisons, and guides must call the same author/methodology helpers (`By Rome Thorndike` + LinkedIn link + "Reviewed by... Last verified {BUILD_DATE}" + methodology paragraph). No new bio content needed.
+- **Image strategy deferred to a later wave.** No vendor logos, hero images, or OG cards in Wave 1. Pages are text-only with existing site CSS. Run `/image-seo-audit` after Wave 1 ships to plan a retro image pass.
+- **Aggregator-competition principle (added per gap-3 review)**: every guide and scope landing must use **opinionated rankings + niche use-case framing** to differentiate from G2/Capterra/Software Advice. Generic "best [category] software" framing is forbidden — every guide must specify a use case, firm size, or buyer profile in its angle. Sort by editorial verdict, not by user-rating proxies.
+- **First-party data leverage**: where Rome's vertical contact-data brands (Vettica/Lexica/SubForge/etc.) have publishable counts (e.g. "12,847 personal-injury law firms in the US per our database"), surface them in scope landings as a "by-the-numbers" callout. One per scope landing, sourced + dated.
+- **Search-intent validation**: before writing each batch, spot-check the slug against actual search-volume data (Lookout / Ahrefs / SEMrush / Keyword Planner). If a comparison or guide returns 0 monthly searches, drop it and substitute a higher-volume alternative from the research output.
+- **Internal linking from existing pages**: after Wave 1 deploys, run a retroactive linking pass — scan existing 190 pages for topical fit with new pages and add 2-3 contextual links per relevant existing page. Captured as a Day-15+1 follow-up task.
+- **Wave 2 trigger criteria**: proceed to Wave 2 if Wave 1 hits ≥500 GSC impressions OR ≥50 clicks within 8 weeks of deploy. If neither metric hits, diagnose what's not ranking before adding more pages.
+- **Refresh cadence**: each new content data entry includes a `last_verified` field (defaulting to BUILD_DATE). Quarterly refresh review for all Wave 1 pages, with stale-data verification before each rebuild.
+
 ## References
 
 - **Site repo**: `/Users/rome/Documents/websites/content/b2bsalestools/`
