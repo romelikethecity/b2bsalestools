@@ -2877,6 +2877,22 @@ def _load_content():
 _load_content()
 
 
+# Wave 1 vertical content (legal + home services). Explicit imports because these
+# do not follow the auto-loaded naming conventions of the existing _load_content() pass.
+from content.industries_legal import (
+ LEGAL_INDUSTRY, LEGAL_SAAS_TOOLS, LEGAL_AI_TOOLS,
+ LEGAL_SAAS_SUB_CLUSTERS, LEGAL_AI_SUB_CLUSTERS,
+ LEGAL_SAAS_LANDING, LEGAL_AI_LANDING,
+)
+from content.industries_home_services import (
+ HOME_SERVICES_INDUSTRY, HOME_SERVICES_SAAS_TOOLS, HOME_SERVICES_AI_TOOLS,
+ HOME_SERVICES_SAAS_SUB_CLUSTERS, HOME_SERVICES_AI_SUB_CLUSTERS,
+ HOME_SERVICES_SAAS_LANDING, HOME_SERVICES_AI_LANDING,
+)
+from content._comparisons_4 import COMPARISON_CONTENT_W1
+from content.guides_vertical import GUIDE_CONTENT_VERTICAL
+
+
 def get_tool_content(slug):
  """Get expanded content for a tool, with safe defaults."""
  defaults = {
@@ -4829,6 +4845,412 @@ def build_industry_pages():
  return count
 
 
+# =============================================================================
+# WAVE 1 VERTICAL RENDERING (Legal + Home Services)
+# =============================================================================
+
+VERTICAL_INDUSTRIES = {
+ "legal": {
+  "data": LEGAL_INDUSTRY,
+  "saas_tools": LEGAL_SAAS_TOOLS,
+  "ai_tools": LEGAL_AI_TOOLS,
+  "saas_clusters": LEGAL_SAAS_SUB_CLUSTERS,
+  "ai_clusters": LEGAL_AI_SUB_CLUSTERS,
+  "saas_landing": LEGAL_SAAS_LANDING,
+  "ai_landing": LEGAL_AI_LANDING,
+  "saas_scope": "practice-management",
+  "saas_scope_name": "Practice Management Software",
+  "ai_scope": "ai",
+  "ai_scope_name": "Vertical AI Tools",
+ },
+ "home-services": {
+  "data": HOME_SERVICES_INDUSTRY,
+  "saas_tools": HOME_SERVICES_SAAS_TOOLS,
+  "ai_tools": HOME_SERVICES_AI_TOOLS,
+  "saas_clusters": HOME_SERVICES_SAAS_SUB_CLUSTERS,
+  "ai_clusters": HOME_SERVICES_AI_SUB_CLUSTERS,
+  "saas_landing": HOME_SERVICES_SAAS_LANDING,
+  "ai_landing": HOME_SERVICES_AI_LANDING,
+  "saas_scope": "field-service-management",
+  "saas_scope_name": "Field Service Management",
+  "ai_scope": "ai",
+  "ai_scope_name": "Vertical AI Tools",
+ },
+}
+
+
+def _vendor_link(name, url):
+ """Render a vendor name as an affiliate-class link."""
+ return f'<a href="{url}" class="affiliate-link" target="_blank" rel="nofollow noopener">{name}</a>'
+
+
+def _vendor_card_html(slug, name, url, sub_cluster_label, pricing_line, verdict, who_for):
+ """Render a vendor card in scope landing or industry hub mini-review style."""
+ return f'''<div class="tool-card">
+<div class="tool-card-top">
+<div class="tool-card-info">
+<h3>{_vendor_link(name, url)}</h3>
+<span class="tool-category">{sub_cluster_label}</span>
+</div>
+</div>
+<p class="tool-verdict">{verdict}</p>
+<p class="tool-best-for"><strong>Best for:</strong> {who_for}</p>
+<div class="tool-card-meta">
+<span class="tool-tag">{pricing_line}</span>
+</div>
+<a href="{url}" class="tool-btn affiliate-link" target="_blank" rel="nofollow noopener">Visit {name} &rarr;</a>
+</div>
+'''
+
+
+def _by_the_numbers_html(items):
+ """Render 'by the numbers' callout (proprietary data from vertical brands)."""
+ if not items:
+  return ""
+ rows = "".join(f'<div class="stat-row"><strong>{i["number"]}</strong> {i["label"]}</div>' for i in items)
+ return f'<div class="profile-section by-the-numbers"><h2>By the Numbers</h2><p class="stat-meta">Sourced from our vertical-data brands. Last verified {BUILD_DATE}.</p>{rows}</div>'
+
+
+def _related_callout_html(heading, links):
+ """Render a 'related comparisons' or 'related guides' callout."""
+ if not links:
+  return ""
+ items = "".join(f'<li><a href="{href}">{label}</a></li>' for href, label in links)
+ return f'<div class="profile-section"><h2>{heading}</h2><ul class="related-list">{items}</ul></div>'
+
+
+def _paras_html(text):
+ """Split a string by double-newlines and wrap each non-empty para in <p>."""
+ return "\n".join(f"<p>{p}</p>" for p in (text or "").split("\n\n") if p.strip())
+
+
+def build_vertical_industry_hubs():
+ """Render Wave 1 vertical industry hubs (legal, home-services) and refresh /industries/ index."""
+ rendered = 0
+ for industry_slug, info in VERTICAL_INDUSTRIES.items():
+  ind = info["data"]
+  title = f"Best Software for {ind['name']} Firms ({CURRENT_YEAR})"
+  meta_desc_src = ind.get("hero_intro", "") or f"Practice management, AI, and operations software for {ind['name']} firms."
+  meta_desc = meta_desc_src[:155]
+  canonical = f"/industries/{industry_slug}/"
+  hero_paras = _paras_html(ind.get("hero_intro", ""))
+  saas_card = f'''<a href="/industries/{industry_slug}/{info["saas_scope"]}/" class="category-card">
+<h3>{info["saas_scope_name"]}</h3>
+<p>{ind.get("saas_card_blurb", f"Software platforms for {ind['name'].lower()} business operations.")}</p>
+<span class="tool-count">{len(info["saas_tools"])} tools reviewed</span>
+</a>'''
+  ai_card = f'''<a href="/industries/{industry_slug}/{info["ai_scope"]}/" class="category-card">
+<h3>{info["ai_scope_name"]}</h3>
+<p>{ind.get("ai_card_blurb", f"AI-native tools built specifically for {ind['name'].lower()} workflows.")}</p>
+<span class="tool-count">{len(info["ai_tools"])} tools reviewed</span>
+</a>'''
+  cards_html = f'<div class="category-grid">{saas_card}{ai_card}</div>'
+  state_paras = _paras_html(ind.get("state_of_overview", ""))
+  state_html = f'<div class="profile-section"><h2>State of {ind["name"]} Software in {CURRENT_YEAR}</h2>{state_paras}</div>' if state_paras else ""
+  compared_html = _related_callout_html(f"Most-Compared {ind['name']} Tools", ind.get("most_compared", []))
+  guides_html = _related_callout_html(f"Buyer Guides for {ind['name']} Software", ind.get("buyer_guides", []))
+  btn_html = _by_the_numbers_html(ind.get("by_the_numbers", []))
+  faq_html = faq_schema_and_html(ind.get("faqs", [])) if ind.get("faqs") else ""
+  bc = breadcrumb_schema([("Home", "/"), ("Industries", "/industries/"), (ind["name"], canonical)])
+  art_schema = article_schema(title, meta_desc, canonical)
+  body = f'''
+{bc}
+{art_schema}
+{breadcrumb_html([("Home", "/"), ("Industries", "/industries/"), (ind["name"], "")])}
+<div class="page-hero">
+<h1>{title}</h1>
+{hero_paras}
+<p class="page-meta">Last updated: {BUILD_DATE}</p>
+</div>
+<div class="section-header" style="margin-top:32px"><h2>Software Categories for {ind["name"]}</h2></div>
+{cards_html}
+{state_html}
+{btn_html}
+{compared_html}
+{guides_html}
+{faq_html}
+{reviewer_attribution_html()}
+{newsletter_cta_html("VP Sales/CRO")}
+'''
+  page_title = f'{title} | {SITE_NAME}'
+  page = page_shell(page_title, meta_desc, canonical, body)
+  write_page(f"industries/{industry_slug}/index.html", page)
+  rendered += 1
+ # Refresh the /industries/ index to include both INDUSTRIES dict entries + vertical industries.
+ cards = ""
+ for slug, ind in INDUSTRIES.items():
+  pick_count = len(ind["picks"])
+  cards += f'''<a href="/industries/{slug}/" class="category-card">
+<h3>{ind["name"]}</h3>
+<p>{ind["description"][:120]}{"..." if len(ind["description"]) > 120 else ""}</p>
+<span class="tool-count">{pick_count} tool picks</span>
+</a>\n'''
+ for industry_slug, info in VERTICAL_INDUSTRIES.items():
+  ind = info["data"]
+  vendor_count = len(info["saas_tools"]) + len(info["ai_tools"])
+  blurb = ind.get("index_card_blurb", f"Practice management, AI, and operations software for {ind['name'].lower()} firms.")
+  cards += f'''<a href="/industries/{industry_slug}/" class="category-card">
+<h3>{ind["name"]}</h3>
+<p>{blurb[:120]}{"..." if len(blurb) > 120 else ""}</p>
+<span class="tool-count">{vendor_count} tools reviewed</span>
+</a>\n'''
+ idx_body = f'''
+<div class="page-hero">
+<h1>Best B2B Software by Industry ({CURRENT_YEAR})</h1>
+<p>Recommended sales stacks plus vertical software reviews across {len(INDUSTRIES) + len(VERTICAL_INDUSTRIES)} industries.</p>
+</div>
+<div class="category-grid">{cards}</div>
+'''
+ idx_page = page_shell(
+  f"Best B2B Software by Industry | {SITE_NAME}",
+  "Find the best B2B software for your industry. Sales stacks plus vertical practice management, FSM, and AI tool reviews.",
+  "/industries/",
+  idx_body
+ )
+ write_page("industries/index.html", idx_page)
+ return rendered
+
+
+def build_vertical_scope_landings():
+ """Render the 4 scope landing pages (saas + ai per vertical industry)."""
+ rendered = 0
+ for industry_slug, info in VERTICAL_INDUSTRIES.items():
+  ind = info["data"]
+  for scope_key in ("saas", "ai"):
+   scope_slug = info[f"{scope_key}_scope"]
+   scope_name = info[f"{scope_key}_scope_name"]
+   tools = info[f"{scope_key}_tools"]
+   clusters = info[f"{scope_key}_clusters"]
+   landing = info[f"{scope_key}_landing"]
+   title = f"Best {scope_name} for {ind['name']} ({CURRENT_YEAR})"
+   meta_desc_src = landing.get("hero_verdict", "") or f"Ranked review of {scope_name.lower()} for {ind['name'].lower()} firms."
+   meta_desc = meta_desc_src[:155]
+   canonical = f"/industries/{industry_slug}/{scope_slug}/"
+   hero_paras = _paras_html(landing.get("hero_verdict", ""))
+   method_paras = _paras_html(landing.get("methodology", ""))
+   method_html = f'<div class="profile-section"><h2>How We Picked</h2>{method_paras}</div>' if method_paras else ""
+   cluster_sections = ""
+   for cluster_key, cluster_label in clusters.items():
+    cluster_tools = [t for t in tools if t[3] == cluster_key]
+    if not cluster_tools:
+     continue
+    cluster_intro = landing.get("cluster_intros", {}).get(cluster_key, "")
+    cluster_intro_html = f'<p>{cluster_intro}</p>' if cluster_intro else ""
+    cards_html = "".join(_vendor_card_html(t[0], t[1], t[2], cluster_label, t[4], t[5], t[6]) for t in cluster_tools)
+    cluster_heading = cluster_label.split(".")[0]
+    cluster_sections += f'<div class="profile-section"><h2>{cluster_heading}</h2>{cluster_intro_html}<div class="tool-grid">{cards_html}</div></div>'
+   framework_paras = _paras_html(landing.get("buyer_framework", ""))
+   framework_html = f'<div class="profile-section"><h2>How to Evaluate {scope_name} Vendors</h2>{framework_paras}</div>' if framework_paras else ""
+   pricing_paras = _paras_html(landing.get("pricing_landscape", ""))
+   pricing_html = f'<div class="profile-section"><h2>Pricing Landscape</h2>{pricing_paras}</div>' if pricing_paras else ""
+   trends_paras = _paras_html(landing.get("market_trends", ""))
+   trends_html = f'<div class="profile-section"><h2>Market Trends</h2>{trends_paras}</div>' if trends_paras else ""
+   btn_html = _by_the_numbers_html(landing.get("by_the_numbers", []))
+   compared_html = _related_callout_html("Comparisons in This Category", landing.get("comparisons", []))
+   guides_html = _related_callout_html("Buyer Guides for This Category", landing.get("guides", []))
+   faq_html = faq_schema_and_html(landing.get("faqs", [])) if landing.get("faqs") else ""
+   bc = breadcrumb_schema([
+    ("Home", "/"), ("Industries", "/industries/"),
+    (ind["name"], f"/industries/{industry_slug}/"),
+    (scope_name, canonical)
+   ])
+   art_schema = article_schema(title, meta_desc, canonical)
+   body = f'''
+{bc}
+{art_schema}
+{breadcrumb_html([("Home", "/"), ("Industries", "/industries/"), (ind["name"], f"/industries/{industry_slug}/"), (scope_name, "")])}
+<div class="page-hero">
+<h1>{title}</h1>
+{hero_paras}
+<p class="page-meta">Last updated: {BUILD_DATE}</p>
+</div>
+{method_html}
+{cluster_sections}
+{framework_html}
+{pricing_html}
+{trends_html}
+{btn_html}
+{compared_html}
+{guides_html}
+{faq_html}
+{reviewer_attribution_html()}
+{newsletter_cta_html("VP Sales/CRO")}
+'''
+   page_title = f'{title} | {SITE_NAME}'
+   page = page_shell(page_title, meta_desc, canonical, body)
+   write_page(f"industries/{industry_slug}/{scope_slug}/index.html", page)
+   rendered += 1
+ return rendered
+
+
+def _all_vertical_vendors():
+ """Vendor lookup across legal + home-services for comparison/guide rendering."""
+ lookup = {}
+ for info in VERTICAL_INDUSTRIES.values():
+  for tool in info["saas_tools"] + info["ai_tools"]:
+   slug, name, url, sub_cluster, pricing, verdict, who_for = tool
+   lookup[slug] = {"name": name, "url": url, "pricing": pricing, "verdict": verdict, "who_for": who_for, "sub_cluster": sub_cluster}
+ return lookup
+
+
+def build_vertical_comparisons():
+ """Render Wave 1 comparison pages, skipping any with _pending: True."""
+ vendors = _all_vertical_vendors()
+ # Manual aliases for slugs whose split-on-vs doesn't match a vendor slug directly.
+ aliases = {
+  "lexis-ai": "lexis-ai", "westlaw-precision": "westlaw-precision",
+  "cocounsel": "westlaw-precision",  # CoCounsel is the Westlaw AI assistant
+ }
+ rendered = 0
+ for slug, content in COMPARISON_CONTENT_W1.items():
+  if content.get("_pending"):
+   print(f"  [pending] /compare/{slug}/")
+   continue
+  parts = slug.split("-vs-")
+  if len(parts) != 2:
+   print(f"  [error] Invalid comparison slug: {slug}")
+   continue
+  a_slug, b_slug = parts
+  a_slug = aliases.get(a_slug, a_slug)
+  b_slug = aliases.get(b_slug, b_slug)
+  a = vendors.get(a_slug)
+  b = vendors.get(b_slug)
+  if not a or not b:
+   print(f"  [error] Could not resolve vendors for {slug} (a={a_slug}, b={b_slug})")
+   continue
+  title = content.get("title") or f"{a['name']} vs {b['name']}: Which Should You Choose? ({CURRENT_YEAR})"
+  meta_desc_src = content.get("verdict") or content.get("intro", "") or f"{a['name']} versus {b['name']} compared."
+  meta_desc = meta_desc_src[:155]
+  canonical = f"/compare/{slug}/"
+  intro_paras = _paras_html(content.get("intro", ""))
+  dims = content.get("dimensions", [])
+  if dims:
+   rows = "".join(f'<tr><td>{d[0]}</td><td>{d[1]}</td><td>{d[2]}</td></tr>' for d in dims)
+   dim_table = f'<div class="profile-section"><h2>Feature Comparison</h2><table class="comparison-table"><thead><tr><th>Dimension</th><th>{a["name"]}</th><th>{b["name"]}</th></tr></thead><tbody>{rows}</tbody></table></div>'
+  else:
+   dim_table = ""
+  a_wins_html = f'<div class="profile-section"><h2>Where {a["name"]} Wins</h2>{_paras_html(content.get("a_wins", ""))}</div>' if content.get("a_wins") else ""
+  b_wins_html = f'<div class="profile-section"><h2>Where {b["name"]} Wins</h2>{_paras_html(content.get("b_wins", ""))}</div>' if content.get("b_wins") else ""
+  choose_a_html = f'<div class="profile-section"><h3>Choose {a["name"]} if...</h3><p>{content.get("choose_a", "")}</p></div>' if content.get("choose_a") else ""
+  choose_b_html = f'<div class="profile-section"><h3>Choose {b["name"]} if...</h3><p>{content.get("choose_b", "")}</p></div>' if content.get("choose_b") else ""
+  pricing_html = f'<div class="profile-section"><h2>Pricing Scenario</h2>{_paras_html(content.get("pricing_scenario", ""))}</div>' if content.get("pricing_scenario") else ""
+  integrations_html = f'<div class="profile-section"><h2>Integrations</h2>{_paras_html(content.get("integrations", ""))}</div>' if content.get("integrations") else ""
+  faq_html = faq_schema_and_html(content.get("faqs", [])) if content.get("faqs") else ""
+  verdict_html = f'<div class="verdict-box"><h2>The Verdict</h2><p>{content["verdict"]}</p></div>' if content.get("verdict") else ""
+  bc = breadcrumb_schema([("Home", "/"), ("Compare", "/compare/"), (f"{a['name']} vs {b['name']}", canonical)])
+  art_schema = article_schema(title, meta_desc, canonical)
+  sw_a = software_app_schema(a["name"], "", 0, a["pricing"], a["url"])
+  sw_b = software_app_schema(b["name"], "", 0, b["pricing"], b["url"])
+  body = f'''
+{bc}
+{art_schema}
+{sw_a}
+{sw_b}
+{breadcrumb_html([("Home", "/"), ("Compare", "/compare/"), (f"{a['name']} vs {b['name']}", "")])}
+<div class="page-hero">
+<h1>{a['name']} vs {b['name']}: {CURRENT_YEAR} Comparison</h1>
+{intro_paras}
+<p class="page-meta">Last updated: {BUILD_DATE}</p>
+</div>
+{verdict_html}
+{dim_table}
+{a_wins_html}
+{b_wins_html}
+{choose_a_html}
+{choose_b_html}
+{pricing_html}
+{integrations_html}
+{faq_html}
+{reviewer_attribution_html()}
+{newsletter_cta_html("VP Sales/CRO")}
+'''
+  page_title = f'{a["name"]} vs {b["name"]} ({CURRENT_YEAR}) | {SITE_NAME}'
+  page = page_shell(page_title, meta_desc, canonical, body)
+  write_page(f"compare/{slug}/index.html", page)
+  rendered += 1
+ return rendered
+
+
+def build_vertical_guides():
+ """Render Wave 1 guide pages, skipping any with _pending: True."""
+ vendors = _all_vertical_vendors()
+ rendered = 0
+ for slug, content in GUIDE_CONTENT_VERTICAL.items():
+  if content.get("_pending"):
+   print(f"  [pending] /guides/{slug}/")
+   continue
+  title = content.get("title") or slug.replace("-", " ").title()
+  full_title = f"{title} ({CURRENT_YEAR})"
+  meta_desc_src = content.get("intro", "") or content.get("verdict", "") or title
+  meta_desc = meta_desc_src[:155]
+  canonical = f"/guides/{slug}/"
+  intro_paras = _paras_html(content.get("intro", ""))
+  verdict_html = f'<div class="verdict-box"><h2>Top Picks</h2>{_paras_html(content.get("verdict", ""))}</div>' if content.get("verdict") else ""
+  method_html = f'<div class="profile-section"><h2>How We Picked</h2>{_paras_html(content.get("methodology", ""))}</div>' if content.get("methodology") else ""
+  recs_html = ""
+  for rec in content.get("recommendations", []):
+   rec_slug = rec.get("slug", "")
+   v = vendors.get(rec_slug, {})
+   rec_name = rec.get("name") or v.get("name", rec_slug.replace("-", " ").title())
+   rec_url = rec.get("url") or v.get("url", "#")
+   rec_review = rec.get("review", "")
+   rec_verdict = rec.get("verdict", v.get("verdict", ""))
+   rec_pricing = rec.get("pricing", v.get("pricing", ""))
+   rec_who_for = rec.get("who_for", v.get("who_for", ""))
+   rank_label = f'<span class="rec-rank">{rec.get("rank", "")}</span>' if rec.get("rank") else ""
+   recs_html += f'''<div class="rec-block">
+<h3>{rank_label} {_vendor_link(rec_name, rec_url)}</h3>
+{_paras_html(rec_review)}
+<p><strong>Verdict:</strong> {rec_verdict}</p>
+<p><strong>Best for:</strong> {rec_who_for}</p>
+<p><strong>Pricing:</strong> {rec_pricing}</p>
+<p><a href="{rec_url}" class="tool-btn affiliate-link" target="_blank" rel="nofollow noopener">Visit {rec_name} &rarr;</a></p>
+</div>'''
+  wtl_html = f'<div class="profile-section"><h2>What to Look For</h2>{_paras_html(content.get("what_to_look_for", ""))}</div>' if content.get("what_to_look_for") else ""
+  pricing_html = f'<div class="profile-section"><h2>Pricing Scenarios</h2>{_paras_html(content.get("pricing_scenarios", ""))}</div>' if content.get("pricing_scenarios") else ""
+  avoid_html = f'<div class="profile-section"><h2>What to Avoid</h2>{_paras_html(content.get("what_to_avoid", ""))}</div>' if content.get("what_to_avoid") else ""
+  qta = content.get("questions_to_ask", [])
+  qta_html = ""
+  if qta:
+   items = "".join(f"<li>{q}</li>" for q in qta)
+   qta_html = f'<div class="profile-section"><h2>Questions to Ask Vendors</h2><ul class="checklist">{items}</ul></div>'
+  faq_html = faq_schema_and_html(content.get("faqs", [])) if content.get("faqs") else ""
+  related_comp_html = _related_callout_html("Related Comparisons", content.get("related_comparisons", []))
+  related_guides_html = _related_callout_html("Related Guides", content.get("related_guides", []))
+  bc = breadcrumb_schema([("Home", "/"), ("Best For", "/guides/"), (title, canonical)])
+  art_schema = article_schema(full_title, meta_desc, canonical)
+  rec_slugs = [r.get("slug", "") for r in content.get("recommendations", [])]
+  list_schema = item_list_schema(rec_slugs, title) if rec_slugs else ""
+  body = f'''
+{bc}
+{art_schema}
+{list_schema}
+{breadcrumb_html([("Home", "/"), ("Best For", "/guides/"), (title, "")])}
+<div class="page-hero">
+<h1>{full_title}</h1>
+{intro_paras}
+<p class="page-meta">Last updated: {BUILD_DATE}</p>
+</div>
+{verdict_html}
+{method_html}
+<div class="profile-section"><h2>Ranked Recommendations</h2>{recs_html}</div>
+{wtl_html}
+{pricing_html}
+{avoid_html}
+{qta_html}
+{faq_html}
+{related_comp_html}
+{related_guides_html}
+{reviewer_attribution_html()}
+{newsletter_cta_html("VP Sales/CRO")}
+'''
+  page_title = f'{full_title} | {SITE_NAME}'
+  page = page_shell(page_title, meta_desc, canonical, body)
+  write_page(f"guides/{slug}/index.html", page)
+  rendered += 1
+ return rendered
+
+
 def build_sitemap():
  """Generate sitemap.xml."""
  urls = ""
@@ -4971,6 +5393,17 @@ def build():
 
  industry_count = build_industry_pages()
  print(f" {industry_count} industry pages + index")
+
+ # Wave 1 vertical pages (legal + home services)
+ print("\n Wave 1 vertical pages:")
+ v_hub_count = build_vertical_industry_hubs()
+ print(f"  {v_hub_count} vertical industry hubs (legal + home-services)")
+ v_scope_count = build_vertical_scope_landings()
+ print(f"  {v_scope_count} vertical scope landings")
+ v_comp_count = build_vertical_comparisons()
+ print(f"  {v_comp_count} vertical comparison pages rendered (rest pending content)")
+ v_guide_count = build_vertical_guides()
+ print(f"  {v_guide_count} vertical guide pages rendered (rest pending content)")
 
  # Sitemap & robots
  print("\n Generating SEO files...")
