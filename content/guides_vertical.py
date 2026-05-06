@@ -1060,3 +1060,471 @@ GUIDE_CONTENT_VERTICAL["best-clio-alternatives"] = {
         ("/guides/best-practice-management-software-solo-attorneys/", "Best PMS for Solo Attorneys"),
     ],
 }
+
+
+# =============================================================================
+# Legal AI guides
+# =============================================================================
+
+GUIDE_CONTENT_VERTICAL["best-legal-ai-personal-injury-firms"] = {
+    "category": "legal-ai",
+    "title": "Best Legal AI for Personal Injury Firms",
+    "last_verified": "2026-05-05",
+    "intro": (
+        "Personal injury is the most active legal AI category in 2026. The volume math fits: PI "
+        "firms generate hundreds of demand letters per attorney per year, review thousands of "
+        "pages of medical records per case, and run intake at scale that overwhelms manual "
+        "qualification. Three specialized vendors (EvenUp, Eve, Supio) raised at unicorn or near-"
+        "unicorn valuations between 2024 and 2026 building AI products specifically for PI firms.\n\n"
+        "This guide covers the vendors that target PI firms and where each fits. Most PI firms end "
+        "up with one or two of these tools rather than all three because the workflows overlap. "
+        "Pricing is custom enterprise across the category; expect $30,000-$200,000+ in annual "
+        "spend depending on firm size and matter volume."
+    ),
+    "verdict": (
+        "Top pick: **EvenUp** for AI demand letters and medical chronologies at high volume. "
+        "**Eve** if you want end-to-end PI workflow AI from intake through settlement (more PMS-"
+        "adjacent than EvenUp). **Supio** for heavy medical record review on complex PI and mass "
+        "tort. **CaseMark** for matter summaries, transcripts, and court reporter workflow. **Lawmatics** "
+        "for AI-driven intake automation and lead scoring (more CRM than AI, but AI-enabled). "
+        "Most PI firms run EvenUp plus Lawmatics, or Eve as a standalone."
+    ),
+    "methodology": (
+        "We evaluated each vendor on PI-specific criteria: demand-letter quality and editability, "
+        "medical record review and chronology capability, intake automation depth, integration "
+        "with PMS (Filevine, Smokeball, Clio), pilot accessibility, pricing model, and bar-ethics "
+        "compliance posture. Pricing and feature data verified as of 2026-05-05."
+    ),
+    "recommendations": [
+        {
+            "slug": "evenup", "rank": "1.",
+            "review": (
+                "EvenUp leads the AI demand letter category. The product takes case intake data, "
+                "medical records, and case context and generates demand-package drafts (demand "
+                "letter, medical chronology, settlement valuation analysis) ready for attorney "
+                "review and finalization. Time savings on a typical demand package: 70-90% versus "
+                "full paralegal drafting.\n\n"
+                "EvenUp's per-document or subscription pricing scales with volume. Mid-volume PI "
+                "firms (200-500 demands/year) typically spend $30,000-$80,000 annually. The "
+                "platform integrates with major PMS (Filevine, Smokeball, Clio, Litify). Customer "
+                "base includes hundreds of PI firms across the US and the product has matured "
+                "fast in 2024-2026. Best choice if your bottleneck is demand-package volume."
+            ),
+        },
+        {
+            "slug": "eve", "rank": "2.",
+            "review": (
+                "Eve covers the full PI case lifecycle: intake, medical record review, demand "
+                "drafting, settlement workflow. The pitch is a single platform for the whole PI AI "
+                "stack rather than EvenUp's narrower demand-letter focus. Pricing is custom firm-"
+                "level subscription, typically $50,000-$200,000+ annually depending on firm size.\n\n"
+                "Eve's broader scope makes it more PMS-adjacent than EvenUp. Some firms run Eve as "
+                "their primary AI platform across the workflow rather than picking specialized "
+                "tools per stage. Best fit: PI firms wanting an integrated AI experience and "
+                "willing to commit to one vendor across multiple workflow stages."
+            ),
+        },
+        {
+            "slug": "supio", "rank": "3.",
+            "review": (
+                "Supio specializes in heavy medical record review for PI and mass tort. The "
+                "product takes medical record packets (often hundreds of pages per case) and "
+                "generates structured chronologies with key event extraction, treatment summaries, "
+                "and damages analysis. Pricing typically $150-$400 per user per month or custom "
+                "firm-level subscription.\n\n"
+                "Where Supio wins versus EvenUp on medical records: deeper extraction on complex "
+                "cases (multiple providers, surgeries, specialist visits), better handling of "
+                "mass-tort medical record patterns, and stronger workflow for paralegals reviewing "
+                "AI output. Best fit: mass tort firms or PI firms with high complex-case volume."
+            ),
+        },
+        {
+            "slug": "casemark", "rank": "4.",
+            "review": (
+                "CaseMark is broader than PI but covers important PI use cases: matter summaries, "
+                "deposition transcript work, court-reporting workflow. Pricing is credit-based "
+                "(usage scales with consumption) and works for episodic use rather than continuous "
+                "high-volume drafting. Mid-market PI firms running 50-200 matters per year find "
+                "CaseMark cost-effective for the per-matter summary and transcript work without "
+                "needing a full EvenUp or Eve subscription.\n\n"
+                "Trade-off: less PI-specific than EvenUp, Eve, or Supio. Best as a complement to "
+                "those tools or as a budget option for smaller PI shops."
+            ),
+        },
+        {
+            "slug": "lawmatics", "rank": "5.",
+            "review": (
+                "Lawmatics is the leading legal CRM with AI-enabled intake automation. Pricing: "
+                "$199 Lite, $299 Pro per firm per month, with premium tiers $300+ per user. "
+                "PI firms running paid acquisition (Google Ads, Facebook, lead-gen vendors, "
+                "billboards) need intake automation, lead scoring (QualifyAI), and marketing "
+                "analytics that PMS does not deliver. Lawmatics fills that gap.\n\n"
+                "Most PI firms run Lawmatics alongside their PMS rather than as a replacement. "
+                "The combination of Lawmatics for intake plus EvenUp for demands plus Filevine "
+                "or Smokeball for matter management is a common high-performing PI AI stack."
+            ),
+        },
+    ],
+    "what_to_look_for": (
+        "Six things matter when picking AI for a PI firm.\n\n"
+        "**Demand-letter quality and editability.** AI demand letters are starting points, not "
+        "final drafts. Quality of the AI output (factual accuracy, narrative clarity, damages "
+        "framing) determines how much paralegal or attorney editing is needed. Run a 30-60 day "
+        "pilot on real cases and measure the editing time. If the AI-generated draft requires "
+        "more than 30-40% rewriting, the time savings shrink.\n\n"
+        "**Medical record review depth.** Multi-provider, multi-procedure cases test AI extraction "
+        "quality. Supio is purpose-built for this. EvenUp and Eve handle medical records as part "
+        "of the broader workflow. For mass tort or complex single-plaintiff cases with "
+        "extensive medical history, deeper specialization wins.\n\n"
+        "**Intake automation and lead scoring.** PI is marketing-driven. The intake-to-signed-"
+        "client conversion is the entire economic engine. Lawmatics is the leader on intake "
+        "automation specifically. PMS-bundled intake (Clio Grow, MyCase IQ, Filevine native) "
+        "covers the basics but rarely matches Lawmatics on lead scoring depth.\n\n"
+        "**PMS integration depth.** Your AI workflow needs to write back into your PMS so the "
+        "matter, time entries, and document records stay consistent. EvenUp, Eve, and Supio all "
+        "integrate with major PI PMS (Filevine, Smokeball, Litify). Verify the specific "
+        "integration depth for your PMS before committing.\n\n"
+        "**Pricing model fit.** Per-document pricing (EvenUp at high volumes) vs custom firm-"
+        "level subscription (Eve, Supio, EvenUp at low volumes) vs usage-credits (CaseMark) vs "
+        "per-firm-or-per-user (Lawmatics). Match the pricing model to your matter volume "
+        "predictability. High and stable volume favors subscription; episodic or growing volume "
+        "favors per-document or credits.\n\n"
+        "**Bar-ethics compliance posture.** AI in PI implicates competence, supervision, and "
+        "billing rules under bar ethics. Tools that publish privacy documentation, supervision "
+        "controls, and billing-rate guidance reduce supervisory burden. EvenUp, Eve, and Supio "
+        "all publish enterprise-grade documentation. Lawmatics is mature on data privacy."
+    ),
+    "pricing_scenarios": (
+        "**Small PI firm (1-3 attorneys, 50-200 matters/year):** EvenUp per-document pricing on "
+        "100-200 demands/year ($25,000-$50,000) plus Lawmatics Lite at $199/mo ($2,400) = "
+        "~$28,000-$53,000 annually. Skip Eve and Supio at this volume.\n\n"
+        "**Mid-size PI firm (10-15 attorneys, 1,000-2,500 matters/year):** EvenUp subscription "
+        "$60,000-$120,000 plus Lawmatics Pro $3,600 plus optional Supio for complex cases "
+        "$30,000-$60,000 = $95,000-$185,000 annually.\n\n"
+        "**Large PI firm (50+ attorneys, 5,000+ matters/year):** Eve full-platform subscription "
+        "$200,000-$500,000+, or EvenUp + Supio + Lawmatics combined stack at similar total cost. "
+        "Implementation and integration setup adds another $25,000-$75,000 in year one."
+    ),
+    "what_to_avoid": (
+        "**Adopting AI without paralegal training.** AI demand letters require human review. "
+        "Paralegals reviewing AI output need different skills than paralegals drafting from "
+        "scratch (spotting AI errors, validating medical record extraction, ensuring narrative "
+        "coherence). Plan training time and adjust paralegal job descriptions.\n\n"
+        "**Buying Eve and EvenUp when you only need one.** They overlap meaningfully on demand-"
+        "letter workflow. Pilot one and see if it covers your needs before adding the other. "
+        "Most PI firms benefit from picking one primary AI vendor and adding specialized tools "
+        "(Supio for complex medical, Lawmatics for intake) only as specific gaps emerge.\n\n"
+        "**Skipping the pilot.** Every credible AI vendor in PI offers a 30-60 day pilot program. "
+        "Use it. Measure editing time on real cases. Validate the time savings claim with your "
+        "actual matter mix and paralegal team.\n\n"
+        "**Ignoring bar-ethics implications.** Florida, California, and ABA guidance all specify "
+        "competence, supervision, and billing-rate rules for AI use. Set internal policy before "
+        "rolling out AI tools, not after a bar grievance."
+    ),
+    "questions_to_ask": [
+        "What is the time-to-finalized-demand on real cases similar to ours?",
+        "What is the editing percentage on AI-generated demand letters that go to paralegal review?",
+        "How does the platform handle medical record packets from multiple providers and across long treatment timelines?",
+        "What is the integration depth with our PMS (Filevine, Smokeball, Clio)?",
+        "What is the pilot program structure and what does success look like?",
+        "What is the pricing model and how does it scale with our matter volume?",
+        "What data privacy documentation is available and how is client data handled?",
+        "What is the bar-ethics guidance for using this tool, and what supervision controls exist?",
+        "What does training look like for paralegals reviewing AI output?",
+        "What is the contract structure including auto-renewal and term length?",
+    ],
+    "faqs": [
+        {
+            "question": "EvenUp vs Eve: which fits a typical PI firm?",
+            "answer": (
+                "EvenUp is narrower (demand letters and medical chronologies focused) and prices "
+                "per-document or by subscription that scales with volume. Eve is broader (full PI "
+                "workflow from intake to settlement) and prices as a custom firm-level "
+                "subscription. EvenUp wins for firms with strong PMS already in place that want "
+                "to add AI demand drafting without changing the broader workflow. Eve wins for "
+                "firms wanting an integrated AI-first experience and willing to commit to one "
+                "vendor across the workflow. Most existing PI firms with established PMS pick "
+                "EvenUp; greenfield deployments and AI-first firms lean Eve."
+            ),
+        },
+        {
+            "question": "Is Supio worth the cost on top of EvenUp?",
+            "answer": (
+                "For mass tort or complex-case PI firms, yes. Supio's medical record review depth "
+                "exceeds EvenUp's on multi-provider, multi-procedure cases. For straightforward PI "
+                "(motor vehicle accidents, slip-and-falls with single-provider treatment), EvenUp "
+                "alone usually delivers enough medical record handling. Run pilots on representative "
+                "cases from your mix and compare extraction quality side-by-side."
+            ),
+        },
+        {
+            "question": "Can AI demand letters cite hallucinated case law?",
+            "answer": (
+                "PI demand letters typically focus on case facts, damages, and settlement "
+                "argumentation rather than case-law citation, so the hallucination risk is lower "
+                "than in legal research or motion drafting. That said, any AI-drafted document "
+                "going to opposing counsel or insurance carriers requires attorney review to catch "
+                "factual errors, narrative inaccuracies, or unsupported damage claims. Bar ethics "
+                "rules require it as part of competent supervision."
+            ),
+        },
+        {
+            "question": "How long does the typical AI rollout take?",
+            "answer": (
+                "30-60 days for the pilot. 60-90 days for production rollout once you commit. "
+                "Implementation includes PMS integration setup, paralegal training on the new "
+                "review workflow, internal policy development for AI use and supervision, and "
+                "validation of the demand-letter or medical-summary output quality on a "
+                "representative case sample. Firms that rush implementation see lower quality and "
+                "higher paralegal frustration; firms that plan it properly see the promised time "
+                "savings within 3-4 months."
+            ),
+        },
+        {
+            "question": "What about bar-grievance risk from AI errors?",
+            "answer": (
+                "Treat AI output the same way you treat paralegal work product: review, supervise, "
+                "and take responsibility. The bar-grievance cases involving AI errors so far have "
+                "all involved attorneys filing AI-drafted briefs without verification, which "
+                "violated existing competence and supervision rules. Tools designed for legal use "
+                "(EvenUp, Eve, Supio, all with audit trails) make supervision easier. Generic "
+                "consumer AI is the higher-risk category and several state bars have warned "
+                "specifically against using it for client work."
+            ),
+        },
+    ],
+    "related_comparisons": [
+        ("/compare/evenup-vs-eve/", "EvenUp vs Eve"),
+        ("/compare/evenup-vs-supio/", "EvenUp vs Supio"),
+    ],
+    "related_guides": [
+        ("/guides/best-pms-personal-injury-law-firms/", "Best PMS for PI Firms"),
+        ("/guides/best-ai-contract-review-software/", "Best AI Contract Review Software"),
+        ("/guides/best-ai-tools-solo-lawyers/", "Best AI Tools for Solo Lawyers"),
+    ],
+}
+
+
+GUIDE_CONTENT_VERTICAL["best-ai-contract-review-software"] = {
+    "category": "legal-ai",
+    "title": "Best AI Contract Review Software",
+    "last_verified": "2026-05-05",
+    "intro": (
+        "AI contract review and drafting moved from experimental to mainstream in 2024-2025. "
+        "Transactional lawyers, in-house teams, and BigLaw firms doing high contract volume now "
+        "have credible product options that integrate inside Microsoft Word and deliver "
+        "measurable time savings on contract review (typically 6-9 hours saved per contract on "
+        "common Spellbook reports).\n\n"
+        "This guide covers the AI contract tools that work in 2026, with vendor-by-vendor "
+        "breakdowns. The category is volatile: Robin AI was the third major player and "
+        "effectively shut down its core SaaS product in late 2025 (managed services arm sold to "
+        "Scissero, engineering team to Microsoft). We omit Robin AI from this guide pending "
+        "product continuity confirmation."
+    ),
+    "verdict": (
+        "Top pick: **Spellbook** for transactional lawyers and in-house teams who live in "
+        "Microsoft Word. **Harvey** for BigLaw and enterprise legal departments wanting AI "
+        "across contracts plus broader research and drafting. **Lexis+ AI** if you are already "
+        "on Lexis and want contract drafting integrated with research. Avoid generic consumer AI "
+        "for client contracts due to data privacy and bar-ethics risk."
+    ),
+    "methodology": (
+        "We evaluated each vendor on: contract review accuracy and edit suggestion quality, Word "
+        "integration depth, clause library and template logic, data privacy documentation, "
+        "pricing model fit for transactional teams, and pilot accessibility. Pricing data verified "
+        "as of 2026-05-05."
+    ),
+    "recommendations": [
+        {
+            "slug": "spellbook", "rank": "1.",
+            "review": (
+                "Spellbook is the leader for contract review and drafting. Pricing: Starter at "
+                "$99 per user per month, Enterprise at $199 per user per month with 10-seat "
+                "minimum. The product runs inside Microsoft Word as a sidebar add-in, where "
+                "transactional lawyers already live. AI suggestions cover clause review, "
+                "redlining, missing-clause detection, drafting from templates, and risk flagging.\n\n"
+                "Spellbook's customer base includes hundreds of transactional firms and in-house "
+                "teams. Reported time savings: 6-9 hours per contract review on average. The "
+                "Starter tier covers most solo transactional lawyers and small teams; Enterprise "
+                "adds advanced clause libraries, team templates, and admin controls for larger "
+                "deployments."
+            ),
+        },
+        {
+            "slug": "harvey", "rank": "2.",
+            "review": (
+                "Harvey covers contract drafting and review as part of its broader BigLaw AI "
+                "platform. Pricing is custom enterprise, typically $100,000+ annually with "
+                "scaling to seven figures for AmLaw 100 deployments. For BigLaw and enterprise "
+                "legal departments, Harvey's broader scope (research, drafting, due diligence "
+                "across deal work) justifies the price. For pure contract-focused teams, Spellbook "
+                "delivers comparable contract-specific value at much lower cost.\n\n"
+                "Reasons to pick Harvey for contracts specifically: enterprise procurement comfort "
+                "with one vendor, broader use cases beyond contracts (corporate, litigation, M&A), "
+                "and the depth of Harvey's training corpus on commercial law specifically."
+            ),
+        },
+        {
+            "slug": "lexis-ai", "rank": "3.",
+            "review": (
+                "Lexis+ AI extends contract-related research into drafting. The integration with "
+                "Lexis precedent corpus, contract libraries, and case law gives Lexis-using firms "
+                "an integrated workflow. Pricing is add-on to existing Lexis subscriptions, "
+                "typically $20,000-$200,000 annually depending on firm size and seat count.\n\n"
+                "Where Lexis+ AI wins for contracts: existing Lexis customers who want AI "
+                "integrated into the same platform their attorneys already use for research, "
+                "and firms that prioritize citation-grounded contract analysis (provisions tied "
+                "to relevant case law). Where Spellbook wins: dedicated Word workflow, lower "
+                "cost, faster onboarding."
+            ),
+        },
+        {
+            "slug": "westlaw-precision", "rank": "4.",
+            "review": (
+                "Westlaw Precision with CoCounsel covers similar ground to Lexis+ AI: AI features "
+                "as add-on to the existing research subscription with contract-related "
+                "capabilities (clause analysis, risk flagging, template support). Pricing "
+                "structure is similar: add-on to Westlaw subscription, custom pricing typically "
+                "in the same $20,000-$200,000 range.\n\n"
+                "Pick Westlaw Precision over Lexis+ AI based on which research platform your "
+                "firm already uses. The contract-specific features are close enough that the "
+                "research-platform decision dominates."
+            ),
+        },
+        {
+            "slug": "casemark", "rank": "5.",
+            "review": (
+                "CaseMark is broader than contracts but useful for contract-adjacent workflows: "
+                "matter summaries, transcript work, agreement summarization. Credit-based pricing "
+                "fits episodic use. CaseMark is not a primary contract drafting tool the way "
+                "Spellbook or Harvey are, but for firms that occasionally need contract "
+                "summarization without committing to a per-seat subscription, CaseMark works."
+            ),
+        },
+    ],
+    "what_to_look_for": (
+        "Six things matter for AI contract review.\n\n"
+        "**Word integration depth.** Transactional lawyers spend their day in Word. AI tools that "
+        "live as sidebar add-ins (Spellbook is the canonical example) get used. AI tools that "
+        "require switching to a separate web app see lower adoption. Word integration is the "
+        "single most important factor for contract review tools.\n\n"
+        "**Review accuracy and edit suggestion quality.** Run a pilot on real contracts and "
+        "measure the AI suggestions: how many are useful, how many are wrong, how many are noise. "
+        "Spellbook reports 70-85% useful suggestion rate on common commercial agreements. Lower "
+        "tools cluster in the 50-65% range, where the noise becomes a productivity drag.\n\n"
+        "**Clause library and template logic.** AI that drafts from your firm's preferred clauses "
+        "and templates beats AI that generates generic language. Spellbook Enterprise and Harvey "
+        "both support team-level clause libraries. Lexis+ AI and Westlaw Precision rely on their "
+        "respective proprietary libraries plus user-uploaded firm templates.\n\n"
+        "**Data privacy documentation.** Contracts are confidential. Tools must document data "
+        "handling, training data exclusions, and contractual privacy protections. Spellbook, "
+        "Harvey, Lexis+, Westlaw, and CaseMark all publish enterprise-grade documentation. "
+        "Generic consumer AI does not, and using it for client contracts is a bar-ethics risk.\n\n"
+        "**Pricing model fit.** Per-seat subscription works for transactional teams using AI "
+        "daily. Per-credit pricing fits episodic use. Custom enterprise contracts make sense for "
+        "AmLaw 100 firms with broader AI needs. Match the model to usage pattern.\n\n"
+        "**Pilot program access.** Most credible contract AI vendors offer 30-60 day pilots. "
+        "Use them. Measure time savings on real contracts, edit acceptance rates, and "
+        "transactional team feedback before committing to a multi-year subscription."
+    ),
+    "pricing_scenarios": (
+        "**Solo transactional lawyer:** Spellbook Starter at $99/mo = $1,188/year. "
+        "Lexis+ AI add-on if already on Lexis. Avoid Harvey at this firm size.\n\n"
+        "**Small transactional firm (5-10 attorneys):** Spellbook Enterprise at $199 × 10 seats = "
+        "$23,880/year, or Lexis+ AI add-on $30,000-$60,000/year if Lexis is already in place.\n\n"
+        "**BigLaw or enterprise legal department:** Harvey custom enterprise $200,000-$1,000,000+/"
+        "year for broad AI platform, or Spellbook Enterprise across the team for contract focus "
+        "specifically. Many BigLaw firms run Harvey plus Spellbook for transactional teams "
+        "specifically."
+    ),
+    "what_to_avoid": (
+        "**Generic consumer AI for client contracts.** Free ChatGPT, Claude.ai consumer, and "
+        "similar tools have not been audited for legal use, may train on your inputs, and create "
+        "data-privacy risk. Several state bars have warned against this specifically.\n\n"
+        "**Buying Harvey when Spellbook covers your contract needs.** Harvey's enterprise pricing "
+        "assumes broader AI usage across research and drafting. If your team does primarily "
+        "contract work, Spellbook delivers comparable contract value at 5-20% the cost.\n\n"
+        "**Skipping the pilot.** Every credible vendor offers one. The 30-60 day measurement on "
+        "real contracts validates the time-savings claim and reveals edit-quality issues before "
+        "you commit.\n\n"
+        "**Underestimating attorney adoption work.** AI contract review changes how transactional "
+        "lawyers work. Plan for training time, internal policy development, and supervision "
+        "workflow design."
+    ),
+    "questions_to_ask": [
+        "How does the AI integrate with Microsoft Word? Is it a sidebar add-in or a separate app?",
+        "What is the review accuracy rate on contracts similar to ours?",
+        "Can the platform learn our firm's preferred clauses and templates?",
+        "What is the data privacy documentation? How is contract data handled?",
+        "What is the pilot program structure?",
+        "What is the pricing model and how does it scale with seats?",
+        "What is the bar-ethics compliance documentation?",
+        "How does the platform handle complex commercial agreements vs simpler contracts?",
+        "What does training look like for transactional attorneys?",
+        "What is the contract structure including auto-renewal and term length?",
+    ],
+    "faqs": [
+        {
+            "question": "Spellbook vs Harvey for contract work specifically?",
+            "answer": (
+                "Spellbook for pure contract focus and most transactional teams. Harvey for "
+                "BigLaw with broader AI needs across deal work. The contract-review depth is "
+                "comparable; the difference is platform breadth and pricing. Spellbook Enterprise "
+                "at $199/u/mo × 20 transactional attorneys = $48,000/year. Harvey custom "
+                "enterprise typically starts at $200,000/year minimum. For pure contract "
+                "transactions, Spellbook is 4-5x cheaper and equally effective."
+            ),
+        },
+        {
+            "question": "Will AI replace junior associates on contract review?",
+            "answer": (
+                "Not wholesale. AI is taking the first-pass review work that used to fall to "
+                "first- and second-year associates. The judgment work (negotiation strategy, "
+                "deal structure, complex risk allocation) is unchanged. Firms adopting AI "
+                "aggressively in 2024-2025 report leaner first-year associate classes (10-20% "
+                "smaller) but not wholesale layoffs. The associates who remain do less rote "
+                "review and more substantive work earlier in their careers."
+            ),
+        },
+        {
+            "question": "Can I trust AI-generated contract clauses for client work?",
+            "answer": (
+                "Treat AI-generated clauses as starting points, not final drafts. Bar ethics "
+                "rules require attorney supervision and verification. Spellbook and Harvey both "
+                "engineer clause-validation features into the workflow but no tool eliminates the "
+                "supervisory burden. The economic case for AI is that the first draft is faster "
+                "and more comprehensive, not that it removes the lawyer."
+            ),
+        },
+        {
+            "question": "What about Lexis+ AI for contracts vs Spellbook?",
+            "answer": (
+                "Lexis+ AI wins specifically when you are already paying for Lexis and want "
+                "integrated workflow. The contract-research-to-drafting flow benefits from the "
+                "case-law grounding Lexis brings. Spellbook wins on dedicated Word workflow, "
+                "lower cost, and faster onboarding. Many firms run both: Lexis+ AI for research-"
+                "intensive contract work, Spellbook for daily transactional drafting."
+            ),
+        },
+        {
+            "question": "What happened to Robin AI?",
+            "answer": (
+                "Robin AI's managed services arm was sold to Scissero in late 2025, and the "
+                "engineering team was acquihired by Microsoft in January 2026. The standalone "
+                "Robin SaaS product status is uncertain as of mid-2026. We exclude Robin from "
+                "active recommendations pending product continuity confirmation. Existing Robin "
+                "customers should evaluate Spellbook or Harvey as alternatives."
+            ),
+        },
+    ],
+    "related_comparisons": [
+        ("/compare/harvey-vs-spellbook/", "Harvey vs Spellbook"),
+        ("/compare/spellbook-vs-lexis-ai/", "Spellbook vs Lexis+ AI"),
+        ("/compare/harvey-vs-cocounsel/", "Harvey vs CoCounsel"),
+    ],
+    "related_guides": [
+        ("/guides/best-ai-legal-research-tools/", "Best AI Legal Research Tools"),
+        ("/guides/best-ai-tools-solo-lawyers/", "Best AI Tools for Solo Lawyers"),
+        ("/guides/best-legal-ai-personal-injury-firms/", "Best Legal AI for PI Firms"),
+    ],
+}
