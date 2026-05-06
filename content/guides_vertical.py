@@ -558,3 +558,505 @@ GUIDE_CONTENT_VERTICAL["best-legal-practice-management-small-firms"] = {
         ("/guides/best-clio-alternatives/", "Best Clio Alternatives"),
     ],
 }
+
+
+GUIDE_CONTENT_VERTICAL["best-pms-personal-injury-law-firms"] = {
+    "category": "legal-saas",
+    "title": "Best Practice Management Software for Personal Injury Firms",
+    "last_verified": "2026-05-05",
+    "intro": (
+        "Personal injury practice management is its own software market. The volume math is "
+        "different (a typical PI firm runs 200-2,000 active matters per attorney), the workflow "
+        "shape is different (intake-heavy front end, settlement-driven back end, medical record "
+        "and demand-package volume in between), and the financial model is different (contingency "
+        "fees, lien tracking, cost-of-funds management). General-practice PMS like Clio or MyCase "
+        "can handle small PI shops but bend awkwardly above 5-10 attorneys.\n\n"
+        "This guide covers the practice management options that fit PI firms specifically, with "
+        "vendor breakdowns by firm size and case-volume tier. AI tools that complement PMS in PI "
+        "(EvenUp, Eve, Supio for demand letters and medical chronologies) are covered in the legal "
+        "AI guides. This page focuses on the operational PMS layer."
+    ),
+    "verdict": (
+        "Top pick for high-volume PI (25+ attorneys, mass tort, multi-state): **Filevine** for "
+        "operational depth and PI-specific feature set, **Litify** if your firm is already in the "
+        "Salesforce ecosystem. Top pick for mid-volume PI (5-25 attorneys): **Smokeball** for "
+        "document-heavy single-state PI, **Filevine Standard** for multi-state. For small PI shops "
+        "(1-5 attorneys), **Clio Essentials** with the right add-ons (Lawmatics for intake, EvenUp "
+        "for demands) covers the workflow."
+    ),
+    "methodology": (
+        "We evaluated each platform on PI-specific criteria: intake automation depth (lead capture, "
+        "qualification, document collection), medical record handling (provider lookup, request "
+        "automation, organized retrieval), demand letter and settlement workflow, lien and cost "
+        "tracking, multi-firm or referral attorney support, settlement disbursement workflow, and "
+        "scale capability (does it hold up at 1,000+ active matters?). Pricing verified as of "
+        "2026-05-05."
+    ),
+    "recommendations": [
+        {
+            "slug": "filevine", "rank": "1.",
+            "review": (
+                "Filevine is the dominant PI-specific PMS. Custom enterprise pricing typically lands "
+                "$150-$300+ per user per month with implementation fees in the $25,000-$75,000 range "
+                "for mid-large deployments. The platform was built around PI workflow: intake forms "
+                "with conditional logic, medical records request and tracking, demand-package "
+                "drafting, lien management, settlement disbursement.\n\n"
+                "Filevine's customization depth is the differentiator. Firms can configure workflow, "
+                "intake forms, project templates, and reports without engineering involvement. The "
+                "AI add-ons (DemandsAI, ImmigrationAI) extend the platform into specific drafting "
+                "use cases. For high-volume PI firms (25+ attorneys, 5,000+ active matters), "
+                "Filevine is the safe pick."
+            ),
+        },
+        {
+            "slug": "litify", "rank": "2.",
+            "review": (
+                "Litify runs on Salesforce. Pricing is custom enterprise, typically $200-$400+ per "
+                "user per month for legal-specific functionality plus Salesforce platform costs. "
+                "For firms already in the Salesforce ecosystem (BD on Salesforce, marketing on "
+                "Pardot), Litify's data-model integration is the standout advantage.\n\n"
+                "The trade-off is Salesforce overhead. Implementation typically requires a "
+                "Salesforce partner ($50,000-$200,000 in fees), ongoing admin cost, and a steeper "
+                "learning curve for staff. Litify wins specifically when the firm has Salesforce "
+                "infrastructure already; pure-play PI firms without that context are usually better "
+                "off on Filevine."
+            ),
+        },
+        {
+            "slug": "smokeball", "rank": "3.",
+            "review": (
+                "Smokeball is the document-automation specialist that scales into PI. Pricing for "
+                "PI firms typically runs $99-$199 per user per month. Auto-time-capture, deep "
+                "document templates, and a strong family-and-PI workflow library make Smokeball the "
+                "choice for small-to-mid PI firms (5-15 attorneys) doing single-state or "
+                "single-jurisdiction work.\n\n"
+                "Where Smokeball stops fitting: high-volume mass tort or multi-state PI where "
+                "Filevine's customization depth and Litify's Salesforce-data-model become "
+                "necessary. For firms running 200-2,000 matters per attorney in a focused practice, "
+                "Smokeball is faster to deploy and cheaper than Filevine."
+            ),
+        },
+        {
+            "slug": "clio", "rank": "4.",
+            "review": (
+                "Clio Essentials at $89/u/mo with Clio Grow ($79/u/mo for the intake module) covers "
+                "small PI shops doing 1-5 attorneys with manageable matter volume. The integration "
+                "ecosystem (250+ partners) lets you wire in PI-specific add-ons (EvenUp for "
+                "demands, Lawmatics for intake automation, medical-records services).\n\n"
+                "Clio bends above 5-10 PI attorneys. The general-purpose data model is not optimized "
+                "for PI's specific workflow (lien tracking, settlement disbursement, multi-firm "
+                "referral fees). Most small PI firms that grow past 5 attorneys eventually migrate "
+                "to Filevine or Smokeball."
+            ),
+        },
+        {
+            "slug": "mycase", "rank": "5.",
+            "review": (
+                "MyCase Pro at $79/u/mo is a credible small-PI option with stronger intake "
+                "automation than Clio Essentials. The combined PMS-plus-intake workflow (without "
+                "needing Clio Grow as a separate add-on) saves $79/user/month at small firm sizes. "
+                "Document automation is functional. IOLTA and trust handling work for PI settlement "
+                "payouts.\n\n"
+                "Like Clio, MyCase is general-purpose and bends in high-volume PI. Below 5 "
+                "attorneys it works fine; above that, the PI-specific tools deliver more value."
+            ),
+        },
+        {
+            "slug": "lawmatics", "rank": "6.",
+            "review": (
+                "Lawmatics is not a PMS but the leading legal CRM and intake automation tool. "
+                "Pricing runs $199 Lite, $299 Pro per firm per month, with premium tiers $300+ per "
+                "user. PI firms running paid acquisition (Google Ads, Facebook, billboards, lead-"
+                "gen services) layer Lawmatics on top of their PMS for intake automation, lead "
+                "scoring (QualifyAI), and marketing analytics.\n\n"
+                "If your firm has meaningful ad spend or referral-network volume, Lawmatics often "
+                "pays back faster than upgrading PMS tier. Use it alongside Clio, MyCase, or "
+                "Filevine rather than as a replacement."
+            ),
+        },
+    ],
+    "what_to_look_for": (
+        "Eight criteria matter for PI-specific PMS.\n\n"
+        "**Intake automation depth.** Lead capture from web forms, social media, lead vendors. "
+        "Automatic qualification logic. Document collection automation (intake form, retainer, "
+        "HIPAA authorizations, employer information). Lawmatics is best-in-class. Filevine has "
+        "deep native intake. Smokeball's intake is solid. Clio Grow and MyCase IQ cover the basics.\n\n"
+        "**Medical record handling.** Provider lookup and contact information. Automated record "
+        "request letters with status tracking. Organized retrieval and indexing. Filevine and "
+        "Smokeball both handle this natively. Clio and MyCase rely on integration partners.\n\n"
+        "**Demand letter and settlement workflow.** Template generation, settlement-offer tracking, "
+        "negotiation history. Filevine has the deepest workflow here; AI add-ons (Filevine "
+        "DemandsAI, EvenUp, Eve, Supio) extend the capability further.\n\n"
+        "**Lien and cost tracking.** Medical liens, hospital liens, ERISA liens, attorney's liens, "
+        "and case-cost tracking are PI-specific accounting needs. Filevine and Litify handle this "
+        "natively. Smokeball does it well. General-purpose PMS makes you build this in custom "
+        "fields and reports.\n\n"
+        "**Multi-firm and referral attorney support.** PI firms often work with referral attorneys, "
+        "co-counsel, and lead-gen networks. Tracking who referred which case, fee splits, and "
+        "co-counsel work is operational complexity that Filevine and Litify handle. Most general "
+        "PMS does not.\n\n"
+        "**Settlement disbursement workflow.** Final settlement, lien negotiation, fee distribution, "
+        "client payout, and final accounting in one workflow. Critical at scale. Filevine, Litify, "
+        "and Smokeball all support this. General-purpose PMS requires manual workarounds.\n\n"
+        "**Scale at 1,000+ active matters.** Performance, search, and organizational integrity hold "
+        "up. Filevine and Litify are built for this. Clio handles up to roughly 500-1,000 matters "
+        "per attorney before performance starts to suffer.\n\n"
+        "**AI tool integration.** Demand-letter AI (EvenUp, Eve, Supio), AI medical record review, "
+        "AI intake scoring. Filevine has native AI add-ons. Other PMS platforms integrate with "
+        "third-party AI tools through APIs."
+    ),
+    "pricing_scenarios": (
+        "**Small PI shop (1-3 attorneys, 100-300 active matters):** Clio Essentials at $89 × 3 + "
+        "Clio Grow at $79 × 3 + EvenUp per-document pricing = $560-$700/month total. All-in first "
+        "year: $7,000-$10,000.\n\n"
+        "**Mid-size PI firm (10-15 attorneys, 1,000-3,000 matters):** Smokeball custom-quote "
+        "$1,500-$2,500/month or Filevine Standard $2,000-$4,000/month. All-in first year including "
+        "implementation: $35,000-$80,000.\n\n"
+        "**Large PI firm (50+ attorneys, 5,000+ matters):** Filevine custom enterprise $8,000-"
+        "$20,000+/month or Litify on Salesforce $12,000-$30,000+/month. All-in first year including "
+        "implementation: $200,000-$500,000+."
+    ),
+    "what_to_avoid": (
+        "**Running high-volume PI on Clio or MyCase past 10 attorneys.** General-purpose PMS bends "
+        "and the workflow workarounds compound. Migrate to Filevine or Smokeball before the data "
+        "complexity makes migration painful.\n\n"
+        "**Buying Litify without Salesforce expertise in-house.** The platform requires Salesforce "
+        "admin support to deliver value. If your firm has no Salesforce footprint, Filevine "
+        "delivers similar PI-specific value without the Salesforce overhead.\n\n"
+        "**Skipping intake automation.** PI is a marketing-driven practice. Manual intake from web "
+        "forms or lead-gen vendors is leakage at every step. Lawmatics or native PMS intake "
+        "automation usually pays back within 2-3 months.\n\n"
+        "**Ignoring AI demand-letter tools.** EvenUp, Eve, and Supio deliver 70-90% time reduction "
+        "on demand-package drafting. PI firms not using one are paying paralegal hours for work "
+        "the AI does in minutes."
+    ),
+    "questions_to_ask": [
+        "How does the platform handle intake automation from our specific lead sources (web forms, lead vendors, referral attorneys)?",
+        "What is the medical record request and tracking workflow? Can it scale to our case volume?",
+        "How does lien tracking work? Does it separate medical, hospital, ERISA, and attorney's liens?",
+        "What is the settlement disbursement workflow including lien negotiation and fee splits?",
+        "How does the platform handle co-counsel and referral attorney fee tracking?",
+        "What is performance like at 5,000+ active matters?",
+        "What AI add-ons or integrations are available for demand letters and medical record review?",
+        "What does implementation look like for our firm size, and what are typical costs?",
+        "What is the data migration story from our current platform?",
+        "What is the annual contract structure and what happens at renewal?",
+    ],
+    "faqs": [
+        {
+            "question": "When should a PI firm move from Clio to Filevine?",
+            "answer": (
+                "Around 5-10 attorneys with consistent matter volume above 200-300 active matters "
+                "per attorney. The signals: ops team building workarounds for lien tracking, "
+                "intake leakage from manual processes, settlement disbursement taking too long, or "
+                "Clio performance degrading at high matter counts. Plan a 3-6 month migration. "
+                "Budget $25,000-$75,000 in implementation costs. The migration pays back within "
+                "12-18 months for most growing PI firms because of the operational efficiency gains."
+            ),
+        },
+        {
+            "question": "Filevine vs Litify: which fits your firm?",
+            "answer": (
+                "Salesforce footprint is the deciding factor. If your firm already runs on "
+                "Salesforce (BD, marketing on Pardot, financial reporting through Salesforce data), "
+                "Litify's data-model integration is the cleaner choice. If you do not have "
+                "Salesforce expertise in-house, Filevine delivers similar PI-specific value with "
+                "lower total cost (no Salesforce platform fees, no Salesforce admin overhead). "
+                "Most pure-play PI firms pick Filevine; firms with broader Salesforce-ecosystem "
+                "tooling pick Litify."
+            ),
+        },
+        {
+            "question": "What about EvenUp, Eve, and Supio? Are these PMS replacements?",
+            "answer": (
+                "No, they are AI add-ons that complement PMS. EvenUp specializes in AI demand "
+                "letters and medical chronologies. Eve covers the full PI case lifecycle from "
+                "intake to settlement (more PMS-like than EvenUp). Supio specializes in heavy "
+                "medical record review for PI and mass tort. Most PI firms run one or two of these "
+                "alongside Filevine, Litify, or Smokeball rather than as replacements. Eve is the "
+                "most PMS-overlap of the three; firms that buy Eve sometimes simplify by running "
+                "Eve as the primary system rather than alongside another PMS."
+            ),
+        },
+        {
+            "question": "Can a PI firm run on Smokeball forever, or is it a stepping stone?",
+            "answer": (
+                "Single-state PI firms in the 5-25 attorney range can run on Smokeball indefinitely. "
+                "Multi-state, mass tort, or 50+ attorney PI firms eventually outgrow Smokeball's "
+                "data model and migrate to Filevine or Litify. The trigger is usually customization "
+                "needs (Smokeball is less customizable than Filevine) or scale (matter counts above "
+                "1,500-2,000 per attorney start to feel slow). Smokeball is a credible long-term "
+                "platform for the right firm profile, not just a stepping stone."
+            ),
+        },
+        {
+            "question": "How do AI tools change the PI tech stack?",
+            "answer": (
+                "AI is taking specific high-time-cost workflows: demand letter drafting (1-2 hours "
+                "of paralegal time becomes 10-20 minutes of AI plus human review), medical record "
+                "review (multi-hour summarization becomes near-instant), and intake qualification "
+                "(manual scoring becomes automated). PI firms that adopted AI aggressively in "
+                "2024-2025 report leaner paralegal headcount, faster demand-package turnaround, "
+                "and higher demand quality. The PMS layer is unchanged; AI tools attach to it."
+            ),
+        },
+    ],
+    "related_comparisons": [
+        ("/compare/filevine-vs-litify/", "Filevine vs Litify"),
+        ("/compare/smokeball-vs-clio/", "Smokeball vs Clio"),
+        ("/compare/evenup-vs-eve/", "EvenUp vs Eve"),
+        ("/compare/evenup-vs-supio/", "EvenUp vs Supio"),
+    ],
+    "related_guides": [
+        ("/guides/best-legal-ai-personal-injury-firms/", "Best Legal AI for PI Firms"),
+        ("/guides/best-legal-practice-management-small-firms/", "Best PMS for Small Firms"),
+        ("/guides/best-clio-alternatives/", "Best Clio Alternatives"),
+    ],
+}
+
+
+GUIDE_CONTENT_VERTICAL["best-clio-alternatives"] = {
+    "category": "legal-saas",
+    "title": "Best Clio Alternatives",
+    "last_verified": "2026-05-05",
+    "intro": (
+        "Clio is the largest cloud practice management platform with roughly 150,000 attorneys "
+        "across 100+ countries. It is the default pick for many firms and the integration ecosystem "
+        "(250+ partners) is the broadest in legal tech. But Clio is not the right fit "
+        "for every firm. Some teams find pricing creeps too fast at higher tiers, document "
+        "automation is not deep enough for their practice, trust accounting integration through "
+        "QuickBooks is painful, or the mid-market features they need require Clio Advanced or "
+        "Enterprise pricing.\n\n"
+        "This guide covers the credible alternatives to Clio in 2026, with specific reasons firms "
+        "switch and what they typically gain by switching. We focus on alternatives that win at "
+        "Clio's core market segments (solo through mid-firm general practice, small-mid PI). "
+        "Enterprise-only alternatives like Litify and Centerbase are mentioned for context but "
+        "covered in detail in other guides."
+    ),
+    "verdict": (
+        "Top alternatives by use case: **MyCase** for similar capability at lower price with "
+        "stronger intake automation. **PracticePanther** for stronger workflow automation. "
+        "**Smokeball** for document-heavy practices. **CosmoLex** to drop QuickBooks and run "
+        "trust accounting natively. **Rocket Matter** for firm-level profitability metrics. "
+        "**Filevine** for high-volume PI past Clio's general-purpose limits. **MyCase Basic** at "
+        "$39/u/mo or **PracticePanther Solo** at $59/u/mo are the cheaper-than-Clio alternatives "
+        "for solo practitioners."
+    ),
+    "methodology": (
+        "We evaluated alternatives against Clio's strongest features (integration ecosystem, "
+        "general-practice fit, mobile experience, payment processing) and identified where each "
+        "alternative wins. The frame is: what specific reason would a firm leave Clio for this "
+        "platform? Pricing verified as of 2026-05-05."
+    ),
+    "recommendations": [
+        {
+            "slug": "mycase", "rank": "1.",
+            "review": (
+                "MyCase is the most-direct Clio alternative. Basic at $39/u/mo, Pro at $79/u/mo, "
+                "Advanced at $99/u/mo. The platform covers similar workflow as Clio across solo "
+                "and small-firm general practice with stronger intake automation and a more polished "
+                "client portal. Native MyCase Payments handles IOLTA-compliant trust routing.\n\n"
+                "Reasons firms leave Clio for MyCase: $10-15/user/month savings at solo and small-"
+                "firm tiers, stronger out-of-the-box intake flow, simpler upgrade path. What you "
+                "lose: smaller integration ecosystem (~100 vs Clio's 250+), less depth on "
+                "reporting at higher tiers, weaker document automation than Clio Draft."
+            ),
+        },
+        {
+            "slug": "practicepanther", "rank": "2.",
+            "review": (
+                "PracticePanther's automation engine is the strongest in the small-firm tier. "
+                "Pricing: Solo at $59/u/mo, Essential at $79/u/mo, Business at $99/u/mo. The "
+                "workflow automation, custom field configuration, and matter automation rules are "
+                "more developed than Clio Essentials.\n\n"
+                "Reasons firms leave Clio for PracticePanther: power-user paralegal or admin who "
+                "wants automation control without engineering. What you lose: polished UI, mobile "
+                "app polish, integration ecosystem breadth. PracticePanther feels older but "
+                "delivers operational depth."
+            ),
+        },
+        {
+            "slug": "smokeball", "rank": "3.",
+            "review": (
+                "Smokeball is the move for document-heavy practices. Pricing $69-$199/u/mo by tier. "
+                "Auto-time-capture, deep template library for family law, estate planning, "
+                "immigration, and certain PI workflows. Closes the time-leakage gap that "
+                "Clio's manual time tracking cannot.\n\n"
+                "Reasons firms leave Clio for Smokeball: practice areas where document templates "
+                "are the daily workflow and Clio Draft does not cover the templates needed. "
+                "Auto-time-capture alone justifies the switch for firms billing hourly with "
+                "consistent time-leakage. What you lose: Clio's broad ecosystem, mobile experience, "
+                "general-practice flexibility."
+            ),
+        },
+        {
+            "slug": "cosmolex", "rank": "4.",
+            "review": (
+                "CosmoLex is the answer for firms tired of running QuickBooks plus separate trust "
+                "accounting. $89/u/mo flat. Native general ledger, IOLTA-compliant trust accounting, "
+                "and PMS in one platform. For firms doing significant trust transactions (real "
+                "estate closings, PI settlements, retainer-heavy litigation), CosmoLex's all-in-one "
+                "model eliminates the friction that Clio plus QuickBooks plus a separate trust "
+                "ledger creates.\n\n"
+                "Reasons firms leave Clio for CosmoLex: bookkeeper or office manager spending hours "
+                "weekly on three-way reconciliation, IOLTA compliance audits causing stress, "
+                "QuickBooks integration breaking on monthly reconciliation. What you lose: Clio's "
+                "broad integration ecosystem and a more polished general-practice user experience."
+            ),
+        },
+        {
+            "slug": "rocketmatter", "rank": "5.",
+            "review": (
+                "Rocket Matter wins specifically on firm-level profitability metrics. Pricing: "
+                "Essentials at $49/u/mo, Pro at $79/u/mo, Premier at $99/u/mo. The ProfitFuel module "
+                "reports realization, utilization, and matter-level margins that most other PMS "
+                "platforms make you build manually.\n\n"
+                "Reasons firms leave Clio for Rocket Matter: data-driven firm operators who want "
+                "profitability visibility without building it. The Pro tier at $79/u/mo undercuts "
+                "Clio Essentials at $89/u/mo while delivering more reporting depth. What you lose: "
+                "Clio's ecosystem polish, mobile app polish, document automation breadth."
+            ),
+        },
+        {
+            "slug": "filevine", "rank": "6.",
+            "review": (
+                "Filevine is the move for PI firms outgrowing Clio. Custom enterprise pricing "
+                "(typically $150-$300+ per user per month) plus implementation fees. The PI-"
+                "specific workflow (intake, medical records, demand packages, lien tracking, "
+                "settlement disbursement) handles scale that Clio cannot.\n\n"
+                "Reasons firms leave Clio for Filevine: PI matter volume past 200-300 active per "
+                "attorney, lien-tracking complexity, multi-state or mass-tort work, intake "
+                "automation needs Clio Grow does not cover. What you lose: lower price point and "
+                "faster implementation. Filevine is a 3-6 month deployment, not a 6-week one."
+            ),
+        },
+    ],
+    "what_to_look_for": (
+        "Six things determine the right Clio alternative.\n\n"
+        "**What specific Clio limitation are you hitting?** If pricing is the issue, MyCase Basic "
+        "or PracticePanther Solo are cheaper. If document automation is the issue, Smokeball is "
+        "deeper. If trust accounting is the issue, CosmoLex eliminates QuickBooks. If reporting "
+        "is the issue, Rocket Matter or Clio Advanced. If PI scale is the issue, Filevine.\n\n"
+        "**Migration cost.** Plan for 40-200 hours of admin and bookkeeper time depending on firm "
+        "size and data volume. Most firms underestimate this. Pick a platform you can stay on for "
+        "3+ years to amortize the migration cost.\n\n"
+        "**Integration ecosystem fit.** What Clio integrations are you using today? Calendar, "
+        "email, accounting, e-filing, payments, document storage. The alternative needs to cover "
+        "your specific integrations or have credible substitutes.\n\n"
+        "**Trust accounting compliance.** All credible Clio alternatives handle IOLTA, but the "
+        "depth varies. CosmoLex is deepest. MyCase, PracticePanther, Smokeball, and Rocket Matter "
+        "all do it well through their respective payment integrations.\n\n"
+        "**Mobile experience.** Clio has one of the better mobile apps in legal tech. MyCase is "
+        "comparable. PracticePanther and Smokeball mobile experiences are weaker. Test the "
+        "alternative's mobile app with a typical-day workflow before committing.\n\n"
+        "**Upgrade path and pricing predictability.** What does the alternative cost in 18-24 "
+        "months at projected firm size? Per-user pricing scales with attorneys plus paralegals "
+        "plus office staff. Flat-pricing alternatives (CosmoLex at fixed per-user, Service Fusion-"
+        "style flat-monthly) can save money as the firm grows."
+    ),
+    "pricing_scenarios": (
+        "**Solo on Clio EasyStart at $49/mo:** MyCase Basic at $39/mo saves $120/year. "
+        "PracticePanther Solo at $59/mo costs $120/year more but delivers stronger automation.\n\n"
+        "**5-attorney firm on Clio Essentials at $89/u/mo ($534/mo for 6 seats):** MyCase Pro at "
+        "$79/u/mo ($474/mo) saves $720/year. CosmoLex at $89/u/mo with QuickBooks elimination "
+        "saves $1,200-$2,400/year on bookkeeping time.\n\n"
+        "**10-attorney firm on Clio Advanced at $129/u/mo ($1,419/mo for 11 seats):** Smokeball "
+        "custom-quote ~$1,000-$1,500/mo for document-heavy practices. Filevine starts to make "
+        "sense at this size for PI firms specifically."
+    ),
+    "what_to_avoid": (
+        "**Switching for marginal price savings.** A $10-15/user/month difference rarely justifies "
+        "an 80-200 hour migration. If you are saving $1,500-$3,000/year on a 5-user firm, the "
+        "migration probably eats 18-24 months of savings before paying back.\n\n"
+        "**Switching without identifying the specific Clio limitation.** Most Clio alternatives "
+        "are similar in 80% of features. Switching without a specific reason just creates work. "
+        "List the Clio limitation that is hurting you, then pick the alternative that solves it.\n\n"
+        "**Ignoring integration coverage.** Clio's 250+ integrations cover most legal-tech tools. "
+        "Switching to a platform with 100 integrations means re-evaluating every tool in your "
+        "stack. Plan for that work or pick alternatives with stronger ecosystem coverage (MyCase "
+        "is closest to Clio).\n\n"
+        "**Underestimating migration timeline.** 40-200 hours of admin and bookkeeper time. "
+        "Includes data migration, integration reconfiguration, retraining, parallel-run period, "
+        "and post-cutover stabilization. Budget the time."
+    ),
+    "questions_to_ask": [
+        "What specific Clio limitation are you trying to solve, and how does this alternative solve it?",
+        "What is the data migration process from Clio? Is there a vendor-supported import?",
+        "What integrations do we lose by switching, and what alternatives exist?",
+        "What is the IOLTA compliance and trust accounting depth on this platform?",
+        "How does the mobile app compare to Clio in real field-use scenarios?",
+        "What is the upgrade path and pricing trajectory for the next 24 months?",
+        "What does training look like for our existing team versus a fresh deployment?",
+        "What is the parallel-run period during migration, and what does it cost?",
+        "Are there bar-association discounts or partner programs?",
+        "What is the contract structure, including auto-renewal and term length?",
+    ],
+    "faqs": [
+        {
+            "question": "Is it worth switching from Clio to MyCase to save money?",
+            "answer": (
+                "Often no. MyCase Basic at $39/u/mo saves about $120 per user per year vs Clio "
+                "EasyStart at $49/u/mo. For a solo, that is $120/year and a 40-80 hour migration. "
+                "Payback takes 12+ months. For a 5-user firm (about $720/year savings on Pro vs "
+                "Essentials), payback is faster but still measured in months. Switch for specific "
+                "feature reasons (intake automation, client portal experience) rather than price "
+                "alone."
+            ),
+        },
+        {
+            "question": "When does a small PI firm leave Clio for Filevine?",
+            "answer": (
+                "When matter volume passes 200-300 active per attorney, lien-tracking complexity "
+                "overwhelms manual processes, or intake automation needs go beyond Clio Grow's "
+                "capability. Plan a 3-6 month Filevine deployment with $25,000-$75,000 in "
+                "implementation costs. The migration pays back within 12-18 months for most "
+                "growing PI firms because of the operational efficiency gains. Below 200 matters "
+                "per attorney, Clio Essentials plus Clio Grow plus a PI-specific AI add-on "
+                "(EvenUp, Eve) usually delivers more value than a Filevine migration."
+            ),
+        },
+        {
+            "question": "Can I run Clio plus a specialist tool instead of switching?",
+            "answer": (
+                "Often the better answer. Clio plus EvenUp (PI demand letters), Clio plus "
+                "Lawmatics (intake CRM), Clio plus Spellbook (AI contracts), Clio plus a dedicated "
+                "trust-accounting tool, and so on. The integration approach lets you stay on Clio's "
+                "broad ecosystem while solving specific workflow gaps. Switching makes sense when "
+                "the Clio limitation is platform-level (data model, scale, performance) rather "
+                "than workflow-level."
+            ),
+        },
+        {
+            "question": "How does CosmoLex compare to Clio plus QuickBooks?",
+            "answer": (
+                "CosmoLex eliminates QuickBooks and the integration friction. For firms with high "
+                "trust-transaction volume (real estate, PI, retainer-heavy litigation), the "
+                "operational simplification is meaningful: 5-15 hours per month of bookkeeper time "
+                "saved, lower bar-grievance risk, cleaner monthly reconciliation. Clio plus "
+                "QuickBooks works fine for firms with moderate trust volume; CosmoLex wins for "
+                "high-volume trust practices."
+            ),
+        },
+        {
+            "question": "Should I wait for Clio to add the feature I need?",
+            "answer": (
+                "Sometimes. Clio ships meaningful releases every quarter and has been closing gaps "
+                "(Clio Draft from the Lawyaw acquisition closed the document automation gap, Clio "
+                "Duo added AI features). If your specific limitation is on Clio's roadmap with a "
+                "credible timeline, waiting can avoid migration cost. If the limitation has been "
+                "outstanding for 12+ months without movement, do not assume it is coming."
+            ),
+        },
+    ],
+    "related_comparisons": [
+        ("/compare/clio-vs-mycase/", "Clio vs MyCase"),
+        ("/compare/clio-vs-practicepanther/", "Clio vs PracticePanther"),
+        ("/compare/smokeball-vs-clio/", "Smokeball vs Clio"),
+        ("/compare/clio-vs-smokeball/", "Clio vs Smokeball"),
+    ],
+    "related_guides": [
+        ("/guides/best-legal-practice-management-small-firms/", "Best PMS for Small Firms"),
+        ("/guides/best-pms-personal-injury-law-firms/", "Best PMS for PI Firms"),
+        ("/guides/best-practice-management-software-solo-attorneys/", "Best PMS for Solo Attorneys"),
+    ],
+}
